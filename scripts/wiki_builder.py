@@ -461,7 +461,7 @@ def render_page(title, meta, body_html, lang, rel_path, toc_html="",
 <body class="doc">
 <header class="site-header">
   <div class="wrap header-inner">
-    <span class="brand">{s['portal_short']}</span>
+    <a class="brand" href="{root}index.html">{s['portal_short']}</a>
     <nav class="header-nav">
       <a href="{root}index.html#recent">{s['nav_recent']}</a>
       <a href="{root}index.html#categories">{s['nav_categories']}</a>
