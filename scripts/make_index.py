@@ -39,9 +39,9 @@ SKIP_NAMES = {"index.md"}
 I18N = {
     "en": {
         "lang": "en",
-        "title": "Wiki Portal",
+        "title": "Arkive",
         "tagline": "Papers, concepts and guides, verified against original sources.",
-        "intro": "A reading-first index of everything in this wiki. Filter by type, "
+        "intro": "A reading-first index of everything in this archive. Filter by type, "
                  "category or source, or search. The full navigator on the left reaches "
                  "every document, including ones not listed below.",
         "recent": "Recent",
@@ -75,9 +75,9 @@ I18N = {
     },
     "ko": {
         "lang": "ko",
-        "title": "위키 포털",
+        "title": "Arkive",
         "tagline": "논문, 개념, 가이드. 원문 대조 검증 완료.",
-        "intro": "이 위키의 모든 문서를 읽기 순서로 정리한 색인입니다. 유형, 카테고리, "
+        "intro": "이 아카이브의 모든 문서를 읽기 순서로 정리한 색인입니다. 유형, 카테고리, "
                  "출처로 걸러내거나 검색하세요. 왼쪽 내비게이터에서 목록에 없는 문서도 "
                  "모두 찾을 수 있습니다.",
         "recent": "최근 글",
@@ -700,7 +700,7 @@ def render_landing(counts):
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Wiki — English / 한국어</title>
+<title>Arkive — English / 한국어</title>
 <link rel="stylesheet" href="en/assets/style.css"/>
 <script>
 (function () {{
@@ -726,17 +726,17 @@ def render_landing(counts):
 </head>
 <body class="portal">
 <div class="lang-landing">
-  <h1>Wiki</h1>
+  <h1>Arkive</h1>
   <p class="sub">Redirecting… / 이동 중…</p>
   <noscript><p class="sub">Choose a language / 언어를 선택하세요</p></noscript>
   <div class="lang-cards">
     <a class="lang-card" href="en/">
       <span class="big">English</span>
-      <span class="small">Wiki Portal · {en_n} documents</span>
+      <span class="small">Arkive · {en_n} documents</span>
     </a>
     <a class="lang-card" href="ko/">
       <span class="big">한국어</span>
-      <span class="small">위키 포털 · {ko_n}개 문서</span>
+      <span class="small">Arkive · {ko_n}개 문서</span>
     </a>
   </div>
 </div>
