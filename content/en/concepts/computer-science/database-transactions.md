@@ -8,8 +8,6 @@ locale: en
 
 # Database Transactions
 
-> [한국어 버전](/ko/concepts/computer-science/database-transactions)
-
 A **transaction** bundles multiple reads and writes into a single atomic unit: either all effects commit or none do, with well-defined visibility rules for concurrent transactions. ACID, isolation levels, and write-ahead logging are the machinery that makes shared mutable state trustworthy.
 
 ## Definition

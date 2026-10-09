@@ -12,7 +12,7 @@ locale: "en"
 
 # RRSI: Regularized Recursive Self-Improvement of Agent Harnesses
 
-[한국어 버전](../../../ko/sources/papers/RRSI_Regularized_Recursive_Self-Improvement_of_Agent_Harnesses.md)
+
 
 **arXiv**: [2609.24972](https://arxiv.org/abs/2609.24972) | **HuggingFace**: [papers/2609.24972](https://huggingface.co/papers/2609.24972) | **Published**: 2026-09-21 | **Organization**: Google Cloud AI Research | **Submitted by**: Peng Xia | **Upvotes**: 168
 

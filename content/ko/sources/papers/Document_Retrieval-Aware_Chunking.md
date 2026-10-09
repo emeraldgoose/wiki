@@ -12,7 +12,7 @@ locale: "ko"
 
 # Document Retrieval-Aware Chunking
 
-[English version](../../../en/sources/papers/Document_Retrieval-Aware_Chunking.md)
+
 
 **arXiv**: [2609.24220](https://arxiv.org/abs/2609.24220) | **HuggingFace**: [papers/2609.24220](https://huggingface.co/papers/2609.24220) | **발행**: 2026-09-21 | **소속**: Yellow.ai AI Research Team | **제출**: Uday Allu | **추천**: 51
 

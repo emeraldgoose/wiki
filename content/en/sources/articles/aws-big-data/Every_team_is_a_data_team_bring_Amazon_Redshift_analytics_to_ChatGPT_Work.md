@@ -13,7 +13,7 @@ Data-driven decision-making is often limited by the technical barrier of SQL. Wh
 
 This plugin allows any authorized team member to ask questions in natural language, analyze governed data across Amazon Redshift and data lakes, and create shareable dashboards—all within a conversational interface.
 
-[Korean Version](/ko/sources/articles/aws-big-data/Every_team_is_a_data_team_bring_Amazon_Redshift_analytics_to_ChatGPT_Work)
+
 
 ## Concept: Democratizing Data Access
 

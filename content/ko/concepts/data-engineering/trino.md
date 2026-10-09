@@ -8,8 +8,6 @@ published: 2026-09-07
 
 # Trino
 
-> English version: [/en/concepts/data-engineering/trino](/en/concepts/data-engineering/trino)
-
 **Trino**(구 PrestoSQL, 2020년 페이스북 Presto에서 포크)는 서로 다른 저장소를 아우르는 대화형 분석용 분산 SQL 쿼리 엔진이다. 데이터 레이크, 웨어하우스, NoSQL, 이벤트 스트림 위에 연합 ANSI SQL을 메모리 속도로 실행하며, 자체 스토리지는 보유하지 않는다.
 
 ## 위치

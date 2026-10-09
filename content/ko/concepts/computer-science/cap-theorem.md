@@ -8,8 +8,6 @@ locale: ko
 
 # CAP 정리
 
-> [English version](/en/concepts/computer-science/cap-theorem)
-
 **CAP 정리**는 분산 데이터 저장소가 **일관성(Consistency)**, **가용성(Availability)**, **분할 내성(Partition tolerance)** 세 가지 중 최대 두 가지만 동시에 보장할 수 있다는 정리다. 네트워크 분할은 피할 수 없으므로, 실제 설계 선택은 *분할이 일어났을 때* 어떻게 동작할지로 귀결된다. 일부 요청을 거부하거나(CP), 오래된 데이터라도 내놓거나(AP).
 
 ## 정의

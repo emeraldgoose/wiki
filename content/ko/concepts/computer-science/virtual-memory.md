@@ -8,8 +8,6 @@ locale: ko
 
 # 가상 메모리
 
-> [English version](/en/concepts/computer-science/virtual-memory)
-
 **가상 메모리(virtual memory)** 는 각 프로세스에게 크고 독자적이며 연속적인 주소 공간이라는 환상을 제공한다. OS와 MMU가 가상 페이지를 물리 RAM(또는 디스크)에 투명하게 매핑한다. 프로세스 격리, 효율적 메모리 사용, 메모리-매핑 파일의 기반 메커니즘이다.
 
 ## 정의

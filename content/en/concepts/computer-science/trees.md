@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # Trees
 
-[한국어 버전](/ko/concepts/computer-science/trees.md)
-
 > A tree is a hierarchical structure of nodes connected by edges with no cycles: one root, parent–child links, and subtrees that make search, ordering, and priority operations logarithmic.
 
 ## Definition

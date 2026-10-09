@@ -8,8 +8,6 @@ locale: ko
 
 # HTTP
 
-> [English version](/en/concepts/computer-science/http)
-
 **HTTP**(Hypertext Transfer Protocol)는 웹의 요청-응답 응용 프로토콜이다. 클라이언트가 메서드·대상·헤더·선택적 본문을 보내면, 서버가 상태·헤더·선택적 본문으로 답한다. 모든 API, 페이지 로드, 웹훅은 이 문법의 대화다.
 
 ## 정의

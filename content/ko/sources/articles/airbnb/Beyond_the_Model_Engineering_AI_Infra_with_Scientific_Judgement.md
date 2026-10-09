@@ -10,7 +10,7 @@ tags: [airbnb, ai-agents, agent-harness, data-science, evaluation, methodology, 
 
 # 모델을 넘어서 - 과학적 판단력을 갖춘 AI 인프라 엔지니어링
 
-[English version](../../../../en/sources/articles/airbnb/Beyond_the_Model_Engineering_AI_Infra_with_Scientific_Judgement.md)
+
 
 **저자**: Wren Dougherty · **발행**: 2026-09-15 · **출처**: [Airbnb Engineering & Data Science](https://airbnb.tech/ai-ml/beyond-the-model-engineering-ai-infra-with-scientific-judgement/) ([Medium에도 게재](https://medium.com/airbnb-engineering/beyond-the-model-engineering-ai-infra-with-scientific-judgement-371316d43261))
 

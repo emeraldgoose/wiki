@@ -8,7 +8,7 @@ published: 2026-09-07
 
 # ETL vs ELT
 
-> 한국어: [한국어 버전](/ko/concepts/data-engineering/etl-vs-elt)
+
 
 **Summary:** ETL (Extract-Transform-Load) transforms data **before** loading it into the warehouse, while ELT (Extract-Load-Transform) loads raw data **first** and transforms it inside the destination platform. ETL fits strict schemas, legacy warehouses, and regulated pipelines; ELT fits cloud warehouses and lakehouses where storage is cheap and compute is elastic. The choice shapes cost, latency, debuggability, and who can change the logic.
 

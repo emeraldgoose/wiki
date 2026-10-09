@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # 분산 합의
 
-> English: [English version](/en/concepts/computer-science/distributed-consensus)
-
 **요약:** 분산 합의는 일부 머신이 고장나거나 메시지가 지연되어도 여러 머신이 하나의 값(또는 순서화된 로그)에 동의하게 한다. 복제 상태 머신(etcd, ZooKeeper, Consul)의 토대이며, 리더 선출·설정 저장소·강한 일관성의 메타데이터를 떠받친다. 핵심 결과는 **FLP 불가능성**(완전 비동기 네트워크에서 1개 고장만 있어도 결정적 합의 불가)과, 타임아웃·과반수·리더 선출로 이를 우회하는 실용 프로토콜 **Paxos**·**Raft**이다.
 
 ## 정의

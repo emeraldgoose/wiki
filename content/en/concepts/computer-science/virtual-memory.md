@@ -8,8 +8,6 @@ locale: en
 
 # Virtual Memory
 
-> [한국어 버전](/ko/concepts/computer-science/virtual-memory)
-
 **Virtual memory** gives every process the illusion of a large, private, contiguous address space, while the OS and MMU transparently map virtual pages onto physical RAM (or disk). It is the mechanism behind process isolation, efficient memory use, and memory-mapped files.
 
 ## Definition

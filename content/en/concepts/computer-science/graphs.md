@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # Graphs
 
-[한국어 버전](/ko/concepts/computer-science/graphs.md)
-
 > A graph models entities as vertices connected by edges, and two traversals — breadth-first and depth-first search — unlock shortest paths, connectivity, topological ordering, and cycle detection across networks, maps, and dependency systems.
 
 ## Definition

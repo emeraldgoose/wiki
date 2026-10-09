@@ -8,8 +8,6 @@ locale: en
 
 # Caching
 
-> [한국어 버전](/ko/concepts/computer-science/caching)
-
 A **cache** is a faster, smaller store in front of a slower source of truth, serving repeated requests without recomputation or refetch. Caching is the single most cost-effective performance technique — and invalidation, in Phil Karlton's famous formulation, one of the two hard problems.
 
 ## Definition

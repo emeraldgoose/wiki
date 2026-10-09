@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # Concurrency vs Parallelism
 
-[한국어 버전](/ko/concepts/computer-science/concurrency-vs-parallelism.md)
-
 > Concurrency is dealing with many things at once (overlapping lifetimes, interleaved execution); parallelism is doing many things at once (simultaneous execution on multiple cores). Every correct concurrent program must tame shared state — races, deadlocks, and visibility.
 
 ## Definition

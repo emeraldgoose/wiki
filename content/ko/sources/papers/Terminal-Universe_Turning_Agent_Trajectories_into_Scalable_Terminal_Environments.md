@@ -9,7 +9,7 @@ published: 2026-09-03
 
 # Terminal-Universe: 에이전트 궤적에서 확장 가능한 터미널 환경으로
 
-> English: [English version](/en/sources/papers/Terminal-Universe_Turning_Agent_Trajectories_into_Scalable_Terminal_Environments)
+
 
 **arXiv**: [2609.04148](https://arxiv.org/abs/2609.04148) | **HuggingFace**: [papers/2609.04148](https://huggingface.co/papers/2609.04148) | **Published**: 2026-09-03 | **제출**: taesiri | **Paper of the day #2 (2026-09-04)**
 

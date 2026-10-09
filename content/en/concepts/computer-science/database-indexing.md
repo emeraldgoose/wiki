@@ -8,8 +8,6 @@ locale: en
 
 # Database Indexing
 
-> [한국어 버전](/ko/concepts/computer-science/database-indexing)
-
 A **database index** is an auxiliary data structure that lets the engine locate rows without scanning the whole table — trading write overhead and storage for read speed. Index design (which columns, in which order, of which type) is the highest-leverage activity in relational performance work.
 
 ## Definition

@@ -8,8 +8,6 @@ locale: ko
 
 # 데이터베이스 트랜잭션
 
-> [English version](/en/concepts/computer-science/database-transactions)
-
 **트랜잭션**은 여러 읽기와 쓰기를 하나의 원자적 단위로 묶는다. 전부 커밋되거나 전부 안 되며, 동시 트랜잭션 간의 가시성 규칙이 명확하다. ACID, 격리 수준, write-ahead 로깅은 공유 가변 상태를 신뢰할 수 있게 만드는 기계 장치다.
 
 ## 정의

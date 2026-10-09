@@ -8,8 +8,6 @@ locale: ko
 
 # 운영체제 기초
 
-> [English version](/en/concepts/computer-science/operating-system-basics)
-
 **운영체제**는 하드웨어를 프로그램들 사이에 다중화하면서 각자에게 자기 기계인 환상을 준다. 자기 CPU(프로세스/스레드), 자기 메모리(가상 주소 공간), 자기 디스크(파일). 커널은 가운데의 신뢰 중재자다. 모든 추상은 오버헤드 조금과 격리·공정·이식성을 맞바꾸는 거래다.
 
 ## 정의

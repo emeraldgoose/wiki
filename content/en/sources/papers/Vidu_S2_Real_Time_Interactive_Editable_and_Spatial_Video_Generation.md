@@ -8,7 +8,7 @@ authors: ["Jintao Zhang", "Kai Jiang", "Jintao Chen", "Xu Wang", "Deyuan Liu", "
 
 # Vidu S2: Real-Time Interactive, Editable, and Spatial Video Generation
 
-[Korean version](content/ko/sources/papers/Vidu_S2_Real_Time_Interactive_Editable_and_Spatial_Video_Generation.md)
+
 
 ## Abstract
 We present Vidu S2, which comprises Vidu S2-Avatar, a real-time interactive digital-character model, and Vidu S2-Editing, a real-time video editing model. Moreover, we explore the feasibility of real-time spatial video generation for both Vidu S2-Avatar and Vidu S2-Editing. Compared with Vidu S1, Vidu S2-Avatar supports real-time 720p video generation, generation with dynamic references that can be updated at any moment, and stronger instruction following, such as dancing. Vidu S2-Editing supports editing a video stream in real time, including style rendering, clothing replacement, character replacement, and background replacement. Experiments show that Vidu S2 outperforms all baselines.

@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # Dynamic Programming
 
-[한국어 버전](/ko/concepts/computer-science/dynamic-programming.md)
-
 > Dynamic programming solves problems by breaking them into overlapping subproblems: solve each distinct subproblem once, store the answer, and reuse it — turning exponential brute force into polynomial time.
 
 ## Definition

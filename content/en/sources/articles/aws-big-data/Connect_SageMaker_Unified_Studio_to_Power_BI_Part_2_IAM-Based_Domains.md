@@ -10,7 +10,7 @@ tags: [aws, sagemaker, athena, power-bi, odbc, iam, iam-identity-center, bi]
 
 # Connect SageMaker Unified Studio to Power BI Part 2 - IAM-Based Domains
 
-[한국어 버전](../../../../ko/sources/articles/aws/Connect_SageMaker_Unified_Studio_to_Power_BI_Part_2_IAM-Based_Domains.md)
+
 
 **Authors**: Ramesh H Singh, Krishna Atluru, Armando Segnini, Saushthav Saxena, Gaurav Sharma · **Published**: 2026-09-15 · **Source**: [AWS Big Data Blog](https://aws.amazon.com/blogs/big-data/connect-amazon-sagemaker-unified-studio-to-microsoft-power-bi-part-2-iam-based-domains/)
 

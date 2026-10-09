@@ -8,8 +8,6 @@ locale: en
 
 # Processes and Threads
 
-> [한국어 버전](/ko/concepts/computer-science/processes-and-threads)
-
 A **process** is a running program with its own isolated address space; a **thread** is the smallest schedulable unit of execution inside a process, sharing the process's memory with its sibling threads. Everything about concurrency — performance, correctness bugs, and OS design — flows from this distinction.
 
 ## Definition

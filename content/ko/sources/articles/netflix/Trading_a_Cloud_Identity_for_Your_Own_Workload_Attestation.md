@@ -12,7 +12,7 @@ published_date: 2026-09-25
 
 출처: Dhruv Pratap, Netflix Technology Blog, 2026-09-25.
 
-[English version](../../../../en/sources/articles/netflix/Trading_a_Cloud_Identity_for_Your_Own_Workload_Attestation.md)
+
 
 **핵심 요약**: Netflix의 사내 서비스 간 인증은 사설 PKI인 Metatron 위에서 동작하며, 모든 워크로드는 단기 수명의 X.509 인증서를 받습니다. 문제는 Amazon EMR 같은 매니지드 컴퓨트에서 시작하는 워크로드가 AWS 신원만 들고 있다는 점입니다. 이 글은 IAM 역할 외에 아무것도 없는 상태로 부팅한 Spark 잡이 어떻게 일급 citizen 사내 신원을 갖게 되는지를 설명합니다. 플러그인은 프리사인된 STS URL과 컨트롤 평면이 서명한 메타데이터를 **하나의 애테스테이션 요청**에 담아 보내고, Identity 서비스가 둘 다를 검증하며, Data Project 서비스가 신원-역할 매핑의 권위 있는 출처로 기능합니다. 흥미로운 지점은 암호학이 아니라, **어느 쪽도 단독으로 신원을 발급하지 않는다**는 것입니다.
 

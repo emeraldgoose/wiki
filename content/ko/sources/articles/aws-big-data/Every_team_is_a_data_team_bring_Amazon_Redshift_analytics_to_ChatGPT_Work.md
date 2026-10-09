@@ -13,7 +13,7 @@ locale: "ko"
 
 이 플러그인을 통해 권한이 있는 모든 팀원은 자연어로 질문을 하고, Amazon Redshift 및 데이터 레이크의 관리되는 데이터를 분석하며, 공유 가능한 대시보드를 생성할 수 있습니다. 이 모든 과정은 ChatGPT Work의 대화형 인터페이스 내에서 이루어집니다.
 
-[English Version](/en/sources/articles/aws-big-data/Every_team_is_a_data_team_bring_Amazon_Redshift_analytics_to_ChatGPT_Work)
+
 
 ## 개념: 데이터 접근의 민주화
 

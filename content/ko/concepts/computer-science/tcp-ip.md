@@ -8,8 +8,6 @@ locale: ko
 
 # TCP/IP
 
-> [English version](/en/concepts/computer-science/tcp-ip)
-
 **TCP/IP**는 인터넷의 프로토콜 묶음이다. **IP**는 호스트 간 패킷을 최선형(best-effort)으로 배달하고, **TCP**는 그 위에 신뢰성·순서·혼잡 제어가 보장되는 바이트 스트림을 구축한다. 분산 시스템의 거의 모든 동작 — 지연, 처리량 붕괴, 연결 설정 비용 — 은 이 두 계층으로 거슬러 올라간다.
 
 ## 정의

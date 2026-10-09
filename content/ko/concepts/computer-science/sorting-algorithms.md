@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # 정렬 알고리즘 (Sorting Algorithms)
 
-[English version](/en/concepts/computer-science/sorting-algorithms.md)
-
 > 정렬은 항목을 순서대로 배열하는 가장 많이 연구된 알고리즘 분야다. 비교 정렬은 최악의 경우 Ω(n log n)이 들고, 비비교 정렬은 키의 구조를 이용해 O(n)에 도달한다.
 
 ## 정의

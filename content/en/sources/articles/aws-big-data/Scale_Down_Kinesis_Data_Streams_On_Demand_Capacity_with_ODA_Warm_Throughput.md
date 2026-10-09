@@ -10,7 +10,7 @@ tags: [aws, kinesis, streaming, serverless, cost-optimization, cloudwatch]
 
 # Scale Down Kinesis Data Streams On-Demand Capacity with ODA Warm Throughput
 
-[한국어 버전](../../../../ko/sources/articles/aws/Scale_Down_Kinesis_Data_Streams_On_Demand_Capacity_with_ODA_Warm_Throughput.md)
+
 
 **Authors**: Pratik Patel, Varsha Palepu, Priyanka Chaudhary · **Published**: 2026-09-14 · **Source**: [AWS Big Data Blog](https://aws.amazon.com/blogs/big-data/scale-down-kinesis-data-streams-on-demand-capacity-with-oda-warm-throughput/)
 

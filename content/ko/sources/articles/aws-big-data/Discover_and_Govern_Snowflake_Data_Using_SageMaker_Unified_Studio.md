@@ -10,7 +10,7 @@ tags: [aws, sagemaker, snowflake, glue, data-quality, catalog, governance, ko]
 
 # SageMaker Unified Studio로 Snowflake 데이터를 검색하고 거버넌스하기
 
-[English version](../../../../en/sources/articles/aws/Discover_and_Govern_Snowflake_Data_Using_SageMaker_Unified_Studio.md)
+
 
 **저자**: Marco Duarte López, Diego Ortiz · **발행**: 2026-09-16 · **출처**: [AWS Big Data Blog](https://aws.amazon.com/blogs/big-data/discover-and-govern-snowflake-data-using-sagemaker-unified-studio/)
 

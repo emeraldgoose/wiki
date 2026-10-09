@@ -10,7 +10,7 @@ tags: [aws, redshift, glue, lake-formation, databricks, unity-catalog, iceberg, 
 
 # How United Airlines Uses Amazon Redshift and Glue Data Catalog Federation to Query Databricks-Managed Data
 
-[한국어 버전](../../../../ko/sources/articles/aws/How_United_Airlines_Uses_Amazon_Redshift_and_Glue_Data_Catalog_Federation.md)
+
 
 **Authors**: Vaibhav Agrawal (AWS), Ankit Aggarwal and Raja Kalluri (United Airlines) · **Published**: 2026-09-15 · **Source**: [AWS Big Data Blog](https://aws.amazon.com/blogs/big-data/how-united-airlines-uses-amazon-redshift-and-aws-glue-data-catalog-federation-to-query-databricks-managed-data/)
 

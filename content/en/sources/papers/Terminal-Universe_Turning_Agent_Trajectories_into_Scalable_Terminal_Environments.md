@@ -9,7 +9,7 @@ published: 2026-09-03
 
 # Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments
 
-> 한국어: [한국어 버전](/ko/sources/papers/Terminal-Universe_Turning_Agent_Trajectories_into_Scalable_Terminal_Environments)
+
 
 **arXiv**: [2609.04148](https://arxiv.org/abs/2609.04148) | **HuggingFace**: [papers/2609.04148](https://huggingface.co/papers/2609.04148) | **Published**: 2026-09-03 | **Submitted by**: taesiri | **Paper of the day #2 (2026-09-04)**
 

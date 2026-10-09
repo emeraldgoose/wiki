@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # Sorting Algorithms
 
-[한국어 버전](/ko/concepts/computer-science/sorting-algorithms.md)
-
 > Sorting arranges items in order and is the most-studied algorithm family: comparison sorts cost Ω(n log n) in the worst case, while non-comparison sorts exploit key structure to reach O(n).
 
 ## Definition

@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # Complexity Classes
 
-> 한국어: [한국어 버전](/ko/concepts/computer-science/complexity-classes)
-
 **Summary:** Complexity classes group decision problems by the resources (time, space, randomness) needed to solve or verify them. The most important pair is **P** (solvable in polynomial time) versus **NP** (verifiable in polynomial time); whether they are equal is the most famous open problem in computer science. For engineers, the practical payoff is recognizing **NP-complete** problems so you stop hunting for an exact polynomial algorithm and switch to approximation, heuristics, or parameterized approaches.
 
 ## Definition

@@ -8,8 +8,6 @@ locale: en
 
 # Compilers
 
-> [한국어 버전](/ko/concepts/computer-science/compilers)
-
 A **compiler** translates source code into an executable form — machine code, bytecode, or another language — through a pipeline of lexing, parsing, semantic analysis, intermediate representation, optimization, and code generation. The pipeline structure is what makes languages portable: front ends understand syntax, back ends understand machines, and a shared IR lets M languages target N architectures with M+N components instead of M×N.
 
 ## Definition

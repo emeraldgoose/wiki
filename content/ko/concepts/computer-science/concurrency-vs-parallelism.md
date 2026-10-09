@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # 동시성 대 병렬성 (Concurrency vs Parallelism)
 
-[English version](/en/concepts/computer-science/concurrency-vs-parallelism.md)
-
 > 동시성(concurrency)은 많은 일을 한꺼번에 *다루는* 것(수명 겹침, 엇갈린 실행)이고, 병렬성(parallelism)은 많은 일을 *동시에 하는* 것(여러 코어의 동시 실행)이다. 올바른 동시 프로그램은 공유 상태의 문제 — 레이스, 교착상태, 가시성 — 를 길들여야 한다.
 
 ## 정의

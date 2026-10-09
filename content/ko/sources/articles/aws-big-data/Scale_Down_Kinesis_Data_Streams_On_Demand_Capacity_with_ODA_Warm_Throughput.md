@@ -10,7 +10,7 @@ tags: [aws, kinesis, streaming, serverless, cost-optimization, cloudwatch, ko]
 
 # ODA 웜 처리량으로 Kinesis Data Streams 온디맨드 용량 축소하기
 
-[English version](../../../../en/sources/articles/aws/Scale_Down_Kinesis_Data_Streams_On_Demand_Capacity_with_ODA_Warm_Throughput.md)
+
 
 **저자**: Pratik Patel, Varsha Palepu, Priyanka Chaudhary · **발행**: 2026-09-14 · **출처**: [AWS Big Data Blog](https://aws.amazon.com/blogs/big-data/scale-down-kinesis-data-streams-on-demand-capacity-with-oda-warm-throughput/)
 

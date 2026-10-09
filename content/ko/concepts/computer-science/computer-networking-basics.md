@@ -8,8 +8,6 @@ locale: ko
 
 # 컴퓨터 네트워킹 기초
 
-> [English version](/en/concepts/computer-science/computer-networking-basics)
-
 **컴퓨터 네트워킹**은 계층 프로토콜로 기계 사이 바이트를 옮긴다. 각 계층이 하나의 문제를 푼다. 누구(주소 지정), 얼마나 멀리(라우팅), 믿음직하게 아니면 빠르게(전송), 무슨 뜻인지(애플리케이션). 계층화가 요점이다. IP는 TCP의 보장을 몰라도 라우팅하고, HTTP는 어느 광섬유인지 몰라도 동작한다.
 
 ## 정의

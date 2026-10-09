@@ -9,7 +9,7 @@ published: 2026-09-03
 
 # LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes
 
-> 한국어: [한국어 버전](/ko/sources/papers/LLaDA-Image_Building_Strong_Image_Generators_with_Fully_Open_Training_Recipes)
+
 
 **arXiv**: [2609.03796](https://arxiv.org/abs/2609.03796) | **HuggingFace**: [papers/2609.03796](https://huggingface.co/papers/2609.03796) | **Published**: 2026-09-03 | **Submitted by**: Haoxing Chen (Inclusion AI) | **Paper of the day #3 (2026-09-04)**
 

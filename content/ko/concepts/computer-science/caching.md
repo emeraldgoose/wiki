@@ -8,8 +8,6 @@ locale: ko
 
 # 캐싱
 
-> [English version](/en/concepts/computer-science/caching)
-
 **캐시**는 느린 원본(source of truth) 앞의 더 빠르고 작은 저장소로, 반복 요청을 재계산·재조회 없이 처리한다. 캐싱은 가장 가성비 좋은 성능 기법이며, 무효화는 Phil Karlton의 유명한 말대로 컴퓨터 과학의 두 가지 어려운 문제 중 하나다.
 
 ## 정의

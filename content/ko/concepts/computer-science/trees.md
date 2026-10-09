@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # 트리 (Trees)
 
-[English version](/en/concepts/computer-science/trees.md)
-
 > 트리는 사이클 없는 간선으로 연결된 노드들의 계층 구조다. 하나의 루트, 부모–자식 링크, 하위 트리들로 구성되며 탐색·순서·우선순위 연산을 로그 시간에 수행한다.
 
 ## 정의

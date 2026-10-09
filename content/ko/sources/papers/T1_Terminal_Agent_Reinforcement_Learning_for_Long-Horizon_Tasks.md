@@ -7,7 +7,7 @@ authors: "Junyao Yang, Yucheng Shi, Zhongzhi Li, Ruhan Wang, Zongxia Li, Haitao 
 locale: ko
 ---
 
-[English Version](../../../en/sources/papers/T1_Terminal_Agent_Reinforcement_Learning_for_Long-Horizon_Tasks.md)
+
 
 # T1: 장기 터미널 에이전트를 위한 강화학습 (Terminal Agent Reinforcement Learning for Long-Horizon Tasks)
 

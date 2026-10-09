@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # Distributed Consensus
 
-> 한국어: [한국어 버전](/ko/concepts/computer-science/distributed-consensus)
-
 **Summary:** Distributed consensus lets a group of machines agree on a single value (or an ordered log of values) even when some machines crash or messages are delayed. It is the foundation of replicated state machines — etcd, ZooKeeper, Consul — and therefore of leader election, configuration stores, and strongly consistent metadata in every orchestrator. The core results: **FLP impossibility** (no deterministic protocol in fully asynchronous networks with one faulty process), and practical protocols **Paxos** and **Raft** that work around it with timeouts, majorities, and leader election.
 
 ## Definition

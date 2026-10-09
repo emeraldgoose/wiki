@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # 동적 프로그래밍 (Dynamic Programming)
 
-[English version](/en/concepts/computer-science/dynamic-programming.md)
-
 > 동적 프로그래밍은 겹치는 부분문제로 문제를 나눠 푼다. 서로 다른 부분문제마다 한 번씩만 풀어 저장하고 재사용함으로써 지수 전수 탐색을 다항 시간으로 바꾼다.
 
 ## 정의

@@ -9,7 +9,7 @@ published: 2026-08-26
 
 # 데이터 스케일을 넘어서 — 비전-언어-액션 모델의 표현 중심 지속 사전학습
 
-> English: [English version](/en/sources/papers/Beyond_Data_Scaling)
+
 
 **arXiv**: [2608.27550](https://arxiv.org/abs/2608.27550) | **HuggingFace**: [papers/2608.27550](https://huggingface.co/papers/2608.27550) | **Published**: 2026-08-26 | **조직**: StarVLA | **프로젝트**: https://starvla.github.io/VLAct | **백본**: VLAct · Qwen3-VL-4B (`StarVLA/VLAct_Qwen3_Pretrain`)
 

@@ -7,7 +7,7 @@ authors: "Zhiwei Li, Lei Zhu, Hao Gu, Xiang Hu, Yan Wang, Haitao Mi, Sirui Han, 
 locale: ko
 ---
 
-[English Version](../../../en/sources/papers/SAS_Simple_Attention_Sparsification_via_End-to-End_Optimization_of_Context_Ranking.md)
+
 
 # SAS: 컨텍스트 랭킹의 종단간 최적화를 통한 단순 어텐션 희소화 (Simple Attention Sparsification via End-to-End Optimization of Context Ranking)
 

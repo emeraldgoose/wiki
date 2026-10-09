@@ -8,8 +8,6 @@ locale: en
 
 # Operating System Basics
 
-> [한국어 버전](/ko/concepts/computer-science/operating-system-basics)
-
 An **operating system** multiplexes hardware among programs while giving each the illusion of its own machine: its own CPU (processes/threads), its own memory (virtual address spaces), and its own disk (files). The kernel is the trusted arbiter in the middle — every abstraction is a deal where the OS trades a little overhead for isolation, fairness, and portability.
 
 ## Definition

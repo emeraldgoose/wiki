@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # 해시 테이블 (Hash Tables)
 
-[English version](/en/concepts/computer-science/hash-tables.md)
-
 > 해시 테이블은 키–값 쌍을 저장하고, 해시 함수로 키를 배열 인덱스로 변환하여 평균 O(1) 시간에 임의의 키를 찾는다. 불가피한 충돌은 체이닝이나 개방 주소법으로 해결한다.
 
 ## 정의

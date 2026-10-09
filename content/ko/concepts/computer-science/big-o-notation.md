@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # 빅오 표기법 (Big-O Notation)
 
-[English version](/en/concepts/computer-science/big-o-notation.md)
-
 > 빅오 표기법은 입력 크기가 커질 때 알고리즘의 실행 시간이나 메모리 사용량이 어떻게 증가하는지를 나타내는 점근적 상한으로, 하드웨어와 무관하게 알고리즘을 비교할 수 있게 한다.
 
 ## 정의

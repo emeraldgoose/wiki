@@ -8,8 +8,6 @@ locale: en
 
 # CAP Theorem
 
-> [한국어 버전](/ko/concepts/computer-science/cap-theorem)
-
 The **CAP theorem** states that a distributed data store can simultaneously guarantee at most two of three properties: **Consistency**, **Availability**, and **Partition tolerance**. Since network partitions cannot be wished away, the real design choice is how the system behaves *when a partition occurs*: refuse some requests (CP) or serve possibly stale data (AP).
 
 ## Definition

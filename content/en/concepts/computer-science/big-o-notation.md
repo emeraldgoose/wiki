@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # Big-O Notation
 
-[한국어 버전](/ko/concepts/computer-science/big-o-notation.md)
-
 > Big-O notation describes how an algorithm's running time or memory usage grows as input size grows — an asymptotic upper bound that lets engineers compare algorithms independently of hardware.
 
 ## Definition

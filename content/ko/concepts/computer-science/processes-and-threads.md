@@ -8,8 +8,6 @@ locale: ko
 
 # 프로세스와 스레드
 
-> [English version](/en/concepts/computer-science/processes-and-threads)
-
 **프로세스(process)** 는 독자적인 주소 공간을 가진 실행 중인 프로그램이고, **스레드(thread)** 는 프로세스 내부에서 스케줄링되는 가장 작은 실행 단위로, 같은 프로세스의 메모리를 공유한다. 동시성에 관한 성능·정확성·OS 설계의 모든 논의는 이 구분에서 출발한다.
 
 ## 정의

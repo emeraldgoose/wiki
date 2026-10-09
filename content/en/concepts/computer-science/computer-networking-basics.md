@@ -8,8 +8,6 @@ locale: en
 
 # Computer Networking Basics
 
-> [한국어 버전](/ko/concepts/computer-science/computer-networking-basics)
-
 **Computer networking** moves bytes between machines through layered protocols: each layer solves one problem — who (addressing), how far (routing), reliably or fast (transport), and what it means (application). The layering is the point: IP routes without caring what TCP guarantees, and HTTP works without knowing which fiber carries it.
 
 ## Definition

@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # Hash Tables
 
-[한국어 버전](/ko/concepts/computer-science/hash-tables.md)
-
 > A hash table stores key–value pairs and finds any key in O(1) average time by converting the key into an array index with a hash function, resolving the inevitable collisions by chaining or open addressing.
 
 ## Definition

@@ -8,8 +8,6 @@ locale: en
 
 # Cryptography Basics
 
-> [한국어 버전](/ko/concepts/computer-science/cryptography-basics)
-
 **Cryptography** provides confidentiality, integrity, and authenticity for data in transit and at rest — built from a small set of primitives (ciphers, hashes, MACs, signatures) composed into protocols like TLS. The mathematics is strong; nearly all real failures come from misusing the primitives, not breaking them.
 
 ## Definition

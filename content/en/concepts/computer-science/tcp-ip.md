@@ -8,8 +8,6 @@ locale: en
 
 # TCP/IP
 
-> [한국어 버전](/ko/concepts/computer-science/tcp-ip)
-
 **TCP/IP** is the protocol suite of the internet: **IP** provides best-effort delivery of packets between hosts, and **TCP** builds reliable, ordered, congestion-aware byte streams on top. Nearly every distributed system behavior — latency, throughput collapse, connection setup cost — traces back to these two layers.
 
 ## Definition

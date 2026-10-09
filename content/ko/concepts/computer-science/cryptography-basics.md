@@ -8,8 +8,6 @@ locale: ko
 
 # 암호학 기초
 
-> [English version](/en/concepts/computer-science/cryptography-basics)
-
 **암호학**은 전송 중·저장 중 데이터에 기밀성, 무결성, 진정성을 준다. 소수의 기본 요소(암호, 해시, MAC, 서명)를 TLS 같은 프로토콜로 조합해 만든다. 수학은 강하다. 실제 실패는 거의 전부 기본 요소를 *깨서*가 아니라 *잘못 써서* 일어난다.
 
 ## 정의

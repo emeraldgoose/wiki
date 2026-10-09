@@ -37,6 +37,8 @@ STRINGS = {
         "nav_categories": "Categories",
         "nav_sources": "Sources",
         "footer": "Verified against the original source.",
+        "switch": "Read this page in Korean",
+        "switch_missing": "No Korean version of this page yet — open the Korean portal",
     },
     "ko": {
         "lang": "ko",
@@ -54,6 +56,8 @@ STRINGS = {
         "nav_categories": "카테고리",
         "nav_sources": "출처",
         "footer": "원문 대조 검증 완료.",
+        "switch": "이 문서를 영어로 읽기",
+        "switch_missing": "이 문서의 영어 버전이 아직 없습니다 — 영어 포털로 이동",
     },
 }
 
@@ -240,6 +244,57 @@ def rewrite_md_links(body, md_rel_path, lang):
     return LINK.sub(sub, body)
 
 
+# A line that is nothing but a cross-language "other version" pointer, e.g.
+# `[English version](../../../../en/....md)` or `> 한국어: [한국어 버전](/ko/...)`.
+# The header switch now covers language switching (and points at the live
+# counterpart instead of a possibly renamed target), so these redundant lines
+# are dropped. Only standalone lines match: an inline reference inside real
+# prose is left alone.
+_VERSION_LABEL = re.compile(
+    r"^(?:english(?:\s+versions?)?|korean(?:\s+versions?)?|한국어(?:\s*버전)?)\s*$",
+    re.IGNORECASE,
+)
+_VERSION_PREFIX = re.compile(
+    r"^(?:english|korean|한국어)(?:\s+versions?)?\s*:\s*$", re.IGNORECASE
+)
+_VERSION_LINK = re.compile(r"^(.*?)\[([^\]]*)\]\(([^)]*)\)\s*$")
+_VERSION_WORD = re.compile(r"versions?|버전", re.IGNORECASE)
+
+
+def _is_version_link_line(line, lang):
+    other = "ko" if lang == "en" else "en"
+    s = line.strip()
+    if s.startswith(">"):
+        s = s[1:].strip()
+    m = _VERSION_LINK.match(s)
+    if not m:
+        return False
+    prefix = m.group(1).strip()
+    # A leading flag emoji or similar marker is decoration, not content.
+    label = re.sub(r"^[^\w\s]+", "", m.group(2)).strip()
+    href = m.group(3).strip()
+    if _VERSION_LABEL.match(label):
+        if not prefix:
+            # A bare "[English](...)"-style line is only a version pointer
+            # when it says "version" outright or targets the other language.
+            return bool(_VERSION_WORD.search(label)
+                        or f"/{other}/" in href or f"/{other}/" in label)
+        return bool(_VERSION_PREFIX.match(prefix))
+    # Link text is something else (e.g. a bare URL as the label) but the
+    # line is introduced as a version pointer to the other language.
+    if _VERSION_PREFIX.match(prefix):
+        target = href + " " + label
+        return f"/{other}/" in target or f"/wiki/{other}/" in target
+    return False
+
+
+def strip_version_links(body, lang):
+    """Drop standalone other-language version-pointer lines from a body."""
+    return "\n".join(
+        line for line in body.split("\n") if not _is_version_link_line(line, lang)
+    )
+
+
 def markdown_to_html(body, md_rel_path, lang):
     out = []
     lines = body.split("\n")
@@ -356,12 +411,19 @@ def depth_to_root(rel_path):
     return "../" * (len(rel_path.split("/")) - 1)
 
 
-def render_page(title, meta, body_html, lang, rel_path, toc_html=""):
+def render_page(title, meta, body_html, lang, rel_path, toc_html="",
+                other_href=None, other_has_page=True):
     s = STRINGS[lang]
     root = depth_to_root(rel_path)
     other = "ko" if lang == "en" else "en"
-    # Served site roots are /en and /ko.
-    other_root = f"/{other}/"
+    # The header switch points at the same document in the other language so
+    # readers stay in context. Without a counterpart it falls back to the
+    # other portal (visually dimmed, title says so) instead of 404-ing.
+    if other_href is None:
+        other_href = f"/{other}/index.html"
+        other_has_page = False
+    switch_class = "lang-switch" + ("" if other_has_page else " is-fallback")
+    switch_title = s["switch"] if other_has_page else s["switch_missing"]
     other_label = other.upper()
 
     meta_bits = []
@@ -405,7 +467,7 @@ def render_page(title, meta, body_html, lang, rel_path, toc_html=""):
       <a href="{root}index.html#categories">{s['nav_categories']}</a>
       <a href="{root}index.html#sources">{s['nav_sources']}</a>
     </nav>
-    <a class="lang-switch" href="{other_root}index.html">{other_label}</a>
+    <a class="{switch_class}" href="{other_href}" hreflang="{other}" title="{escape(switch_title)}">{other_label}</a>
   </div>
 </header>
 
@@ -539,6 +601,7 @@ def build_lang(lang):
 
             meta, body = parse_frontmatter(raw)
             body = rewrite_md_links(body, rel, lang)
+            body = strip_version_links(body, lang)
             body_html = markdown_to_html(body, rel, lang)
             body_html = add_anchors(body_html)
             # The body's leading "# <title>" duplicates the <h1> in the header.
@@ -555,8 +618,18 @@ def build_lang(lang):
             out_path = os.path.join(out_root, out_rel)
             os.makedirs(os.path.dirname(out_path), exist_ok=True)
             toc = collect_toc(body_html)
+            # Header language switch: same document in the other language when
+            # its source exists, otherwise the other portal as fallback.
+            other = "ko" if lang == "en" else "en"
+            if os.path.isfile(os.path.join(CONTENT_DIR, other, rel)):
+                other_href = f"/{other}/{out_rel}"
+                other_has_page = True
+            else:
+                other_href = f"/{other}/index.html"
+                other_has_page = False
             with open(out_path, "w", encoding="utf-8") as f:
-                f.write(render_page(title, meta, body_html, lang, out_rel, toc))
+                f.write(render_page(title, meta, body_html, lang, out_rel, toc,
+                                    other_href, other_has_page))
             written += 1
 
     print(f"  {lang}: wrote {written} pages")

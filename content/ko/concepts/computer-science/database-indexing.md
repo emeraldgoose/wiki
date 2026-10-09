@@ -8,8 +8,6 @@ locale: ko
 
 # 데이터베이스 인덱싱
 
-> [English version](/en/concepts/computer-science/database-indexing)
-
 **데이터베이스 인덱스**는 테이블 전체 스캔 없이 행을 찾게 하는 보조 자료구조다 — 쓰기 오버헤드와 저장 공간을 읽기 속도와 맞바꾼다. 인덱스 설계(어떤 컬럼을, 어떤 순서로, 어떤 종류로)는 관계형 성능 작업에서 지렛대가 가장 큰 활동이다.
 
 ## 정의

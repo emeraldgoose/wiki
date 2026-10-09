@@ -8,8 +8,6 @@ published: 2026-09-06
 
 # 그래프 (Graphs)
 
-[English version](/en/concepts/computer-science/graphs.md)
-
 > 그래프는 개체를 정점, 관계를 간선으로 모델링한다. 너비 우선·깊이 우선 탐색 두 가지 순회가 네트워크·지도·의존성 시스템의 최단 경로, 연결성, 위상 순서, 사이클 검출을 풀어낸다.
 
 ## 정의

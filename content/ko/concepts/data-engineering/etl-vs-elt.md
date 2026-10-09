@@ -8,8 +8,6 @@ published: 2026-09-07
 
 # ETL과 ELT
 
-> English: [English version](/en/concepts/data-engineering/etl-vs-elt)
-
 **요약:** ETL(Extract-Transform-Load)은 데이터를 웨어하우스에 적재하기 **전**에 변환하고, ELT(Extract-Load-Transform)는 원본 데이터를 **먼저** 적재한 뒤 목적지 플랫폼 안에서 변환한다. ETL은 엄격한 스키마, 레거시 웨어하우스, 규제 대상 파이프라인에 맞고, ELT는 저장소가 싸고 연산이 탄력적인 클라우드 웨어하우스와 레이크하우스에 맞는다. 선택에 따라 비용, 지연, 디버깅 방식, 로직 변경 주체가 달라진다.
 
 ## 정의

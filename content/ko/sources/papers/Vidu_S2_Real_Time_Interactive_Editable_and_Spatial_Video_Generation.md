@@ -8,7 +8,7 @@ authors: ["Jintao Zhang", "Kai Jiang", "Jintao Chen", "Xu Wang", "Deyuan Liu", "
 
 # Vidu S2: 실시간 인터랙티브, 편집 가능 및 공간 비디오 생성
 
-[English version](content/en/sources/papers/Vidu_S2_Real_Time_Interactive_Editable_and_Spatial_Video_Generation.md)
+
 
 ## 초록
 본 논문에서는 실시간 인터랙티브 디지털 캐릭터 모델인 Vidu S2-Avatar와 실시간 비디오 편집 모델인 Vidu S2-Editing으로 구성된 Vidu S2를 제시합니다. 또한, Vidu S2-Avatar와 Vidu S2-Editing 모두에 대해 실시간 공간 비디오 생성의 가능성을 탐구합니다. Vidu S1과 비교하여, Vidu S2-Avatar는 실시간 720p 비디오 생성, 언제든지 업데이트 가능한 동적 참조 생성, 그리고 춤과 같은 더 강력한 지침 수행 능력을 지원합니다. Vidu S2-Editing은 스타일 렌더링, 의상 교체, 캐릭터 교체, 배경 교체를 포함하여 비디오 스트림을 실시간으로 편집할 수 있습니다. 실험 결과, Vidu S2는 모든 베이스라인 모델보다 우수한 성능을 보였습니다.

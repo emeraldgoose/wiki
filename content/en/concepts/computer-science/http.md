@@ -8,8 +8,6 @@ locale: en
 
 # HTTP
 
-> [한국어 버전](/ko/concepts/computer-science/http)
-
 **HTTP** (Hypertext Transfer Protocol) is the request-response application protocol of the web: a client sends a method, target, headers, and optional body; a server returns a status, headers, and optional body. Every API, page load, and webhook is a conversation in this grammar.
 
 ## Definition
