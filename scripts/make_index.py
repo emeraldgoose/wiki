@@ -302,7 +302,7 @@ def collect(lang):
 
             records.append({
                 "rel": rel,
-                "href": url_path("/wiki/%s/%s.html" % (lang, rel[:-3])),
+                "href": url_path("/%s/%s.html" % (lang, rel[:-3])),
                 "title": title,
                 "desc": meta.get("description", ""),
                 "date": resolve_date(meta),
@@ -520,7 +520,7 @@ def render(records, t, lang, other_lang_code):
 <body class="portal">
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="/wiki/{lang}/">{e(t['title'])}</a>
+    <a class="brand" href="/{lang}/">{e(t['title'])}</a>
     <nav class="header-nav">
       <a href="#recent">{e(t['recent'])}</a>
       <a href="#categories">{e(t['by_category'])}</a>
@@ -528,7 +528,7 @@ def render(records, t, lang, other_lang_code):
       <a href="#tags">{e(t['by_tag'])}</a>
       <a href="pending.html">{e(t['pending_title'])}</a>
     </nav>
-    <a class="lang-switch" href="/wiki/{other_lang_code}/">{e(other['other_lang'])}</a>
+    <a class="lang-switch" href="/{other_lang_code}/">{e(other['other_lang'])}</a>
   </div>
 </header>
 
@@ -644,7 +644,7 @@ def render_pending(pending, t, lang, other):
   <div class="wrap header-inner">
     <a class="brand" href="index.html">{e(t['title'])}</a>
     <nav class="header-nav"><a href="index.html">{e(t['recent'])}</a></nav>
-    <a class="lang-switch" href="/wiki/{other}/pending.html">{other.upper()}</a>
+    <a class="lang-switch" href="/{other}/pending.html">{other.upper()}</a>
   </div>
 </header>
 <div class="wrap layout">
@@ -680,7 +680,7 @@ def render_landing(counts):
     anything else (including absent) -> en/. Uses location.replace so the
     landing never stays in history. The en/ko cards remain as a fallback
     for no-JS / direct-file use. Relative targets work both as a file and
-    when static/ is served at /wiki/.
+    when static/ is served at /.
     """
     en_n = counts.get("en", 0)
     ko_n = counts.get("ko", 0)
@@ -769,11 +769,11 @@ def main():
             print(f"  wrote static/{lang}/pending.html ({len(pending)} pending)")
     landing = render_landing(counts)
     redirects = (
-        "# Cloudflare Pages: serve the /wiki/<lang>/ URL namespace from the\n"
-        "# static/en|ko output dirs. 200 keeps the /wiki/... URL in the bar\n"
-        "# (matches serve_wiki.py locally), so every absolute /wiki/... link\n"
-        "# in the built pages resolves without moving files.\n"
-        "/wiki/* /:splat 200\n"
+        "# Cloudflare Pages: canonical URLs are /en/... and /ko/....\n"
+        "# Any lingering /wiki/... address (old links, bookmarks) is moved\n"
+        "# permanently to the clean URL, so the /wiki/ prefix never stays\n"
+        "# in the address bar (it also broke relative asset paths).\n"
+        "/wiki/* /:splat 301\n"
     )
     if args.dry_run:
         print(f"  [dry-run] static/index.html would be {len(landing):,}B")
@@ -785,7 +785,7 @@ def main():
         print(f"  wrote static/index.html (en={counts.get('en', 0)}, ko={counts.get('ko', 0)})")
         with open(os.path.join(STATIC_ROOT, "_redirects"), "w", encoding="utf-8") as fh:
             fh.write(redirects)
-        print("  wrote static/_redirects (/wiki/* -> /:splat 200)")
+        print("  wrote static/_redirects (/wiki/* -> /:splat 301)")
     print("Index generation complete")
 
 

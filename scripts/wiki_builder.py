@@ -176,14 +176,14 @@ def _candidates(md_rel_path, href, lang):
 
 
 def rewrite_md_links(body, md_rel_path, lang):
-    """Convert .md links to .html under /wiki/<lang>/ served paths.
+    """Convert .md links to .html under /<lang>/ served paths.
 
     Cross-language links appear in several forms: markdown links to
     ../ko/<path>.md, bare language switches like /ko/concepts/x or
     /wiki/ko/x, and content/ko/<path>.md. All must resolve to the sibling
-    language's page under the served site root, i.e. /wiki/<other>/..., so
+    language's page under the served site root, i.e. /<other>/..., so
     the link works both on disk and in the browser. Same-language absolute
-    links (/en/...) are normalised to /wiki/en/... too.
+    links (/en/...) are normalised to /en/... too.
     """
     other = "ko" if lang == "en" else "en"
     prefix = f"../{other}/"
@@ -198,21 +198,21 @@ def rewrite_md_links(body, md_rel_path, lang):
             return label
         if href.startswith(prefix):
             rest = href[len(prefix) :][: -len(".md")]
-            return f"[{label}](/wiki/{other}/{rest}.html)"
-        # /ko/... or /wiki/ko/... -> sibling language root
+            return f"[{label}](/{other}/{rest}.html)"
+        # /ko/... or legacy /wiki/ko/... -> sibling language root
         for lead in (f"/{other}/", f"/wiki/{other}/"):
             if href.startswith(lead):
                 rest = href[len(lead) :]
                 if rest.endswith(".md"):
                     rest = rest[: -len(".md")]
-                return f"[{label}](/wiki/{other}/{rest}.html)"
-        # /en/... or /wiki/en/... -> this language's root
+                return f"[{label}](/{other}/{rest}.html)"
+        # /en/... or legacy /wiki/en/... -> this language's root
         for lead in (f"/{lang}/", f"/wiki/{lang}/"):
             if href.startswith(lead):
                 rest = href[len(lead) :]
                 if rest.endswith(".md"):
                     rest = rest[: -len(".md")]
-                return f"[{label}](/wiki/{lang}/{rest}.html)"
+                return f"[{label}](/{lang}/{rest}.html)"
         if not href.endswith(".md"):
             return match.group(0)
         for cand in _candidates(md_rel_path, href, lang):
@@ -223,7 +223,7 @@ def rewrite_md_links(body, md_rel_path, lang):
             # does not depend on build ordering
             if not os.path.exists(os.path.join("content", cand_lang, cand_rest)):
                 continue
-            return f"[{label}](/wiki/{cand_lang}/{cand_rest[: -len('.md')]}.html)"
+            return f"[{label}](/{cand_lang}/{cand_rest[: -len('.md')]}.html)"
         # unresolved by convention: fall back to a unique basename match in
         # the content tree (handles links with a miscounted number of ../)
         for l in (lang, other):
@@ -233,7 +233,7 @@ def rewrite_md_links(body, md_rel_path, lang):
             if len(hits) == 1:
                 cand_lang, cand_rest = _lang_of(hits[0].replace(os.sep, "/"))
                 if cand_lang:
-                    return f"[{label}](/wiki/{cand_lang}/{cand_rest[: -len('.md')]}.html)"
+                    return f"[{label}](/{cand_lang}/{cand_rest[: -len('.md')]}.html)"
         # genuinely unresolvable: leave the original markup untouched
         return match.group(0)
 
@@ -360,8 +360,8 @@ def render_page(title, meta, body_html, lang, rel_path, toc_html=""):
     s = STRINGS[lang]
     root = depth_to_root(rel_path)
     other = "ko" if lang == "en" else "en"
-    # Served site roots are /wiki/en and /wiki/ko.
-    other_root = f"/wiki/{other}/"
+    # Served site roots are /en and /ko.
+    other_root = f"/{other}/"
     other_label = other.upper()
 
     meta_bits = []

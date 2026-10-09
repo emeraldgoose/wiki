@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Serve static/en + static/ko the way nginx does: /wiki/en/... and /wiki/ko/....
+"""Serve static/en + static/ko: /en/... and /ko/....
 
 Local verification harness only. Mirrors the production route so absolute
-/wiki/<lang>/... hrefs in the generated index resolve exactly as they do on
-the real host. Bare / and /wiki/ 302-redirect by Accept-Language
-(ko* -> ko, anything else incl. absent -> en); the static/index.html landing
-does the same via navigator.language for non-HTTP (file://) use.
+/<lang>/... hrefs in the generated index resolve exactly as they do on
+the real host. Bare / serves the static/index.html locale landing (which
+302-redirects by Accept-Language here, by navigator.language as a file).
+Legacy /wiki/... addresses are still served from the same files.
 """
 
 import http.server
@@ -58,7 +58,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         if parts and parts not in (["wiki"], ["static"]):
             return False
         lang = self._preferred_lang()
-        base = "/static/" if parts == ["static"] else "/wiki/"
+        base = "/static/" if parts == ["static"] else "/"
         qs = self.path.split("?", 1)[1] if "?" in self.path else ""
         loc = f"{base}{lang}/" + (("?" + qs) if qs else "")
         body = f"Redirecting to {loc}\n".encode()
@@ -138,5 +138,5 @@ class Server(socketserver.ThreadingTCPServer):
 
 if __name__ == "__main__":
     with Server(("127.0.0.1", PORT), Handler) as httpd:
-        print(f"serving landing + /wiki/en and /wiki/ko from static/ on http://127.0.0.1:{PORT}", flush=True)
+        print(f"serving landing + /en and /ko from static/ on http://127.0.0.1:{PORT}", flush=True)
         httpd.serve_forever()
