@@ -66,7 +66,125 @@ python3 scripts/serve_wiki.py 8900  # 로컬 확인 (http://localhost:8900/)
   언어 버튼이 그 문서를 가리키는지 본다.
 - `static/`은 빌드 산출물이라 git에 올리지 않는다 (`.gitignore`).
 
-## 5. 흔한 실수
+## 5. 외부 문서 가져오기 (수집 파이프라인)
+
+### 5.1 아티클 — RSS 자동 수집
+
+아티클(`sources/articles/`)은 RSS/Atom 피드에서 자동 수집한다.
+
+```bash
+python3 scripts/collect_articles.py --year 2026
+python3 scripts/collect_articles.py --year 2026 --stubs   # stub까지 생성
+```
+
+- 수집 대상(`scripts/collect_articles.py` 상단 `FEEDS`):
+  `netflix`, `airbnb`, `spotify`, `aws-big-data`, `databricks`.
+- 동작: 각 피드를 읽어 올해(`--year`) 이후 발행글만 남기고,
+  `.index-backup/collected.json`에 제목·URL·날짜·출처 목록을 쓴다.
+  이 단계에서는 본문을 쓰지 않는다.
+- `--stubs`를 붙이면 미작성 글마다 양 언어에 자리표시자를 만든다:
+  `content/<lang>/sources/articles/<slug>/<제목슬러그>.md`
+  (`<slug>`은 `BLOG_SLUG` 매핑. 파일명은 제목에서 뽑은
+  `slugify` 결과이므로 발행처 원제와 대략 일치한다).
+- stub frontmatter는 `title`, `source_url`, `blog`,
+  `published_date`, `locale`, `status: pending`만 담고, 본문은
+  `[Content pending]` 한 줄이다.
+- 중복 판정은 `source_url` 기준이다. 피드 URL의 추적 쿼리(`?...`)와
+  프래그먼트(`#...`)를 떼고 정규화한 뒤 양 언어 기존 파일과 비교하므로,
+  이미 쓴 글은 다시 수집되지 않는다. `source_url`을 지우거나 바꾸면
+  중복 검사가 깨지니 유지한다.
+- stub을 정식 문서로 바꾸는 법: `status: pending` 줄을 지우고,
+  `description`, `tags` (§2 규칙), `published`를 채운 뒤 본문을 작성한다.
+  예시 완성형:
+
+  ```yaml
+  ---
+  title: "Accelerating Spark queries with Iceberg materialized views"
+  description: "한 줄 요약."
+  tags: [source, aws-big-data, spark, iceberg, ko]
+  locale: ko
+  source_url: "https://aws.amazon.com/blogs/big-data/..."
+  blog: aws-big-data
+  published: "2026-09-10"
+  ---
+  ```
+
+- stub 상태에서는 빌드가 페이지를 렌더링하되 메인 포털 목록에는 넣지 않고
+  `pending.html`로 분리한다. 빌드 끝의
+  `NOTE: N article(s) are still stubs`가 남은 분량이다.
+- 새 피드를 추가하려면 세 곳을 함께 고친다:
+  `collect_articles.py`의 `FEEDS` + `BLOG_SLUG`,
+  `make_index.py`의 `BLOG_LABEL`. 폴더명(`content/<lang>/sources/articles/<slug>/`)은
+  세 곳에서 동일해야 한다.
+
+### 5.2 논문 — 수동 수집 (HF Daily Papers + arXiv HTML)
+
+논문(`sources/papers/`)은 자동 수집 스크립트가 없으므로 수동으로 가져온다.
+`concepts/`, `guides/`도 마찬가지다 (§1 양식 준수).
+
+1. 고르기: [HuggingFace Daily Papers](https://huggingface.co/papers)에서
+   고른다. 날짜별(`?date=YYYY-MM-DD`)·주별 보기가 있고,
+   개별 페이지(`https://huggingface.co/papers/<arxiv_id>`)에 요약·코드 링크·추천수가 있다.
+2. 읽기: arXiv PDF를 직접 파싱하지 말고 HTML 버전을 쓴다.
+   - 공식 HTML: `https://arxiv.org/html/<arxiv_id>`
+     (예: `abs/2609.04199` → `html/2609.04199`. abs 페이지의 PDF 링크 밑 "HTML" 버튼.
+     2023-12 이후 TeX 제출분부터 제공되는 실험 기능이라 최신 논문은 대부분 된다)
+   - 구버전·변환 실패분은 미러: `https://ar5iv.org/html/<arxiv_id>`
+     (arxiv의 `x`를 `5`로 바꾸면 된다)
+3. 저장: `content/<lang>/sources/papers/`에 파일을 만든다.
+   파일명은 arXiv ID형(`2609-04199.md`) 또는 제목 슬러그형(`JIT-Agent.md`) 중 하나.
+   양 언어에 **같은 상대 경로**로 두면 언어 버튼이 서로 오간다.
+   frontmatter 완성형:
+
+  ```yaml
+  ---
+  title: "논문 제목"
+  description: "한 줄 요약. 포털 목록과 검색에 쓰인다."
+  tags: [source, paper, machine-learning, ko]
+  locale: ko
+  source_url: "https://arxiv.org/abs/xxxx.xxxxx"
+  arxiv_id: "xxxx.xxxxx"
+  published_date: 2026-08-30
+  authors: ["홍길동", "김철수"]
+  ---
+  ```
+
+- `source_url`은 반드시 arXiv abs URL로 남긴다 (중복 판정·출처 표기의 기준).
+  HF 페이지 URL은 본문 References에 따로 적는다.
+- HTML 변환이 깨지는 수식·표·그림은 PDF와 대조해서 고치고,
+  포털 footer의 "원문 대조 검증 완료" 기준을 맞춘다.
+
+### 5.3 개념 — sources로 보강·신설 (`concepts/`)
+
+개념 문서는 여러 원전(source)을 종합하는 문서다. 단일 원문 복사가 아니다.
+`sources/`에 글을 쓸 때마다 관련 개념을 확인한다:
+
+- 기존 개념이 있으면 보강한다:
+  1. 본문 맨 앞 `**원전**: ...` 줄에 새 원전을 덧붙인다.
+  2. 새 내용이 들어갈 섹션을 추가·수정한다. 어느 원전에서 왔는지
+     소제목·문장에 명시한다 (`(StepGuard에서 차용)` 방식).
+  3. 맨 끝 `## 관련 원전`에 상대경로 `.md` 링크를 추가한다 (§3 규칙).
+- 새 개념이 등장하면 문서를 만든다:
+  `content/<lang>/concepts/<분야>/<kebab-case>.md`
+  (예: `content/ko/concepts/ai-engineering/harness.md`).
+  양 언어에 **같은 상대 경로**로 둔다. frontmatter:
+
+  ```yaml
+  ---
+  title: "개념명 (English Name)"
+  description: "한 줄 요약."
+  tags: [concept, ai-engineering, harness, ko]
+  locale: ko
+  ---
+  ```
+
+  본문 최소 구조: `# 제목` → `**원전**: ...` → 핵심 섹션(`##`) →
+  `## 관련 원전` → `## 관련 가이드` (있으면).
+- `## 관련 원전`에는 개념을 뒷받침하는 `sources/papers/...`,
+  `sources/articles/...` 링크를, `## 관련 가이드`에는 이를 쓰는
+  `guides/...` 링크를 건다. 링크가 없으면 섹션을 생략한다.
+
+## 6. 흔한 실수
 
 | 증상 | 원인 |
 |---|---|
@@ -74,3 +192,4 @@ python3 scripts/serve_wiki.py 8900  # 로컬 확인 (http://localhost:8900/)
 | 언어 버튼이 포털로 간다 | 반대 언어 쪽에 같은 경로 파일이 없음 |
 | 링크가 404다 | `.md`가 아닌 `.html`로 직접 연결했거나, 이동·개명한 경로를 가리킴 |
 | 목차(TOC)가 비었다 | `##` 섹션이 없음. TOC는 h2에서 자동 생성 |
+| 수집한 글이 포털에 안 보인다 | `status: pending` stub은 정상적으로 `pending.html`로만 간다. 본문 작성 후 `status` 제거 |
