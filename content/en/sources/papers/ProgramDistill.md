@@ -1,0 +1,56 @@
+---
+published: true
+title: "ProgramDistill: From Interactive Web Apps to Verifiable Reference-Guided SWE Tasks"
+arxiv_id: "2609.18805"
+url: "https://arxiv.org/abs/2609.18805"
+authors: ["Jeonghye Kim", "Minseon Kim", "Young Jin Kim", "Matheus Pereira", "Marc-Alexandre Côté", "Alessandro Sordoni", "Xingdi Yuan", "Zhengyan Shi"]
+---
+published: true
+
+# ProgramDistill: From Interactive Web Apps to Verifiable Reference-Guided SWE Tasks
+
+[KO version](../ko/sources/papers/ProgramDistill.md)
+
+## Abstract
+
+Coding agents are typically evaluated with desired behavior specified through issues or instructions. In practical web development, however, agents may need to infer behavior from working software and implement it in an incomplete application. We introduce ProgramDistill, a benchmark evaluating coding agents on features discovered through interaction with fully functional reference applications. We build ProgramDistill by factorizing applications into features of different granularities, each associated with replayable behaviors executable via its gold patch. Our pipeline, mine-craft-patch, discovers 1,975 replay-verified behaviors across 26 applications and constructs 4,063 tasks without human intervention. Across nine frontier coding agents, GPT-6 Astra and Claude Opus 5 achieve 49.2% and 28.8% success on cumulative workflows in full-application reconstruction. In partial-application reconstruction, success falls from 100% to 64.0% and from 96% to 32% as restoration depth increases from 1 to 8. ProgramDistill thus provides a scalable benchmark with controlled difficulty for evaluating and diagnosing coding agents, and a natural basis for future curriculum-based training.
+
+## Background & Problem Setup
+
+Most SWE benchmarks (SWE-bench and follow-ups) hand the agent a pre-written specification: a GitHub issue, instructions, or hidden tests. The agent never has to discover what the software should do. The paper argues this misses a common web-development workflow: a developer is given a working reference — an earlier product version, an interactive prototype, a comparable app, or a demo video — plus an incomplete current codebase, and must infer intended behavior by interacting with the reference, implement it, and validate against it. Even dragging a card requires inferring both the visible effect and the persisted application state.
+
+Recent work points in this direction. ProgramBench asks agents to probe compiled C/C++, Go, or Rust programs and reconstruct them from observable execution, but treats each program as one whole-reconstruction target. Interactive web apps have richer structure: functionality unfolds through UI actions and application states with explicit prerequisites (log in before creating an object, create before editing). These stateful dependencies form prerequisite lineages. The paper asks: can we uncover that latent behavioral structure and turn one working web app into many verifiable SWE tasks at controlled granularities? That transformation is called application-to-task factorization, and the evaluated skill — inferring behavior from a runnable reference and realizing it in code — is called reference-to-current distillation. Success is measured by whether the same replayable interaction trace passes after the agent's patch.
+
+## Methodology
+
+**Setup: deterministic, observable instances.** The corpus has 26 web applications: self-contained apps adapted from the OSWorld web suite plus real-world open-source projects and SaaS clones with larger codebases, deeper workflows, and heterogeneous architectures. Each app is served twice: a fixed production build as the reference instance (source hidden from the agent) and a development-server version as the editable instance (hot reload on edit). A shared deterministic clock spans database, backend, and frontend, and state is reset before collection and replay, preserving ordering and timeout semantics while removing time-dependent flakiness. A shared Playwright-based browser helper executes high-level actions and returns structured observations (visible text, accessibility tree, interactive elements), resolving elements by stable observable attributes rather than volatile DOM IDs and waiting for the app to settle before recording.
+
+**Mining: behavior goals to verified traces.** Given the current trace bank, a Planner proposes new behavior goals grounded in source and UI evidence, each with an optional parent trace. The parent lineage is replayed from reset to establish prerequisite state, then an LLM agent (GPT-5.6 Sol is used for all pipeline stages) explores the live app to pursue the goal, recording an exploratory trace. A Collector then re-collects the behavior from a clean reset, conditioned on the exploratory route as privileged context, omitting detours and selecting expected outcome signals from observed state. The admitted trace contains replay-stable actions, expected signals, and a parent reference, extending a lineage `L_d = (tau_1, ..., tau_d)`. Replay verifier `V(A, L_d)` replays the lineage from reset without LLM intervention and returns 1 only if all actions complete and all signals hold. Only traces with `V = 1` on the intact app are admitted (1,975 total). Roles: Planner, Collector, Relabeler (labels what was actually achieved), Reflector.
+
+**Crafting: verified behaviors to repair tasks.** Two control axes. Mask scope: logic-only (UI left in place, implementation removed) vs. logic-and-UI (both removed). Task composition: atomic (one behavior) vs. cumulative (several along a lineage). A trace-conditioned mask `m_d` for target trace `tau_d` yields masked app `A[m_d]` plus a concise behavioral problem statement describing user-facing purpose while withholding implementation, repair procedure, and exact signals. Atomic validation requires: the masked app builds and launches, all prerequisites still replay (`V(A[m_d], L_{d-1}) = 1`), and the target fails (`V(A[m_d], L_d) = 0`) — an SWE-bench-style fail-to-pass target with pass-to-pass prerequisites. A separate LLM mask-depth critic rejects superficial masks (feature-flag toggles, removed call sites with implementation intact); failed proposals get bounded revision rounds. Reversing a validated mask gives the gold patch, validated by requiring the full lineage to pass replay. Cumulative masks `M_L = m_{j1} ⊕ ... ⊕ m_{jr}` combine validated atomic masks along a lineage; restoration depth `r_L` counts repair targets (lineage depth `d` may exceed `r_L` because unmasked traces serve as replay bridges). Non-overlapping edits merge deterministically with a git three-way merge as consistency check; on disagreement an LLM merge agent resolves overlaps.
+
+**Patching: evaluation settings.** Partial-application reconstruction gives the agent the masked repo plus problem statement; it edits the hot-reloading current app while comparing against the reference through the browser, with masking diff, gold patch, grading traces, and reference source hidden and public egress disabled. Full-application reconstruction starts from a minimal executable scaffold and requires rebuilding whole workflows. Trace-level verification replays mining traces; lineage scoring measures how much of a behavior chain is recovered (atomic vs. chain/cumulative scores).
+
+## Results
+
+- **Benchmark scale**: 1,975 replay-verified behaviors across 26 apps yield 4,063 tasks with zero human-written issues, tests, or annotations. Of 1,201 cumulative tasks, 629 composed deterministically and 572 required the LLM merge agent (all succeeded without dropping mask components). Merge-agent rate rises with depth: 25.6% at `r = 2`, 89.7% at `r = 8`, 100% beyond.
+- **Full-application reconstruction** (9 frontier coding agents): GPT-6 Astra recovers 49.2% of evaluated workflows, Claude Opus 5 recovers 28.8%. Trajectory analysis shows observation strategy matters: Astra pairs the strongest repair performance with the highest observation activity and fewest edit/write steps.
+- **Partial-application reconstruction**: systematic degradation with restoration depth. Astra falls from 100% at depth 1 to 64.0% at depth 8; Claude Opus 5 falls from 96% to 32% over the same range. Observation effort per required behavior declines as tasks deepen — a growing mismatch between reconstruction burden and agent effort, identifying effort allocation across observation, validation, and editing as a key dimension alongside raw coding ability.
+- **Diagnostics**: behavior-level outcomes, mask-scope splits (logic-only vs. logic-and-UI), chain-score views, context-length controls (depth effect is not explained by context length alone), and shortcut-attempt analysis (agents probing for grading traces or reference source under isolation) are reported in appendices.
+- Project page: https://microsoft.github.io/debug-gym/blog/2026/09/programdistill/
+
+## Limitations & Open Questions
+
+- Pipeline model dependence: all mining/crafting stages use GPT-5.6 Sol; behavior coverage and mask quality inherit that model's exploration biases. Corpus is 26 apps — broader stacks, auth/payment integrations, and mobile-web hybrids are untested.
+- Reference-guided setting assumes a runnable reference and deterministic replay harness; flaky real-world backends, third-party services, and timing-sensitive interactions may break the verifier outside the lab.
+- Gold patches restore the original implementation by construction; they prove a task is solvable, not that the reference solution is unique or idiomatic. Shortcutting and overfitting to replay signals remain adversarial concerns despite isolation.
+- Authors flag potential misuse (automated cloning of proprietary web apps from observable behavior) and frame the depth axis as future curriculum material for trajectory distillation or RL training rather than a solved evaluation.
+
+## Relevance to SW Engineers
+
+For teams building or buying coding agents for frontend/full-stack work, the headline is operational: issue-to-patch benchmarks overstate readiness for reference-driven tasks (re-implement this flow from the staging deployment). Add a reference-guided eval to your harness: hide the reference source, expose only the running app through browser observations, and score with replayable interaction traces plus prerequisite pass-to-pass checks. Track success against restoration depth (1 to 8 in this study) rather than a single aggregate — expect steep decay and budget observation/validation steps accordingly, since the best agent here won by observing more and editing less. The mine-craft-patch recipe is also reusable: replay-verified traces double as regression tests, and the mask-depth critic plus gold-patch replay pattern is a cheap template for generating internal training tasks from your own apps. Extends `concepts/ai-engineering/agent.md`, `concepts/ai-engineering/agent-evaluation.md`, and `guides/ai-engineering/build-agent.md`.
+
+## References
+
+- Paper: https://arxiv.org/abs/2609.18805 (HTML: https://arxiv.org/html/2609.18805v1) — HF: https://huggingface.co/papers/2609.18805 — Project: https://microsoft.github.io/debug-gym/blog/2026/09/programdistill/
+- SWE-bench (Jimenez et al. 2024); ProgramBench (Yang et al. 2026); OSWorld (Xie et al. 2024); Playwright (Microsoft 2024)
