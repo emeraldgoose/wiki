@@ -44,7 +44,7 @@
 
   var PER_OPTIONS = [20, 50, 100];
 
-  var state = { kind: "", cat: "", src: "", tag: "", dir: "desc", page: 1, per: 50 };
+  var state = { kind: "", cat: "", src: "", tag: "", dir: "desc", page: 1, per: 20 };
 
   function $(id) { return document.getElementById(id); }
 
