@@ -485,29 +485,29 @@ def add_anchors(body_html):
 
 
 def build_css():
-    """Write static/<lang>/assets/style.css and mirror portal.js.
+    """Write static/<lang>/assets/style.css and deploy portal.js.
 
-    The stylesheet lives in scripts/site_css.py so it is the single source of
-    truth; edit it there rather than in the generated output.
+    Both live in scripts/ as the single source of truth (site_css.py and
+    portal.js); edit them there rather than in the generated output.
+    A missing portal.js is a build error, not a silent skip: without it
+    every filter, sort and pagination control on the portal is dead.
     """
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     from site_css import SHARED, DOC
 
     css = SHARED.rstrip() + "\n\n" + DOC.lstrip() + "\n"
 
-    # portal.js is authored once in static/en/assets and mirrored to the other
-    # language root. Read fully into memory first: copying a file onto itself
-    # with "wb" would truncate the source before the read completes.
-    portal_src = os.path.join(PUBLIC["en"], "assets", "portal.js")
-    if os.path.exists(portal_src):
-        with open(portal_src, "rb") as fh:
-            portal_bytes = fh.read()
-        for lang, pub in PUBLIC.items():
-            target_dir = os.path.join(pub, "assets")
-            os.makedirs(target_dir, exist_ok=True)
-            with open(os.path.join(target_dir, "portal.js"), "wb") as out:
-                out.write(portal_bytes)
-            print(f"  mirrored assets/portal.js into static/{lang}/")
+    portal_src = os.path.join(os.path.dirname(os.path.abspath(__file__)), "portal.js")
+    if not os.path.exists(portal_src):
+        raise SystemExit(f"missing {portal_src} — portal interactivity would ship broken")
+    with open(portal_src, "rb") as fh:
+        portal_bytes = fh.read()
+    for lang, pub in PUBLIC.items():
+        target_dir = os.path.join(pub, "assets")
+        os.makedirs(target_dir, exist_ok=True)
+        with open(os.path.join(target_dir, "portal.js"), "wb") as out:
+            out.write(portal_bytes)
+        print(f"  deployed assets/portal.js into static/{lang}/")
 
     written = []
     for lang, pub in PUBLIC.items():

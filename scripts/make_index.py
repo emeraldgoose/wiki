@@ -350,8 +350,13 @@ def url_path(path):
     return quote(path, safe="/")
 
 
-def table_html(records, t, show_type=True, id_prefix=""):
-    """Render one records table. Rows carry data-* for client-side filtering."""
+def table_html(records, t, show_type=True, id_prefix="", table_id=""):
+    """Render one records table. Rows carry data-* for client-side filtering.
+
+    table_id marks the interactive table (the Recent one); portal.js scopes
+    all filtering/sorting/pagination to it. The date header gets a
+    data-col="date" hook so portal.js can inject the sort toggle.
+    """
     kind_label = {
         "papers": t["papers"], "concepts": t["concepts"],
         "guides": t["guides"], "articles": t["articles"],
@@ -367,12 +372,17 @@ def table_html(records, t, show_type=True, id_prefix=""):
     if has_cat:
         cols.append(t["col_category"])
     if has_date:
-        cols.append(t["col_date"])
+        cols.append((t["col_date"], "date"))
     if has_src:
         cols.append(t["col_source"])
 
-    out = ['<table class="doc-table">', "<thead><tr>"]
-    out += [f"<th>{e(c)}</th>" for c in cols]
+    id_attr = f' id="{eattr(table_id)}"' if table_id else ""
+    out = [f'<table class="doc-table"{id_attr}>', "<thead><tr>"]
+    for c in cols:
+        if isinstance(c, tuple):
+            out.append(f'<th data-col="{c[1]}">{e(c[0])}</th>')
+        else:
+            out.append(f"<th>{e(c)}</th>")
     out.append("</tr></thead><tbody>")
 
     for rec in records:
@@ -560,7 +570,8 @@ def render(records, t, lang, other_lang_code):
         </div>
       </div>
       <p class="result-count" id="result-count"></p>
-      {table_html(recent, t, show_type=True)}
+      {table_html(recent, t, show_type=True, table_id="recent-table")}
+      <nav class="pager" id="pager" hidden></nav>
       <p class="empty" id="empty-msg" hidden>{e(t['empty'])}</p>
     </section>
 
