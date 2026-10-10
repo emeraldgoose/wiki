@@ -44,7 +44,7 @@ published: 2026-10-09
   빌드가 중복을 제거한다).
 - 섹션은 `##`, 하위는 `###`부터. `#`은 제목 한 번에만 쓴다.
 - 지원하는 문법: 굵게/기울임/인라인 코드, 순서·비순서 목록, 표,
-  인용(`>`), 코드펜스, 구분선.
+  인용(`>`), 코드펜스, 구분선, 이미지(`![alt](url)`), 수식(`$…$`, `$$…$$`).
 - 문서 간 링크는 **상대경로 `.md`** 로 건다. 빌드가 `/<lang>/....html`로
   바꿔준다. 예: `[RAG 가이드](../ai-engineering/build-rag.md)`
 - 바깥 링크(`http…`)는 자동으로 새 탭으로 열린다.
@@ -52,6 +52,16 @@ published: 2026-10-09
   상단 언어 버튼이 상대 문서를 자동으로 가리킨다. 단독 버전 링크행은
   빌드가 제거한다.
 - 이미지는 별도 파이프라인이 없으므로 외부 URL을 쓴다.
+  `![설명](https://…)` 형식, `alt` 설명은 필수다 (캡션으로 렌더링된다).
+  단독 문단의 이미지는 가운데 정렬 figure가 되고, 본문 중 이미지는
+  lazy loading으로 읽힌다. 빌드가 리사이즈하지 않으므로 원본은 적정
+  크기로 고르고, 브라우저가 본문 폭(`--measure`)에 맞춰 축소한다.
+  화면별 대응은 CSS가 담당한다 (`max-width: 100%; height: auto`).
+- 수식은 TeX로 쓴다. 인라인 `$…$`, 디스플레이 `$$…$$`
+  (`\(…\)`, `\[…\]`도 가능). 빌드가 MathJax(CDN)를 해당 페이지만에
+  붙여 렌더링하므로 `$` 앞뒤로 공백을 두지 않는다 (`$100` 같은 금액은
+  TeX 문자(`\`, `^`, `_`, `{`, `=`)가 없어 수식으로 오인되지 않는다).
+  오프라인에서는 TeX 원문이 그대로 보인다.
 
 ## 4. 빌드와 확인
 
@@ -95,6 +105,13 @@ python3 scripts/collect_articles.py --year 2026 --stubs   # stub까지 생성
   중복 검사가 깨지니 유지한다.
 - stub을 정식 문서로 바꾸는 법: `status: pending` 줄을 지우고,
   `description`, `tags` (§2 규칙), `published`를 채운 뒤 본문을 작성한다.
+  수집·초안 스크립트는 `en`만 만든다. `en` 정식 문서가 완성되면 에이전트가
+  이를 기반으로 `ko` 문서를 만든다: 같은 상대 경로
+  (`content/ko/...` ↔ `content/en/...`, §1), 본문은 `en` 완성본을 한국어로
+  번역·요약(원문 복붙 금지), frontmatter는 `title`·`description` 한국어 작성,
+  `tags` 끝을 `ko`로, `locale: ko`, `source_url`·`blog`·`published`는 `en`과
+  동일하게 유지한다. `ko` 대응이 없으면 언어 버튼이 포털로 폴백되므로
+  `en` 단독 완성 상태로 두지 않는다.
   예시 완성형:
 
   ```yaml
@@ -112,6 +129,18 @@ python3 scripts/collect_articles.py --year 2026 --stubs   # stub까지 생성
 - stub 상태에서는 빌드가 페이지를 렌더링하되 메인 포털 목록에는 넣지 않고
   `pending.html`로 분리한다. 빌드 끝의
   `NOTE: N article(s) are still stubs`가 남은 분량이다.
+- 초안 판정 (본문을 끝까지 읽지 않고 고르는 법): 파일 앞부분(head) 마커만 본다.
+  `status: pending` 또는 `[Content pending]` 중 하나라도 있으면 초안이다.
+  `wiki_builder.py`·`make_index.py`·`fetch_drafts.py` 모두 앞 2000~4000자만 읽고
+  판정하므로 전문 파싱이 필요 없다. `--full` 원문 초안도 `status: pending`을
+  유지하므로 같은 기준으로 계속 골라지고, 마커를 지우는 순간 정식 문서로
+  취급되니 요약 완료 전까지 유지한다. 고르는 명령:
+
+  ```bash
+  grep -rl "status: pending" content/en/sources/articles/ content/ko/sources/articles/
+  python3 scripts/make_index.py --dry-run | grep pending   # 개수만 확인
+  python3 scripts/fetch_drafts.py --dry-run --limit 5      # 처리 대상 목록
+  ```
 - 새 피드를 추가하려면 세 곳을 함께 고친다:
   `collect_articles.py`의 `FEEDS` + `BLOG_SLUG`,
   `make_index.py`의 `BLOG_LABEL`. 폴더명(`content/<lang>/sources/articles/<slug>/`)은

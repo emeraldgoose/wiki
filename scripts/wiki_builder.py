@@ -117,15 +117,37 @@ INLINE_CODE = re.compile(r"`([^`]+)`")
 BOLD = re.compile(r"\*\*([^*]+)\*\*")
 ITALIC = re.compile(r"(?<![*\w])\*([^*\n]+)\*(?!\*)")
 LINK = re.compile(r"\[([^\]]+)\]\(([^)\s]+)\)")
+LINKED_IMAGE = re.compile(r"\[(!\[[^\]]*\]\([^)]+\))\]\(([^)\s]+)\)")
+IMAGE = re.compile(r"!\[([^\]]*)\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
+# Display math first (greedy across the joined paragraph line), then \( \),
+# \[ \], then $..$ which needs either a TeX-ish character (\ _ ^ { }) or a
+# bare identifier ($y$, $x_i$) so prices like $100 and prose with = never
+# match ($S$: Brier score = $...$ must not glue across the prose).
+MATH_DISPLAY_DOLLAR = re.compile(r"\$\$(.+?)\$\$", re.S)
+MATH_DISPLAY_BRACKET = re.compile(r"\\\[(.+?)\\\]", re.S)
+MATH_INLINE_PAREN = re.compile(r"\\\((.+?)\\\)", re.S)
+MATH_INLINE = re.compile(
+    r"\$([^$\n]*?[\\_^{[}][^$\n]*?|[A-Za-z][A-Za-z0-9]{0,2}(?:[_^][^$\n]*)?)\$"
+)
 
 
 def escape(text):
     return html.escape(text, quote=False)
 
 
+def _img_tag(alt, src):
+    return (
+        f'<img src="{html.escape(src, quote=True)}"'
+        f' alt="{html.escape(alt, quote=False)}"'
+        ' loading="lazy" decoding="async">'
+    )
+
+
 def inline(text):
     """Escape, then apply inline markdown. Code spans are extracted first so
-    their contents are never treated as markup."""
+    their contents are never treated as markup. Math and images are stashed
+    next: math must survive BOLD/ITALIC untouched, and images must not be
+    eaten by the LINK pattern (the inner [alt](url) of ![alt](url))."""
     spans = []
 
     def stash(match):
@@ -133,6 +155,41 @@ def inline(text):
         return f"\x00{len(spans) - 1}\x00"
 
     text = INLINE_CODE.sub(stash, text)
+
+    maths = []
+
+    def stash_math_display(match):
+        maths.append(("display", match.group(1)))
+        return f"\x02{len(maths) - 1}\x02"
+
+    def stash_math_inline(match):
+        maths.append(("inline", match.group(1)))
+        return f"\x02{len(maths) - 1}\x02"
+
+    text = MATH_DISPLAY_DOLLAR.sub(stash_math_display, text)
+    text = MATH_DISPLAY_BRACKET.sub(stash_math_display, text)
+    text = MATH_INLINE_PAREN.sub(stash_math_inline, text)
+    text = MATH_INLINE.sub(stash_math_inline, text)
+
+    imgs = []
+
+    def stash_linked_image(match):
+        inner = match.group(1)
+        href = match.group(2)
+        m = IMAGE.match(inner)
+        img = _img_tag(m.group(1), m.group(2)) if m else escape(inner)
+        target = ""
+        if href.startswith("http"):
+            target = ' target="_blank" rel="noopener"'
+        imgs.append(f'<a href="{html.escape(href, quote=True)}"{target}>{img}</a>')
+        return f"\x01{len(imgs) - 1}\x01"
+
+    def stash_image(match):
+        imgs.append(_img_tag(match.group(1), match.group(2)))
+        return f"\x01{len(imgs) - 1}\x01"
+
+    text = LINKED_IMAGE.sub(stash_linked_image, text)
+    text = IMAGE.sub(stash_image, text)
     text = escape(text)
 
     def link_sub(match):
@@ -148,6 +205,14 @@ def inline(text):
 
     for i, span in enumerate(spans):
         text = text.replace(f"\x00{i}\x00", span)
+    for i, tag in enumerate(imgs):
+        text = text.replace(f"\x01{i}\x01", tag)
+    for i, (kind, src) in enumerate(maths):
+        if kind == "display":
+            tag = f'<div class="math-display">\\[{escape(src)}\\]</div>'
+        else:
+            tag = f'<span class="math-inline">\\({escape(src)}\\)</span>'
+        text = text.replace(f"\x02{i}\x02", tag)
     return text
 
 
@@ -193,6 +258,10 @@ def rewrite_md_links(body, md_rel_path, lang):
     prefix = f"../{other}/"
 
     def sub(match):
+        # Image syntax ![alt](src) contains a LINK-shaped inner match;
+        # inline() owns images, so leave any !-prefixed hit untouched.
+        if match.start() > 0 and body[match.start() - 1] == "!":
+            return match.group(0)
         label, href = match.group(1), match.group(2)
         if href.startswith(("http", "#", "mailto:")):
             return match.group(0)
@@ -398,10 +467,33 @@ def markdown_to_html(body, md_rel_path, lang):
         ):
             buf.append(lines[i].strip())
             i += 1
-        out.append(f"<p>{inline(' '.join(buf))}</p>")
+        out.append(_paragraph_html(" ".join(buf)))
 
     close_list()
     return "\n".join(out)
+
+
+STANDALONE_IMG = re.compile(
+    r'^<p>(<a [^>]+>)?<img src="([^"]+)" alt="([^"]*)"[^>]*>(</a>)?</p>$'
+)
+
+
+def _paragraph_html(text):
+    """Render one paragraph; a lone image becomes a captioned figure."""
+    rendered = inline(text)
+    m = STANDALONE_IMG.match(f"<p>{rendered}</p>")
+    if m:
+        open_a, src, alt, close_a = m.groups()
+        img = (
+            f'<img src="{html.escape(src, quote=True)}"'
+            f' alt="{html.escape(alt, quote=False)}"'
+            ' loading="lazy" decoding="async">'
+        )
+        if open_a:
+            img = f"{open_a}{img}{close_a or ''}"
+        caption = f"<figcaption>{html.escape(alt, quote=False)}</figcaption>" if alt else ""
+        return f'<figure class="md-figure">{img}{caption}</figure>'
+    return f"<p>{rendered}</p>"
 
 
 # --------------------------------------------------------------------------
@@ -412,7 +504,7 @@ def depth_to_root(rel_path):
 
 
 def render_page(title, meta, body_html, lang, rel_path, toc_html="",
-                other_href=None, other_has_page=True):
+                other_href=None, other_has_page=True, has_math=False):
     s = STRINGS[lang]
     root = depth_to_root(rel_path)
     other = "ko" if lang == "en" else "en"
@@ -449,6 +541,17 @@ def render_page(title, meta, body_html, lang, rel_path, toc_html="",
 
     toc_block = f'<nav class="toc"><p class="toc-title">{s["toc"]}</p>{toc_html}</nav>' if toc_html else ""
 
+    # TeX math is rendered client-side so the stdlib-only builder stays
+    # dependency-free. Pages without math get no extra tags. Offline readers
+    # see the raw TeX source, which is exactly today's rendering.
+    mathjax_tags = ""
+    if has_math:
+        mathjax_tags = (
+            '<script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],'
+            'displayMath:[["\\[","\\]"]]},chtml:{mtextInheritFont:true}};</script>\n'
+            '<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>'
+        )
+
     return f"""<!DOCTYPE html>
 <html lang="{s['lang']}" dir="ltr">
 <head>
@@ -457,6 +560,7 @@ def render_page(title, meta, body_html, lang, rel_path, toc_html="",
 <meta name="description" content="{escape(title)}" />
 <title>{escape(title)} — {s['portal']}</title>
 <link rel="stylesheet" href="{root}assets/style.css" />
+{mathjax_tags}
 </head>
 <body class="doc">
 <header class="site-header">
@@ -629,7 +733,8 @@ def build_lang(lang):
                 other_has_page = False
             with open(out_path, "w", encoding="utf-8") as f:
                 f.write(render_page(title, meta, body_html, lang, out_rel, toc,
-                                    other_href, other_has_page))
+                                    other_href, other_has_page,
+                                    has_math=('class="math-' in body_html)))
             written += 1
 
     print(f"  {lang}: wrote {written} pages")
