@@ -1,5 +1,5 @@
 ---
-title: 'StepGuard — 논문 소스 (전체 번역)'
+title: 'StepGuard: 단계별 가드레일 학습'
 description: 'StepGuard: 확장 가능한 감독과 안전-유틸리티 균형을 갖춘 단계별 가드레일 학습 (한국어 전체 번역)'
 tags: [paper, source, huggingface, ai-engineering, agent-security, grpo, ko]
 locale: ko

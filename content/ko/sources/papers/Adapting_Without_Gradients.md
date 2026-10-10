@@ -1,12 +1,12 @@
 ---
-title: "Adapting Without Gradients: Affine Statistics Transport and What Its Certificate Can Tell You (번역 요약)"
+title: "Adapting Without Gradients: Affine Statistics Transport and What Its Certificate Can Tell You"
 description: en/sources/papers/Adapting_Without_Gradients.md 한국어 번역 요약
 tags: [source, paper, huggingface, machine-learning, ko]
 locale: ko
 arxiv_id: 2609.00374
 ---
 
-# Adapting Without Gradients: Affine Statistics Transport and What Its Certificate Can Tell You — 요약
+# Adapting Without Gradients: Affine Statistics Transport and What Its Certificate Can Tell You
 
 **arXiv**: 2609.00374 | **게시일**: 2026-08-31 | **기관**: Talan
 

@@ -1,16 +1,14 @@
 ---
-published: true
 title: "Gaze as Evidence for Common Grounding: A Cross-Corpus Analysis of MapTask and MUNDEX"
+description: "Across MapTask and MUNDEX, aligned understanding goes with more task-directed gaze, less partner-directed gaze, lower entropy, and fewer transitions — a modest contributing cue, not a standalone signal"
+locale: en
+source_url: "https://arxiv.org/abs/2609.18011"
 arxiv_id: "2609.18011"
-url: "https://arxiv.org/abs/2609.18011"
 authors: ["Nan Li", "Albert Gatt", "Massimo Poesio"]
 tags: [source, paper, machine-learning]
 ---
-published: true
 
 # Gaze as Evidence for Common Grounding: A Cross-Corpus Analysis of MapTask and MUNDEX
-
-[KO version](../ko/sources/papers/Gaze_as_Evidence_for_Common_Grounding.md)
 
 ## Abstract
 

@@ -1,9 +1,11 @@
 ---
 title: "Vidu S2: Real-Time Interactive, Editable, and Spatial Video Generation"
+description: "Vidu S2-Avatar (real-time 720p interactive characters with dynamic references) plus Vidu S2-Editing (real-time stream editing: style, clothing, character, background) with spatial-video exploration"
+locale: en
+source_url: "https://arxiv.org/abs/2609.11638"
 published: 2026-09-10
 arxiv_id: "2609.11638"
-url: "https://arxiv.org/abs/2609.11638"
-authors: ["Jintao Zhang", "Kai Jiang", "Jintao Chen", "Xu Wang", "Deyuan Liu", "Jungang Li", "Dechuang Chen", "Ming Lin", "Jingjiang Zhou", "Haopeng Jin", "Qi Jia", "Xiaohang Wang", "Yaole Wang", "Zhanqiang Zhang", "Ran Li", "Zhengkun Huang", "Shuyue Xiong", "Yuji Wang", "Zikun Dai", "Hui He", "Yang Luo", "Mang Ning", "Weiqi Feng", "Chengyang Ye", "Xinyue Lin", "Min Zhao", "Hongzhou Zhu", "Hengkai Tan", "Zeyuan Wang", "Chendong Xiang", "Kaiwen Zheng", "Zhijie Deng", "Fan Bao", "Jianfei Chen", "Jun Zhu"]
+authors: ["Jintao Zhang", "and 34 other authors"]
 tags: [source, paper, machine-learning]
 ---
 
@@ -40,10 +42,18 @@ The demand for real-time interactive video generation is growing, particularly f
 - Vidu S2 explores generating left- and right-eye views to create 3D-like spatial video, improving depth separation between foreground and background.
 
 ## Results
-- **Quantitative/Qualitative**: Vidu S2 outperforms baselines (e.g., PixVerse, Runway, XMax, Decart) in identity preservation and temporal stability.
-- **Avatar Consistency**: Maintains facial identity, hairstyle, and fine-grained geometry without the drift seen in competitors.
-- **Editing Precision**: Successfully handles complex tasks like garment deformation during "shirt-pulling" actions, where other models fail.
+- **Avatar**: real-time 720p generation with dynamic references (updatable at any moment) and stronger instruction following (e.g. dancing); identity, hairstyle, and fine-grained geometry hold without the drift seen in competitors.
+- **Editing**: real-time stream editing across style rendering, clothing replacement, character replacement, and background replacement — including hard cases like garment deformation during "shirt-pulling".
+- **Baselines named**: PixVerse, Runway, XMax, Decart — Vidu S2 is stated to outperform them on identity preservation and temporal stability.
+- **No metrics in the abstract**: the abstract gives no FPS/latency numbers, no score tables, no win rates. Cite figures only from the full text or the playable online demo, not from this summary.
 
 ## Limitations & Relevance
 - **Relevance**: For software engineers and ML practitioners, Vidu S2 demonstrates the potential of combining diffusion forcing with efficient inference infrastructure to achieve real-time, high-resolution generative video.
 - **Takeaway**: The move toward "streaming" generative AI allows for true interactivity, turning video generation from a batch process into a real-time utility.
+- **Evidence gap**: "outperforms all baselines" is abstract-stated; check the paper body for datasets, metrics, and statistical significance before quoting.
+
+## References
+
+- Source: https://arxiv.org/abs/2609.11638
+- arXiv HTML: https://arxiv.org/html/2609.11638
+- Scope: abstract-based; metrics and demo link are in the full text

@@ -1,9 +1,11 @@
 ---
 title: "SAS: 컨텍스트 랭킹의 종단간 최적화를 통한 단순 어텐션 희소화 (Simple Attention Sparsification via End-to-End Optimization of Context Ranking)"
+description: "사후학습 어텐션 희소화를 위한 종단간 학습 컨텍스트 랭킹"
 arxiv_id: "2609.13141"
 HF_URL: "https://huggingface.co/papers/2609.13141"
 published: 2026-09-11
 authors: "Zhiwei Li, Lei Zhu, Hao Gu, Xiang Hu, Yan Wang, Haitao Mi, Sirui Han, Leo Liang, Zhijiang Guo"
+tags: [source, paper, machine-learning, ko]
 locale: ko
 ---
 

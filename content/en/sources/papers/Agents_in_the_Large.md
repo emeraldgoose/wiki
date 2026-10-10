@@ -3,6 +3,7 @@ title: "Agents in the Large: Perception-Centered Architecture for Persistent Age
 description: HuggingFace Daily Papers — 2026-08-31 — Fudan University
 tags: [source, paper, huggingface, fudan-university]
 locale: en
+source_url: "https://arxiv.org/abs/2608.30478"
 arxiv_id: 2608.30478
 ---
 
@@ -20,39 +21,29 @@ Cognitive language agents have achieved substantial progress by equipping langua
 
 ## Key Contributions
 
-- **Novel methodology** for [specific contribution]
-- **Key insight** that addresses [problem]
-- **Implementation details** relevant to software engineering,
-
-
+- **Pera (Perception-Centered Architecture for Persistent Agents)**: organizes a long-lived agent around perception and control components that continually perceive service-relevant signals — from episodic task executions, internal context, and environment changes — and turn them into lifecycle tasks driving ongoing operation and adaptation
+- **Retrospective organization** of recent work through the Pera lens plus a detailed case study and forward-looking guidance
+- **Framing**: just as software engineering moved from programming-in-the-small to programming-in-the-large, language agents face an analogous transition toward long-lived, adaptive intelligence
 
 ## Methodology
 
-- **Architecture**: [describe model architecture or framework]
-- **Algorithms**: [key algorithms used]
-- **Key equations/choices**: [important mathematical or computational choices]
-
-
+Conceptual architecture paper (no benchmark table): defines persistent assistance as the target setting (needs, context, and procedures persist and change), derives lifecycle tasks from perceived signals, and uses Pera to re-describe existing systems and the case study.
 
 ## Results
 
-- **Key results**: [main experimental findings with numbers]
-- **Baseline comparisons**: [comparison with existing methods]
-- **Reproducibility**: [whether results can be reproduced]
-
-
+No quantitative results — this is a framework/position contribution. Its testable content is the Pera decomposition (perception → lifecycle tasks → service-procedure adaptation) applied to the case study and prior work.
 
 ## Relevance to Software Engineers
 
-- [To be filled: practical implications for SW engineers]
+If you operate agents across sessions (memory, changing procedures, recurring users), Pera gives a checklist: what signals are perceived, what lifecycle tasks they create, and how service procedures adapt. Design the perception loop first; bounded-task harnesses will not compose into persistent assistance by themselves.
 
 ## Related Concepts
 
-- `concepts/ai-engineering/agent.md`
-- `concepts/ai-engineering/llm-training.md`
-- `concepts/machine-learning/transformer.md`
+- [Agent](../../concepts/ai-engineering/agent.md)
+- [LLM Training](../../concepts/ai-engineering/llm-training.md)
 
 ## References
 
 - arXiv: https://arxiv.org/abs/2608.30478
 - HuggingFace: https://huggingface.co/papers/2608.30478
+- Scope: framework paper; no benchmark numbers to cite

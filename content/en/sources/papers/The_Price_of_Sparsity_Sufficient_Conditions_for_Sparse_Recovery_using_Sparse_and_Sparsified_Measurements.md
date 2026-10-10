@@ -1,5 +1,6 @@
 ---
 title: "The Price of Sparsity: Sufficient Conditions for Sparse Recovery using Sparse and Sparsified Measurements"
+description: "Sufficient sample-size conditions for ML support recovery from sparse Gaussian measurements"
 arxiv_id: 2509.01809
 HF_URL: https://huggingface.co/papers/2509.01809
 published: 2026-09-08

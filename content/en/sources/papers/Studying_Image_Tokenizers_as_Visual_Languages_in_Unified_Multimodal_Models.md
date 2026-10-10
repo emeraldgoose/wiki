@@ -1,14 +1,15 @@
 ---
-arxiv_id: "2609.09143"
+title: "Studying Image Tokenizers as Visual Languages in Unified Multimodal Models"
+description: "Do discrete image tokenizers behave like visual languages inside unified multimodal models — vocabulary, grammar, and compositionality under test"
+locale: "en"
 source_url: "https://arxiv.org/abs/2609.09143"
+arxiv_id: "2609.09143"
 authors: ["Siting Li", "Zhengyang Wang", "Simon Shaolei Du", "Xi Chen", "Yang Liu"]
 published: "2026-09-08"
-locale: "en"
+tags: [source, paper, machine-learning]
 ---
 
 # Studying Image Tokenizers as Visual Languages in Unified Multimodal Models
-
-[View in Korean]([[KO_PATH_PLACEHOLDER]])
 
 ## Abstract
 

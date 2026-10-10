@@ -3,6 +3,7 @@ title: Keep-or-Drop? Adaptive Tokenizer for Compact Video Representation
 description: HuggingFace Daily Papers — 2026-08-25 — Kakao Corp.
 tags: [source, paper, huggingface, kakao-corp., machine-learning]
 locale: en
+source_url: "https://arxiv.org/abs/2608.24293"
 arxiv_id: 2608.24293
 ---
 
@@ -18,18 +19,24 @@ Latent diffusion models have emerged as a dominant framework for high-fidelity i
 
 ## Key Contributions
 
-- Present KATok, a transformer-based VAE with adaptive token selector for video representation
-- Adaptive token selector evaluates each token's content-richness as keep-or-drop probability
-- Two position-prediction strategies (cascaded and joint generation) ensure spatial consistency
-- Achieves state-of-the-art compression ratio with strong reconstruction/generation quality
+- **KATok**: transformer-based VAE with an adaptive token selector jointly learned with latent tokens; each token's content-richness is scored as a keep-or-drop probability, giving data-dependent compression instead of a fixed ratio
+- **Two position-prediction strategies** for spatial consistency after token dropping: cascaded generation vs joint generation
+- **Claim**: strong reconstruction and generation quality at a state-of-the-art compression ratio, attributed to reduced spatio-temporal redundancy and removal of uninformative tokens
 
 ## Methodology
 
-Transformer-based VAE with jointly learned adaptive token selector. Token drop probabilities computed per-token based on content-richness. Position-prediction strategies (cascaded/joint generation) maintain spatial consistency after token dropping. Trained on video diffusion models to achieve strong reconstruction and generation quality.
+A transformer VAE where the token selector is trained jointly with latent tokens: per-token drop probabilities from content-richness, then position prediction (cascaded or joint) to repair the spatio-temporal structure disturbed by dropping. The resulting tokenizer is plugged into video diffusion models. Which strategy wins, and under what resolution/motion regime, is reported in the full text — not the abstract.
 
 ## Results
 
-Strong reconstruction and generation quality at state-of-the-art compression ratio. Reduction of spatio-temporal redundancy and removal of uninformative tokens supported by quantitative and qualitative results.
+The arXiv abstract reports **no numeric metrics** (no compression ratio, no PSNR/FVD-style scores, no baseline table), only the qualitative claim above. Do not cite numbers from this page; verify in the full text (PDF, v2 2026-08-27):
+
+- Stated: SOTA compression ratio with strong reconstruction/generation quality
+- Stated mechanism: gains from spatio-temporal redundancy reduction + uninformative-token removal, supported by quantitative and qualitative results (in-paper only)
+
+## Caveats
+
+This summary is abstract-based: the paper's evidence lives in the PDF body. Before reusing KATok, check the full-text tables for the actual ratio, datasets, baselines, and which position-prediction strategy (cascaded vs joint) the ablations favor.
 
 ## Relevance to Software Engineers
 
@@ -37,11 +44,13 @@ For SW engineers, this work introduces adaptive tokenization techniques that can
 
 ## Related Concepts
 
-- `concepts/ai-engineering/agent.md`
-- `concepts/ai-engineering/llm-training.md`
-- `concepts/machine-learning/transformer.md`
+- [Transformer](../../concepts/machine-learning/transformer.md)
+- [Attention](../../concepts/machine-learning/attention.md)
+- [LLM Training](../../concepts/ai-engineering/llm-training.md)
 
 ## References
 
 - arXiv: https://arxiv.org/abs/2608.24293
+- arXiv HTML: https://arxiv.org/html/2608.24293
 - HuggingFace: https://huggingface.co/papers/2608.24293
+- Scope: abstract-based; quantitative tables are PDF-only (v2 2026-08-27)

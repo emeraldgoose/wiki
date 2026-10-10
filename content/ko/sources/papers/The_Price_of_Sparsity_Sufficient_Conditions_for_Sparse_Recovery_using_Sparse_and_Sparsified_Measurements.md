@@ -1,5 +1,6 @@
 ---
 title: "The Price of Sparsity: Sufficient Conditions for Sparse Recovery using Sparse and Sparsified Measurements"
+description: "희소 가우시안 측정에서 ML 지지 복원의 충분 표본 조건"
 arxiv_id: 2509.01809
 HF_URL: https://huggingface.co/papers/2509.01809
 published: 2026-09-08

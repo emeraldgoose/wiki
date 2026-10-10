@@ -1,11 +1,11 @@
 ---
-title: StepGuard — Paper Source (Full Body)
+title: "StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing"
 description: "StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing"
 tags: [paper, source, huggingface, ai-engineering, agent-security, grpo]
 locale: en
 ---
 
-# StepGuard: Learning Step-Level Guardrails
+# StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing
 
 **arXiv**: 2608.24777 | **Authors**: AI45Research et al. | **Code**: https://github.com/zheng977/StepGuard | **Weights**: https://huggingface.co/ninty-seven/StepGuard
 

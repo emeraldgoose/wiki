@@ -1,15 +1,15 @@
 ---
 title: "장기 기억을 위한 지속 학습 메커니즘의 구성"
+description: "지속학습 메커니즘 구성(앵커x저랭크 할당)으로 100-과제 유지율 1.2%에서 34.9%로"
 published: 2026-09-07
 arxiv_id: "2609.06986"
 url: "https://arxiv.org/abs/2609.06986"
 authors: ["Zheyuan Zhang", "Alvin Zhang", "Daniel Khashabi", "Tianmin Shu"]
 tags: [source, paper, machine-learning, ko]
+locale: ko
 ---
 
 # 장기 기억을 위한 지속 학습 메커니즘의 구성
-
-[EN version](../en/sources/papers/Continual_Learning_Mechanisms_Compose_for_Long-Horizon_Memorization.md)
 
 ## 초록
 

@@ -3,6 +3,7 @@ title: SHAPE of Chain-of-Thought in Math Reasoning
 description: HuggingFace Daily Papers — 2026-06-28 — Seoul National University
 tags: [source, paper, huggingface, seoul-national-university, machine-learning]
 locale: en
+source_url: "https://arxiv.org/abs/2608.28600"
 arxiv_id: 2608.28600
 ---
 
@@ -20,39 +21,31 @@ Large language models (LLMs) achieve strong performance on mathematical reasonin
 
 ## Key Contributions
 
-- **Novel methodology** for [specific contribution]
-- **Key insight** that addresses [problem]
-- **Implementation details** relevant to software engineering,
-
-
+- **SHAPE**: analyzes CoT trajectories through two mathematics-education lenses — (1) semantic spaces (the model's evolving interpretations: algebraic, geometric, …) and (2) heuristics (actions within spaces: simplifying, working backward, …)
+- **Descriptive finding**: the heuristics a model uses explain final-answer correctness better than traditional CoT features; correct solutions concentrate effort in few semantic spaces (human-like), rather than exploring many
+- **Post-training finding**: RL induces mode-seeking in heuristic usage
+- **Intervention**: post-training that promotes diverse heuristics improves accuracy
 
 ## Methodology
 
-- **Architecture**: [describe model architecture or framework]
-- **Algorithms**: [key algorithms used]
-- **Key equations/choices**: [important mathematical or computational choices]
-
-
+SHAPE lens applied to reasoning patterns of various models (pattern analysis), then to evaluating whether post-training truly enhances math proficiency, then as a training signal (diversity promotion).
 
 ## Results
 
-- **Key results**: [main experimental findings with numbers]
-- **Baseline comparisons**: [comparison with existing methods]
-- **Reproducibility**: [whether results can be reproduced]
-
-
+Qualitative-structural results (no single headline number in the abstract): heuristic profiles beat CoT features at explaining correctness; concentration-beats-breadth pattern; RL mode-seeking diagnosis; diverse-heuristic training helps. Check the paper body for per-model tables.
 
 ## Relevance to Software Engineers
 
-- [To be filled: practical implications for SW engineers]
+When debugging math reasoning, log *heuristics and semantic spaces*, not just CoT length — they predict correctness. If RL post-training plateaus, check for heuristic mode collapse and explicitly reward heuristic diversity. Code: https://github.com/holi-lab/SHAPE-of-CoT
 
 ## Related Concepts
 
-- `concepts/ai-engineering/agent.md`
-- `concepts/ai-engineering/llm-training.md`
-- `concepts/machine-learning/transformer.md`
+- [LLM Training](../../concepts/ai-engineering/llm-training.md)
+- [Transformer](../../concepts/machine-learning/transformer.md)
+- [Attention](../../concepts/machine-learning/attention.md)
 
 ## References
 
 - arXiv: https://arxiv.org/abs/2608.28600
 - HuggingFace: https://huggingface.co/papers/2608.28600
+- Scope: abstract-based; per-model analyses are in the full text

@@ -3,6 +3,7 @@ title: Verification-Aware Training for Speculative Decoding
 description: HuggingFace Daily Papers — 2026-08-31 — NAVER AI Lab
 tags: [source, paper, huggingface, naver-ai-lab]
 locale: en
+source_url: "https://arxiv.org/abs/2608.30135"
 arxiv_id: 2608.30135
 ---
 
@@ -20,39 +21,34 @@ Speculative decoding accelerates large language model inference by using a draft
 
 ## Key Contributions
 
-- **Novel methodology** for [specific contribution]
-- **Key insight** that addresses [problem]
-- **Implementation details** relevant to software engineering,
-
-
+- **Problem**: sequential verification discards everything from the first rejection on, but draft training uses fixed per-position imitation weights reflecting neither sequentiality nor rejection
+- **VAT (Verification-Aware Training)**: plug-in that simulates verification every step — (i) verification head (lightweight joint binary classifier: does each position survive sequential verification?), (ii) verification-adaptive weighting (full weight up to each sample's first rejection, decay re-anchored there)
+- **Compatibility**: training-objective-only change; layers onto existing methods without touching draft architecture, target model, or inference
 
 ## Methodology
 
-- **Architecture**: [describe model architecture or framework]
-- **Algorithms**: [key algorithms used]
-- **Key equations/choices**: [important mathematical or computational choices]
-
-
+Applied to EAGLE-3 and DFlash on Qwen3-4B, Qwen3-8B, and LLaMA-3.1-8B; evaluated on math, code, and chat benchmarks for acceptance length and wall-clock speedup.
 
 ## Results
 
-- **Key results**: [main experimental findings with numbers]
-- **Baseline comparisons**: [comparison with existing methods]
-- **Reproducibility**: [whether results can be reproduced]
-
-
+| Finding | Number |
+|---|---|
+| Avg acceptance length | up to **+11.4%** |
+| Wall-clock speedup | up to **+8.7%** |
+| Generality | consistent gains across math/code/chat |
 
 ## Relevance to Software Engineers
 
-- [To be filled: practical implications for SW engineers]
+If you serve LLMs with speculative decoding, VAT is a free upgrade — no inference change, just retrain the draft head with verification simulation. Weight supervision by survival, not position. Code forthcoming at https://github.com/naver-ai/vat
 
 ## Related Concepts
 
-- `concepts/ai-engineering/agent.md`
-- `concepts/ai-engineering/llm-training.md`
-- `concepts/machine-learning/transformer.md`
+- [Speculative Decoding](../../concepts/ai-engineering/speculative-decoding.md)
+- [LLM Training](../../concepts/ai-engineering/llm-training.md)
+- [Transformer](../../concepts/machine-learning/transformer.md)
 
 ## References
 
 - arXiv: https://arxiv.org/abs/2608.30135
 - HuggingFace: https://huggingface.co/papers/2608.30135
+- Scope: abstract-based; per-model/bench tables are in the full text

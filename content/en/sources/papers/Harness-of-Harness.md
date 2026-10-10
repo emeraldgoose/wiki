@@ -3,6 +3,7 @@ title: "Harness-of-Harness: Multi-Day Autonomous Software Development with Conti
 description: HuggingFace Daily Papers — 2026-09-01 — 
 tags: [source, paper, huggingface, arxiv, ai-engineering]
 locale: en
+source_url: "https://arxiv.org/abs/2609.01481"
 arxiv_id: 2609.01481
 ---
 
@@ -20,39 +21,34 @@ This paper studies autonomous software development, in which LLM-based coding ag
 
 ## Key Contributions
 
-- **Novel methodology** for [specific contribution]
-- **Key insight** that addresses [problem]
-- **Implementation details** relevant to software engineering,
-
-
+- **Harness-of-Harness (HoH)**: operates on existing coding-agent harnesses, organizing executions into iterative planning–coding–testing loops that balance repair with capability growth
+- **Design rules**: small verifiable increments, implementation-time testing separated from independent evaluation, constrained verifiable outputs instead of prescribed workflows, progressive exposure of deliverables/tools/skills, reuse over recreation, versioned project histories
+- **Multi-day autonomy demo**: 70+ iterations building a playable first-person-shooter game (storyline, mechanics, visuals, audio)
 
 ## Methodology
 
-- **Architecture**: [describe model architecture or framework]
-- **Algorithms**: [key algorithms used]
-- **Key equations/choices**: [important mathematical or computational choices]
-
-
+Three harness–model pairs (Codex + GPT-5.5, OpenCode + DeepSeek-V4-Pro, Pi + MiniMax-M3) run HoH loops vs standalone harnesses on GameCraft-Bench, FrontierSWE, and ProgramBench.
 
 ## Results
 
-- **Key results**: [main experimental findings with numbers]
-- **Baseline comparisons**: [comparison with existing methods]
-- **Reproducibility**: [whether results can be reproduced]
-
-
+| Finding | Number |
+|---|---|
+| Average relative gain over standalone harness | **+52.25%** after 3 iterations |
+| Maximum gain | **+82.86%** |
+| Consistency | gains across all three harness–model pairs |
+| Endurance | coherent FPS game over 70+ autonomous iterations |
 
 ## Relevance to Software Engineers
 
-- [To be filled: practical implications for SW engineers]
+Wrap your coding agent in an outer loop with versioned history, separate eval gates, and small increments — harness-level iteration beats single-shot generation. Constrain *outputs* (verifiable), not *workflows*. Links from the paper: https://github.com/Flesymeb/HarnessOfHarness, https://flesymeb.github.io/HarnessOfHarness/
 
 ## Related Concepts
 
-- `concepts/ai-engineering/agent.md`
-- `concepts/ai-engineering/llm-training.md`
-- `concepts/machine-learning/transformer.md`
+- [Agent](../../concepts/ai-engineering/agent.md)
+- [LLM Training](../../concepts/ai-engineering/llm-training.md)
 
 ## References
 
 - arXiv: https://arxiv.org/abs/2609.01481
 - HuggingFace: https://huggingface.co/papers/2609.01481
+- Scope: abstract-based; per-bench tables are in the full text

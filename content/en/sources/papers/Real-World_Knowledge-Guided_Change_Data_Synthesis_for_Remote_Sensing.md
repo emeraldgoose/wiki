@@ -1,5 +1,6 @@
 ---
 title: Real-World Knowledge-Guided Change Data Synthesis for Remote Sensing
+description: "Knowledge-guided change synthesis for remote sensing beyond handcrafted rules"
 arxiv_id: 2608.24263
 HF_URL: https://huggingface.co/papers/2608.24263
 published: 2026-08-25

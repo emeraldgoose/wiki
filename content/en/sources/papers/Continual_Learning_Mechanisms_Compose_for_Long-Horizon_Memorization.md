@@ -1,15 +1,15 @@
 ---
 title: "Continual Learning Mechanisms Compose for Long-Horizon Memorization"
+description: "Composing continual-learning mechanisms (anchors x low-rank allocation) lifts 100-task retention from 1.2% to 34.9%"
 published: 2026-09-07
 arxiv_id: "2609.06986"
 url: "https://arxiv.org/abs/2609.06986"
 authors: ["Zheyuan Zhang", "Alvin Zhang", "Daniel Khashabi", "Tianmin Shu"]
 tags: [source, paper, machine-learning]
+locale: en
 ---
 
 # Continual Learning Mechanisms Compose for Long-Horizon Memorization
-
-[KO version](../ko/sources/papers/Continual_Learning_Mechanisms_Compose_for_Long-Horizon_Memorization.md)
 
 ## Abstract
 

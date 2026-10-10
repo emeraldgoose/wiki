@@ -3,6 +3,7 @@ title: "Learning Where Outcomes Change:Credit-Addressable Reasoning for Multimod
 description: HuggingFace Daily Papers — 2026-08-31 — Tsinghua IIGroup
 tags: [source, paper, huggingface, tsinghua-iigroup]
 locale: en
+source_url: "https://arxiv.org/abs/2608.30457"
 arxiv_id: 2608.30457
 ---
 
@@ -18,18 +19,28 @@ Multimodal geometry reasoning requires VLMs to extract precise visual relations 
 
 ## Key Contributions
 
-- Propose credit-addressable reasoning for multimodal geometry tasks
-- Attribute outcomes to specific parts of multimodal inputs
-- Enable precise debugging of multimodal model behavior
-- Identify contributing visual and textual elements to final decisions
+- **Credit-addressable reasoning**: the semantic units exposed during inference (typed events) also define where learning compares alternatives and assigns credit — closing both the representation gap and the credit gap of trajectory-level RL
+- **Code-CoT**: retains the diagram and represents visual relations as line-addressable executable Matplotlib code, organizing reasoning into typed events (`reference`, `auxiliary`, `coordinate`, `think`); each event is verifiable and branchable
+- **CE-GRPO**: selects candidate event boundaries with a structural prior + type-normalized entropy, samples complete continuations from the shared prefix through the final answer, and converts terminal outcome differences into localized advantages (shared prefix excluded from loss; unanimous groups contribute no update)
+- **Evidence**: 9 geometry benchmarks, average 76.04 (+8.09 over Qwen3-VL-8B, +3.43 over trajectory-level GRPO); margin over trajectory GRPO grows 3.77 points per additional intermediate event
 
 ## Methodology
 
-Framework for assigning credit to specific multimodal input components. Involves identifying which visual and textual elements contribute to final decisions in geometry-related reasoning tasks. Credit assignment mechanisms established to attribute outcomes to specific parts of inputs.
+Code-CoT is installed by SFT on 18,302 quality-controlled traces (diagram + perception code + plan + typed events + answer; visual encoder frozen), then refined by CE-GRPO. Ordinary and shared-prefix groups are mixed 1:1 under the same GRPO objective with a programmatic reward (correctness + action validity − repetition/answer-leakage penalties). Branching fixes image, question, and complete prefix, so updates apply only to the regenerated event and its downstream consequences.
 
 ## Results
 
-Enables more precise debugging and understanding of multimodal model behavior in geometry tasks. Framework helps identify contributing elements to model decisions.
+| Comparison | Result |
+|---|---|
+| CE-GRPO average (9 benchmarks) | **76.04** |
+| vs Qwen3-VL-8B backbone | **+8.09** (all 9 benchmarks improved) |
+| vs trajectory-level GRPO | **+3.43** (+3.91 on validly terminated responses) |
+| vs Code-CoT SFT | +6.49 |
+| Dependency-heavy splits | GeoLaux-mini **+15.16**, MM-Math **+9.44** over trajectory GRPO |
+| Event scaling | CE-GRPO margin **+3.77 points per additional event** (r=0.866) |
+| Selector ablation | structure + entropy best (76.04, 4.73% unclosed); structure alone 74.26; entropy alone ≈ random |
+
+Code-grounded training also narrows the MathVerse text-dominant–vision-only gap from 30.07 to 14.09. Full per-benchmark tables are in the paper (HTML version verified); protocol-constrained models must terminate with a non-empty `<answer>` block.
 
 ## Relevance to Software Engineers
 
@@ -37,11 +48,12 @@ For SW engineers, credit-addressable reasoning provides a much-needed framework 
 
 ## Related Concepts
 
-- `concepts/ai-engineering/agent.md`
-- `concepts/ai-engineering/llm-training.md`
-- `concepts/machine-learning/transformer.md`
+- [LLM Training](../../concepts/ai-engineering/llm-training.md)
+- [Transformer](../../concepts/machine-learning/transformer.md)
+- [Attention](../../concepts/machine-learning/attention.md)
 
 ## References
 
 - arXiv: https://arxiv.org/abs/2608.30457
+- arXiv HTML (verified): https://arxiv.org/html/2608.30457
 - HuggingFace: https://huggingface.co/papers/2608.30457

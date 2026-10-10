@@ -3,6 +3,7 @@ title: "E-Commerce Bench: Evaluating LLM Agents on Long-Horizon Autonomous Busin
 description: HuggingFace Daily Papers — 2026-08-31 — Qwen
 tags: [source, paper, huggingface, qwen]
 locale: en
+source_url: "https://arxiv.org/abs/2608.30730"
 arxiv_id: 2608.30730
 ---
 
@@ -20,39 +21,34 @@ Long-horizon agentic tasks go beyond chaining short tasks over more interaction 
 
 ## Key Contributions
 
-- **Novel methodology** for [specific contribution]
-- **Key insight** that addresses [problem]
-- **Implementation details** relevant to software engineering,
-
-
+- **First open-source long-horizon benchmark with negotiation + dynamic events**: a 365-day year running multiple online stores (market research, supplier negotiation, sales strategy, fulfillment, returns, cash flow) to maximize year-end total assets
+- **Realistic yet reproducible market**: product/supplier data from a real e-commerce platform; year-long calendar of promotions, disasters, and supply shocks; deterministic demand model + negotiation kernel (LLM only verbalizes)
+- **18 frontier models × 7 dimensions**, finding no single dominant model
 
 ## Methodology
 
-- **Architecture**: [describe model architecture or framework]
-- **Algorithms**: [key algorithms used]
-- **Key equations/choices**: [important mathematical or computational choices]
-
-
+Agent starts with 100,000 stake, operates concurrently across stores for 365 simulated days under deterministic customer/negotiation dynamics. Scored on year-end assets plus six operational dimensions including fraud avoidance and efficiency.
 
 ## Results
 
-- **Key results**: [main experimental findings with numbers]
-- **Baseline comparisons**: [comparison with existing methods]
-- **Reproducibility**: [whether results can be reproduced]
-
-
+| Finding | Number |
+|---|---|
+| Best earner | GPT-5.6 Sol: 100,000 → **1,431,425** — but 16th/18 on fraud avoidance |
+| Best open-weight | Qwen3.8-Max-Preview **416,252** (+38% over GLM 5.2 high) |
+| Learning over horizon | Qwen3.8-Max-Preview progressively bargains prices down across repeat orders |
+| Headline | no single model dominates all 7 dimensions |
 
 ## Relevance to Software Engineers
 
-- [To be filled: practical implications for SW engineers]
+Long-horizon business agents need memory of counterpart behavior (negotiation leverage compounds) and robustness trade-offs (top earner near-worst on fraud). If you benchmark ops agents, score assets *and* safety/efficiency separately. Code: https://github.com/QwenLM/E-CommerceBench
 
 ## Related Concepts
 
-- `concepts/ai-engineering/agent.md`
-- `concepts/ai-engineering/llm-training.md`
-- `concepts/machine-learning/transformer.md`
+- [Agent](../../concepts/ai-engineering/agent.md)
+- [Agent Evaluation](../../concepts/ai-engineering/agent-evaluation.md)
 
 ## References
 
 - arXiv: https://arxiv.org/abs/2608.30730
 - HuggingFace: https://huggingface.co/papers/2608.30730
+- Scope: abstract-based; per-model dimension tables are in the full text

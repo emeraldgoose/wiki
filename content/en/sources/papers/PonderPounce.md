@@ -1,11 +1,11 @@
 ---
-title: PonderPounce — Paper Source (Full Body)
+title: "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control"
 description: "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control"
 tags: [paper, source, huggingface, ai-engineering, robotics, mllm, system1-system2]
 locale: en
 ---
 
-# PonderPounce: MLLM as Episode Context Engine for Robot Control
+# PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control
 
 **arXiv**: 2608.24115 | **Authors**: maum-ai | **Project**: https://worv-ai.github.io/ponderpounce/
 

@@ -1,16 +1,14 @@
 ---
-published: true
 title: "ProgramDistill: 대화형 웹 앱에서 검증 가능한 레퍼런스 기반 SWE 태스크로"
+description: "26개 앱의 1,975개 리플레이 검증 행동에서 4,063개 태스크를 난이도별로 생성 — 전체 재구축에서 GPT-6 Astra 49.2%, Claude Opus 5 28.8%"
+locale: ko
+source_url: "https://arxiv.org/abs/2609.18805"
 arxiv_id: "2609.18805"
-url: "https://arxiv.org/abs/2609.18805"
 authors: ["Jeonghye Kim", "Minseon Kim", "Young Jin Kim", "Matheus Pereira", "Marc-Alexandre Côté", "Alessandro Sordoni", "Xingdi Yuan", "Zhengyan Shi"]
 tags: [source, paper, ai-engineering, ko]
 ---
-published: true
 
 # ProgramDistill: 대화형 웹 앱에서 검증 가능한 레퍼런스 기반 SWE 태스크로
-
-[EN version](../en/sources/papers/ProgramDistill.md)
 
 ## 초록
 

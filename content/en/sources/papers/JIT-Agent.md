@@ -1,5 +1,5 @@
 ---
-title: JIT-Agent — Paper Source (Full Body)
+title: "JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution"
 description: "JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution"
 tags: [paper, source, huggingface, ai-engineering, agent-harness, harness-intelligence]
 locale: en

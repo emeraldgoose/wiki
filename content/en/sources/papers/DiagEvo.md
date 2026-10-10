@@ -3,6 +3,7 @@ title: "DiagEvo: Diagnosis-Guided Self-Evolution via Hierarchical Error Memory"
 description: HuggingFace Daily Papers — 2026-09-01 — LongCat
 tags: [source, paper, huggingface, longcat]
 locale: en
+source_url: "https://arxiv.org/abs/2609.00768"
 arxiv_id: 2609.00768
 ---
 
@@ -20,39 +21,34 @@ Self-play is an effective paradigm for language-model self-evolution, but withou
 
 ## Key Contributions
 
-- **Novel methodology** for [specific contribution]
-- **Key insight** that addresses [problem]
-- **Implementation details** relevant to software engineering,
-
-
+- **Failure-history-derived direction**: instead of difficulty/learnability/diversity signals or external task resources, DiagEvo's diagnostician extracts recurring error causes from the solver's own failure history into a hierarchical error-cause memory (skill nodes; each cause tracked Active/Mastered by self-consistency on targeted questions)
+- **Challenger** balances cause-targeted generation with free exploration using memory states and recurrence counts
+- **Double-confidence filtering**: keeps intermediate-difficulty questions only when the most common solver answer has a clear vote lead
 
 ## Methodology
 
-- **Architecture**: [describe model architecture or framework]
-- **Algorithms**: [key algorithms used]
-- **Key equations/choices**: [important mathematical or computational choices]
-
-
+Self-play loop with a default 4B diagnostician: diagnose → hierarchical memory → targeted + exploratory question generation → filtered solving → memory update. No external task resources. Evaluated on three solvers (Qwen3-4B, Qwen3-8B, OctoThinker-8B) across nine benchmarks.
 
 ## Results
 
-- **Key results**: [main experimental findings with numbers]
-- **Baseline comparisons**: [comparison with existing methods]
-- **Reproducibility**: [whether results can be reproduced]
-
-
+| Finding | Number |
+|---|---|
+| Mean accuracy, all 9 benchmarks × all 3 solvers | best of every baseline |
+| Qwen3-8B, 5 math benchmarks | **72.3%** (+4.5 pp over R-Zero) |
+| Qwen3-8B, all 9 benchmarks | **57.4%** (+1.1 pp over DARC) |
+| Ablations | hierarchical memory and double-confidence filtering both contribute |
 
 ## Relevance to Software Engineers
 
-- [To be filled: practical implications for SW engineers]
+For self-improving LM pipelines, mine the failure log — not just difficulty scores — and track error causes as a stateful memory (active vs mastered). Gate training questions on answer-consensus margin. The pattern ports to any agentic self-play loop (coding, tool use) where unguided rounds plateau.
 
 ## Related Concepts
 
-- `concepts/ai-engineering/agent.md`
-- `concepts/ai-engineering/llm-training.md`
-- `concepts/machine-learning/transformer.md`
+- [LLM Training](../../concepts/ai-engineering/llm-training.md)
+- [Transformer](../../concepts/machine-learning/transformer.md)
 
 ## References
 
 - arXiv: https://arxiv.org/abs/2609.00768
 - HuggingFace: https://huggingface.co/papers/2609.00768
+- Scope: abstract-based; per-benchmark tables are in the full text

@@ -1,5 +1,5 @@
 ---
-title: 'JIT-Agent — 논문 소스 (전체 번역)'
+title: 'JIT-Agent: Just-in-Time 하네스 진화를 통한 하네스 지능 스케일링'
 description: 'JIT-Agent: Just-in-Time 하네스 진화를 통한 하네스 지능 스케일링 (한국어 전체 번역)'
 tags: [paper, source, huggingface, ai-engineering, agent-harness, harness-intelligence, ko]
 locale: ko

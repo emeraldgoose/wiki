@@ -3,6 +3,7 @@ title: "DramaChain Bench: An End-to-End Benchmark for Short-Drama Generation"
 description: HuggingFace Daily Papers — 2026-09-01 — Tencent Hunyuan
 tags: [source, paper, huggingface, tencent-hunyuan, ai-engineering]
 locale: en
+source_url: "https://arxiv.org/abs/2609.00646"
 arxiv_id: 2609.00646
 ---
 
@@ -20,39 +21,34 @@ Commercial short-drama production follows a multi-stage chain: script, storyboar
 
 ## Key Contributions
 
-- **Novel methodology** for [specific contribution]
-- **Key insight** that addresses [problem]
-- **Implementation details** relevant to software engineering,
-
-
+- **First end-to-end short-drama benchmark**: evaluates all five production stages (script → storyboard → keyframes → shot video → finished drama) instead of video-only generation from pre-authored inputs
+- **DramaChain Dimensions**: five evaluation axes instantiated at every stage, resolving into 63 leaf dimensions; DramaChain Agent calibrated against commercial platforms for fair stage-wise comparison
+- **DramaChain Labeling System**: 5,785 items × 3 professional annotators → 17,488 valid scores + 255,925 traceable attribution records, defects spatio-temporally localized from a predefined list
+- **DramaChain Agentic Judge**: multi-round evidence gathering against per-item checklists; reproduces model ranking at mean PLCC 0.918, admitting new models at zero annotation cost
 
 ## Methodology
 
-- **Architecture**: [describe model architecture or framework]
-- **Algorithms**: [key algorithms used]
-- **Key equations/choices**: [important mathematical or computational choices]
-
-
+Real upstream pipeline outputs feed each stage (not pre-authored inputs), so two questions become answerable: stage adherence to original script intent, and cross-shot coherence after multi-episode assembly. Human annotations establish the reference; the agentic judge is validated by rank correlation.
 
 ## Results
 
-- **Key results**: [main experimental findings with numbers]
-- **Baseline comparisons**: [comparison with existing methods]
-- **Reproducibility**: [whether results can be reproduced]
-
-
+| Finding | Number |
+|---|---|
+| Annotation scale | 5,785 items, 17,488 scores, 255,925 attributions |
+| Key empirical result | upstream defects cascade — final quality not governed by video generation alone |
+| Agentic judge fidelity | mean PLCC **0.918** vs human ranking |
 
 ## Relevance to Software Engineers
 
-- [To be filled: practical implications for SW engineers]
+Evaluate generative pipelines stage-by-stage against the original intent, not each stage's immediate prompt — upstream drift dominates final quality. The checklist + multi-round-evidence judge pattern (PLCC 0.918) is a reusable recipe for cheap, trustworthy eval of new models.
 
 ## Related Concepts
 
-- `concepts/ai-engineering/agent.md`
-- `concepts/ai-engineering/llm-training.md`
-- `concepts/machine-learning/transformer.md`
+- [Agent Evaluation](../../concepts/ai-engineering/agent-evaluation.md)
+- [Agent](../../concepts/ai-engineering/agent.md)
 
 ## References
 
 - arXiv: https://arxiv.org/abs/2609.00646
 - HuggingFace: https://huggingface.co/papers/2609.00646
+- Scope: abstract-based; dimension definitions are in the full text

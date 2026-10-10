@@ -1,15 +1,15 @@
 ---
 title: "Atria Dawn: 에이전트 기반 초지능의 서막"
+description: "검증 가능한 경험 파이프라인의 Atria Dawn Preview — 16 벤치 경쟁, 5개 최고. 769 작업 인간-AI 협업 연구"
 published: 2026-09-14
 arxiv_id: "2609.15818"
 url: "https://arxiv.org/abs/2609.15818"
 authors: ["Honglin Guo", "Tao Gui", "Yicheng Chen", "Guanting Dong", "Qiming Ge", "Yuyang Hu", "Zixian Huang", "Jiajie Jin", "Alexander Lam", "Yining Li", "Jiahang Lin", "Yanjiang Liu", "Xinyu Lu", "Haijun Lv", "Junlin Shang", "Qisheng Su", "Guoqiang Wang", "Rui Wang", "Zhecan Wang", "Hao Xiang", "Xinchen Xie", "Shuhao Xing", "Xiaoyu Xing", "Wanghan Xu", "Xinyu Yang", "Yajie Yang", "Chengfeng Zhao", "Haoran Zhao", "Ruojun Zhou", "Yunhua Zhou", "Yicheng Zou", "Kun Cai", "Qiye Cai", "Xinmeng Che", "Haodong Chen", "Jiabei Chen", "Jiahao Chen", "Jiayi Chen", "Yujia Chen", "Lizhi Cui", "Youheng Dai", "Xin Deng", "Yi Dong", "Shihan Dou", "Chenya Gu", "Xu Guo", "Ding Han", "Feiyang Hao", "Haotan He", "Jie Hou", "Binze Hu", "Zijian Hu", "Junhao Huang", "Huicheng Jiang", "Jiazhen Jiang", "Shufan Jiang", "Jiahao Kuang", "Bowen Lai", "Bo Li", "Jiaqiang Li", "Peng Li", "Qilong Li", "Zhuoqun Li", "Jiaxiang Liu", "Shuainan Liu", "Tong Liu", "Yi Liu", "Zhonghang Lu", "Jianwen Luo", "Yanyi Luo", "Huijie Lv", "Ningsheng Ma", "Zerun Ma", "Houcheng Min", "Chengjun Pan", "Qiyuan Peng", "Xiaoxuan Peng", "Jianmin Qian", "Jiantao Qiu", "Wanying Ren", "Huayu Sha", "Jifei Shan", "Zixin Shang", "Bing Shao", "Zhuohui Sheng", "Jiayang Shi", "Yang Shu", "Aierpanjiang Simayi", "Sirui Song", "Yuxiao Song", "Zhe Sun", "Zhichao Sun", "Wenzhe Tan", "Wenhui Tian", "Zhongbo Tian", "Hanchen Wang", "Pengbo Wang", "Rui Wang", "Yiding Wang", "Yuhui Wang", "Zhiheng Xi", "Caijun Xu", "Chao Xu", "Yongfeng Xu", "Xiaolei Yang", "Zhixiong Yang", "Qian Yao", "Shihong Yi", "Yuankai Ying", "Jia Yu", "Dingbo Yuan", "Hao Yuan", "Junjie Yuan", "Bo Zhang", "Caixian Zhang", "Qiuyinzhe Zhang", "Jiyuan Zhao", "Penghao Zhao", "Ying Zhao", "Pujun Zheng", "Xiaoxue Zhong", "Xiaohao Zhou", "Xinyu Zhou", "Dongsheng Zhu", "Guanru Zhu", "Yulun Zhu", "Yaojie Lu", "Tao Ji", "Hongyu Lin", "Yutao Zhu", "Pengfei Cao", "Guoxiu He", "Xianpei Han", "Ben He", "Zhicheng Dou", "Kang Liu", "Qi Zhang", "Le Sun", "Jun Zhao", "Ji-Rong Wen", "Xuanjing Huang", "Yu-Gang Jiang", "Bowen Zhou"]
 tags: [source, paper, ai-engineering, ko]
+locale: ko
 ---
 
 # Atria Dawn: 에이전트 기반 초지능의 서막
-
-[EN version](../en/sources/papers/Atria_Dawn_The_Dawn_of_Agentic_Superintelligence.md)
 
 ## 초록
 AI 에이전트가 후속 모델의 개발에 직접 참여하게 됨에 따라, 지능의 생산 방식과 인간 연구자의 역할이 재정의되고 있습니다. 본 논문에서는 과학 연구 및 엔지니어링 워크플로우를 위해 설계된 파운데이션 에이전트 언어 모델인 **Atria Dawn Preview**를 소개합니다. 이 모델은 도구 매개 상호작용을 실행 가능한 환경 및 외부 검증 결과와 연결하는 **검증 가능한 경험 파이프라인(Verifiable Experience Pipeline)**을 통해 학습되었습니다. 실제 연구, 엔지니어링, 디지털 작업 등 16개 벤치마크에서 Atria Dawn Preview는 최신 에이전트들과 경쟁 가능한 성능을 보였으며, 그 중 5개 항목에서 최고 점수를 기록했습니다. 성능 외에도, 56명의 참여자와 에이전트 로그를 통해 769개의 작업 기록을 분석하여 인간-AI 협업 사례 연구를 수행했습니다. 그 결과, 참여자들은 완료된 AI 지원 작업의 약 1/3이 AI 없이는 불가능했을 것이라고 평가했습니다. 특히, 에이전트가 방법론을 제안하고 수정을 구현하는 반면, 인간은 최종 결정권을 유지하며 판단과 피드백을 통해 탐색을 가이드하는 경향이 뚜렷했습니다. 이는 작업 단위의 실행에서 프로젝트 단위의 파트너십으로의 전환을 의미하며, 인간의 노력은 '무엇을 추구할 것인가'와 '증거가 연구를 어떻게 가이드해야 하는가'에 집중됩니다. 더 자율적인 AI 연구로 나아가기 위해서는 발견 능력뿐만 아니라 의미 있는 인간 감독 능력을 동시에 발전시켜, 지속적인 개발의 위험과 방향에 대해 인간의 책임 있는 권한을 유지해야 합니다.

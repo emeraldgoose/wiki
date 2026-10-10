@@ -3,6 +3,7 @@ title: "AgentJudgeBench: A Multi-Difficulty Benchmark for Evaluating LLM Judges 
 description: HuggingFace Daily Papers — 2026-08-27 — ServiceNow-AI
 tags: [source, paper, huggingface, servicenow-ai]
 locale: en
+source_url: "https://arxiv.org/abs/2608.26623"
 arxiv_id: 2608.26623
 ---
 
@@ -20,39 +21,38 @@ LLM judges are widely used to evaluate agentic tool-calling systems, yet their r
 
 ## Key Contributions
 
-- **Novel methodology** for [specific contribution]
-- **Key insight** that addresses [problem]
-- **Implementation details** relevant to software engineering,
-
-
+- **First benchmark for LLM-as-a-judge on agentic tool-calling over workflow DAGs** — 3,808 instances across six DAG topologies and three difficulty tiers, separating judge reliability from open-ended text/preference evaluation
+- **Paired with/without-ground-truth protocol**: five generators (3B–70B open-weight + GPT-5.4) × six judges (20B to frontier scale)
+- **Structural ceiling finding**: judge alignment degrades monotonically with difficulty, 1.5x faster without ground truth; on hard queries without GT all six judges converge to 77–82% regardless of scale
+- **Over-anchoring**: ground-truth exposure reduces alignment for GPT-5.4 (−1.5 pp) and Gemini-2.5-Pro (−3.9 pp)
 
 ## Methodology
 
-- **Architecture**: [describe model architecture or framework]
-- **Algorithms**: [key algorithms used]
-- **Key equations/choices**: [important mathematical or computational choices]
-
-
+Workflow DAGs at three difficulty tiers with paired ground-truth conditions. Judge–generator matrix evaluated against programmatic reference plus a human validation study. Mitigations tested: chain-of-thought, temperature, structured rubrics.
 
 ## Results
 
-- **Key results**: [main experimental findings with numbers]
-- **Baseline comparisons**: [comparison with existing methods]
-- **Reproducibility**: [whether results can be reproduced]
-
-
+| Finding | Number |
+|---|---|
+| Difficulty degradation without GT | 1.5x faster than with GT |
+| Hard queries, no GT (all 6 judges) | 77–82% band regardless of scale |
+| GT over-anchoring | −1.5 pp (GPT-5.4), −3.9 pp (Gemini-2.5-Pro) |
+| CoT reasoning / temperature | negligible effect |
+| Structured rubrics | up to +6.5 pp, not uniform across pairs |
+| Best with GT | QwQ-32B (programmatic match); GPT-OSS-120B most human-aligned |
 
 ## Relevance to Software Engineers
 
-- [To be filled: practical implications for SW engineers]
+Do not trust LLM judges on hard multi-step tool-calling without ground truth — capacity does not break the ceiling. Budget for structured rubrics (+6.5 pp where they transfer) and paired GT/no-GT evaluation; watch for over-anchoring when showing judges the answer. QwQ-32B and GPT-OSS-120B are the reference points to beat.
 
 ## Related Concepts
 
-- `concepts/ai-engineering/agent.md`
-- `concepts/ai-engineering/llm-training.md`
-- `concepts/machine-learning/transformer.md`
+- [Agent Evaluation](../../concepts/ai-engineering/agent-evaluation.md)
+- [Agent](../../concepts/ai-engineering/agent.md)
+- [LLM Training](../../concepts/ai-engineering/llm-training.md)
 
 ## References
 
 - arXiv: https://arxiv.org/abs/2608.26623
 - HuggingFace: https://huggingface.co/papers/2608.26623
+- Scope: abstract-based; per-DAG tables are in the full text

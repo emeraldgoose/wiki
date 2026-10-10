@@ -1,14 +1,15 @@
 ---
-arxiv_id: "Studying Image Tokenizers as Visual Languages in Unified Multimodal Models"
+title: "통합 멀티모달 모델에서의 시각 언어로서의 이미지 토크나이저 연구"
+description: "통합 멀티모달 모델 안에서 이산 이미지 토크나이저가 시각 언어처럼 동작하는지 — 어휘·문법·구성성을 검증"
+locale: "ko"
 source_url: "https://arxiv.org/abs/2609.09143"
+arxiv_id: "2609.09143"
 authors: ["Siting Li", "Zhengyang Wang", "Simon Shaolei Du", "Xi Chen", "Yang Liu"]
 published: "2026-09-08"
-locale: "ko"
+tags: [source, paper, machine-learning, ko]
 ---
 
 # 통합 멀티모달 모델에서의 시각 언어로서의 이미지 토크나이저 연구
-
-[영문 원문 보기]([[EN_PATH_PLACEHOLDER]])
 
 ## 초록
 

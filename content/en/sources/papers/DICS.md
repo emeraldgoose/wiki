@@ -3,6 +3,7 @@ title: "DICS: Exploring Data Intrinsic Consistency for Visual Instruction Select
 description: HuggingFace Daily Papers — 2026-08-31 — SpatialAxiom
 tags: [source, paper, huggingface, spatialaxiom, machine-learning]
 locale: en
+source_url: "https://arxiv.org/abs/2608.30209"
 arxiv_id: 2608.30209
 ---
 
@@ -20,39 +21,34 @@ Visual instruction tuning is crucial for advancing the vision-language alignment
 
 ## Key Contributions
 
-- **Novel methodology** for [specific contribution]
-- **Key insight** that addresses [problem]
-- **Implementation details** relevant to software engineering,
-
-
+- **DIC (Data Intrinsic Consistency)**: self-scoring metric for intra-sample coherence — VIC (visual content ↔ instruction alignment) + RIC (response coherence relative to instruction)
+- **DICS selection**: adaptively trades high intra-sample consistency against global distributional diversity under varying data budgets, instead of relying on diversity/heuristics alone
+- **DICS-6M**: 6M-sample multimodal instruction corpus enabling the largest-scale visual-instruction selection study to date
 
 ## Methodology
 
-- **Architecture**: [describe model architecture or framework]
-- **Algorithms**: [key algorithms used]
-- **Key equations/choices**: [important mathematical or computational choices]
-
-
+Score every sample with DIC (VIC + RIC), then select under a fixed ratio constraint balancing top-consistency samples with distribution coverage. Evaluated across dataset scales and model architectures.
 
 ## Results
 
-- **Key results**: [main experimental findings with numbers]
-- **Baseline comparisons**: [comparison with existing methods]
-- **Reproducibility**: [whether results can be reproduced]
-
-
+| Finding | Number |
+|---|---|
+| vs full-dataset fine-tuning | surpasses it with **25%** of LLaVA-1.5-665K data |
+| vs official InternVL3-8B-Instruct | **94.52%** of its performance with **<25%** of reported training data |
+| Generality | consistently beats SOTA selection across scales and architectures |
 
 ## Relevance to Software Engineers
 
-- [To be filled: practical implications for SW engineers]
+When instruction-tuning VLMs on a data budget, filter by intra-sample consistency (does the response actually cohere with the instruction and image?), not just diversity. 25%-of-data beating full-data fine-tuning is a direct training-cost lever. Code: https://github.com/cqu-student/DICS
 
 ## Related Concepts
 
-- `concepts/ai-engineering/agent.md`
-- `concepts/ai-engineering/llm-training.md`
-- `concepts/machine-learning/transformer.md`
+- [Embeddings](../../concepts/machine-learning/embedding.md)
+- [Transformer](../../concepts/machine-learning/transformer.md)
+- [LLM Training](../../concepts/ai-engineering/llm-training.md)
 
 ## References
 
 - arXiv: https://arxiv.org/abs/2608.30209
 - HuggingFace: https://huggingface.co/papers/2608.30209
+- Scope: abstract-based; per-scale tables are in the full text

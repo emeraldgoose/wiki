@@ -5,3 +5,5 @@ static/
 
 # Local collection inventory (scripts/collect_articles.py --out default).
 .index-backup/
+
+scripts/__pycache__

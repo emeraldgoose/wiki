@@ -1,5 +1,5 @@
 ---
-title: "Training, Learning and Inference: Unified Dynamics — Paper Source (Full Body)"
+title: "Training, Learning and Inference: Unified Dynamics"
 description: "Training, learning and inference: unified dynamics of neural systems"
 tags: [paper, source, huggingface, ai-engineering, neural-dynamics, transformer, resnet, diffusion]
 locale: en

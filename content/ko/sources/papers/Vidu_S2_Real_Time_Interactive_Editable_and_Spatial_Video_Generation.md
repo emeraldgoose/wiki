@@ -1,9 +1,11 @@
 ---
-title: "Vidu S2: Real-Time Interactive, Editable, and Spatial Video Generation"
+title: "Vidu S2: 실시간 인터랙티브, 편집 가능 및 공간 비디오 생성"
+description: "실시간 720p 아바타(S2-Avatar, 동적 참조 지원)와 실시간 스트림 편집(S2-Editing, 스타일·의상·캐릭터·배경), 공간 비디오 탐색"
+locale: ko
+source_url: "https://arxiv.org/abs/2609.11638"
 published: 2026-09-10
 arxiv_id: "2609.11638"
-url: "https://arxiv.org/abs/2609.11638"
-authors: ["Jintao Zhang", "Kai Jiang", "Jintao Chen", "Xu Wang", "Deyuan Liu", "Jungang Li", "Dechuang Chen", "Ming Lin", "Jingjiang Zhou", "Haopeng Jin", "Qi Jia", "Xiaohang Wang", "Yaole Wang", "Zhanqiang Zhang", "Ran Li", "Zhengkun Huang", "Shuyue Xiong", "Yuji Wang", "Zikun Dai", "Hui He", "Yang Luo", "Mang Ning", "Weiqi Feng", "Chengyang Ye", "Xinyue Lin", "Min Zhao", "Hongzhou Zhu", "Hengkai Tan", "Zeyuan Wang", "Chendong Xiang", "Kaiwen Zheng", "Zhijie Deng", "Fan Bao", "Jianfei Chen", "Jun Zhu"]
+authors: ["Jintao Zhang", "외 34명의 저자"]
 tags: [source, paper, machine-learning, ko]
 ---
 
@@ -40,10 +42,18 @@ tags: [source, paper, machine-learning, ko]
 - Vidu S2는 좌우 안구 뷰를 생성하여 3D와 같은 공간 비디오를 구현함으로써, 전경과 배경을 명확히 분리하고 몰입감을 높입니다.
 
 ## 결과
-- **정량적/정성적 평가**: Vidu S2는 정체성 보존과 시간적 안정성 면에서 PixVerse, Runway, XMax, Decart와 같은 베이스라인 모델보다 뛰어난 성능을 보였습니다.
-- **아바타 일관성**: 경쟁 모델에서 나타나는 얼굴 표정의 표류(drift) 없이 정체성, 헤어스타일, 세부 기하학적 구조를 유지합니다.
-- **편집 정밀도**: 다른 모델들이 실패하는 "셔츠를 당기는" 동작 중의 의상 변형까지 정확하게 처리합니다.
+- **아바타**: 실시간 720p 생성, 수시 갱신 동적 참조, 춤 같은 강한 지시 수행. 경쟁 모델의 드리프트 없이 정체성·헤어·미세 기하 유지.
+- **편집**: 스타일 렌더링·의상 교체·캐릭터 교체·배경 교체를 실시간 스트림 편집. "셔츠 당기기" 같은 고난도 의상 변형 처리.
+- **베이스라인 명시**: PixVerse·Runway·XMax·Decart 대비 정체성 보존·시간 안정성 우세 진술.
+- **초록에 지표 없음**: FPS·지연·점수표·승률 없음. 인용은 전문 또는 플레이 가능 온라인 데모에서만.
 
 ## 한계 및 시사점
 - **관련성**: 소프트웨어 엔지니어 및 ML 실무자에게 Vidu S2는 효율적인 추론 인프라와 diffusion forcing을 결합하여 실시간 고해상도 생성 비디오를 구현하는 방법을 보여줍니다.
 - **핵심 교훈**: "스트리밍" 생성 AI로의 전환은 진정한 인터랙티브성을 가능하게 하며, 비디오 생성을 일괄 처리 과정에서 실시간 유틸리티로 변화시킵니다.
+- **근거 간극**: "모든 베이스라인 능가"는 초록 진술. 인용 전 전문의 데이터셋·지표·유의성을 확인하세요.
+
+## 참고 자료
+
+- 원문: https://arxiv.org/abs/2609.11638
+- arXiv HTML: https://arxiv.org/html/2609.11638
+- 범위: 초록 기반. 지표·데모 링크는 전문에 있음

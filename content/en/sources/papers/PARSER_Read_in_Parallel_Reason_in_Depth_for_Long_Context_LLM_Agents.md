@@ -1,9 +1,11 @@
 ---
 title: "PARSER: Read in Parallel, Reason in Depth for Long-Context LLM Agents"
+description: "Decoupling document traversal from reasoning depth — parallel reading for long-context agents"
 arxiv_id: 2609.06702
 HF_URL: https://huggingface.co/papers/2609.06702
 published: 2026-09-06
 authors: Kun Li, Zexuan Qiu, Tianhua Zhang, Irwin King, Helen Meng
+tags: [source, paper, ai-engineering]
 locale: en
 ---
 

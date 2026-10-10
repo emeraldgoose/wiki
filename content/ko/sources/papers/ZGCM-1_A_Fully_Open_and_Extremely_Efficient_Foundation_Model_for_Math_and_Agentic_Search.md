@@ -1,15 +1,15 @@
 ---
 title: "ZGCM-1: 수학 및 에이전트 검색을 위한 완전 공개 및 극효율 파운데이션 모델"
+description: "완전 공개 7B 밀집 모델 — 수십 배 큰 모델과 경쟁, time-to-loss 4.2배"
 published: 2026-09-11
 arxiv_id: "2609.13356"
 url: "https://arxiv.org/abs/2609.13356"
 authors: ["Jiyan He", "Guang Liang", "Hao Liu", "Haoxiang Guan", "Jinbo Sun", "Junyi Guo", "Wenjun Feng", "Yantai Xie", "Yifei Shen", "Bin Shao", "Chuyang Wei", "Kai Chen", "Kexin Zhou", "Minghang Zhu", "Shuxin Zheng", "Tie-Yan Liu", "Taine Zhao", "Wenhui Zhu", "Xueyin Xu", "Xiaoqing Zhang", "Yatao Li", "Yuxuan Ren"]
 tags: [source, paper, machine-learning, ko]
+locale: ko
 ---
 
 # ZGCM-1: 수학 및 에이전트 검색을 위한 완전 공개 및 극효율 파운데이션 모델
-
-[EN version](../en/sources/papers/ZGCM-1_A_Fully_Open_and_Extremely_Efficient_Foundation_Model_for_Math_and_Agentic_Search.md)
 
 ## 초록
 본 연구에서는 데이터, 시스템 및 알고리즘 효율성을 극대화하여 처음부터 학습시킨 완전 공개 7B 밀집(dense) 파운데이션 모델인 **ZGCM-1**을 제시합니다. ZGCM-1은 "소형 모델이 웹의 모든 정보를 수동적으로 암기할 수는 없지만, 의도적인 내부 사고와 능동적인 외부 도구 사용을 결합함으로써 파라미터 용량의 한계를 극복할 수 있다"는 핵심 전제에서 출발합니다. 256K의 긴 컨텍스트를 지원하기 위해 다음과 같은 고효율 오픈 학습 레시피를 개발했습니다. 1) 아키텍처 및 시스템 공동 설계: 게이트형 슬라이딩 윈도우와 풀 어텐션의 인터리브(interleaved) 구성 및 안정적인 FP8 Muon 옵티마이저 적용. 2) 점진적 커리큘럼 및 MDP 중간 학습: 16K $\rightarrow$ 64K $\rightarrow$ 256K로 이어지는 컨텍스트 확장 및 상호작용 궤적을 마르코프 결정 과정(MDP)으로 재구성. 또한, 에이전트 스웜(agent swarms)이 클러스터 운영, 데이터 큐레이션, 신속한 진단 평가를 자율적으로 관리하는 AI 네이티브 R&D 워크플로우를 구축했습니다. 평가 결과, ZGCM-1-7B는 일반 벤치마크에서 7B 모델군과 경쟁 가능하며, 특히 고난도 수학적 추론 및 에이전트 검색 스위트에서는 Qwen3-235B-A22B나 GLM-5.1과 같이 수십 배 더 큰 최신 모델들과도 경쟁할 만한 성능을 보였습니다. 또한, 사전 학습 설계 덕분에 16K 사전 학습 시 time-to-loss 효율이 약 4.2배 향상되었습니다. 커뮤니티 연구를 위해 사전 학습, 중간 학습, 사후 학습 단계의 모델 가중치, 체크포인트, 학습 코드, 데이터 레시피 및 W&B 로그를 모두 공개합니다.
