@@ -524,7 +524,8 @@ def depth_to_root(rel_path):
 
 
 def render_page(title, meta, body_html, lang, rel_path, toc_html="",
-                other_href=None, other_has_page=True, has_math=False):
+                other_href=None, other_has_page=True, has_math=False,
+                has_zoom=False):
     s = STRINGS[lang]
     root = depth_to_root(rel_path)
     other = "ko" if lang == "en" else "en"
@@ -572,6 +573,12 @@ def render_page(title, meta, body_html, lang, rel_path, toc_html="",
             '<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>'
         )
 
+    # Figure zoom animation (scripts/zoom.js). Only pages with zoomable
+    # figures load it; elsewhere the no-JS :target lightbox needs nothing.
+    zoom_tag = (
+        f'<script defer src="{root}assets/zoom.js"></script>\n' if has_zoom else ""
+    )
+
     return f"""<!DOCTYPE html>
 <html lang="{s['lang']}" dir="ltr">
 <head>
@@ -580,7 +587,7 @@ def render_page(title, meta, body_html, lang, rel_path, toc_html="",
 <meta name="description" content="{escape(title)}" />
 <title>{escape(title)} — {s['portal']}</title>
 <link rel="stylesheet" href="{root}assets/style.css" />
-{mathjax_tags}
+{mathjax_tags}{zoom_tag}
 </head>
 <body class="doc">
 <header class="site-header">
@@ -671,10 +678,10 @@ def add_anchors(body_html):
 
 
 def build_css():
-    """Write static/<lang>/assets/style.css and deploy portal.js.
+    """Write static/<lang>/assets/style.css and deploy portal.js + zoom.js.
 
-    Both live in scripts/ as the single source of truth (site_css.py and
-    portal.js); edit them there rather than in the generated output.
+    All three live in scripts/ as the single source of truth (site_css.py,
+    portal.js, zoom.js); edit them there rather than in the generated output.
     A missing portal.js is a build error, not a silent skip: without it
     every filter, sort and pagination control on the portal is dead.
     """
@@ -688,12 +695,20 @@ def build_css():
         raise SystemExit(f"missing {portal_src} — portal interactivity would ship broken")
     with open(portal_src, "rb") as fh:
         portal_bytes = fh.read()
+    zoom_src = os.path.join(os.path.dirname(os.path.abspath(__file__)), "zoom.js")
+    if not os.path.exists(zoom_src):
+        raise SystemExit(f"missing {zoom_src} — figure zoom would ship broken")
+    with open(zoom_src, "rb") as fh:
+        zoom_bytes = fh.read()
     for lang, pub in PUBLIC.items():
         target_dir = os.path.join(pub, "assets")
         os.makedirs(target_dir, exist_ok=True)
         with open(os.path.join(target_dir, "portal.js"), "wb") as out:
             out.write(portal_bytes)
         print(f"  deployed assets/portal.js into static/{lang}/")
+        with open(os.path.join(target_dir, "zoom.js"), "wb") as out:
+            out.write(zoom_bytes)
+        print(f"  deployed assets/zoom.js into static/{lang}/")
 
     written = []
     for lang, pub in PUBLIC.items():
@@ -754,7 +769,8 @@ def build_lang(lang):
             with open(out_path, "w", encoding="utf-8") as f:
                 f.write(render_page(title, meta, body_html, lang, out_rel, toc,
                                     other_href, other_has_page,
-                                    has_math=('class="math-' in body_html)))
+                                    has_math=('class="math-' in body_html),
+                                    has_zoom=('class="zoom-in"' in body_html)))
             written += 1
 
     print(f"  {lang}: wrote {written} pages")
