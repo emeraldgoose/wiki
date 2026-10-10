@@ -72,6 +72,7 @@ I18N = {
         "pending_intro": "Collected from the source feeds but not yet written. These are placeholders, not readable articles.",
         "no_pending": "Nothing pending.",
         "other_lang": "한국어",
+        "theme": "Toggle dark mode",
     },
     "ko": {
         "lang": "ko",
@@ -108,6 +109,7 @@ I18N = {
         "pending_intro": "원본 피드에서 수집했으나 아직 본문을 작성하지 않은 항목입니다. 읽을 수 있는 글이 아닌 자리표시자입니다.",
         "no_pending": "대기 중인 항목이 없습니다.",
         "other_lang": "English",
+        "theme": "다크 모드 전환",
     },
 }
 
@@ -481,11 +483,27 @@ def nav_tree(records, t):
 
 def render(records, t, lang, other_lang_code):
     total = len(records)
+    # The search placeholder shows the live document count, not a hardcoded
+    # number that goes stale as the archive grows.
+    if lang == "ko":
+        t = dict(t, search_ph=f"{total}개 문서 검색…")
+    else:
+        t = dict(t, search_ph=f"Search {total} documents…")
     recent = sorted(records, key=sort_key)
     kinds = Counter(r["kind"] for r in records)
     other = I18N[other_lang_code]
 
     counts = {k: kinds.get(k, 0) for k in ("papers", "articles", "concepts", "guides")}
+    self_label = "English" if lang == "en" else "한국어"
+    other_label = "한국어" if other_lang_code == "ko" else "English"
+    header_actions = (
+        '<div class="header-actions">'
+        f'<button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="{eattr(t["theme"])}">☾</button>'
+        '<details class="lang-menu"><summary>Language</summary><ul>'
+        f'<li><a href="/{lang}/" hreflang="{lang}" aria-current="page">{self_label}</a></li>'
+        f'<li><a href="/{other_lang_code}/" hreflang="{other_lang_code}">{other_label}</a></li>'
+        "</ul></details></div>"
+    )
     filter_buttons = [f'<button class="chip is-active" data-filter-kind="">{e(t["all"])} ({total})</button>']
     for kind in ("papers", "articles", "concepts", "guides"):
         if counts[kind]:
@@ -526,6 +544,8 @@ def render(records, t, lang, other_lang_code):
 <meta property="og:type" content="website"/>
 <title>{e(t['title'])}</title>
 <link rel="stylesheet" href="assets/style.css"/>
+<script>try{{var t=localStorage.getItem("arkive-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}}catch(e){{}}</script>
+<script defer src="assets/theme.js"></script>
 </head>
 <body class="portal">
 <header class="site-header">
@@ -538,7 +558,7 @@ def render(records, t, lang, other_lang_code):
       <a href="#tags">{e(t['by_tag'])}</a>
       <a href="pending.html">{e(t['pending_title'])}</a>
     </nav>
-    <a class="lang-switch" href="/{other_lang_code}/">{e(other['other_lang'])}</a>
+    {header_actions}
   </div>
 </header>
 
@@ -626,6 +646,16 @@ def render_pending(pending, t, lang, other):
     Kept out of the main index so the portal reflects what is actually
     readable, with one obvious place to see the backlog.
     """
+    self_label = "English" if lang == "en" else "한국어"
+    other_label = "한국어" if lang == "en" else "English"
+    header_actions = (
+        '<div class="header-actions">'
+        f'<button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="{eattr(t["theme"])}">☾</button>'
+        '<details class="lang-menu"><summary>Language</summary><ul>'
+        f'<li><a href="pending.html" hreflang="{lang}" aria-current="page">{self_label}</a></li>'
+        f'<li><a href="../{other}/pending.html" hreflang="{other}">{other_label}</a></li>'
+        "</ul></details></div>"
+    )
     rows = []
     for item in sorted(pending, key=lambda r: (r["date"] or "", r["title"]), reverse=True):
         blog = BLOG_LABEL.get(item["blog"], item["blog"])
@@ -649,13 +679,15 @@ def render_pending(pending, t, lang, other):
 <meta name="robots" content="noindex"/>
 <title>{e(t['pending_title'])} — {e(t['title'])}</title>
 <link rel="stylesheet" href="assets/style.css"/>
+<script>try{{var t=localStorage.getItem("arkive-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}}catch(e){{}}</script>
+<script defer src="assets/theme.js"></script>
 </head>
 <body class="portal">
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="index.html">{e(t['title'])}</a>
     <nav class="header-nav"><a href="index.html">{e(t['recent'])}</a></nav>
-    <a class="lang-switch" href="/{other}/pending.html">{other.upper()}</a>
+    {header_actions}
   </div>
 </header>
 <div class="wrap layout">
@@ -745,6 +777,57 @@ def render_landing(counts):
 """
 
 
+def render_404():
+    """Branded 404 served by the host for unmatched routes (static/404.html).
+
+    Relative targets so it works both at the domain root and as a file.
+    Uses the shared card styles inline (they live only in the landing page).
+    """
+    return """<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex"/>
+<title>Not found — Arkive</title>
+<link rel="stylesheet" href="en/assets/style.css"/>
+<style>
+.notfound { max-width: 760px; margin: 12vh auto; padding: 0 24px; text-align: center; }
+.notfound h1 { font-family: Georgia, "Times New Roman", serif; font-size: 2rem; margin: 0 0 8px; }
+.notfound .sub { color: #757575; margin: 0 0 32px; }
+.lang-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 560px) { .lang-cards { grid-template-columns: 1fr; } }
+.lang-card { display: block; border: 1px solid #e6e6e6; border-radius: 12px; padding: 28px 20px; color: inherit; text-decoration: none; }
+.lang-card:hover { border-color: #191919; }
+.lang-card .big { font-size: 1.25rem; font-weight: 700; display: block; margin-bottom: 6px; }
+.lang-card .small { color: #757575; font-size: 0.9rem; }
+@media (prefers-color-scheme: dark) {
+  .notfound .sub, .lang-card .small { color: #a19d96; }
+  .lang-card { border-color: #2e2e2e; }
+  .lang-card:hover { border-color: #e9e6e1; }
+}
+</style>
+</head>
+<body class="portal">
+<div class="notfound">
+  <h1>404</h1>
+  <p class="sub">This page does not exist. / 존재하지 않는 페이지입니다.</p>
+  <div class="lang-cards">
+    <a class="lang-card" href="en/">
+      <span class="big">English</span>
+      <span class="small">Arkive portal</span>
+    </a>
+    <a class="lang-card" href="ko/">
+      <span class="big">한국어</span>
+      <span class="small">Arkive 포털</span>
+    </a>
+  </div>
+</div>
+</body>
+</html>
+"""
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true", help="report only, write nothing")
@@ -786,9 +869,22 @@ def main():
         "# in the address bar (it also broke relative asset paths).\n"
         "/wiki/* /:splat 301\n"
     )
+    # Asset URLs are stable across builds (no content hash), so cap their
+    # browser cache instead of marking immutable: a returning visitor picks
+    # up a redeployed style.css within a day, not a year.
+    headers = (
+        "/*\n"
+        "  X-Content-Type-Options: nosniff\n"
+        "/en/assets/*\n"
+        "  Cache-Control: public, max-age=86400\n"
+        "/ko/assets/*\n"
+        "  Cache-Control: public, max-age=86400\n"
+    )
     if args.dry_run:
         print(f"  [dry-run] static/index.html would be {len(landing):,}B")
         print(f"  [dry-run] static/_redirects would be {len(redirects):,}B")
+        print(f"  [dry-run] static/404.html would be {len(render_404()):,}B")
+        print(f"  [dry-run] static/_headers would be {len(headers):,}B")
     else:
         os.makedirs(STATIC_ROOT, exist_ok=True)
         with open(os.path.join(STATIC_ROOT, "index.html"), "w", encoding="utf-8") as fh:
@@ -797,6 +893,12 @@ def main():
         with open(os.path.join(STATIC_ROOT, "_redirects"), "w", encoding="utf-8") as fh:
             fh.write(redirects)
         print("  wrote static/_redirects (/wiki/* -> /:splat 301)")
+        with open(os.path.join(STATIC_ROOT, "404.html"), "w", encoding="utf-8") as fh:
+            fh.write(render_404())
+        print("  wrote static/404.html")
+        with open(os.path.join(STATIC_ROOT, "_headers"), "w", encoding="utf-8") as fh:
+            fh.write(headers)
+        print("  wrote static/_headers (asset cache policy)")
     print("Index generation complete")
 
 

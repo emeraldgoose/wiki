@@ -38,6 +38,7 @@ STRINGS = {
         "footer": "Verified against the original source.",
         "switch": "Read this page in Korean",
         "switch_missing": "No Korean version of this page yet — open the Korean portal",
+        "theme": "Toggle dark mode",
     },
     "ko": {
         "lang": "ko",
@@ -56,6 +57,7 @@ STRINGS = {
         "footer": "원문 대조 검증 완료.",
         "switch": "이 문서를 영어로 읽기",
         "switch_missing": "이 문서의 영어 버전이 아직 없습니다 — 영어 포털로 이동",
+        "theme": "다크 모드 전환",
     },
 }
 
@@ -70,6 +72,11 @@ STALE_OUTPUTS = ["404.html", "concepts/index.html"]
 
 # Generated pages that are authored by hand and must never be pruned.
 HAND_WRITTEN_OUTPUTS = {"index.html"}
+
+# Internal .md links no convention could resolve (file:line collected during
+# build_lang, reported at the end of main). Left as-is in the HTML they 404,
+# so the warning is the safety net.
+UNRESOLVED_LINKS = []
 
 
 # --------------------------------------------------------------------------
@@ -305,7 +312,9 @@ def rewrite_md_links(body, md_rel_path, lang):
                 cand_lang, cand_rest = _lang_of(hits[0].replace(os.sep, "/"))
                 if cand_lang:
                     return f"[{label}](/{cand_lang}/{cand_rest[: -len('.md')]}.html)"
-        # genuinely unresolvable: leave the original markup untouched
+        # genuinely unresolvable: record it for the end-of-build warning,
+        # then leave the original markup untouched
+        UNRESOLVED_LINKS.append((md_rel_path, href))
         return match.group(0)
 
     return LINK.sub(sub, body)
@@ -533,9 +542,38 @@ def render_page(title, meta, body_html, lang, rel_path, toc_html="",
     if other_href is None:
         other_href = f"/{other}/index.html"
         other_has_page = False
-    switch_class = "lang-switch" + ("" if other_has_page else " is-fallback")
-    switch_title = s["switch"] if other_has_page else s["switch_missing"]
-    other_label = other.upper()
+    # Header controls: a theme toggle plus a Language menu. Each language
+    # links to the same document when it exists, otherwise to that
+    # language's portal (dimmed as a fallback). Relative hrefs so pages also
+    # work under a subpath or as local files.
+    self_name = rel_path.rsplit("/", 1)[-1]
+    lang_items = []
+    for code, label in (("en", "English"), ("ko", "한국어")):
+        if code == lang:
+            href = self_name
+            extra = ' aria-current="page"'
+            titled = ""
+        elif other_has_page:
+            href = f"{root}../{code}/{rel_path}"
+            extra = ""
+            titled = ""
+        else:
+            href = f"{root}../{code}/index.html"
+            extra = ' class="is-fallback"'
+            titled = f' title="{escape(s["switch_missing"])}"'
+        lang_items.append(
+            f'<li><a href="{href}" hreflang="{code}"{extra}{titled}>{label}</a></li>'
+        )
+    header_actions = (
+        '<div class="header-actions">'
+        f'<button id="theme-toggle" class="theme-toggle" type="button" '
+        f'aria-pressed="false" aria-label="{escape(s["theme"])}">☾</button>'
+        '<details class="lang-menu"><summary>Language</summary><ul>'
+        + "".join(lang_items) + "</ul></details></div>"
+    )
+
+    # SEO/social preview: the one-line summary when present, else the title.
+    desc = meta.get("description") or title
 
     meta_bits = []
     if meta.get("authors"):
@@ -582,10 +620,11 @@ def render_page(title, meta, body_html, lang, rel_path, toc_html="",
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="{escape(title)}" />
+<meta name="description" content="{html.escape(str(desc), quote=True)}" />
 <title>{escape(title)} — {s['portal']}</title>
 <link rel="stylesheet" href="{root}assets/style.css" />
-{mathjax_tags}{zoom_tag}
+<script>try{{var t=localStorage.getItem("arkive-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}}catch(e){{}}</script>
+{mathjax_tags}{zoom_tag}<script defer src="{root}assets/theme.js"></script>
 </head>
 <body class="doc">
 <header class="site-header">
@@ -596,7 +635,7 @@ def render_page(title, meta, body_html, lang, rel_path, toc_html="",
       <a href="{root}index.html#categories">{s['nav_categories']}</a>
       <a href="{root}index.html#sources">{s['nav_sources']}</a>
     </nav>
-    <a class="{switch_class}" href="{other_href}" hreflang="{other}" title="{escape(switch_title)}">{other_label}</a>
+    {header_actions}
   </div>
 </header>
 
@@ -675,10 +714,10 @@ def add_anchors(body_html):
 
 
 def build_css():
-    """Write static/<lang>/assets/style.css and deploy portal.js + zoom.js.
+    """Write static/<lang>/assets/style.css and deploy portal/theme/zoom JS.
 
-    All three live in scripts/ as the single source of truth (site_css.py,
-    portal.js, zoom.js); edit them there rather than in the generated output.
+    All four live in scripts/ as the single source of truth (site_css.py,
+    portal.js, theme.js, zoom.js); edit them there rather than the output.
     A missing portal.js is a build error, not a silent skip: without it
     every filter, sort and pagination control on the portal is dead.
     """
@@ -697,6 +736,11 @@ def build_css():
         raise SystemExit(f"missing {zoom_src} — figure zoom would ship broken")
     with open(zoom_src, "rb") as fh:
         zoom_bytes = fh.read()
+    theme_src = os.path.join(os.path.dirname(os.path.abspath(__file__)), "theme.js")
+    if not os.path.exists(theme_src):
+        raise SystemExit(f"missing {theme_src} — theme toggle would ship broken")
+    with open(theme_src, "rb") as fh:
+        theme_bytes = fh.read()
     for lang, pub in PUBLIC.items():
         target_dir = os.path.join(pub, "assets")
         os.makedirs(target_dir, exist_ok=True)
@@ -706,6 +750,9 @@ def build_css():
         with open(os.path.join(target_dir, "zoom.js"), "wb") as out:
             out.write(zoom_bytes)
         print(f"  deployed assets/zoom.js into static/{lang}/")
+        with open(os.path.join(target_dir, "theme.js"), "wb") as out:
+            out.write(theme_bytes)
+        print(f"  deployed assets/theme.js into static/{lang}/")
 
     written = []
     for lang, pub in PUBLIC.items():
@@ -823,6 +870,17 @@ def main():
         if removed:
             print(f"  pruned {removed} orphaned page(s) from static/{lang}/")
     print(f"Build completed: {total} pages across {len(LANGS)} languages")
+    if UNRESOLVED_LINKS:
+        uniq = sorted(set(UNRESOLVED_LINKS))
+        print(
+            f"  WARNING: {len(uniq)} internal .md link(s) did not resolve "
+            f"to any content file (they ship as-is and will 404):",
+            file=sys.stderr,
+        )
+        for rel, href in uniq[:10]:
+            print(f"        {rel}: {href}", file=sys.stderr)
+        if len(uniq) > 10:
+            print(f"        ... and {len(uniq) - 10} more", file=sys.stderr)
     if total == 0:
         raise SystemExit("no pages written — content directories are empty")
 
