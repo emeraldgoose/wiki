@@ -365,6 +365,8 @@ def strip_version_links(body, lang):
 
 
 def markdown_to_html(body, md_rel_path, lang):
+    global _fig_seq
+    _fig_seq = 0  # lightbox ids only need to be unique within a page
     out = []
     lines = body.split("\n")
     i = 0
@@ -477,23 +479,41 @@ STANDALONE_IMG = re.compile(
     r'^<p>(<a [^>]+>)?<img src="([^"]+)" alt="([^"]*)"[^>]*>(</a>)?</p>$'
 )
 
+_fig_seq = 0
+
 
 def _paragraph_html(text):
-    """Render one paragraph; a lone image becomes a captioned figure."""
+    """Render one paragraph; a lone image becomes a captioned figure.
+
+    Bare figures get a click-to-zoom lightbox (pure CSS :target, no JS):
+    the thumbnail links to a fullscreen overlay holding the same image at
+    up to 96vw/94vh. Externally linked images keep their own link instead.
+    """
+    global _fig_seq
     rendered = inline(text)
     m = STANDALONE_IMG.match(f"<p>{rendered}</p>")
-    if m:
-        open_a, src, alt, close_a = m.groups()
-        img = (
-            f'<img src="{html.escape(src, quote=True)}"'
-            f' alt="{html.escape(alt, quote=False)}"'
-            ' loading="lazy" decoding="async">'
-        )
-        if open_a:
-            img = f"{open_a}{img}{close_a or ''}"
-        caption = f"<figcaption>{html.escape(alt, quote=False)}</figcaption>" if alt else ""
-        return f'<figure class="md-figure">{img}{caption}</figure>'
-    return f"<p>{rendered}</p>"
+    if not m:
+        return f"<p>{rendered}</p>"
+    open_a, src, alt, close_a = m.groups()
+    src_q = html.escape(src, quote=True)
+    alt_q = html.escape(alt, quote=False)
+    thumb = (
+        f'<img src="{src_q}" alt="{alt_q}" loading="lazy" decoding="async">'
+    )
+    caption = f"<figcaption>{alt_q}</figcaption>" if alt else ""
+    if open_a:
+        # Already links somewhere (e.g. full-size original): don't hijack.
+        return f'<figure class="md-figure">{open_a}{thumb}{close_a or ""}{caption}</figure>'
+    _fig_seq += 1
+    zid = f"zoom-{_fig_seq}"
+    return (
+        f'<figure class="md-figure">'
+        f'<a class="zoom-in" href="#{zid}" title="확대 / enlarge">{thumb}</a>'
+        f"{caption}</figure>"
+        f'<a class="lightbox" id="{zid}" href="#" aria-label="닫기 / close">'
+        f'<img src="{src_q}" alt="{alt_q}" loading="lazy" decoding="async">'
+        f"</a>"
+    )
 
 
 # --------------------------------------------------------------------------
