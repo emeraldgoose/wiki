@@ -92,4 +92,14 @@
       if (open) closeZoom(open);
     }
   });
+
+  // While zoomed, the wheel must do nothing: no close, no background
+  // scroll, no overlay drift (Medium contract: only click/Esc closes).
+  // Non-passive so preventDefault actually stops the scroll chain.
+  document.addEventListener("wheel", function (ev) {
+    if (document.querySelector(".lightbox.is-open")) {
+      ev.preventDefault();
+      ev.stopPropagation();
+    }
+  }, { passive: false });
 })();
