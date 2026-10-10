@@ -1,7 +1,7 @@
 ---
 title: Keep-or-Drop? Adaptive Tokenizer for Compact Video Representation (번역 요약)
 description: en/sources/papers/Keep-or-Drop_Adaptive_Tokenizer_for_Compact_Video_Representation.md 한국어 번역 요약
-tags: [source, paper, huggingface, ko]
+tags: [source, paper, huggingface, machine-learning, ko]
 locale: ko
 arxiv_id: 2608.24293
 ---

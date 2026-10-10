@@ -4,6 +4,7 @@ title: "공통 기반에 대한 증거로서의 시선: MapTask와 MUNDEX의 교
 arxiv_id: "2609.18011"
 url: "https://arxiv.org/abs/2609.18011"
 authors: ["Nan Li", "Albert Gatt", "Massimo Poesio"]
+tags: [source, paper, machine-learning, ko]
 ---
 published: true
 

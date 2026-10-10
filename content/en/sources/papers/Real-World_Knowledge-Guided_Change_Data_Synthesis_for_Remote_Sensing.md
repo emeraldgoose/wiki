@@ -5,6 +5,7 @@ HF_URL: https://huggingface.co/papers/2608.24263
 published: 2026-08-25
 authors: Yaoyi Qi, Xingxing Weng, Chao Pang, Yongkang Cui, Xiangyu Hao, Xiaokang Zhang, Guibo Zhu, Gui-Song Xia
 locale: en
+tags: [source, paper, machine-learning]
 ---
 
 # Real-World Knowledge-Guided Change Data Synthesis for Remote Sensing

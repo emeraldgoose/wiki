@@ -1,7 +1,7 @@
 ---
 title: Twitter 사용자 데이터베이스 읽기 확장기
 description: Vitess Vtgate를 Aurora Mesos에 올려 사용자 예약 시스템을 수백만 읽기 QPS까지 확장한 사례
-tags: [source, twitter, x, mysql, vitess, databases, scalability, ko]
+tags: [source, twitter, x, mysql, vitess, databases, scalability, data-engineering, ko]
 locale: ko
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/how-we-scaled-reads-on-the-twitter-users-database"
 blog: twitter

@@ -1,7 +1,7 @@
 ---
 title: "유연한 인증: 수백만 사용자를 위한 Airbnb 인증의 재구상"
 description: 서버 주도 Identify-first-then-Challenge 인증 재구축 — Challenge Picker, 인증 성공률 +2.6%, 중복 계정 -27%
-tags: [source, airbnb, authentication, identity, architecture, experimentation, ko]
+tags: [source, airbnb, authentication, identity, architecture, experimentation, infrastructure, ko]
 locale: ko
 source_url: "https://medium.com/airbnb-engineering/flexible-authentication-reimagining-authentication-for-millions-of-users-at-airbnb-3a8a4c917137"
 blog: airbnb

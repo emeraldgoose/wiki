@@ -1,7 +1,7 @@
 ---
 title: "DICS: Exploring Data Intrinsic Consistency for Visual Instruction Selection"
 description: HuggingFace Daily Papers — 2026-08-31 — SpatialAxiom
-tags: [source, paper, huggingface, spatialaxiom]
+tags: [source, paper, huggingface, spatialaxiom, machine-learning]
 locale: en
 arxiv_id: 2608.30209
 ---

@@ -4,6 +4,7 @@ title: "Gaze as Evidence for Common Grounding: A Cross-Corpus Analysis of MapTas
 arxiv_id: "2609.18011"
 url: "https://arxiv.org/abs/2609.18011"
 authors: ["Nan Li", "Albert Gatt", "Massimo Poesio"]
+tags: [source, paper, machine-learning]
 ---
 published: true
 

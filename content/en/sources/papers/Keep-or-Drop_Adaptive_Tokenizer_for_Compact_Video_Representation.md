@@ -1,7 +1,7 @@
 ---
 title: Keep-or-Drop? Adaptive Tokenizer for Compact Video Representation
 description: HuggingFace Daily Papers — 2026-08-25 — Kakao Corp.
-tags: [source, paper, huggingface, kakao-corp.]
+tags: [source, paper, huggingface, kakao-corp., machine-learning]
 locale: en
 arxiv_id: 2608.24293
 ---

@@ -4,6 +4,7 @@ published: 2026-09-11
 arxiv_id: "2609.13356"
 url: "https://arxiv.org/abs/2609.13356"
 authors: ["Jiyan He", "Guang Liang", "Hao Liu", "Haoxiang Guan", "Jinbo Sun", "Junyi Guo", "Wenjun Feng", "Yantai Xie", "Yifei Shen", "Bin Shao", "Chuyang Wei", "Kai Chen", "Kexin Zhou", "Minghang Zhu", "Shuxin Zheng", "Tie-Yan Liu", "Taine Zhao", "Wenhui Zhu", "Xueyin Xu", "Xiaoqing Zhang", "Yatao Li", "Yuxuan Ren"]
+tags: [source, paper, machine-learning]
 ---
 
 # ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search

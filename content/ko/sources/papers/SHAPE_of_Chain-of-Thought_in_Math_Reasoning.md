@@ -1,7 +1,7 @@
 ---
 title: SHAPE of Chain-of-Thought in Math Reasoning (번역 요약)
 description: en/sources/papers/SHAPE_of_Chain-of-Thought_in_Math_Reasoning.md 한국어 번역 요약
-tags: [source, paper, huggingface, ko]
+tags: [source, paper, huggingface, machine-learning, ko]
 locale: ko
 arxiv_id: 2608.28600
 ---

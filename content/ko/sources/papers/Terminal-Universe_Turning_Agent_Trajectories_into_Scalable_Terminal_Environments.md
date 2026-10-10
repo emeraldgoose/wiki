@@ -1,7 +1,7 @@
 ---
 title: "Terminal-Universe: 에이전트 궤적에서 확장 가능한 터미널 환경으로"
 description: "HuggingFace Daily Papers — 2026-09-03 — 에이전트 궤적에서 실행 가능한 터미널 환경을 복원"
-tags: [source, paper, huggingface]
+tags: [source, paper, huggingface, ai-engineering]
 locale: ko
 arxiv_id: 2609.04148
 published: 2026-09-03

@@ -1,7 +1,7 @@
 ---
 title: "LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes"
 description: "HuggingFace Daily Papers — 2026-09-03 — 6B unified image generator with image-only pre-training and TwinFlow distillation"
-tags: [source, paper, huggingface]
+tags: [source, paper, huggingface, machine-learning]
 locale: en
 arxiv_id: 2609.03796
 published: 2026-09-03

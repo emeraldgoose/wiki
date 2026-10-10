@@ -1,7 +1,7 @@
 ---
 title: Knowledge Distillation During Mid-Training Favors Reasoning over Factual Recall (번역 요약)
 description: en/sources/papers/Knowledge_Distillation_During_Mid-Training_Favors_Reasoning_over_Factual_Recall.md 한국어 번역 요약
-tags: [source, paper, huggingface, ko]
+tags: [source, paper, huggingface, machine-learning, ko]
 locale: ko
 arxiv_id: 2609.01532
 ---

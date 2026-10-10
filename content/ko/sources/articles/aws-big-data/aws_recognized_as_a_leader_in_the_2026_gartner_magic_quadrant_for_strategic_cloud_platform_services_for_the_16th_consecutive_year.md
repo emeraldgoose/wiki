@@ -4,6 +4,7 @@ source_url: "https://aws.amazon.com/blogs/big-data/aws-recognized-as-a-leader-in
 blog: "AWS Big Data"
 published: "2026-09-08"
 locale: "ko"
+tags: [source, aws-big-data, infrastructure, ko]
 ---
 
 [Translation needed]

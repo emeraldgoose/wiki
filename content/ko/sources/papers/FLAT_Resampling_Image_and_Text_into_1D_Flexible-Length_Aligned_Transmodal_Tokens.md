@@ -4,6 +4,7 @@ published: 2026-09-15
 arxiv_id: "2609.16591"
 url: "https://arxiv.org/abs/2609.16591"
 authors: ["Guangyu Sun", "Shlok Kumar Mishra", "Wentao Bao", "Robert Zhenheng Yang", "Xiao Wang", "Xiyuan Wang", "Yujunrong Ma", "Chen Yuan", "Max Xiangjun Fan", "Jun Xiao", "Jianpeng Cheng"]
+tags: [source, paper, machine-learning, ko]
 ---
 
 # FLAT - 검색과 생성을 위한 1D 가변 길이 정렬 트랜스모달 토큰으로 이미지·텍스트 리샘플링

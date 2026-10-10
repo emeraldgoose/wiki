@@ -4,6 +4,7 @@ published: 2026-09-10
 arxiv_id: "2609.11638"
 url: "https://arxiv.org/abs/2609.11638"
 authors: ["Jintao Zhang", "Kai Jiang", "Jintao Chen", "Xu Wang", "Deyuan Liu", "Jungang Li", "Dechuang Chen", "Ming Lin", "Jingjiang Zhou", "Haopeng Jin", "Qi Jia", "Xiaohang Wang", "Yaole Wang", "Zhanqiang Zhang", "Ran Li", "Zhengkun Huang", "Shuyue Xiong", "Yuji Wang", "Zikun Dai", "Hui He", "Yang Luo", "Mang Ning", "Weiqi Feng", "Chengyang Ye", "Xinyue Lin", "Min Zhao", "Hongzhou Zhu", "Hengkai Tan", "Zeyuan Wang", "Chendong Xiang", "Kaiwen Zheng", "Zhijie Deng", "Fan Bao", "Jianfei Chen", "Jun Zhu"]
+tags: [source, paper, machine-learning]
 ---
 
 # Vidu S2: Real-Time Interactive, Editable, and Spatial Video Generation

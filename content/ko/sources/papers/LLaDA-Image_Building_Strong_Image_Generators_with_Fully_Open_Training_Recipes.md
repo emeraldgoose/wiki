@@ -1,7 +1,7 @@
 ---
 title: "LLaDA-Image: 완전 공개 학습 레시피로 강한 이미지 생성기 만들기"
 description: "HuggingFace Daily Papers — 2026-09-03 — 이미지-전용 사전학습과 TwinFlow 증류의 6B 통합 이미지 생성기"
-tags: [source, paper, huggingface]
+tags: [source, paper, huggingface, machine-learning]
 locale: ko
 arxiv_id: 2609.03796
 published: 2026-09-03

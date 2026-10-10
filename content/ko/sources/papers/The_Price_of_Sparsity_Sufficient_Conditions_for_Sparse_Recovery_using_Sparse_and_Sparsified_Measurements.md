@@ -5,6 +5,7 @@ HF_URL: https://huggingface.co/papers/2509.01809
 published: 2026-09-08
 authors: Youssef Chaabouni, David Gamarnik
 locale: ko
+tags: [source, paper, computer-science, ko]
 ---
 
 # The Price of Sparsity: Sufficient Conditions for Sparse Recovery using Sparse and Sparsified Measurements

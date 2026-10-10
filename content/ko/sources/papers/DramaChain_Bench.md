@@ -1,7 +1,7 @@
 ---
 title: "DramaChain Bench: An End-to-End Benchmark for Short-Drama Generation (번역 요약)"
 description: en/sources/papers/DramaChain_Bench.md 한국어 번역 요약
-tags: [source, paper, huggingface, ko]
+tags: [source, paper, huggingface, ai-engineering, ko]
 locale: ko
 arxiv_id: 2609.00646
 ---

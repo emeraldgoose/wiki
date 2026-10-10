@@ -4,6 +4,7 @@ published: 2026-09-15
 arxiv_id: "2609.16591"
 url: "https://arxiv.org/abs/2609.16591"
 authors: ["Guangyu Sun", "Shlok Kumar Mishra", "Wentao Bao", "Robert Zhenheng Yang", "Xiao Wang", "Xiyuan Wang", "Yujunrong Ma", "Chen Yuan", "Max Xiangjun Fan", "Jun Xiao", "Jianpeng Cheng"]
+tags: [source, paper, machine-learning]
 ---
 
 # FLAT - Resampling Image and Text into 1D Flexible-Length Aligned Transmodal Tokens for Retrieval and Generation

@@ -4,6 +4,7 @@ published: 2026-09-07
 arxiv_id: "2609.06986"
 url: "https://arxiv.org/abs/2609.06986"
 authors: ["Zheyuan Zhang", "Alvin Zhang", "Daniel Khashabi", "Tianmin Shu"]
+tags: [source, paper, machine-learning]
 ---
 
 # Continual Learning Mechanisms Compose for Long-Horizon Memorization

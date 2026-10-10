@@ -1,7 +1,7 @@
 ---
 title: "Harness-of-Harness: Multi-Day Autonomous Software Development with Continual Improvement (번역 요약)"
 description: en/sources/papers/Harness-of-Harness.md 한국어 번역 요약
-tags: [source, paper, huggingface, ko]
+tags: [source, paper, huggingface, ai-engineering, ko]
 locale: ko
 arxiv_id: 2609.01481
 ---

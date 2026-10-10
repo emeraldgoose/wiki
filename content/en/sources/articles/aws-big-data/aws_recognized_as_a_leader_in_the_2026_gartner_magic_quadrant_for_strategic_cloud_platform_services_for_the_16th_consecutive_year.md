@@ -4,6 +4,7 @@ source_url: "https://aws.amazon.com/blogs/big-data/aws-recognized-as-a-leader-in
 blog: "AWS Big Data"
 published: "2026-09-08"
 locale: "en"
+tags: [source, aws-big-data, infrastructure]
 ---
 
 # AWS recognized as a Leader in the 2026 Gartner Magic Quadrant for Strategic Cloud Platform Services for the 16th consecutive year

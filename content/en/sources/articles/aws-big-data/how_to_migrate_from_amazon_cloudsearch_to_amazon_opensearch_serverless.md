@@ -4,6 +4,7 @@ source_url: "https://aws.amazon.com/blogs/big-data/how-to-migrate-from-amazon-cl
 blog: "AWS Big Data"
 published: "2026-09-10"
 locale: "en"
+tags: [source, aws-big-data, infrastructure]
 ---
 
 # How to migrate from Amazon CloudSearch to Amazon OpenSearch Serverless

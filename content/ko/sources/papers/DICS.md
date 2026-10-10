@@ -1,7 +1,7 @@
 ---
 title: "DICS: Exploring Data Intrinsic Consistency for Visual Instruction Selection (번역 요약)"
 description: en/sources/papers/DICS.md 한국어 번역 요약
-tags: [source, paper, huggingface, ko]
+tags: [source, paper, huggingface, machine-learning, ko]
 locale: ko
 arxiv_id: 2608.30209
 ---

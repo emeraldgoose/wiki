@@ -4,6 +4,7 @@ published: 2026-09-14
 arxiv_id: "2609.14858"
 url: "https://arxiv.org/abs/2609.14858"
 authors: ["Tong Zheng", "외 16명의 저자"]
+tags: [source, paper, ai-engineering, ko]
 ---
 
 # Dream-RSI: 진화하는 세계를 통한 재귀적 자기 개선
