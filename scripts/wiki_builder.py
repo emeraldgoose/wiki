@@ -23,7 +23,6 @@ LANGS = {"en": "en", "ko": "ko"}
 STRINGS = {
     "en": {
         "lang": "en",
-        "subtitle": "Seminar-level documentation of papers, concepts, and guides.",
         "source": "Source",
         "authors": "Authors",
         "arxiv": "arXiv",
@@ -42,7 +41,6 @@ STRINGS = {
     },
     "ko": {
         "lang": "ko",
-        "subtitle": "논문, 개념, 가이드에 대한 세미나 수준 문서.",
         "source": "출처",
         "authors": "저자",
         "arxiv": "arXiv",
@@ -606,7 +604,6 @@ def render_page(title, meta, body_html, lang, rel_path, toc_html="",
   <article class="doc-body">
     <header class="doc-header">
       <h1>{escape(title)}</h1>
-      <p class="subtitle">{s['subtitle']}</p>
       {meta_html}
     </header>
     {toc_block}
