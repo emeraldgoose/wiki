@@ -93,13 +93,10 @@
     }
   });
 
-  // While zoomed, the wheel must do nothing: no close, no background
-  // scroll, no overlay drift (Medium contract: only click/Esc closes).
-  // Non-passive so preventDefault actually stops the scroll chain.
+  // Scrolling while zoomed auto-zooms out (reverse animation), like
+  // dismissing the zoom to get back to reading. Only click/Esc otherwise.
   document.addEventListener("wheel", function (ev) {
-    if (document.querySelector(".lightbox.is-open")) {
-      ev.preventDefault();
-      ev.stopPropagation();
-    }
-  }, { passive: false });
+    var open = document.querySelector(".lightbox.is-open");
+    if (open) closeZoom(open);
+  }, { passive: true });
 })();
