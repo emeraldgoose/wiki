@@ -300,8 +300,29 @@
     });
   }
 
+  function installColToggle() {
+    var toggle = $("col-toggle");
+    var scroll = $("table-scroll");
+    if (!toggle || !scroll || !table) return;
+    var map = { cat: "show-cat", date: "show-date", src: "show-src" };
+    toggle.addEventListener("click", function (ev) {
+      var btn = ev.target.closest ? ev.target.closest("[data-col-toggle]") : null;
+      if (!btn || !toggle.contains(btn)) return;
+      var cls = map[btn.getAttribute("data-col-toggle")];
+      if (!cls) return;
+      var on = scroll.classList.toggle(cls);
+      btn.classList.toggle("is-active", on);
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      var anyOn = scroll.classList.contains("show-cat") ||
+        scroll.classList.contains("show-date") ||
+        scroll.classList.contains("show-src");
+      scroll.classList.toggle("is-scrollable", anyOn);
+    });
+  }
+
   installFilters();
   installSort();
+  installColToggle();
   installNavSearch();
   render();
 })();

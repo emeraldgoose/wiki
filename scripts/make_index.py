@@ -62,6 +62,7 @@ I18N = {
         "col_category": "Category",
         "col_date": "Date",
         "col_source": "Source",
+        "cols": "Columns",
         "read": "Read",
         "empty": "No documents match.",
         "count": "documents",
@@ -99,6 +100,7 @@ I18N = {
         "col_category": "카테고리",
         "col_date": "날짜",
         "col_source": "출처",
+        "cols": "열 보기",
         "read": "읽기",
         "empty": "문서가 없습니다.",
         "count": "개 문서",
@@ -368,23 +370,21 @@ def table_html(records, t, show_type=True, id_prefix="", table_id=""):
     has_date = any(r["date"] for r in records)
     has_src = any(r["blog"] for r in records)
 
-    cols = [t["col_title"]]
+    cols = [(t["col_title"], "t-title", "")]
     if show_type:
-        cols.append(t["col_type"])
+        cols.append((t["col_type"], "t-type", ""))
     if has_cat:
-        cols.append(t["col_category"])
+        cols.append((t["col_category"], "t-cat", ""))
     if has_date:
-        cols.append((t["col_date"], "date"))
+        cols.append((t["col_date"], "t-date", "date"))
     if has_src:
-        cols.append(t["col_source"])
+        cols.append((t["col_source"], "t-src", ""))
 
     id_attr = f' id="{eattr(table_id)}"' if table_id else ""
     out = [f'<table class="doc-table"{id_attr}>', "<thead><tr>"]
-    for c in cols:
-        if isinstance(c, tuple):
-            out.append(f'<th data-col="{c[1]}">{e(c[0])}</th>')
-        else:
-            out.append(f"<th>{e(c)}</th>")
+    for label, cls, data_col in cols:
+        data_attr = f' data-col="{data_col}"' if data_col else ""
+        out.append(f'<th class="{cls}"{data_attr}>{e(label)}</th>')
     out.append("</tr></thead><tbody>")
 
     for rec in records:
@@ -590,7 +590,15 @@ def render(records, t, lang, other_lang_code):
         </div>
       </div>
       <p class="result-count" id="result-count"></p>
+      <div class="col-toggle" id="col-toggle">
+        <span class="col-toggle-label">{e(t['cols'])}</span>
+        <button class="chip" type="button" data-col-toggle="cat" aria-pressed="false">{e(t['col_category'])}</button>
+        <button class="chip" type="button" data-col-toggle="date" aria-pressed="false">{e(t['col_date'])}</button>
+        <button class="chip" type="button" data-col-toggle="src" aria-pressed="false">{e(t['col_source'])}</button>
+      </div>
+      <div class="table-scroll" id="table-scroll">
       {table_html(recent, t, show_type=True, table_id="recent-table")}
+      </div>
       <nav class="pager" id="pager" hidden></nav>
       <p class="empty" id="empty-msg" hidden>{e(t['empty'])}</p>
     </section>
