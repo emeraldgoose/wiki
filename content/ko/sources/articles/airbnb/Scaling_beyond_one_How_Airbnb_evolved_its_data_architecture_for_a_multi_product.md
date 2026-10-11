@@ -1,11 +1,33 @@
 ---
-title: "Scaling beyond one: How Airbnb evolved its data architecture for a multi-product world"
+title: "하나를 넘어 확장하기: 멀티 프로덕트 시대 Airbnb 데이터 아키텍처의 진화"
+description: "중앙 원칙과 도메인별 분리·통합 모델 선택을 결합한 Airbnb 멀티 프로덕트 오프라인 데이터 모델링 프레임워크."
+tags: [source, airbnb, data-warehouse, data-modeling, ko]
+locale: ko
 source_url: "https://airbnb.tech/uncategorized/scaling-beyond-one-how-airbnb-evolved-its-data-architecture-for-a-multi-product-world"
 blog: airbnb
-published_date: 2026-06-09
-locale: ko
-status: pending
+published: "2026-06-09"
 ---
 
-[Content pending] This stub was created by scripts/collect_articles.py.
-Source: https://airbnb.tech/uncategorized/scaling-beyond-one-how-airbnb-evolved-its-data-architecture-for-a-multi-product-world
+# 하나를 넘어 확장하기: 멀티 프로덕트 시대 Airbnb 데이터 아키텍처의 진화
+
+## 개요
+
+2025년 5월 Summer Release에서 Services 출시와 Experiences 개편으로 Homes 일변도였던 Airbnb 앱이 세 개 제품 체제로 바뀌면서, 10년 묵은 오프라인 데이터 웨어하우스가 두 개의 새 제품 축을 분석 중단 없이 흡수해야 했다. 데이터 조직은 단일 모델링 방식을 강제하는 대신 세 가지 중앙 원칙을 세우고, 각 도메인 팀이 공유 가이드라인에 따라 분리형·통합형 모델을 선택하게 했다. 일관성과 도메인 유연성의 균형이 핵심이다.
+
+## 세 가지 기반 원칙
+
+첫째, 하이브리드 금지다. 각 도메인은 제품별 완전 분리형이거나 완전 통합형이어야 하며, 어중간한 혼합 상태를 피한다. 둘째, 선택과 연동된 식별자 명명 규칙이다. 분리형은 제품별 ID(`id_experience`, `id_service`)를, 통합형은 범용 기술자(`id_product_listing`)와 제품 구분 컬럼을 쓴다. 셋째, 명확한 네임스페이스 구성이다. 제품별 핵심 테이블은 전용 네임스페이스에, 공통 테이블은 전역 네임스페이스에, 팀 중간 산출물은 팀 네임스페이스에 둔다.
+
+선택 가이드라인은 속성 공유 여부, 향후 제품 확장성, 상류 온라인 스키마 정합, 하류 쿼리 패턴, 유지보수성, 데이터량·성능, 기존 Homes 모델과의 호환성, 핵심 지표의 업무 연속성을 다룬다.
+
+## 분리형과 통합형의 실제 적용
+
+결정적 질문은 제품 간 속성 공유 여부였다. 사용자 접점 도메인은 분리형을 택했다. 리스팅(Services의 상위 리스팅 아래 중첩된 오퍼링 개념), 예약 가능 시간(유연한 영업시간을 예약 슬롯으로 변환), 위치(고정 주소 대비 반경 기반 서비스 지역), 게스트(제품별 고볼륨 퍼널)다. 기반 도메인은 통합형을 택했다. 메시징(스레드가 여러 제품·고객지원을 넘나듦), 결제(상품 무관한 거래·환불·정산), 고객지원(다중 예약을 아우르는 단일 이력 필요)이다.
+
+## 과제와 교훈
+
+두 가지 현실적 난관이 있었다. 앱 속도에 최적화된 상류 온라인 스키마는 분석에 부적합한 경우가 많아 웨어하우스가 신뢰 가능한 진실 원천으로 번역하는 번역 계층 역할을 해야 했고, 수백 개 하류 소비자를 가진 레거시 테이블은 이중 파이프라인 검증과 느린 단계적 폐기가 필요했다. 교훈은 명확하다. 규모가 커지면 정답은 단일 방식인 경우가 드물며, 중앙 일관성과 도메인 선택권을 결합한 체계이며, 신규 구축과 과거 데이터 부채 정리를 함께 밀고 나가는 규율이 필요하다.
+
+## References
+
+- 원문: https://airbnb.tech/uncategorized/scaling-beyond-one-how-airbnb-evolved-its-data-architecture-for-a-multi-product-world
