@@ -125,6 +125,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         if not parts:
             return os.path.join(CWD, "static", "index.html")
 
+        # Site-root files (favicon.svg, _redirects, ...) live directly under
+        # static/ in production. Serve them here too so local checks match.
+        root_candidate = os.path.join(CWD, "static", *parts)
+        if os.path.isfile(root_candidate):
+            return root_candidate
+
         return self._out("en", *parts)
 
     def log_message(self, format, *args):

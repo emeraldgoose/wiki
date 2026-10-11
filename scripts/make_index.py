@@ -543,6 +543,7 @@ def render(records, t, lang, other_lang_code):
 <meta property="og:title" content="{eattr(t['title'])}"/>
 <meta property="og:type" content="website"/>
 <title>{e(t['title'])}</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="assets/style.css"/>
 <script>try{{var t=localStorage.getItem("arkive-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}}catch(e){{}}</script>
 <script defer src="assets/theme.js"></script>
@@ -686,6 +687,7 @@ def render_pending(pending, t, lang, other):
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="robots" content="noindex"/>
 <title>{e(t['pending_title'])} — {e(t['title'])}</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="assets/style.css"/>
 <script>try{{var t=localStorage.getItem("arkive-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}}catch(e){{}}</script>
 <script defer src="assets/theme.js"></script>
@@ -741,6 +743,7 @@ def render_landing(counts):
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Arkive — English / 한국어</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="en/assets/style.css"/>
 <script>
 (function () {{
@@ -798,6 +801,7 @@ def render_404():
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="robots" content="noindex"/>
 <title>Not found — Arkive</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="en/assets/style.css"/>
 <style>
 .notfound { max-width: 760px; margin: 12vh auto; padding: 0 24px; text-align: center; }
@@ -893,6 +897,7 @@ def main():
         print(f"  [dry-run] static/_redirects would be {len(redirects):,}B")
         print(f"  [dry-run] static/404.html would be {len(render_404()):,}B")
         print(f"  [dry-run] static/_headers would be {len(headers):,}B")
+        print("  [dry-run] static/favicon.svg would be copied from scripts/favicon.svg")
     else:
         os.makedirs(STATIC_ROOT, exist_ok=True)
         with open(os.path.join(STATIC_ROOT, "index.html"), "w", encoding="utf-8") as fh:
@@ -907,6 +912,14 @@ def main():
         with open(os.path.join(STATIC_ROOT, "_headers"), "w", encoding="utf-8") as fh:
             fh.write(headers)
         print("  wrote static/_headers (asset cache policy)")
+        favicon_src = os.path.join(CWD, "scripts", "favicon.svg")
+        if not os.path.exists(favicon_src):
+            raise SystemExit(f"missing {favicon_src} — favicon would ship broken")
+        with open(favicon_src, "rb") as fh:
+            favicon_bytes = fh.read()
+        with open(os.path.join(STATIC_ROOT, "favicon.svg"), "wb") as out:
+            out.write(favicon_bytes)
+        print("  wrote static/favicon.svg")
     print("Index generation complete")
 
 

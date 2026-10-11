@@ -622,6 +622,7 @@ def render_page(title, meta, body_html, lang, rel_path, toc_html="",
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="{html.escape(str(desc), quote=True)}" />
 <title>{escape(title)} — {s['portal']}</title>
+<link rel="icon" href="{root}assets/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="{root}assets/style.css" />
 <script>try{{var t=localStorage.getItem("arkive-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}}catch(e){{}}</script>
 {mathjax_tags}{zoom_tag}<script defer src="{root}assets/theme.js"></script>
@@ -716,10 +717,11 @@ def add_anchors(body_html):
 def build_css():
     """Write static/<lang>/assets/style.css and deploy portal/theme/zoom JS.
 
-    All four live in scripts/ as the single source of truth (site_css.py,
-    portal.js, theme.js, zoom.js); edit them there rather than the output.
-    A missing portal.js is a build error, not a silent skip: without it
-    every filter, sort and pagination control on the portal is dead.
+    All five live in scripts/ as the single source of truth (site_css.py,
+    portal.js, theme.js, zoom.js, favicon.svg); edit them there rather than
+    the output. A missing portal.js is a build error, not a silent skip:
+    without it every filter, sort and pagination control on the portal is
+    dead.
     """
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     from site_css import SHARED, DOC
@@ -741,6 +743,11 @@ def build_css():
         raise SystemExit(f"missing {theme_src} — theme toggle would ship broken")
     with open(theme_src, "rb") as fh:
         theme_bytes = fh.read()
+    favicon_src = os.path.join(os.path.dirname(os.path.abspath(__file__)), "favicon.svg")
+    if not os.path.exists(favicon_src):
+        raise SystemExit(f"missing {favicon_src} — favicon would ship broken")
+    with open(favicon_src, "rb") as fh:
+        favicon_bytes = fh.read()
     for lang, pub in PUBLIC.items():
         target_dir = os.path.join(pub, "assets")
         os.makedirs(target_dir, exist_ok=True)
@@ -753,6 +760,9 @@ def build_css():
         with open(os.path.join(target_dir, "theme.js"), "wb") as out:
             out.write(theme_bytes)
         print(f"  deployed assets/theme.js into static/{lang}/")
+        with open(os.path.join(target_dir, "favicon.svg"), "wb") as out:
+            out.write(favicon_bytes)
+        print(f"  deployed assets/favicon.svg into static/{lang}/")
 
     written = []
     for lang, pub in PUBLIC.items():
