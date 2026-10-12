@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch pending article stubs into reviewable summary drafts — politely.
+"""Fetch pending article/paper stubs into reviewable summary drafts — politely.
 
 Safest possible crawler for this repo:
 
@@ -15,10 +15,13 @@ Safest possible crawler for this repo:
   - Never copies the article verbatim: the generated body is a short
     summary skeleton (overview + key points + source outline) with a link
     back to the original and source_url preserved in frontmatter.
+  - Paper stubs (sources/papers/, arXiv abs source_url) are fetched from
+    the arXiv HTML version first, then the ar5iv mirror — never the PDF.
 
 Usage:
     python3 scripts/fetch_drafts.py --dry-run            # what would be fetched
     python3 scripts/fetch_drafts.py --limit 2 --only databricks --write
+    python3 scripts/fetch_drafts.py --kind papers --limit 2 --write
 """
 
 import argparse
@@ -349,29 +352,83 @@ def parse_stub(path):
     return meta, body, raw
 
 
-def find_stubs(lang, only="", reprocess=False):
+def find_stubs(lang, only="", reprocess=False, kind="articles"):
+    """Find pending stubs under content/<lang>/sources/<kind>/.
+
+    kind is "articles", "papers", or "all" (both).
+    """
+    roots = []
+    if kind in ("articles", "all"):
+        roots.append(os.path.join(CONTENT_DIR, lang, "sources", "articles"))
+    if kind in ("papers", "all"):
+        roots.append(os.path.join(CONTENT_DIR, lang, "sources", "papers"))
     out = []
-    root = os.path.join(CONTENT_DIR, lang, "sources", "articles")
-    if not os.path.isdir(root):
-        return out
-    for dirpath, _dirs, files in os.walk(root):
-        for fname in sorted(files):
-            if not fname.endswith(".md"):
-                continue
-            full = os.path.join(dirpath, fname)
-            try:
-                with open(full, encoding="utf-8", errors="replace") as fh:
-                    head = fh.read(4000)
-            except OSError:
-                continue
-            is_stub = ("status: pending" in head or "[Content pending]" in head
-                       or (reprocess and "Draft summary auto-extracted" in head))
-            if is_stub:
-                rel = os.path.relpath(full, CWD)
-                if only and only not in rel:
+    for root in roots:
+        if not os.path.isdir(root):
+            continue
+        for dirpath, _dirs, files in os.walk(root):
+            for fname in sorted(files):
+                if not fname.endswith(".md"):
                     continue
-                out.append(full)
+                full = os.path.join(dirpath, fname)
+                try:
+                    with open(full, encoding="utf-8", errors="replace") as fh:
+                        head = fh.read(4000)
+                except OSError:
+                    continue
+                is_stub = ("status: pending" in head or "[Content pending]" in head
+                           or (reprocess and "Draft summary auto-extracted" in head))
+                if is_stub:
+                    rel = os.path.relpath(full, CWD)
+                    if only and only not in rel:
+                        continue
+                    out.append(full)
     return sorted(out)
+
+
+def resolve_fetch_urls(source_url):
+    """Candidate HTML URLs for a stub, in preference order.
+
+    Paper stubs carry an arXiv abs URL: try the official arXiv HTML first,
+    then the ar5iv mirror. Never the PDF (AUTHORING.md §5.2).
+    """
+    m = re.match(r"https?://arxiv\.org/abs/([0-9]+\.[0-9]+(?:v\d+)?)", source_url)
+    if m:
+        pid = m.group(1)
+        return [f"https://arxiv.org/html/{pid}", f"https://ar5iv.org/html/{pid}"]
+    return [source_url]
+
+
+def _yaml_quote(s):
+    return '"' + str(s).replace("\\", "\\\\").replace('"', '\\"') + '"'
+
+
+def build_front(meta, url, published, lang_tag, keep_pending, desc):
+    """Frontmatter for a filled draft, preserving paper fields when present."""
+    title = meta.get("title", "Untitled")
+    blog = meta.get("blog", "")
+    lines = [
+        "---",
+        f'title: {_yaml_quote(title)}',
+        f'description: {_yaml_quote(desc)}',
+    ]
+    if meta.get("arxiv_id") or "/sources/papers/" in meta.get("_rel", ""):
+        lines.append(f"tags: [source, paper, huggingface, {lang_tag}]")
+    else:
+        lines.append(f"tags: [source, {blog}, {lang_tag}]")
+    lines.append(f"locale: {lang_tag}")
+    lines.append(f'source_url: {_yaml_quote(url)}')
+    if meta.get("arxiv_id"):
+        lines.append(f'arxiv_id: {_yaml_quote(meta["arxiv_id"])}')
+    if meta.get("authors"):
+        lines.append(f'authors: {meta["authors"]}')
+    if blog:
+        lines.append(f"blog: {blog}")
+    lines.append(f'published: "{published}"')
+    if keep_pending:
+        lines.append("status: pending")
+    lines.append("---")
+    return "\n".join(lines) + "\n\n"
 
 
 def main():
@@ -390,10 +447,12 @@ def main():
                          "portal holds it in pending.html until summarized")
     ap.add_argument("--reprocess", action="store_true",
                     help="also pick up files already converted to condensed drafts")
+    ap.add_argument("--kind", choices=("articles", "papers", "all"), default="articles",
+                    help="which stub tree to process under content/<lang>/sources/")
     args = ap.parse_args()
 
-    stubs = find_stubs(args.lang, args.only, args.reprocess)[: args.limit]
-    print(f"Pending stubs in scope ({args.lang}): {len(stubs)}")
+    stubs = find_stubs(args.lang, args.only, args.reprocess, args.kind)[: args.limit]
+    print(f"Pending stubs in scope ({args.lang}/{args.kind}): {len(stubs)}")
     if not stubs:
         return
 
@@ -401,15 +460,21 @@ def main():
         meta, _body, _raw = parse_stub(path)
         url = meta.get("source_url", "")
         rel = os.path.relpath(path, CWD)
+        meta["_rel"] = rel
         if not url or not url.startswith("http"):
             print(f"  SKIP {rel}: no source_url")
             continue
-        allowed, reason = robot_allows(url)
-        print(f"  {rel}\n    robots: {reason}")
-        if not allowed:
-            continue
-        html_text, cached, note = fetch_url(url, args.delay)
-        print(f"    fetch: {note} ({len(html_text)} chars)")
+        html_text, fetched_from = "", ""
+        for candidate in resolve_fetch_urls(url):
+            allowed, reason = robot_allows(candidate)
+            print(f"  {rel}\n    robots({candidate}): {reason}")
+            if not allowed:
+                continue
+            html_text, _cached, note = fetch_url(candidate, args.delay)
+            print(f"    fetch({candidate}): {note} ({len(html_text)} chars)")
+            if html_text:
+                fetched_from = candidate
+                break
         if not html_text:
             continue
         if args.dry_run or not args.write:
@@ -429,18 +494,7 @@ def main():
             body = build_full_body(title, blog, url, published, blocks)
             first_para = next((t for k, t in blocks if k == "p"), "")
             desc = word_cut(first_para) or f"Summary of {title}."
-            front = (
-                "---\n"
-                f'title: "{title}"\n'
-                f'description: "{desc}"\n'
-                f"tags: [source, {blog}, {lang_tag}]\n"
-                f"locale: {lang_tag}\n"
-                f'source_url: "{url}"\n'
-                f"blog: {blog}\n"
-                f"published: \"{published}\"\n"
-                "status: pending\n"
-                "---\n\n"
-            )
+            front = build_front(meta, url, published, lang_tag, True, desc)
             with open(path, "w", encoding="utf-8") as fh:
                 fh.write(front + body)
             print(f"    wrote RAW full-text draft -> {rel} ({len(blocks)} blocks, kept pending)")
@@ -449,17 +503,7 @@ def main():
         first_para = next((t for k, t in blocks if k == "p"), "")
         desc = (word_cut(first_para)
                 or f"Summary of {title}.")
-        front = (
-            "---\n"
-            f'title: "{title}"\n'
-            f'description: "{desc}"\n'
-            f"tags: [source, {blog}, {lang_tag}]\n"
-            f"locale: {lang_tag}\n"
-            f'source_url: "{url}"\n'
-            f"blog: {blog}\n"
-            f"published: \"{published}\"\n"
-            "---\n\n"
-        )
+        front = build_front(meta, url, published, lang_tag, False, desc)
         with open(path, "w", encoding="utf-8") as fh:
             fh.write(front + body)
         print(f"    wrote draft summary -> {rel} ({len(blocks)} blocks)")

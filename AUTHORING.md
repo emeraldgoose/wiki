@@ -151,24 +151,51 @@ python3 scripts/collect_articles.py --year 2026 --stubs   # stub까지 생성
   `make_index.py`의 `BLOG_LABEL`. 폴더명(`content/<lang>/sources/articles/<slug>/`)은
   세 곳에서 동일해야 한다.
 
-### 5.2 논문 — 수동 수집 (HF Daily Papers + arXiv HTML)
+### 5.2 논문 — HF Daily Papers 수집 (`collect_articles.py --kind papers`)
 
-논문(`sources/papers/`)은 자동 수집 스크립트가 없으므로 수동으로 가져온다.
-`concepts/`, `guides/`도 마찬가지다 (§1 양식 준수).
+`concepts/`, `guides/`는 수동 작성 그대로다 (§1 양식 준수).
 
-1. 고르기: [HuggingFace Daily Papers](https://huggingface.co/papers)에서
-   고른다. 날짜별(`?date=YYYY-MM-DD`)·주별 보기가 있고,
-   개별 페이지(`https://huggingface.co/papers/<arxiv_id>`)에 요약·코드 링크·추천수가 있다.
-2. 읽기: arXiv PDF를 직접 파싱하지 말고 HTML 버전을 쓴다.
-   - 공식 HTML: `https://arxiv.org/html/<arxiv_id>`
-     (예: `abs/2609.04199` → `html/2609.04199`. abs 페이지의 PDF 링크 밑 "HTML" 버튼.
-     2023-12 이후 TeX 제출분부터 제공되는 실험 기능이라 최신 논문은 대부분 된다)
-   - 구버전·변환 실패분은 미러: `https://ar5iv.org/html/<arxiv_id>`
-     (arxiv의 `x`를 `5`로 바꾸면 된다)
-3. 저장: `content/<lang>/sources/papers/`에 파일을 만든다.
-   파일명은 arXiv ID형(`2609-04199.md`) 또는 제목 슬러그형(`JIT-Agent.md`) 중 하나.
-   양 언어에 **같은 상대 경로**로 두면 언어 버튼이 서로 오간다.
-   frontmatter 완성형:
+**Step 1 — 수집 + stub 생성.** `--date`를 생략하면 오늘(UTC) 기준이다.
+
+```bash
+python3 scripts/collect_articles.py --kind papers --date $(date -u +%F) --stubs
+```
+
+- 기대 출력: `Total N items -> .index-backup/collected_papers.json` +
+  `en: K new stub(s)`, `ko: K new stub(s)` (K=0이면 이미 수집된 날짜이므로 정상).
+- 생성물: `content/<lang>/sources/papers/<arxiv_id-대시형>.md`
+  (예: `2609.04199` → `2609-04199.md`). 제목 슬러그형 파일명 금지.
+- stub frontmatter는 `title`, `source_url`(arXiv abs URL), `blog: huggingface`,
+  `arxiv_id`, `authors`, `published_date`, `locale`, `status: pending`만 담고,
+  본문은 `[Content pending]` 한 줄이다.
+- 선택 기준: 수집된 전건을 대상으로 한다. 주제·추천수로 자의 제외 금지.
+  이미 쓴 논문은 `source_url` 기준 자동 제외된다.
+
+**Step 2 — 초안 채우기 (건조 실행 먼저).**
+
+```bash
+python3 scripts/fetch_drafts.py --kind papers --dry-run --limit 5
+python3 scripts/fetch_drafts.py --kind papers --limit 5 --write
+```
+
+- 기대 출력: `extract: N blocks` → `wrote draft summary -> ...`.
+  (`Pending stubs in scope` 헤더와 `robots`/`fetch` 경과 행이 함께 출력된다.
+  dry-run은 `(cached, no file change)`로 끝나며 파일을 바꾸지 않는다.)
+- 읽는 원문은 arXiv HTML (`arxiv.org/html/<id>`, 실패시 `ar5iv.org/html/<id>`).
+  PDF 파싱 금지.
+- `--full`은 전문 초안으로 `status: pending` 유지, 기본 모드는 요약 초안으로 승격
+  (승격 = `status: pending` 삭제 + `description`·`tags`·`published` 추가).
+
+**Step 3 — 정식 문서로 승격 (en → ko 순서).**
+
+1. `status: pending` 줄 삭제, `description`·`tags`·`published` 채우기.
+   `tags`는 `[source, paper, <주제>, en]` 형태 (§2).
+2. 본문 작성 후 §4 빌드로 검증. `en` 완성 후 같은 상대 경로에 `ko` 작성:
+   본문은 한국어 번역·요약(원문 복붙 금지), `title`·`description` 한국어,
+   `tags` 끝 `ko`, `source_url`·`arxiv_id`·`authors`·`published`는 `en`과 동일.
+3. `en` 단독 완성 금지 (`ko` 없으면 언어 버튼이 포털로 폴백).
+
+예시 완성형 (`ko`):
 
   ```yaml
   ---
@@ -183,10 +210,18 @@ python3 scripts/collect_articles.py --year 2026 --stubs   # stub까지 생성
   ---
   ```
 
-- `source_url`은 반드시 arXiv abs URL로 남긴다 (중복 판정·출처 표기의 기준).
-  HF 페이지 URL은 본문 References에 따로 적는다.
-- HTML 변환이 깨지는 수식·표·그림은 PDF와 대조해서 고치고,
-  포털 footer의 "원문 대조 검증 완료" 기준을 맞춘다.
+**금지 / 필수 체크리스트.**
+
+- 금지: PDF 파싱, `source_url` 변경·삭제, 제목 슬러그형 파일명, 주제 자의 제외.
+- 필수: `source_url`은 arXiv abs URL (중복 판정·출처 기준. HF 페이지 URL은
+  본문 References에만), 양 언어 동일 상대 경로, 깨진 수식·표·그림은 PDF와 대조 수정.
+
+**실패시 행동.**
+
+- arXiv HTML·ar5iv 둘 다 실패 → stub 그대로 두고 다음 stub으로 (수동 작성 대상).
+- `extract: too few blocks` → stub 유지, 수동 작성 대상으로 보고.
+- HF API 실패 (`fetch failed`) → `--date`가 `YYYY-MM-DD` 형식인지, 미래 날짜가
+  아닌지 확인 후 재시도.
 
 ### 5.3 개념 — sources로 보강·신설 (`concepts/`)
 
@@ -227,3 +262,6 @@ python3 scripts/collect_articles.py --year 2026 --stubs   # stub까지 생성
 | 링크가 404다 | `.md`가 아닌 `.html`로 직접 연결했거나, 이동·개명한 경로를 가리킴 |
 | 목차(TOC)가 비었다 | `##` 섹션이 없음. TOC는 h2에서 자동 생성 |
 | 수집한 글이 포털에 안 보인다 | `status: pending` stub은 정상적으로 `pending.html`로만 간다. 본문 작성 후 `status` 제거 |
+| 논문 stub이 pending에만 있다 | `fetch_drafts.py --kind papers --write` 미실행 또는 `--write` 누락 |
+| 같은 논문이 중복 수집된다 | `source_url`을 abs가 아닌 html/ar5iv URL로 바꿈 |
+| 오늘 날짜 수집이 비어 있다 | 미래 날짜 지정 또는 API 장애. `--date` 확인 후 재시도 |
