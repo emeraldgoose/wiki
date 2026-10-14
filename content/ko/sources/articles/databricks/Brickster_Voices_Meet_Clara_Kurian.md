@@ -1,11 +1,50 @@
 ---
-title: "Brickster Voices: Meet Clara Kurian"
+title: "Brickster Voices: Clara Kurian을 만나다"
+description: "Databricks 최초의 APJ 대학 채용 리크루터가 인도 캠퍼스 채용 구축기를 들려준다 — 2.5억 달러 이상 투자, 2022년 이후 270% 인력 성장, 51명 벵갈루루 인턴 프로그램 — 그리고 주니어 데이터·AI 인재를 가르는 기준을 설명한다."
+tags: [source, databricks, university-recruiting, india, early-career, ko]
+locale: ko
 source_url: "https://www.databricks.com/blog/brickster-voices-meet-clara-kurian"
 blog: databricks
-published_date: 2026-10-12
-locale: ko
-status: pending
+published: "2026-10-12"
 ---
 
-[Content pending] This stub was created by scripts/collect_articles.py.
-Source: https://www.databricks.com/blog/brickster-voices-meet-clara-kurian
+# Brickster Voices: Clara Kurian을 만나다
+
+**Source**: Databricks Blog, 2026-10-12
+
+**핵심**: Brickster Voices는 Databricks의 일을 만드는 사람들을 조명하는 시리즈다. 이번 편은 APJ 대학 채용 시니어 리크루터이자 회사 최초의 지역 대학 채용 담당자인 Clara Kurian 인터뷰다. 인도에서 캠퍼스 채용을 밑바닥부터 구축한 경험, 최초의 정규 51명 벵갈루루 인턴 프로그램 운영, 주니어 데이터·AI 인재 평가의 기초+마인드셋 기준을 다룬다.
+
+## 배경
+
+Brickster Voices는 커리어 여정, 임팩트 프로젝트의 비하인드, 협업 방식을 다루는 Databricks 시리즈다. 이번 인터뷰의 중심은 인도로, Databricks는 2.5억 달러 이상을 투자하고 약 50% 인력 확장을 계획 중이다 — 대학 채용이 백오피스가 아닌 전략 기능인 이유다.
+
+## 인도의 Databricks 성장
+
+Kurian은 투자가 헤드라인이 아니라 벵갈루루에서 체감되는 실체라고 말한다: 인도는 위성 오피스가 아닌 전략 허브로 대우받는다. 2022년 이후 수치:
+
+| 영역 | 성장 |
+|------|--------|
+| 인도 전체 | +270% |
+| 리더십 규모 | 전 사업부 +350% |
+| 엔지니어링 | 14배 |
+| 필드 엔지니어링·프로페셔널 서비스 | +260% |
+
+채용과 함께 커뮤니티 투자도 병행한다: 시니어 테크 리더가 참여하는 엔지니어링 네트워킹, IIT·IISc 대상 Bharat Bricks Hacks 해커톤, 벵갈루루 테크 위크 후원 — 단순 충원이 아니라 인도 테크 생태계에 내재화되겠다는 positioning이다.
+
+## 최초의 정규 인도 인턴 프로그램
+
+51명 벵갈루루 1기 프로그램의 비전은 인턴이 밖에서 관찰자가 아니라 Databricks 자체를 경험하게 하는 것이었다: 첫날부터 실제 업무, 엔지니어링 리더십과의 스피드 멘토링 같은 의도적 설계, 스니커 아트·피클볼 같은 문화 몰입. 일의 속도·사람·문화 — 여기서의 커리어가 어떤 모습일지를 진짜로 맛보게 하는 것이 설계 목표였다.
+
+## 주니어 후보를 가르는 것
+
+학생 조언의 요지는 특정 팀 쫓기보다 탄탄한 기초 — 호기심과 지속 학습이 딥 시스템부터 응용 AI까지 전이되기 때문이다. 마인드셋: 호기심이 첫째("아직 모르지만 알아내겠다"), 빌더 마인드셋과 비판적 사고가 뒤를 잇는다. 기억에 남는 후보를 가르는 건 태도다 — 진짜 호기심, 낯선 문제에 뛰어드는 자세, 꾸민 답변보다 진솔함과 자기 인식. 가치 측면에서는 채용이 진짜 다팀 파트너십으로 돌아가는 점에서 "Customer Obsessed"가 구현된다고 본다: 이해관계자가 자기 몫을 넘어 투자하면서 리크루팅 전문성을 신뢰한다.
+
+## 소프트웨어 엔지니어를 위한 시사점
+
+- **커리어 신호**: 데이터·AI 직무를 노리는 학생에게 기초 + 입증된 호기심이 팀별 맞춤 준비보다 중요하다; "이렇게 알아내겠다"는 말이 꾸민 정답을 이긴다.
+- **고용주 평가**: 커뮤니티 투자(해커톤, 캠퍼스 행사, 테크 위크 참여)는 지역 오피스가 실권 있는 전략 허브인지 위성인지 가르는 지표다.
+- **인턴십 설계**: 인턴을 멘토링한다면 첫날부터 실제 업무, 시니어 빌더와 직접 접촉, 문화 몰입이라는 글의 체크리스트가 간결한 템플릿이다.
+
+## 참고문헌
+
+- 원문: [https://www.databricks.com/blog/brickster-voices-meet-clara-kurian](https://www.databricks.com/blog/brickster-voices-meet-clara-kurian)
