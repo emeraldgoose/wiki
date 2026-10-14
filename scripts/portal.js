@@ -8,6 +8,8 @@
  * Wires up:
  *  - kind filter chips (#kind-filter)
  *  - category / source selects (#cat-filter, #src-filter)
+ *  - free-text search over title/description/source (#table-search,
+ *    matched against each recent-table row's data-search)
  *  - tag cloud filter (#tag-cloud)
  *  - date sort toggle (injected into #recent-table th[data-col="date"])
  *  - pagination (#pager) + result count (#result-count) + empty state (#empty-msg)
@@ -44,7 +46,7 @@
 
   var PER_OPTIONS = [20, 50, 100];
 
-  var state = { kind: "", cat: "", src: "", tag: "", dir: "desc", page: 1, per: 20 };
+  var state = { kind: "", cat: "", src: "", tag: "", q: "", dir: "desc", page: 1, per: 20 };
 
   function $(id) { return document.getElementById(id); }
 
@@ -67,6 +69,7 @@
       var tags = (d.tags || "").split(/\s+/);
       if (tags.indexOf(state.tag) === -1) return false;
     }
+    if (state.q && (d.search || "").indexOf(state.q) === -1) return false;
     return true;
   }
 
@@ -248,6 +251,12 @@
     if (cat) cat.addEventListener("change", function () { state.cat = cat.value; state.page = 1; render(); });
     var src = $("src-filter");
     if (src) src.addEventListener("change", function () { state.src = src.value; state.page = 1; render(); });
+    var q = $("table-search");
+    if (q) q.addEventListener("input", function () {
+      state.q = (q.value || "").trim().toLowerCase();
+      state.page = 1;
+      render();
+    });
 
     var cloud = $("tag-cloud");
     if (cloud) {

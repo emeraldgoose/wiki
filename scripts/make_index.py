@@ -57,6 +57,7 @@ I18N = {
         "by_tag": "By tag",
         "navigate": "Navigator",
         "search_ph": "Search 519 documents…",
+        "table_search_ph": "Search title, description, source…",
         "col_title": "Title",
         "col_type": "Type",
         "col_category": "Category",
@@ -95,6 +96,7 @@ I18N = {
         "by_tag": "태그별",
         "navigate": "내비게이터",
         "search_ph": "519개 문서 검색…",
+        "table_search_ph": "제목·설명·출처 검색…",
         "col_title": "제목",
         "col_type": "유형",
         "col_category": "카테고리",
@@ -354,12 +356,19 @@ def url_path(path):
     return quote(path, safe="/")
 
 
-def table_html(records, t, show_type=True, id_prefix="", table_id=""):
+def table_html(records, t, show_type=True, id_prefix="", table_id="",
+               compact=False, drop_cat=False, drop_src=False):
     """Render one records table. Rows carry data-* for client-side filtering.
 
     table_id marks the interactive table (the Recent one); portal.js scopes
     all filtering/sorting/pagination to it. The date header gets a
     data-col="date" hook so portal.js can inject the sort toggle.
+
+    compact=True is for the static facet tables (By category / By source):
+    no data-* attributes (portal.js never touches them) and no columns made
+    redundant by the grouping (drop_cat inside a category group, drop_src
+    inside a source group). This keeps the portal page small: every
+    duplicated row would otherwise repeat ~500 bytes of dead attributes.
     """
     kind_label = {
         "papers": t["papers"], "concepts": t["concepts"],
@@ -373,11 +382,11 @@ def table_html(records, t, show_type=True, id_prefix="", table_id=""):
     cols = [(t["col_title"], "t-title", "")]
     if show_type:
         cols.append((t["col_type"], "t-type", ""))
-    if has_cat:
+    if has_cat and not drop_cat:
         cols.append((t["col_category"], "t-cat", ""))
     if has_date:
-        cols.append((t["col_date"], "t-date", "date"))
-    if has_src:
+        cols.append((t["col_date"], "t-date", "date" if table_id else ""))
+    if has_src and not drop_src:
         cols.append((t["col_source"], "t-src", ""))
 
     id_attr = f' id="{eattr(table_id)}"' if table_id else ""
@@ -388,27 +397,30 @@ def table_html(records, t, show_type=True, id_prefix="", table_id=""):
     out.append("</tr></thead><tbody>")
 
     for rec in records:
-        search = " ".join([rec["title"], rec["desc"], rec["category"], rec["blog"]]).lower()
-        tags = " ".join(rec["tags"])
-        out.append(
-            f'<tr data-kind="{eattr(rec["kind"])}" '
-            f'data-category="{eattr(rec["category"])}" '
-            f'data-blog="{eattr(rec["blog"])}" '
-            f'data-date="{eattr(rec["date"])}" '
-            f'data-tags="{eattr(tags)}" '
-            f'data-search="{eattr(search)}">'
-        )
+        if compact:
+            out.append("<tr>")
+        else:
+            search = " ".join([rec["title"], rec["desc"], rec["category"], rec["blog"]]).lower()
+            tags = " ".join(rec["tags"])
+            out.append(
+                f'<tr data-kind="{eattr(rec["kind"])}" '
+                f'data-category="{eattr(rec["category"])}" '
+                f'data-blog="{eattr(rec["blog"])}" '
+                f'data-date="{eattr(rec["date"])}" '
+                f'data-tags="{eattr(tags)}" '
+                f'data-search="{eattr(search)}">'
+            )
         out.append(
             f'<td class="t-title"><a href="{eattr(rec["href"])}">{e(rec["title"])}</a></td>'
         )
         if show_type:
             label = kind_label.get(rec["kind"], rec["kind"])
             out.append(f'<td class="t-type"><span class="pill pill-{eattr(rec["kind"])}">{e(label)}</span></td>')
-        if has_cat:
+        if has_cat and not drop_cat:
             out.append(f'<td class="t-cat">{e(rec["category"] or "")}</td>')
         if has_date:
             out.append(f'<td class="t-date">{e(rec["date"] or "")}</td>')
-        if has_src:
+        if has_src and not drop_src:
             out.append(f'<td class="t-src">{e(rec["blog"] or "")}</td>')
         out.append("</tr>")
 
@@ -439,8 +451,9 @@ def facet_groups(records, key, t, id_prefix):
             f'data-value="{eattr(name)}">'
             f'<summary><span class="facet-name">{e(name)}</span>'
             f'<span class="facet-count">{len(items)}</span></summary>'
-            f"{table_html(items, t, show_type=True)}"
-            f"</details>"
+            + table_html(items, t, show_type=True, compact=True,
+                         drop_cat=(key == "category"), drop_src=(key == "blog"))
+            + "</details>"
         )
     blocks.append("</div>")
     return "\n".join(blocks)
@@ -588,6 +601,9 @@ def render(records, t, lang, other_lang_code):
         <div class="selects">
           <select id="cat-filter"><option value="">{e(t['by_category'])}: {e(t['all'])}</option>{cat_options}</select>
           <select id="src-filter"><option value="">{e(t['by_source'])}: {e(t['all'])}</option>{src_options}</select>
+        </div>
+        <div class="table-search">
+          <input type="search" id="table-search" class="search" placeholder="{eattr(t['table_search_ph'])}" autocomplete="off"/>
         </div>
       </div>
       <p class="result-count" id="result-count"></p>
