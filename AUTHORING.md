@@ -83,9 +83,34 @@ python3 scripts/serve_wiki.py 8900  # 로컬 확인 (http://localhost:8900/)
 
 ## 5. 외부 문서 가져오기 (수집 파이프라인)
 
-### 5.1 아티클 — RSS 자동 수집
+아티클·논문 모두 **같은 4단계를 순서대로** 거친다. 단계를 건너뛰지 않는다
+(흔한 실패: 수집 후 승격 없이 방치, 초안 채우기 생략):
 
-아티클(`sources/articles/`)은 RSS/Atom 피드에서 자동 수집한다.
+1. **수집** (§5.1) — inventory JSON + 양 언어 stub 생성. 본문을 쓰지 않는다.
+2. **초안 채우기** (§5.2) — `fetch_drafts.py`로 원문을 읽어 스켈레톤 본문 생성.
+3. **승격** (§5.3) — stub마다 본문 완성 + frontmatter 확정 (`en` 먼저, §5.3 체크리스트).
+4. **번역 + 검증** (§5.3) — `ko` 작성 후 §4 빌드로 확인.
+
+**상태 판정 (공통).** 파일 앞부분에 `status: pending` 또는 `[Content pending]` 중
+하나라도 있으면 미완성이다. 빌드는 이런 파일을 메인 목록에서 빼고
+`pending.html`로 분리한다 (빌드 끝의 `NOTE: N article(s) are still stubs`가
+남은 분량). 관련 스크립트 모두 앞 2000~4000자만 보고 판정하므로 전문 파싱 없이
+고른다. `--full` 출력도 `status: pending`을 유지하므로 같은 기준으로 계속
+걸리고, 마커를 지우는 순간 정식 문서로 취급되니 요약 완료 전까지 유지한다:
+
+```bash
+grep -rl "status: pending" content/en/sources/articles/ content/en/sources/papers/ \
+  content/ko/sources/articles/ content/ko/sources/papers/
+python3 scripts/fetch_drafts.py --kind all --dry-run --limit 5   # 처리 대상 목록
+```
+
+### 5.1 수집 — stub 만들기 (종류별 명령. 이 단계에서 본문을 쓰지 않는다)
+
+공통 규칙: `--stubs`는 미작성 건만 양 언어에 만든다
+(이미 있으면 0건이 정상). `source_url`은 중복 판정·출처 기준이니
+지우거나 바꾸지 않는다.
+
+**아티클 (RSS/Atom).**
 
 ```bash
 python3 scripts/collect_articles.py --year 2026
@@ -108,20 +133,98 @@ python3 scripts/collect_articles.py --year 2026 --stubs   # stub까지 생성
   프래그먼트(`#...`)를 떼고 정규화한 뒤 양 언어 기존 파일과 비교하므로,
   이미 쓴 글은 다시 수집되지 않는다. `source_url`을 지우거나 바꾸면
   중복 검사가 깨지니 유지한다.
-- stub을 정식 문서로 바꾸는 법: `status: pending` 줄을 지우고,
-  `description`, `tags` (§2 규칙), `published`를 채운 뒤 본문을 작성한다.
-  수집·초안 스크립트는 `en`만 만든다. `en` 정식 문서가 완성되면 에이전트가
-  이를 기반으로 `ko` 문서를 만든다: 같은 상대 경로
-  (`content/ko/...` ↔ `content/en/...`, §1), 본문은 `en` 완성본을 한국어로
-  번역·요약(원문 복붙 금지), frontmatter는 `title`·`description` 한국어 작성,
-  `tags` 끝을 `ko`로, `locale: ko`, `source_url`·`blog`·`published`는 `en`과
-  동일하게 유지한다. `ko` 대응이 없으면 언어 버튼이 포털로 폴백되므로
-  `en` 단독 완성 상태로 두지 않는다.
-  예시 완성형:
+- stub 상태에서는 빌드가 페이지를 렌더링하되 메인 포털 목록에는 넣지 않고
+  `pending.html`로 분리한다.
+- 새 피드를 추가하려면 세 곳을 함께 고친다:
+  `collect_articles.py`의 `FEEDS` + `BLOG_SLUG`,
+  `make_index.py`의 `BLOG_LABEL`. 폴더명(`content/<lang>/sources/articles/<slug>/`)은
+  세 곳에서 동일해야 한다.
+
+**논문 (HF Daily Papers).** `concepts/`, `guides/`는 수집 대상이 아니다
+(수동 작성, §1 양식 준수).
+
+```bash
+python3 scripts/collect_articles.py --kind papers --date $(date -u +%F) --stubs
+```
+
+- `--date`를 생략하면 오늘(UTC) 기준이다.
+- 기대 출력: `Total N items -> .index-backup/collected_papers.json` +
+  `en: K new stub(s)`, `ko: K new stub(s)`.
+- 생성물: `content/<lang>/sources/papers/<arxiv_id-대시형>.md`
+  (예: `2609.04199` → `2609-04199.md`). 제목 슬러그형 파일명 금지.
+- stub frontmatter는 `title`, `source_url`(arXiv abs URL), `blog: huggingface`,
+  `arxiv_id`, `authors`, `published_date`, `locale`, `status: pending`만 담고,
+  본문은 `[Content pending]` 한 줄이다.
+- 선택 기준: 수집된 전건을 대상으로 한다. 주제·추천수로 자의 제외 금지.
+  이미 쓴 논문은 `source_url` 기준 자동 제외된다.
+- HF API 실패 (`fetch failed`) → `--date`가 `YYYY-MM-DD` 형식인지, 미래 날짜가
+  아닌지 확인 후 재시도.
+
+### 5.2 초안 채우기 — `fetch_drafts.py` (아티클·논문 공통, `--kind`만 다름)
+
+수집이 끝나면 같은 단계로 초안을 채운다. 반드시 dry-run으로 대상을 먼저 확인한다.
+
+```bash
+# 아티클
+python3 scripts/fetch_drafts.py --kind articles --dry-run --limit 5
+python3 scripts/fetch_drafts.py --kind articles --limit 5 --write
+# 논문
+python3 scripts/fetch_drafts.py --kind papers --dry-run --limit 5
+python3 scripts/fetch_drafts.py --kind papers --limit 5 --write
+```
+
+- 기대 출력: `Pending stubs in scope (<lang>/<kind>): N` 헤더 +
+  건별 `robots(...)` / `fetch(...)` 경과 행 + `extract: N blocks` →
+  `wrote draft summary -> ...`.
+  dry-run은 `(cached, no file change)`로 끝나며 파일을 바꾸지 않는다.
+- 읽는 원문: 아티클은 stub의 `source_url` HTML 그대로.
+  논문은 arXiv HTML (`arxiv.org/html/<id>`, 실패시 `ar5iv.org/html/<id>`).
+  PDF 파싱 금지.
+- `--write` 후 파일 상태 (반드시 확인): `status: pending` 삭제됨(= pending 탈출),
+  `description`·`tags`·`published` 자동 기입, 본문은 요약 스켈레톤.
+  자동 `tags`는 `[source, <blog>, <lang>]`
+  (논문은 `[source, paper, huggingface, <lang>]`) — 주제 태그는 §5.3에서 직접
+  추가한다. 스켈레톤을 그대로 두지 말고 §5.3으로 간다.
+- `--full`은 전문 초안으로 `status: pending`을 유지한다 (여전히 pending에 머무름).
+  요약이 끝난 뒤 `status`를 지우고 §5.3을 적용한다.
+- 실패시 행동 (공통): `extract: too few blocks` → stub 유지, 수동 작성 대상으로 보고.
+  논문에서 arXiv HTML·ar5iv 둘 다 실패 → stub 그대로 두고 다음 stub으로.
+  robots 차단 URL은 재시도하지 않는다.
+
+### 5.3 승격 — 정식 문서로 만들기 (아티클·논문 공통. 매 stub마다 수행)
+
+§5.2 출력물(또는 손으로 쓴 stub)을 아래 순서대로 처리한다.
+`en`을 먼저 완성하고, 그 다음 같은 상대 경로에 `ko`를 만든다.
+**이 절을 생략하면 글이 pending에 영원히 남는다.**
+
+1. **본문 작성.** 스켈레톤을 완성형으로 확장한다 (§1·§3 양식).
+   `--full` 출력이면 먼저 요약하고 `status: pending`을 지운다.
+2. **`tags`에 주제 태그 추가.** fetch가 넣어준 뼈대
+   (`[source, <blog>, en]` / `[source, paper, huggingface, en]`)에 주제 태그를
+   끼운다 (`[source, paper, machine-learning, en]`). 끝 언어 태그는 유지한다 (§2).
+3. **날짜 키 확인.** `published`(fetch 출력) 또는 `published_date`(stub/`--full` 출력)
+   중 하나가 `YYYY-MM-DD` 형식이면 된다. 둘 다 넣지 않는다.
+4. **종류별 보존 키 (삭제·변경 금지).**
+
+   | 종류 | 유지해야 할 키 |
+   |---|---|
+   | 아티클 | `source_url`, `blog` |
+   | 논문 | `source_url`(arXiv abs URL), `blog: huggingface`, `arxiv_id`, `authors` |
+
+   HF 페이지 URL은 본문 References에만 적는다.
+5. **`ko` 작성.** 같은 상대 경로 (`content/ko/...` ↔ `content/en/...`, §1).
+   본문은 `en` 완성본을 한국어로 번역·요약(원문 복붙 금지),
+   `title`·`description` 한국어 작성, `tags` 끝을 `ko`로, `locale: ko`,
+   나머지 키(`source_url`·`blog`·`arxiv_id`·`authors`·날짜)는 `en`과 동일.
+6. **빌드 검증** (§4): `Build verified` + 포털 Recent·Navigator 노출 +
+   언어 버튼 상호 이동 확인. `en` 단독 완성 금지
+   (`ko` 없으면 언어 버튼이 포털로 폴백).
+
+예시 완성형 (아티클, `ko`):
 
   ```yaml
   ---
-  title: "Accelerating Spark queries with Iceberg materialized views"
+  title: "Iceberg 머티리얼라이즈드 뷰로 Spark 쿼리 가속하기"
   description: "한 줄 요약."
   tags: [source, aws-big-data, spark, iceberg, ko]
   locale: ko
@@ -131,71 +234,7 @@ python3 scripts/collect_articles.py --year 2026 --stubs   # stub까지 생성
   ---
   ```
 
-- stub 상태에서는 빌드가 페이지를 렌더링하되 메인 포털 목록에는 넣지 않고
-  `pending.html`로 분리한다. 빌드 끝의
-  `NOTE: N article(s) are still stubs`가 남은 분량이다.
-- 초안 판정 (본문을 끝까지 읽지 않고 고르는 법): 파일 앞부분(head) 마커만 본다.
-  `status: pending` 또는 `[Content pending]` 중 하나라도 있으면 초안이다.
-  `wiki_builder.py`·`make_index.py`·`fetch_drafts.py` 모두 앞 2000~4000자만 읽고
-  판정하므로 전문 파싱이 필요 없다. `--full` 원문 초안도 `status: pending`을
-  유지하므로 같은 기준으로 계속 골라지고, 마커를 지우는 순간 정식 문서로
-  취급되니 요약 완료 전까지 유지한다. 고르는 명령:
-
-  ```bash
-  grep -rl "status: pending" content/en/sources/articles/ content/ko/sources/articles/
-  python3 scripts/make_index.py --dry-run | grep pending   # 개수만 확인
-  python3 scripts/fetch_drafts.py --dry-run --limit 5      # 처리 대상 목록
-  ```
-- 새 피드를 추가하려면 세 곳을 함께 고친다:
-  `collect_articles.py`의 `FEEDS` + `BLOG_SLUG`,
-  `make_index.py`의 `BLOG_LABEL`. 폴더명(`content/<lang>/sources/articles/<slug>/`)은
-  세 곳에서 동일해야 한다.
-
-### 5.2 논문 — HF Daily Papers 수집 (`collect_articles.py --kind papers`)
-
-`concepts/`, `guides/`는 수동 작성 그대로다 (§1 양식 준수).
-
-**Step 1 — 수집 + stub 생성.** `--date`를 생략하면 오늘(UTC) 기준이다.
-
-```bash
-python3 scripts/collect_articles.py --kind papers --date $(date -u +%F) --stubs
-```
-
-- 기대 출력: `Total N items -> .index-backup/collected_papers.json` +
-  `en: K new stub(s)`, `ko: K new stub(s)` (K=0이면 이미 수집된 날짜이므로 정상).
-- 생성물: `content/<lang>/sources/papers/<arxiv_id-대시형>.md`
-  (예: `2609.04199` → `2609-04199.md`). 제목 슬러그형 파일명 금지.
-- stub frontmatter는 `title`, `source_url`(arXiv abs URL), `blog: huggingface`,
-  `arxiv_id`, `authors`, `published_date`, `locale`, `status: pending`만 담고,
-  본문은 `[Content pending]` 한 줄이다.
-- 선택 기준: 수집된 전건을 대상으로 한다. 주제·추천수로 자의 제외 금지.
-  이미 쓴 논문은 `source_url` 기준 자동 제외된다.
-
-**Step 2 — 초안 채우기 (건조 실행 먼저).**
-
-```bash
-python3 scripts/fetch_drafts.py --kind papers --dry-run --limit 5
-python3 scripts/fetch_drafts.py --kind papers --limit 5 --write
-```
-
-- 기대 출력: `extract: N blocks` → `wrote draft summary -> ...`.
-  (`Pending stubs in scope` 헤더와 `robots`/`fetch` 경과 행이 함께 출력된다.
-  dry-run은 `(cached, no file change)`로 끝나며 파일을 바꾸지 않는다.)
-- 읽는 원문은 arXiv HTML (`arxiv.org/html/<id>`, 실패시 `ar5iv.org/html/<id>`).
-  PDF 파싱 금지.
-- `--full`은 전문 초안으로 `status: pending` 유지, 기본 모드는 요약 초안으로 승격
-  (승격 = `status: pending` 삭제 + `description`·`tags`·`published` 추가).
-
-**Step 3 — 정식 문서로 승격 (en → ko 순서).**
-
-1. `status: pending` 줄 삭제, `description`·`tags`·`published` 채우기.
-   `tags`는 `[source, paper, <주제>, en]` 형태 (§2).
-2. 본문 작성 후 §4 빌드로 검증. `en` 완성 후 같은 상대 경로에 `ko` 작성:
-   본문은 한국어 번역·요약(원문 복붙 금지), `title`·`description` 한국어,
-   `tags` 끝 `ko`, `source_url`·`arxiv_id`·`authors`·`published`는 `en`과 동일.
-3. `en` 단독 완성 금지 (`ko` 없으면 언어 버튼이 포털로 폴백).
-
-예시 완성형 (`ko`):
+예시 완성형 (논문, `ko`):
 
   ```yaml
   ---
@@ -212,18 +251,12 @@ python3 scripts/fetch_drafts.py --kind papers --limit 5 --write
 
 **금지 / 필수 체크리스트.**
 
-- 금지: PDF 파싱, `source_url` 변경·삭제, 제목 슬러그형 파일명, 주제 자의 제외.
-- 필수: `source_url`은 arXiv abs URL (중복 판정·출처 기준. HF 페이지 URL은
-  본문 References에만), 양 언어 동일 상대 경로, 깨진 수식·표·그림은 PDF와 대조 수정.
+- 금지: PDF 파싱, `source_url` 변경·삭제, 논문의 제목 슬러그형 파일명,
+  수집건의 주제 자의 제외, 스켈레톤 그대로 방치, §5.3 생략.
+- 필수: 양 언어 동일 상대 경로, 깨진 수식·표·그림은 PDF와 대조 수정
+  (논문만), 매 stub마다 §5.3 1→6 완주.
 
-**실패시 행동.**
-
-- arXiv HTML·ar5iv 둘 다 실패 → stub 그대로 두고 다음 stub으로 (수동 작성 대상).
-- `extract: too few blocks` → stub 유지, 수동 작성 대상으로 보고.
-- HF API 실패 (`fetch failed`) → `--date`가 `YYYY-MM-DD` 형식인지, 미래 날짜가
-  아닌지 확인 후 재시도.
-
-### 5.3 개념 — sources로 보강·신설 (`concepts/`)
+### 5.4 개념 — sources로 보강·신설 (`concepts/`)
 
 개념 문서는 여러 원전(source)을 종합하는 문서다. 단일 원문 복사가 아니다.
 `sources/`에 글을 쓸 때마다 관련 개념을 확인한다:
@@ -261,7 +294,9 @@ python3 scripts/fetch_drafts.py --kind papers --limit 5 --write
 | Language 메뉴가 포털로 간다 | 반대 언어 쪽에 같은 경로 파일이 없음 |
 | 링크가 404다 | `.md`가 아닌 `.html`로 직접 연결했거나, 이동·개명한 경로를 가리킴 |
 | 목차(TOC)가 비었다 | `##` 섹션이 없음. TOC는 h2에서 자동 생성 |
-| 수집한 글이 포털에 안 보인다 | `status: pending` stub은 정상적으로 `pending.html`로만 간다. 본문 작성 후 `status` 제거 |
+| 수집한 글이 포털에 안 보인다 | `status: pending` stub은 정상적으로 `pending.html`로만 간다. §5.3 승격 후 `status` 제거 확인 |
+| 아티클 stub이 pending에만 있다 | `fetch_drafts.py --kind articles --write` 미실행 또는 `--write` 누락. §5.2→§5.3 순서 준수 |
 | 논문 stub이 pending에만 있다 | `fetch_drafts.py --kind papers --write` 미실행 또는 `--write` 누락 |
+| fetch 후에도 Recent에 안 보인다 | `--full`로 써서 `status` 유지 중. 요약 후 `status` 제거 (§5.3.1) |
 | 같은 논문이 중복 수집된다 | `source_url`을 abs가 아닌 html/ar5iv URL로 바꿈 |
 | 오늘 날짜 수집이 비어 있다 | 미래 날짜 지정 또는 API 장애. `--date` 확인 후 재시도 |
