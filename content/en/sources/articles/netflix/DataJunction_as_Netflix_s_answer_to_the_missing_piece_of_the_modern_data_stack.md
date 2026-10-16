@@ -4,7 +4,6 @@ source_url: "https://netflixtechblog.com/datajunction-as-netflixs-answer-to-the-
 blog: netflix
 published_date: 2026-10-14
 locale: en
-status: pending
 ---
 
 [Content pending] This stub was created by scripts/collect_articles.py.

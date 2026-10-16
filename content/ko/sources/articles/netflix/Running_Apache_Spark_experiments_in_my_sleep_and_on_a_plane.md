@@ -4,7 +4,6 @@ source_url: "https://netflixtechblog.com/running-apache-spark-experiments-in-my-
 blog: netflix
 published_date: 2026-10-14
 locale: ko
-status: pending
 ---
 
 [Content pending] This stub was created by scripts/collect_articles.py.

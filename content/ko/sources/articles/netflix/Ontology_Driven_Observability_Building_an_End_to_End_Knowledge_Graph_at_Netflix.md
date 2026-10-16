@@ -4,7 +4,6 @@ source_url: "https://netflixtechblog.com/ontology-driven-observability-building-
 blog: netflix
 published_date: 2026-10-16
 locale: ko
-status: pending
 ---
 
 [Content pending] This stub was created by scripts/collect_articles.py.

@@ -4,7 +4,6 @@ source_url: "https://www.databricks.com/blog/geospatial-queries-are-38x-faster-l
 blog: databricks
 published_date: 2026-10-15
 locale: en
-status: pending
 ---
 
 [Content pending] This stub was created by scripts/collect_articles.py.

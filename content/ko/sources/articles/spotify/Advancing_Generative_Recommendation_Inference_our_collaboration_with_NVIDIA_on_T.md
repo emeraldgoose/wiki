@@ -4,7 +4,6 @@ source_url: "https://engineering.atspotify.com/2026/10/advancing-generative-reco
 blog: spotify
 published_date: 2026-10-16
 locale: ko
-status: pending
 ---
 
 [Content pending] This stub was created by scripts/collect_articles.py.

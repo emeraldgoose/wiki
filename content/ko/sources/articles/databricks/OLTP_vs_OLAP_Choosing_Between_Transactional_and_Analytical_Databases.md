@@ -4,7 +4,6 @@ source_url: "https://www.databricks.com/blog/oltp-vs-olap-choosing-between-trans
 blog: databricks
 published_date: 2026-10-13
 locale: ko
-status: pending
 ---
 
 [Content pending] This stub was created by scripts/collect_articles.py.
