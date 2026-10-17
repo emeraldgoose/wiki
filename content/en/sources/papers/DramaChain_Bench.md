@@ -1,10 +1,11 @@
 ---
 title: "DramaChain Bench: An End-to-End Benchmark for Short-Drama Generation"
-description: HuggingFace Daily Papers — 2026-09-01 — Tencent Hunyuan
-tags: [source, paper, huggingface, tencent-hunyuan, ai-engineering]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 source_url: "https://arxiv.org/abs/2609.00646"
 arxiv_id: 2609.00646
+published: 2026-10-17
 ---
 
 # DramaChain Bench: An End-to-End Benchmark for Short-Drama Generation

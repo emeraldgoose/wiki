@@ -1,9 +1,10 @@
 ---
 title: Token-Efficient Data Reasoning Agents via Adaptive Structuring of Unstructured Data
-description: HuggingFace Daily Papers — 2026-08-31 — Harvard University
-tags: [source, paper, huggingface, harvard-university]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 arxiv_id: 2608.31082
+published: 2026-10-17
 ---
 
 # Token-Efficient Data Reasoning Agents via Adaptive Structuring of Unstructured Data

@@ -4,6 +4,9 @@ source_url: "https://aws.amazon.com/blogs/big-data/dbt-and-amazon-redshift-data-
 blog: aws-big-data
 published_date: 2026-10-15
 locale: en
+description: Promoted on 2026-10-17
+tags: [source, article, en]
+published: 2026-10-17
 ---
 
 [Content pending] This stub was created by scripts/collect_articles.py.

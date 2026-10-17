@@ -1,11 +1,12 @@
 ---
 title: Stability and Scalability for Search
-description: Proxy, Kafka-backed Ingestion Service, and Backfill Service that keep Twitter's Elasticsearch platform stable under traffic spikes
-tags: [source, twitter, x, search, elasticsearch, kafka, scalability, tier-2]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2022/stability-and-scalability-for-search"
 blog: twitter
 date: '2022-10-14'
+published: 2026-10-17
 ---
 
 # Stability and Scalability for Search

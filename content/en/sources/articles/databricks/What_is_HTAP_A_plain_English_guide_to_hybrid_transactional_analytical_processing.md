@@ -1,11 +1,11 @@
 ---
 title: "What is HTAP? A plain-English guide to hybrid transactional/analytical processing"
-description: "Consider a payment system processing a purchase. Before approving the transaction, a fraud model may need to evaluate it against the"
-tags: [source, databricks, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/what-htap-plain-english-guide-hybrid-transactionalanalytical-processing"
 blog: databricks
-published: "2026-10-13"
+published: 2026-10-17
 ---
 
 # What is HTAP? A plain-English guide to hybrid transactional/analytical processing

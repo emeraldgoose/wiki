@@ -1,11 +1,12 @@
 ---
 title: How Twitter Uses rasdaemon for Hardware Reliability
-description: Replacing deprecated mcelog/edac-utils with rasdaemon as the centralized hardware-error telemetry on hundreds of thousands of hosts
-tags: [source, twitter, x, hardware, reliability, linux, rasdaemon, tier-2]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/how-twitter-uses-rasdaemon-for-hardware-reliability"
 blog: twitter
 date: '2023-01-06'
+published: 2026-10-17
 ---
 
 # How Twitter Uses rasdaemon for Hardware Reliability

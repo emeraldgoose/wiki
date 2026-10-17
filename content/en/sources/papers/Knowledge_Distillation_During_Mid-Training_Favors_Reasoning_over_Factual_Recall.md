@@ -1,10 +1,11 @@
 ---
 title: Knowledge Distillation During Mid-Training Favors Reasoning over Factual Recall
-description: HuggingFace Daily Papers — 2026-09-01 — Meta
-tags: [source, paper, huggingface, meta, machine-learning]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 source_url: "https://arxiv.org/abs/2609.01532"
 arxiv_id: 2609.01532
+published: 2026-10-17
 ---
 
 # Knowledge Distillation During Mid-Training Favors Reasoning over Factual Recall

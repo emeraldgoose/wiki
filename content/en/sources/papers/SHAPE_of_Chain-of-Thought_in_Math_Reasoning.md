@@ -1,10 +1,11 @@
 ---
 title: SHAPE of Chain-of-Thought in Math Reasoning
-description: HuggingFace Daily Papers — 2026-06-28 — Seoul National University
-tags: [source, paper, huggingface, seoul-national-university, machine-learning]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 source_url: "https://arxiv.org/abs/2608.28600"
 arxiv_id: 2608.28600
+published: 2026-10-17
 ---
 
 # SHAPE of Chain-of-Thought in Math Reasoning

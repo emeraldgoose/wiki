@@ -1,10 +1,11 @@
 ---
 title: Keep-or-Drop? Adaptive Tokenizer for Compact Video Representation
-description: HuggingFace Daily Papers — 2026-08-25 — Kakao Corp.
-tags: [source, paper, huggingface, kakao-corp., machine-learning]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 source_url: "https://arxiv.org/abs/2608.24293"
 arxiv_id: 2608.24293
+published: 2026-10-17
 ---
 
 # Keep-or-Drop? Adaptive Tokenizer for Compact Video Representation

@@ -1,10 +1,11 @@
 ---
 title: "Harness-of-Harness: Multi-Day Autonomous Software Development with Continual Improvement"
-description: HuggingFace Daily Papers — 2026-09-01 — 
-tags: [source, paper, huggingface, arxiv, ai-engineering]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 source_url: "https://arxiv.org/abs/2609.01481"
 arxiv_id: 2609.01481
+published: 2026-10-17
 ---
 
 # Harness-of-Harness: Multi-Day Autonomous Software Development with Continual Improvement

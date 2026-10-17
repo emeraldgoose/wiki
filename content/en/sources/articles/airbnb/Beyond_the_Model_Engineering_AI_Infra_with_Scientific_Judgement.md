@@ -1,11 +1,11 @@
 ---
 title: "Beyond the Model - Engineering AI Infra with Scientific Judgement"
-description: "Airbnb's Insight Miner agent harness encodes scientific methodology as infrastructure for unstructured text investigation: extract-embed-cluster core, scaled labeling, and agentic upkeep."
-published: "2026-09-15"
+description: Promoted on 2026-10-17
+published: 2026-10-17
 source_url: "https://airbnb.tech/ai-ml/beyond-the-model-engineering-ai-infra-with-scientific-judgement/"
 blog: airbnb
 locale: "en"
-tags: [airbnb, ai-agents, agent-harness, data-science, evaluation, methodology, unstructured-data]
+tags: [source, article, en]
 ---
 
 # Beyond the Model - Engineering AI Infra with Scientific Judgement

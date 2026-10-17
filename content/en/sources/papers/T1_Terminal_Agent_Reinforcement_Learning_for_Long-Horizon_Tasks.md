@@ -1,11 +1,11 @@
 ---
 title: "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks"
-description: "122B-MoE terminal agent trained with RL in a cloud sandbox, 300+ tool calls for long-horizon tasks"
+description: Promoted on 2026-10-17
 arxiv_id: "2609.11042"
 HF_URL: "https://huggingface.co/papers/2609.11042"
-published: 2026-09-10
+published: 2026-10-17
 authors: "Junyao Yang, Yucheng Shi, Zhongzhi Li, Ruhan Wang, Zongxia Li, Haitao Mi, Leowei Liang"
-tags: [source, paper, ai-engineering]
+tags: [source, paper, en]
 locale: en
 ---
 

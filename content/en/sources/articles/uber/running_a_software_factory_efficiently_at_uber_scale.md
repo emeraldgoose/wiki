@@ -1,11 +1,12 @@
 ---
 title: Running a Software Factory Efficiently at Uber Scale
-description: Uber's cost equation and optimization levers for AI agent coding at scale — model selection, token efficiency, and managed-agent economics
-tags: [source, uber, ai-engineering, agent, cost-optimization, software-factory]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.uber.com/us/en/blog/efficient-software-factory/"
 blog: uber
 published_date: 2026-08-27
+published: 2026-10-17
 ---
 
 # Running a Software Factory Efficiently at Uber Scale

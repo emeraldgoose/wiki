@@ -1,11 +1,11 @@
 ---
 title: "Toward More Controllable AI Video Editing"
-description: Vera layered video diffusion and VOID physically-plausible inpainting for artist-controlled generative editing of promotional assets
-tags: [source, article, netflix, generative-models, video, diffusion, computer-vision]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://netflixtechblog.com/toward-more-controllable-ai-video-editing-an-early-research-exploration-at-netflix-eb8160ed60a2"
 blog: netflix
-published: 2026-06-23
+published: 2026-10-17
 ---
 
 # Toward More Controllable AI Video Editing

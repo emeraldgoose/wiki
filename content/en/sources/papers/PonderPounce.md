@@ -1,8 +1,9 @@
 ---
 title: "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control"
-description: "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control"
-tags: [paper, source, huggingface, ai-engineering, robotics, mllm, system1-system2]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
+published: 2026-10-17
 ---
 
 # PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control

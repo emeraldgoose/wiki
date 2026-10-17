@@ -1,11 +1,12 @@
 ---
 title: Data Quality Automation at Twitter
-description: The Data Quality Platform — config-driven Great Expectations + Airflow checks over exabyte-scale BigQuery data
-tags: [source, twitter, x, data-quality, bigquery, airflow, great-expectations, tier-2]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2022/data-quality-automation-at-twitter"
 blog: twitter
 date: '2022-09-15'
+published: 2026-10-17
 ---
 
 # Data Quality Automation at Twitter

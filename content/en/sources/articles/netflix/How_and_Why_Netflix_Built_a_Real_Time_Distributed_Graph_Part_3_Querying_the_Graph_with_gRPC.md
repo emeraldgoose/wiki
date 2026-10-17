@@ -1,11 +1,11 @@
 ---
 title: "How and Why Netflix Built a Real-Time Distributed Graph Part 3: Querying the Graph with gRPC"
-description: gRPC serving layer for an 8B-node 150B-edge real-time graph — breadth-first async traversal, early filtering, selective caching
-tags: [source, article, netflix, distributed-systems, graph, grpc, serving]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607"
 blog: netflix
-published: 2026-08-07
+published: 2026-10-17
 ---
 
 # How and Why Netflix Built a Real-Time Distributed Graph Part 3: Querying the Graph with gRPC

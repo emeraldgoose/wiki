@@ -1,11 +1,11 @@
 ---
 title: "Bring data quality to your Amazon EMR workloads with Amazon EMR Data Quality built on AWS Glue Data Quality"
-description: "Amazon EMR Data Quality brings AWS Glue's DQDL rule engine natively into EMR Spark jobs on EC2, Serverless, and EKS, supporting ad hoc inline validation and Iceberg Write-Audit-Publish promotion gates via managed rulesets in the Glue Data Catalog."
-tags: [source, aws-big-data, emr, data-quality, glue, apache-iceberg, spark, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/bring-data-quality-to-your-amazon-emr-workloads-with-amazon-emr-data-quality-built-on-aws-glue-data-quality"
 blog: aws-big-data
-published: "2026-10-12"
+published: 2026-10-17
 ---
 
 # Bring data quality to your Amazon EMR workloads with Amazon EMR Data Quality built on AWS Glue Data Quality

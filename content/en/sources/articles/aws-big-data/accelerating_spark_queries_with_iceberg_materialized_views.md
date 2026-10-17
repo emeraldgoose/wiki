@@ -2,8 +2,10 @@
 title: "Accelerating Spark queries with Iceberg materialized views"
 source_url: "https://aws.amazon.com/blogs/big-data/accelerating-spark-queries-with-iceberg-materialized-views/"
 blog: "AWS Big Data"
-published: "2026-09-10"
+published: 2026-10-17
 locale: "en"
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 ---
 
 # Accelerating Spark queries with Iceberg materialized views

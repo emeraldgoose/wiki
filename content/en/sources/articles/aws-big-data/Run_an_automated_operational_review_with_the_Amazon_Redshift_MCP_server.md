@@ -1,11 +1,11 @@
 ---
 title: "Run an automated operational review with the Amazon Redshift MCP server"
-description: "The Redshift MCP server's review_cluster tool turns a 4-8 hour manual cluster health review into one natural-language request with prioritized fixes."
-published: "2026-10-05"
+description: Promoted on 2026-10-17
+published: 2026-10-17
 source_url: "https://aws.amazon.com/blogs/big-data/run-an-automated-operational-review-with-the-amazon-redshift-mcp-server"
 blog: aws-big-data
 locale: en
-tags: [source, aws-big-data, redshift, mcp, en]
+tags: [source, article, en]
 ---
 
 # Run an automated operational review with the Amazon Redshift MCP server

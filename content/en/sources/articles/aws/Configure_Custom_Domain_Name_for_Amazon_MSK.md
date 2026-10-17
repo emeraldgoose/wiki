@@ -1,10 +1,11 @@
 ---
 title: Configure Custom Domain Name for Amazon MSK
-description: Custom advertised listener hostnames for Amazon MSK Provisioned clusters (ZooKeeper and KRaft) via NLB, DNS, and ACM — two-phase rollout without client reconfiguration.
+description: Promoted on 2026-10-17
 date: 2026-08-25
-tags: [aws, kafka, msk, networking, dns]
+tags: [source, article, en]
 locale: en
 blog: aws
+published: 2026-10-17
 ---
 
 # Configure Custom Domain Name for Amazon MSK

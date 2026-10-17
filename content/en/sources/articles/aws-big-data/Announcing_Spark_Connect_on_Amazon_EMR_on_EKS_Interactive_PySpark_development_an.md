@@ -1,11 +1,12 @@
 ---
 title: "Announcing Spark Connect on Amazon EMR on EKS: Interactive PySpark development, anywhere"
-description: "Develop and debug PySpark locally in any IDE or notebook while Spark runs at scale on existing EKS clusters via managed endpoints."
-tags: [source, aws-big-data, spark, emr, kubernetes, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/announcing-spark-connect-on-amazon-emr-on-eks"
 blog: aws-big-data
 published_date: 2026-09-29
+published: 2026-10-17
 ---
 
 # Announcing Spark Connect on Amazon EMR on EKS: Interactive PySpark development, anywhere

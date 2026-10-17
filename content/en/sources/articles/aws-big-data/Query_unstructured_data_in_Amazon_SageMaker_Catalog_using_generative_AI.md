@@ -1,11 +1,11 @@
 ---
 title: "Query unstructured data in Amazon SageMaker Catalog using generative AI"
-description: "Subscribe to enriched unstructured assets in SageMaker Catalog and query them via a no-code Bedrock chat agent or programmatic model inference."
-published: "2026-09-23"
+description: Promoted on 2026-10-17
+published: 2026-10-17
 source_url: "https://aws.amazon.com/blogs/big-data/query-unstructured-data-in-amazon-sagemaker-catalog-using-generative-ai"
 blog: aws-big-data
 locale: en
-tags: [source, aws-big-data, sagemaker, bedrock, en]
+tags: [source, article, en]
 ---
 
 # Query unstructured data in Amazon SageMaker Catalog using generative AI

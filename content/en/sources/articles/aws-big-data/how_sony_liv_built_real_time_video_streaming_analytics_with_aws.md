@@ -2,9 +2,10 @@
 title: "How Sony LIV built real-time video streaming analytics with AWS"
 source_url: "https://aws.amazon.com/blogs/big-data/how-sony-liv-built-real-time-video-streaming-analytics-with-aws/"
 blog: "AWS Big Data"
-published: "2026-09-08"
+published: 2026-10-17
 locale: "en"
-tags: [source, aws-big-data, data-engineering]
+tags: [source, article, en]
+description: Promoted on 2026-10-17
 ---
 
 # How Sony LIV built real-time video streaming analytics with AWS

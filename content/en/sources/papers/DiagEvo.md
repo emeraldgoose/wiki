@@ -1,10 +1,11 @@
 ---
 title: "DiagEvo: Diagnosis-Guided Self-Evolution via Hierarchical Error Memory"
-description: HuggingFace Daily Papers — 2026-09-01 — LongCat
-tags: [source, paper, huggingface, longcat]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 source_url: "https://arxiv.org/abs/2609.00768"
 arxiv_id: 2609.00768
+published: 2026-10-17
 ---
 
 # DiagEvo: Diagnosis-Guided Self-Evolution via Hierarchical Error Memory

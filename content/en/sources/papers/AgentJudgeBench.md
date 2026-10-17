@@ -1,10 +1,11 @@
 ---
 title: "AgentJudgeBench: A Multi-Difficulty Benchmark for Evaluating LLM Judges on Agentic Tool-Calling"
-description: HuggingFace Daily Papers — 2026-08-27 — ServiceNow-AI
-tags: [source, paper, huggingface, servicenow-ai]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 source_url: "https://arxiv.org/abs/2608.26623"
 arxiv_id: 2608.26623
+published: 2026-10-17
 ---
 
 # AgentJudgeBench: A Multi-Difficulty Benchmark for Evaluating LLM Judges on Agentic Tool-Calling

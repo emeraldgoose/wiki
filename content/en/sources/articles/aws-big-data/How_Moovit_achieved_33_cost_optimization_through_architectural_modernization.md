@@ -1,11 +1,11 @@
 ---
 title: "How Moovit achieved 33% cost optimization through architectural modernization"
-description: "Moovit split its overloaded Redshift cluster into a multi-engine lakehouse with EMR and Redshift Serverless, halving cluster size and cutting pipeline cost 33%."
-published: "2026-09-03"
+description: Promoted on 2026-10-17
+published: 2026-10-17
 source_url: "https://aws.amazon.com/blogs/big-data/how-moovit-achieved-33-cost-optimization-through-architectural-modernization"
 blog: aws-big-data
 locale: en
-tags: [source, aws-big-data, redshift, emr, en]
+tags: [source, article, en]
 ---
 
 # How Moovit achieved 33% cost optimization through architectural modernization

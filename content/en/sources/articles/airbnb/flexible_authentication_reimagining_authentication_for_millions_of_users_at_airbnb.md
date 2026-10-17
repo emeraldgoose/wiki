@@ -1,11 +1,12 @@
 ---
 title: "Flexible Authentication: Reimagining Authentication for Millions of Users at Airbnb"
-description: Server-driven Identify-first-then-Challenge auth rebuild — Challenge Picker, +2.6% auth success, -27% duplicate accounts
-tags: [source, airbnb, authentication, identity, architecture, experimentation, infrastructure]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/flexible-authentication-reimagining-authentication-for-millions-of-users-at-airbnb-3a8a4c917137"
 blog: airbnb
 date: 2026-08-12
+published: 2026-10-17
 ---
 
 # Flexible Authentication: Reimagining Authentication for Millions of Users at Airbnb

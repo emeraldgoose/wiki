@@ -1,11 +1,12 @@
 ---
 title: "The Genie One MCP is now Generally Available"
-description: "The GA Genie One MCP server brings governed Genie business context to any AI agent via Unity Gateway with audit logging."
-tags: [source, databricks, mcp, genie, ai-agents, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/genie-one-mcp-now-generally-available"
 blog: databricks
 published_date: 2026-09-22
+published: 2026-10-17
 ---
 
 # The Genie One MCP is now Generally Available

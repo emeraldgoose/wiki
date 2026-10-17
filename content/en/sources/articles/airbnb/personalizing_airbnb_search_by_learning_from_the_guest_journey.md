@@ -1,11 +1,12 @@
 ---
 title: "Personalizing Airbnb Search by Learning from the Guest Journey"
-description: JourneyFormer — Transformer sequence model over guest history; +3.78% NDCG, +0.55% bookers online
-tags: [source, airbnb, recommendation, personalization, transformer, ranking]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/personalizing-airbnb-search-by-learning-from-the-guest-journey-bcefd1915624"
 blog: airbnb
 date: 2026-07-21
+published: 2026-10-17
 ---
 
 # Personalizing Airbnb Search by Learning from the Guest Journey

@@ -1,11 +1,11 @@
 ---
 title: "Network connectivity patterns for the next generation of Amazon OpenSearch Serverless"
-description: "Nine private-connectivity patterns for next-gen OpenSearch Serverless over standard PrivateLink endpoints, from single VPC to cross-Region."
-published: "2026-09-03"
+description: Promoted on 2026-10-17
+published: 2026-10-17
 source_url: "https://aws.amazon.com/blogs/big-data/network-connectivity-patterns-for-the-next-generation-of-amazon-opensearch-serverless"
 blog: aws-big-data
 locale: en
-tags: [source, aws-big-data, opensearch, networking, en]
+tags: [source, article, en]
 ---
 
 # Network connectivity patterns for the next generation of Amazon OpenSearch Serverless

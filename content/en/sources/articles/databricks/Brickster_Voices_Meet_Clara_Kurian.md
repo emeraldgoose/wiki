@@ -1,11 +1,11 @@
 ---
 title: "Brickster Voices: Meet Clara Kurian"
-description: "Databricks' first APJ university recruiter describes building campus hiring in India — a $250M+ investment, 270% headcount growth since 2022, and a 51-intern Bengaluru program — and what makes early-career data and AI candidates stand out."
-tags: [source, databricks, university-recruiting, india, early-career, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/brickster-voices-meet-clara-kurian"
 blog: databricks
-published: "2026-10-12"
+published: 2026-10-17
 ---
 
 # Brickster Voices: Meet Clara Kurian

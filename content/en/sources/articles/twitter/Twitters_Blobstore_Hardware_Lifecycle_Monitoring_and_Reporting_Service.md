@@ -1,11 +1,12 @@
 ---
 title: Twitter's Blobstore Hardware Lifecycle Monitoring and Reporting Service
-description: How Twitter manages bare-metal lifecycle (allocated, managed, maintenance, repair) for Blobstore photo/video storage at scale
-tags: [source, twitter, x, blobstore, storage, hardware, sre, tier-2]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/twitters-blobstore-hardware-lifecycle-monitoring-and-reporting-service"
 blog: twitter
 date: '2023-02-23'
+published: 2026-10-17
 ---
 
 # Twitter's Blobstore Hardware Lifecycle Monitoring and Reporting Service

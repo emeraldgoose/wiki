@@ -1,11 +1,12 @@
 ---
 title: From Silos to Insights - Federated Data Access Patterns for AI Agents
-description: "Federated data access for AI agents via MCP and Bedrock AgentCore: catalog-first (Glue + Athena), direct source (Aurora MySQL), and hybrid patterns with gateway routing and governance."
+description: Promoted on 2026-10-17
 date: 2026-09-04
-tags: [aws, ai-agents, mcp, bedrock-agentcore, athena, glue, aurora, data-governance]
+tags: [source, article, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/from-silos-to-insights-federated-data-access-patterns-for-ai-agents/"
 blog: aws
+published: 2026-10-17
 ---
 
 # From Silos to Insights - Federated Data Access Patterns for AI Agents

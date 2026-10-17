@@ -1,11 +1,12 @@
 ---
 title: "Why Spotify Is Not Using Bayesian A/B Testing"
-description: Spotify's statisticians argue Bayesian A/B testing is a family of configurations, not a cure-all — flat-prior defaults reproduce frequentist peeking, and the genuinely better setups cost more than they return
-tags: [source, spotify, experimentation, statistics, ab-testing, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing"
 blog: spotify
 published_date: 2026-09-08
+published: 2026-10-17
 ---
 
 # Why Spotify Is Not Using Bayesian A/B Testing

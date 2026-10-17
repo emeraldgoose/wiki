@@ -1,11 +1,12 @@
 ---
 title: "Introducing Funke: Native HL7v2 Parsing on Databricks"
-description: "Funke, the open-source PySpark successor to Smolder, parses HL7v2 clinical messages losslessly into native Spark types on a medallion pipeline."
-tags: [source, databricks, healthcare, data-engineering, lakehouse, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/introducing-funke-native-hl7v2-parsing-databricks"
 blog: databricks
 published_date: 2026-10-08
+published: 2026-10-17
 ---
 
 # Introducing Funke: Native HL7v2 Parsing on Databricks

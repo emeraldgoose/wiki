@@ -1,10 +1,11 @@
 ---
 title: "Learning Where Outcomes Change:Credit-Addressable Reasoning for Multimodal Geometry"
-description: HuggingFace Daily Papers — 2026-08-31 — Tsinghua IIGroup
-tags: [source, paper, huggingface, tsinghua-iigroup]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 source_url: "https://arxiv.org/abs/2608.30457"
 arxiv_id: 2608.30457
+published: 2026-10-17
 ---
 
 # Learning Where Outcomes Change:Credit-Addressable Reasoning for Multimodal Geometry

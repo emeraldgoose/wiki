@@ -1,11 +1,12 @@
 ---
 title: "How We Knew COVID Was Over (and What Our Models Had to Unlearn)"
-description: Airbnb forecasting discipline — refit vs respecify vs hold; forgetting pandemic-era assumptions on purpose
-tags: [source, airbnb, forecasting, data-science, bayesian, ml-ops]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/how-we-knew-covid-was-over-and-what-our-models-had-to-unlearn-c606b9bdb0ab"
 blog: airbnb
 date: 2026-08-19
+published: 2026-10-17
 ---
 
 # How We Knew COVID Was Over (and What Our Models Had to Unlearn)

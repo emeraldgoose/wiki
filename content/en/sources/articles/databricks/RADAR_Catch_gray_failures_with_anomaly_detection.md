@@ -1,11 +1,12 @@
 ---
 title: "RADAR: Catch gray failures with anomaly detection"
-description: "RADAR catches partial silent outages via a four-stage anomaly-detection pipeline, cutting discovery time 95% at over 90% precision."
-tags: [source, databricks, observability, anomaly-detection, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/radar-catch-gray-failures-anomaly-detection"
 blog: databricks
 published_date: 2026-09-19
+published: 2026-10-17
 ---
 
 # RADAR: Catch gray failures with anomaly detection

@@ -1,9 +1,10 @@
 ---
 title: "Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models"
-description: 'Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models (StarVLA / VLAct)'
-tags: [paper, source, huggingface, ai-engineering, robotics, vision-language-action, representation-learning]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 arxiv_id: 2608.27550
+published: 2026-10-17
 ---
 
 # Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models

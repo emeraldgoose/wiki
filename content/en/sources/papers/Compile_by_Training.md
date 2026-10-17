@@ -1,9 +1,10 @@
 ---
 title: "Compile by Training: Turning Natural-Language Specifications into Local Neural Functions"
-description: "HuggingFace Daily Papers — 2026-09-03 — compile NL specs into local LoRA neural functions"
-tags: [source, paper, huggingface]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 arxiv_id: 2609.04199
+published: 2026-10-17
 ---
 
 # Compile by Training: Turning Natural-Language Specifications into Local Neural Functions

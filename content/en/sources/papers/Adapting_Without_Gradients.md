@@ -1,9 +1,10 @@
 ---
 title: "Adapting Without Gradients: Affine Statistics Transport and What Its Certificate Can Tell You"
-description: HuggingFace Daily Papers — 2026-08-31 — Talan
-tags: [source, paper, huggingface, talan, machine-learning]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 arxiv_id: 2609.00374
+published: 2026-10-17
 ---
 
 # Adapting Without Gradients: Affine Statistics Transport and What Its Certificate Can Tell You

@@ -1,11 +1,11 @@
 ---
 title: "Modeling Device Capabilities for Analytics"
-description: Cumulative and histogram tables modeling device capabilities (codecs, DRM, display, RAM) to drive feature rollout decisions
-tags: [source, article, netflix, data-engineering, data-modeling, analytics, devices]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://netflixtechblog.com/modeling-device-capabilities-for-analytics-e7607acebde8"
 blog: netflix
-published: 2026-07-31
+published: 2026-10-17
 ---
 
 # Modeling Device Capabilities for Analytics

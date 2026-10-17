@@ -1,11 +1,12 @@
 ---
 title: "How to Repoint dbt ETL Pipelines to Databricks"
-description: "A seven-step recipe for moving dbt transformations to Databricks — adapter swap, Unity Catalog namespaces, dialect fixes, audit-helper validation, and Lakeflow Jobs deployment."
-tags: [source, databricks, dbt, data-engineering, lakehouse, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/how-repoint-dbt-etl-pipelines-databricks"
 blog: databricks
 published_date: 2026-10-06
+published: 2026-10-17
 ---
 
 # How to Repoint dbt ETL Pipelines to Databricks

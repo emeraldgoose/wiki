@@ -1,11 +1,12 @@
 ---
 title: Scaling Exact COUNT(DISTINCT) for High-Cardinality Non-Rollup Metrics in Distributed Data Pipelines
-description: Chunked aggregation buffer strategy partitions Roaring bitmaps by hash prefix to beat the JVM 2GB limit for exact distinct counts at billions scale
-tags: [source, uber, data-engineering, count-distinct, spark, hive, bitmap]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.uber.com/us/en/blog/scaling-exact-count/"
 blog: uber
 published_date: 2026-07-30
+published: 2026-10-17
 ---
 
 # Scaling Exact COUNT(DISTINCT) for High-Cardinality Non-Rollup Metrics in Distributed Data Pipelines

@@ -1,10 +1,11 @@
 ---
 title: Custom Domain Name for Amazon MSK (Technical Deep-dive)
-description: OAuth audience-routed broker auth on Amazon MSK — EKS IAM/STS web-identity flow and Keycloak SSO operator flow behind per-provider resource servers over AMQPS.
+description: Promoted on 2026-10-17
 date: 2026-08-25
-tags: [aws, kafka, msk, auth, oauth, iam, kubernetes]
+tags: [source, article, en]
 locale: en
 blog: aws
+published: 2026-10-17
 ---
 
 # Custom Domain Name for Amazon MSK (Technical Deep-dive)

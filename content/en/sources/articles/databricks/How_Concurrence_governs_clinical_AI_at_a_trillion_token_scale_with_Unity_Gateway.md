@@ -1,11 +1,12 @@
 ---
 title: "How Concurrence governs clinical AI at a trillion-token scale with Unity Gateway"
-description: "Concurrence's governed healthcare AI stack — immutable event-sourced patient state, pre-production simulation, compliance-gated routing, and Unity Gateway for all AI access."
-tags: [source, databricks, unity-catalog, ai-agents, unity-gateway, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/how-concurrence-governs-clinical-ai-trillion-token-scale-unity-gateway"
 blog: databricks
 published_date: 2026-09-23
+published: 2026-10-17
 ---
 
 # How Concurrence governs clinical AI at a trillion-token scale with Unity Gateway

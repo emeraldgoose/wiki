@@ -1,12 +1,12 @@
 ---
 title: "The Price of Sparsity: Sufficient Conditions for Sparse Recovery using Sparse and Sparsified Measurements"
-description: "Sufficient sample-size conditions for ML support recovery from sparse Gaussian measurements"
+description: Promoted on 2026-10-17
 arxiv_id: 2509.01809
 HF_URL: https://huggingface.co/papers/2509.01809
-published: 2026-09-08
+published: 2026-10-17
 authors: Youssef Chaabouni, David Gamarnik
 locale: en
-tags: [source, paper, computer-science]
+tags: [source, paper, en]
 ---
 
 # The Price of Sparsity: Sufficient Conditions for Sparse Recovery using Sparse and Sparsified Measurements

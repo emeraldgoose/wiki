@@ -1,11 +1,12 @@
 ---
 title: "How to build governed enterprise apps on Databricks with Replit and Lakebase"
-description: "Replit Agent plus Databricks Apps and Lakebase Postgres let anyone turn a plain-language prompt into a governed production app on live lakehouse data."
-tags: [source, databricks, lakebase, databricks-apps, unity-catalog, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/how-build-governed-enterprise-apps-databricks-replit-and-lakebase"
 blog: databricks
 published_date: 2026-10-08
+published: 2026-10-17
 ---
 
 # How to build governed enterprise apps on Databricks with Replit and Lakebase

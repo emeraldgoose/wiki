@@ -1,11 +1,12 @@
 ---
 title: Building Medallion Architecture with Iceberg Materialized Views in Amazon SageMaker
-description: Bronze to Silver to Gold medallion pipeline expressed as three Iceberg materialized view SQL statements — no DAGs, no CDC plumbing — with incremental refresh and nested views.
+description: Promoted on 2026-10-17
 date: 2026-09-02
-tags: [aws, data-engineering, lakehouse, apache-iceberg, medallion, materialized-views, sagemaker, s3-tables]
+tags: [source, article, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/building-medallion-architecture-with-iceberg-materialized-views-in-amazon-sagemaker/"
 blog: aws
+published: 2026-10-17
 ---
 
 # Building Medallion Architecture with Iceberg Materialized Views in Amazon SageMaker

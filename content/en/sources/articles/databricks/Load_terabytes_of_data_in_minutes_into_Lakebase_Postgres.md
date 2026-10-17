@@ -1,11 +1,12 @@
 ---
 title: "Load terabytes of data in minutes into Lakebase Postgres"
-description: "LTAP architecture offloads bulk loads from the Lakebase primary to Spark, building valid Postgres pages in parallel for up to 147x faster ingestion."
-tags: [source, databricks, lakebase, postgres, data-ingestion, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/load-terabytes-data-minutes-lakebase-postgres"
 blog: databricks
 published_date: 2026-10-08
+published: 2026-10-17
 ---
 
 # Load terabytes of data in minutes into Lakebase Postgres

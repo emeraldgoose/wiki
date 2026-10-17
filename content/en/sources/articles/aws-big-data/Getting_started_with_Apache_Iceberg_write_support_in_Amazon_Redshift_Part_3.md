@@ -1,11 +1,12 @@
 ---
 title: "Getting started with Apache Iceberg write support in Amazon Redshift – Part 3"
-description: "Evolve Iceberg table schemas and partitions with metadata-only ALTER operations in Redshift and share tables via Lake Formation."
-tags: [source, aws-big-data, redshift, iceberg, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/getting-started-with-apache-iceberg-write-support-in-amazon-redshift-part-3"
 blog: aws-big-data
 published_date: 2026-09-28
+published: 2026-10-17
 ---
 
 # Getting started with Apache Iceberg write support in Amazon Redshift – Part 3

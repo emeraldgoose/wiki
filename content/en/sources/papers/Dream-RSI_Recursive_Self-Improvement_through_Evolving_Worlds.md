@@ -1,12 +1,12 @@
 ---
 title: "Dream-RSI: Recursive Self-Improvement through Evolving Worlds"
-description: "A lightweight orchestration layer turns accumulated discovery history into a replay simulator for low-cost off-policy exploration feedback — 9 tasks across 4 domains with competitive quality at reduced discovery cost"
+description: Promoted on 2026-10-17
 locale: en
 source_url: "https://arxiv.org/abs/2609.14858"
-published: 2026-09-14
+published: 2026-10-17
 arxiv_id: "2609.14858"
 authors: ["Tong Zheng", "and 16 other authors"]
-tags: [source, paper, ai-engineering]
+tags: [source, paper, en]
 ---
 
 # Dream-RSI: Recursive Self-Improvement through Evolving Worlds

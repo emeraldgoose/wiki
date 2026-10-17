@@ -1,11 +1,12 @@
 ---
 title: Measuring the Impact of Twitter Network Latency with CausalImpact
-description: Using Google's CausalImpact (BSTS) package to quantify how edge-latency improvements move engagement and revenue
-tags: [source, twitter, x, causal-inference, edge-network, experimentation, data-science, tier-2]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://blog.x.com/engineering/en_us/topics/insights/2022/measuring-the-impact-of-twitter-network-latency-with-causalimpac"
 blog: twitter
 date: '2022-10-21'
+published: 2026-10-17
 ---
 
 # Measuring the Impact of Twitter Network Latency with CausalImpact

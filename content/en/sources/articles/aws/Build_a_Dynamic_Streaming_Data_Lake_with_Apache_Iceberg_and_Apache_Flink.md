@@ -1,11 +1,12 @@
 ---
 title: Build a Dynamic Streaming Data Lake with Apache Iceberg and Apache Flink
-description: Per-record table routing and automatic schema evolution with Iceberg Dynamic Sink on Managed Service for Flink — new event types and columns without pipeline restarts.
+description: Promoted on 2026-10-17
 date: 2026-09-02
-tags: [aws, data-engineering, lakehouse, apache-iceberg, apache-flink, streaming, schema-evolution]
+tags: [source, article, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/build-a-dynamic-streaming-data-lake-with-apache-iceberg-and-apache-flink/"
 blog: aws
+published: 2026-10-17
 ---
 
 # Build a Dynamic Streaming Data Lake with Apache Iceberg and Apache Flink

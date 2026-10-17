@@ -1,11 +1,11 @@
 ---
 title: "Introducing Private Network Gateway"
-description: "Databricks Private Network Gateway (PNG) simplifies serverless networking by providing a single managed gateway into your private network—configure once, and existing routes, DNS, and firewall rules control what serverless workloads can reach. Public Preview on Azure, Private Preview on AWS."
-tags: [source, databricks, private-network-gateway, serverless, networking, security, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/introducing-private-network-gateway"
 blog: databricks
-published: "2026-10-14"
+published: 2026-10-17
 ---
 
 # Introducing Private Network Gateway

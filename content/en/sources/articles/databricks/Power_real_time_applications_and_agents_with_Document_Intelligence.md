@@ -1,11 +1,11 @@
 ---
 title: "Power real-time applications and agents with Document Intelligence"
-description: "At Databricks, our enterprise customers receive millions of documents every single day. These messy, unstructured documents hold critical"
-tags: [source, databricks, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/power-real-time-applications-and-agents-document-intelligence"
 blog: databricks
-published: "2026-10-14"
+published: 2026-10-17
 ---
 
 # Power real-time applications and agents with Document Intelligence

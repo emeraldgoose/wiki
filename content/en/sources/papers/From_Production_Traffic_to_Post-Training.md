@@ -1,9 +1,10 @@
 ---
 title: "From Production Traffic to Post-Training: Building a Self-Hosted LLM That Covers the Corporate Request Mix"
-description: HuggingFace Daily Papers — 2026-09-01 — T-Tech
-tags: [source, paper, huggingface, t-tech]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 arxiv_id: 2609.01572
+published: 2026-10-17
 ---
 
 # From Production Traffic to Post-Training: Building a Self-Hosted LLM That Covers the Corporate Request Mix

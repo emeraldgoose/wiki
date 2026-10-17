@@ -1,12 +1,12 @@
 ---
 title: "Vidu S2: Real-Time Interactive, Editable, and Spatial Video Generation"
-description: "Vidu S2-Avatar (real-time 720p interactive characters with dynamic references) plus Vidu S2-Editing (real-time stream editing: style, clothing, character, background) with spatial-video exploration"
+description: Promoted on 2026-10-17
 locale: en
 source_url: "https://arxiv.org/abs/2609.11638"
-published: 2026-09-10
+published: 2026-10-17
 arxiv_id: "2609.11638"
 authors: ["Jintao Zhang", "and 34 other authors"]
-tags: [source, paper, machine-learning]
+tags: [source, paper, en]
 ---
 
 # Vidu S2: Real-Time Interactive, Editable, and Spatial Video Generation

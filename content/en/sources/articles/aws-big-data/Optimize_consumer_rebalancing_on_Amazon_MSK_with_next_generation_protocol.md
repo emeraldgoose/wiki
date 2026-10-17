@@ -1,11 +1,11 @@
 ---
 title: "Optimize consumer rebalancing on Amazon MSK with next generation protocol"
-description: "Enable Kafka 4.0's KIP-848 server-driven consumer protocol on MSK to end rebalance storms, plus how to diagnose slow rebalances that remain."
-published: "2026-10-01"
+description: Promoted on 2026-10-17
+published: 2026-10-17
 source_url: "https://aws.amazon.com/blogs/big-data/optimize-consumer-rebalancing-on-amazon-msk-with-next-generation-protocol"
 blog: aws-big-data
 locale: en
-tags: [source, aws-big-data, msk, kafka, en]
+tags: [source, article, en]
 ---
 
 # Optimize consumer rebalancing on Amazon MSK with next generation protocol

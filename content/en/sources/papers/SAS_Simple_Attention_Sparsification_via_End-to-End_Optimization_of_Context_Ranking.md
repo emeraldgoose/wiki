@@ -1,11 +1,11 @@
 ---
 title: "SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking"
-description: "End-to-end learned context ranking for post-training attention sparsification"
+description: Promoted on 2026-10-17
 arxiv_id: "2609.13141"
 HF_URL: "https://huggingface.co/papers/2609.13141"
-published: 2026-09-11
+published: 2026-10-17
 authors: "Zhiwei Li, Lei Zhu, Hao Gu, Xiang Hu, Yan Wang, Haitao Mi, Sirui Han, Leo Liang, Zhijiang Guo"
-tags: [source, paper, machine-learning]
+tags: [source, paper, en]
 locale: en
 ---
 

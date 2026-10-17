@@ -1,11 +1,11 @@
 ---
 title: "Beyond synthetic testing: Capturing and replaying real database workloads at Airbnb"
-description: "How Airbnb replays real production database traffic via ProxySQL capture to load-test, validate upgrades, and debug performance."
-tags: [source, airbnb, mysql, testing, capacity-planning, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://airbnb.tech/infrastructure/beyond-synthetic-testing-capturing-and-replaying-real-database-workloads-at-airbnb"
 blog: airbnb
-published: "2026-10-06"
+published: 2026-10-17
 ---
 
 # Beyond synthetic testing: Capturing and replaying real database workloads at Airbnb

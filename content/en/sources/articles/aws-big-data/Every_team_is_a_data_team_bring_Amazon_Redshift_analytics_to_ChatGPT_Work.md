@@ -1,10 +1,11 @@
 ---
 title: "Every team is a data team — bring Amazon Redshift analytics to ChatGPT Work"
-description: "AWS Data Analytics 플러그인을 사용하여 ChatGPT Work에서 Amazon Redshift 데이터에 대한 자연어 질의 및 대시보드 생성을 구현하는 방법을 알아봅니다."
+description: Promoted on 2026-10-17
 source_url: "https://aws.amazon.com/blogs/big-data/every-team-is-a-data-team-bring-amazon-redshift-analytics-to-chatgpt-work/"
 blog: "AWS Big Data"
-published: 2026-09-10
+published: 2026-10-17
 locale: "en"
+tags: [source, article, en]
 ---
 
 # Every team is a data team — bring Amazon Redshift analytics to ChatGPT Work

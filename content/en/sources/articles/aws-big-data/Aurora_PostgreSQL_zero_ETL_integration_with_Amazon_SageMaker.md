@@ -1,11 +1,12 @@
 ---
 title: "Aurora PostgreSQL zero-ETL integration with Amazon SageMaker"
-description: "Replicate Aurora PostgreSQL data into SageMaker AI as Iceberg tables in near real time with no custom ETL pipelines."
-tags: [source, aws-big-data, aurora, zero-etl, sagemaker, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/aurora-postgresql-zero-etl-integration-with-amazon-sagemaker"
 blog: aws-big-data
 published_date: 2026-09-29
+published: 2026-10-17
 ---
 
 # Aurora PostgreSQL zero-ETL integration with Amazon SageMaker

@@ -1,11 +1,11 @@
 ---
 title: "A Practical Guide to Real-Time Analytics in 2026"
-description: "Most organizations don't need a separate real-time serving layer. Learn to evaluate real-time workloads across three dimensions (freshness, latency, concurrency) and deliver millisecond analytics directly on your lakehouse using Databricks Lakehouse//RT powered by the Reyden engine."
-tags: [source, databricks, real-time-analytics, lakehouse, lakehouse-rt, reyden, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/practical-guide-real-time-analytics-2026"
 blog: databricks
-published: "2026-10-13"
+published: 2026-10-17
 ---
 
 # A Practical Guide to Real-Time Analytics in 2026

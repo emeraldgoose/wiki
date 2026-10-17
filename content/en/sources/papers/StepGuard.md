@@ -1,8 +1,9 @@
 ---
 title: "StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing"
-description: "StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing"
-tags: [paper, source, huggingface, ai-engineering, agent-security, grpo]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
+published: 2026-10-17
 ---
 
 # StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing

@@ -1,10 +1,10 @@
 ---
 title: "Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments"
-description: "HuggingFace Daily Papers — 2026-09-03 — reconstruct executable terminal environments from agent trajectories"
-tags: [source, paper, huggingface, ai-engineering]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 arxiv_id: 2609.04148
-published: 2026-09-03
+published: 2026-10-17
 ---
 
 # Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments

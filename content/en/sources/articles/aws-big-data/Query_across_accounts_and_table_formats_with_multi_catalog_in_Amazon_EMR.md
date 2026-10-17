@@ -1,11 +1,11 @@
 ---
 title: "Query across accounts and table formats with multi-catalog in Amazon EMR"
-description: "EMR 8.1's RedirectingSessionCatalog unifies Iceberg, Delta, Hudi, and Hive tables across accounts behind one Spark catalog with query-time auto-discovery."
-published: "2026-10-06"
+description: Promoted on 2026-10-17
+published: 2026-10-17
 source_url: "https://aws.amazon.com/blogs/big-data/query-across-accounts-and-table-formats-with-multi-catalog-in-amazon-emr"
 blog: aws-big-data
 locale: en
-tags: [source, aws-big-data, emr, glue, en]
+tags: [source, article, en]
 ---
 
 # Query across accounts and table formats with multi-catalog in Amazon EMR

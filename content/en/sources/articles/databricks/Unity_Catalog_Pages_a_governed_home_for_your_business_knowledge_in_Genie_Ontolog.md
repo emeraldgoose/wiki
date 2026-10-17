@@ -1,11 +1,12 @@
 ---
 title: "Unity Catalog Pages: a governed home for your business knowledge in Genie Ontology"
-description: "Unity Catalog Pages give data stewards a governed place to define business terms once, grounding Genie One and agents in authoritative meaning."
-tags: [source, databricks, unity-catalog, genie, knowledge-management, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/unity-catalog-pages-governed-home-your-business-knowledge-genie-ontology"
 blog: databricks
 published_date: 2026-09-22
+published: 2026-10-17
 ---
 
 # Unity Catalog Pages: a governed home for your business knowledge in Genie Ontology

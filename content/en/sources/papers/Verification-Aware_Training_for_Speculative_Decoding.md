@@ -1,10 +1,11 @@
 ---
 title: Verification-Aware Training for Speculative Decoding
-description: HuggingFace Daily Papers — 2026-08-31 — NAVER AI Lab
-tags: [source, paper, huggingface, naver-ai-lab]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 source_url: "https://arxiv.org/abs/2608.30135"
 arxiv_id: 2608.30135
+published: 2026-10-17
 ---
 
 # Verification-Aware Training for Speculative Decoding

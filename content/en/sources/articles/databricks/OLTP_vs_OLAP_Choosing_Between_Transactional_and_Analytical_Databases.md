@@ -1,11 +1,11 @@
 ---
 title: "OLTP vs. OLAP: Choosing Between Transactional and Analytical Databases"
-description: "Online transaction processing (OLTP) handles high-volume, low-latency reads and writes against current transactional data, such as"
-tags: [source, databricks, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/oltp-vs-olap-choosing-between-transactional-and-analytical-databases"
 blog: databricks
-published: "2026-10-13"
+published: 2026-10-17
 ---
 
 # OLTP vs. OLAP: Choosing Between Transactional and Analytical Databases

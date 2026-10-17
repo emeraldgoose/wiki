@@ -1,11 +1,12 @@
 ---
 title: "Top 5 System Table Queries for Understanding Your Databricks Costs"
-description: "Five system-table SQL queries break down Databricks spend by product, warehouse, and team, then flag anomalies and forecast next month."
-tags: [source, databricks, cost-optimization, system-tables, sql, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/top-5-system-table-queries-understanding-your-databricks-costs"
 blog: databricks
 published_date: 2026-09-22
+published: 2026-10-17
 ---
 
 # Top 5 System Table Queries for Understanding Your Databricks Costs

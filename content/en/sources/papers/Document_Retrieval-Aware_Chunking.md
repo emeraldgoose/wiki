@@ -1,12 +1,12 @@
 ---
 title: "Document Retrieval-Aware Chunking"
-description: "D-RAC ingests any enterprise document via PDF normalization plus one multimodal Markdown pass, then plans chunks over IDs — 95.7 percent fewer output tokens at agentic-chunking parity."
-published: "2026-09-21"
+description: Promoted on 2026-10-17
+published: 2026-10-17
 arxiv_id: "2609.24220"
 hf_url: "https://huggingface.co/papers/2609.24220"
 authors: "Abhivanth Sivaprakash, Pratik Singh, Aman Manocha, Uday Allu"
 organization: "Yellow.ai AI Research Team"
-tags: [source, paper, huggingface, rag, chunking, document-ingestion, multimodal]
+tags: [source, paper, en]
 locale: "en"
 ---
 

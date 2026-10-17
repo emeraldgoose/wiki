@@ -1,10 +1,11 @@
 ---
 title: "E-Commerce Bench: Evaluating LLM Agents on Long-Horizon Autonomous Business Operation"
-description: HuggingFace Daily Papers — 2026-08-31 — Qwen
-tags: [source, paper, huggingface, qwen]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 source_url: "https://arxiv.org/abs/2608.30730"
 arxiv_id: 2608.30730
+published: 2026-10-17
 ---
 
 # E-Commerce Bench: Evaluating LLM Agents on Long-Horizon Autonomous Business Operation

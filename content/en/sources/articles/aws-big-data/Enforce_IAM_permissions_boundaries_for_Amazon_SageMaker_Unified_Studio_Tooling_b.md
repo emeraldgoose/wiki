@@ -1,11 +1,12 @@
 ---
 title: "Enforce IAM permissions boundaries for Amazon SageMaker Unified Studio Tooling blueprints"
-description: "Attach a custom permissions boundary to Tooling blueprint roles so SCP-governed accounts can adopt SageMaker Unified Studio."
-tags: [source, aws-big-data, sagemaker, iam, security, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/enforce-iam-permissions-boundaries-for-amazon-sagemaker-unified-studio-tooling-blueprints"
 blog: aws-big-data
 published_date: 2026-09-28
+published: 2026-10-17
 ---
 
 # Enforce IAM permissions boundaries for Amazon SageMaker Unified Studio Tooling blueprints

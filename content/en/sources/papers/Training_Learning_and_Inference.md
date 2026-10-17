@@ -1,8 +1,9 @@
 ---
 title: "Training, Learning and Inference: Unified Dynamics"
-description: "Training, learning and inference: unified dynamics of neural systems"
-tags: [paper, source, huggingface, ai-engineering, neural-dynamics, transformer, resnet, diffusion]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
+published: 2026-10-17
 ---
 
 # Training, Learning and Inference: Unified Dynamics

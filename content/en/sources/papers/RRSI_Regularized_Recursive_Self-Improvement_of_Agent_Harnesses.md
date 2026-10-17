@@ -1,12 +1,12 @@
 ---
 title: "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses"
-description: "RRSI regularizes recursive harness self-improvement on both proposal and selection sides, keeping evolve gains while transferring up to 4.7 points out of distribution on 30 percent fewer policy tokens."
-published: "2026-09-21"
+description: Promoted on 2026-10-17
+published: 2026-10-17
 arxiv_id: "2609.24972"
 hf_url: "https://huggingface.co/papers/2609.24972"
 authors: "Peng Xia, Rujun Han, Zifeng Wang, Yanfei Chen, Yufan Zhang, Yoonho Lee, Chengsong Huang, Han Yu, Zhongying CuiZhu, Yifei Ming, Huaxiu Yao, Burak Gokturk, Tomas Pfister, Chen-Yu Lee"
 organization: "Google Cloud AI Research"
-tags: [source, paper, huggingface, agents, agent-harness, self-improvement, regularization]
+tags: [source, paper, en]
 locale: "en"
 ---
 

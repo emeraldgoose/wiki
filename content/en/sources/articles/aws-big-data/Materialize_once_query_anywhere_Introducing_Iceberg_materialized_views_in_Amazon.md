@@ -1,11 +1,11 @@
 ---
 title: "Materialize once, query anywhere: Introducing Iceberg materialized views in Amazon Redshift"
-description: "Redshift can now store materialized view results as open Iceberg tables, computed once and readable from Athena, Spark, and SageMaker with incremental refresh."
-published: "2026-10-05"
+description: Promoted on 2026-10-17
+published: 2026-10-17
 source_url: "https://aws.amazon.com/blogs/big-data/materialize-once-query-anywhere-introducing-iceberg-materialized-views-in-amazon-redshift"
 blog: aws-big-data
 locale: en
-tags: [source, aws-big-data, redshift, iceberg, en]
+tags: [source, article, en]
 ---
 
 # Materialize once, query anywhere: Introducing Iceberg materialized views in Amazon Redshift

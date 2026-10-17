@@ -1,11 +1,11 @@
 ---
 title: "Build cross-account streaming pipelines with the Amazon Kinesis Producer Library and Kinesis Client Library"
-description: "A three-account reference architecture shows how to run KPL producers and KCL 3.5 consumers against a central Kinesis stream with cross-account IAM roles, resource-based policies, customer-managed KMS keys, and Enhanced Fan-Out, deployed via CloudFormation."
-tags: [source, aws-big-data, kinesis, streaming, cross-account, iam, kms, en]
+description: Promoted on 2026-10-17
+tags: [source, article, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/build-cross-account-streaming-pipelines-with-the-amazon-kinesis-producer-library-and-kinesis-client-library"
 blog: aws-big-data
-published: "2026-10-12"
+published: 2026-10-17
 ---
 
 # Build cross-account streaming pipelines with the Amazon Kinesis Producer Library and Kinesis Client Library

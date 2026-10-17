@@ -1,10 +1,10 @@
 ---
 title: "Flow Reasoning Models: Turning Flows Into Efficient Recurrent Reasoners"
-description: "Flow Reasoning Models turn discrete flow language models into recurrent reasoners via self-conditioning, stabilized by Fixed-Point Forcing; 99.5 percent Sudoku-Extreme at 44x fewer FLOPs"
-tags: [source, paper, arxiv, flow-models, reasoning, diffusion, test-time-scaling]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
 arxiv_id: 2606.29150
-published: 2026-08-28
+published: 2026-10-17
 ---
 
 # Flow Reasoning Models: Turning Flows Into Efficient Recurrent Reasoners

@@ -1,12 +1,12 @@
 ---
 title: Real-World Knowledge-Guided Change Data Synthesis for Remote Sensing
-description: "Knowledge-guided change synthesis for remote sensing beyond handcrafted rules"
+description: Promoted on 2026-10-17
 arxiv_id: 2608.24263
 HF_URL: https://huggingface.co/papers/2608.24263
-published: 2026-08-25
+published: 2026-10-17
 authors: Yaoyi Qi, Xingxing Weng, Chao Pang, Yongkang Cui, Xiangyu Hao, Xiaokang Zhang, Guibo Zhu, Gui-Song Xia
 locale: en
-tags: [source, paper, machine-learning]
+tags: [source, paper, en]
 ---
 
 # Real-World Knowledge-Guided Change Data Synthesis for Remote Sensing

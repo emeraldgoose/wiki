@@ -1,12 +1,13 @@
 ---
 title: 'Java Heap Memory and Garbage Collection: Tuning for High-Performance Services'
-description: LinkedIn FollowFeed's JVM journey — CMS to G1GC to generational ZGC on JDK 21, 55% lower P999, 28% more capacity
+description: Promoted on 2026-10-17
 date: 2024-09-13
-tags: [source, linkedin, jvm, gc, performance, followfeed]
+tags: [source, article, en]
 locale: en
 source_url: "https://www.linkedin.com/blog/engineering/infrastructure/java-heap-memory-and-garbage-collection-tuning-for-high-performance-services"
 blog: linkedin
 author: Nisheedh Raveendran
+published: 2026-10-17
 ---
 
 # Java Heap Memory and Garbage Collection: Tuning for High-Performance Services

@@ -1,8 +1,9 @@
 ---
 title: "JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution"
-description: "JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution"
-tags: [paper, source, huggingface, ai-engineering, agent-harness, harness-intelligence]
+description: Promoted on 2026-10-17
+tags: [source, paper, en]
 locale: en
+published: 2026-10-17
 ---
 
 # JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution

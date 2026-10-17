@@ -1,11 +1,11 @@
 ---
 title: "Monitoring MWAA-orchestrated ETL pipelines with Amazon OpenSearch Service"
-description: "Stream MWAA, Glue, and EC2 logs into OpenSearch via CloudWatch subscription filters and query failures in natural language through a Bedrock-backed MCP server."
-published: "2026-10-06"
+description: Promoted on 2026-10-17
+published: 2026-10-17
 source_url: "https://aws.amazon.com/blogs/big-data/monitoring-mwaa-orchestrated-etl-pipelines-with-amazon-opensearch-service"
 blog: aws-big-data
 locale: en
-tags: [source, aws-big-data, mwaa, opensearch, en]
+tags: [source, article, en]
 ---
 
 # Monitoring MWAA-orchestrated ETL pipelines with Amazon OpenSearch Service
