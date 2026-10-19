@@ -1,7 +1,7 @@
 ---
 title: "Getting started with Apache Iceberg write support in Amazon Redshift – Part 3"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/getting-started-with-apache-iceberg-write-support-in-amazon-redshift-part-3"
 blog: aws-big-data

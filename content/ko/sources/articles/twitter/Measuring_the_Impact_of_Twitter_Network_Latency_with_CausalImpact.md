@@ -1,7 +1,7 @@
 ---
 title: CausalImpact으로 Twitter 네트워크 지연 영향 측정하기
-description: 엣지 지연 개선이 참여·매출에 미치는 인과 효과를 Google CausalImpact(BSTS)로 정량화한 프레임워크
-tags: [source, twitter, x, causal-inference, edge-network, experimentation, data-science, ko]
+description: 엣지 지연 개선이 참여·매출에 미치는 인과 효과를 Google CausalImpact(BSTS)로 정량화한 프레임워크 (한국어 번역)
+tags: [source, twitter, x, causal-inference, edge-network, experimentation, data-science, ko, ko]
 locale: ko
 source_url: "https://blog.x.com/engineering/en_us/topics/insights/2022/measuring-the-impact-of-twitter-network-latency-with-causalimpac"
 blog: twitter

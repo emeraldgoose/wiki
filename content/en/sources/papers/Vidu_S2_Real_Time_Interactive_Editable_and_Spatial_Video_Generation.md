@@ -6,7 +6,7 @@ source_url: "https://arxiv.org/abs/2609.11638"
 published: 2026-10-17
 arxiv_id: "2609.11638"
 authors: ["Jintao Zhang", "and 34 other authors"]
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 ---
 
 # Vidu S2: Real-Time Interactive, Editable, and Spatial Video Generation

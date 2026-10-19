@@ -1,7 +1,7 @@
 ---
 title: "Announcing Workday Data Connect federation in Unity Catalog"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/announcing-workday-data-connect-federation-unity-catalog"
 blog: databricks

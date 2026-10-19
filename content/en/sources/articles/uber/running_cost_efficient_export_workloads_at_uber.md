@@ -1,7 +1,7 @@
 ---
 title: Running Cost-Efficient Export Workloads at Uber
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.uber.com/us/en/blog/running-cost-efficient-export/"
 blog: uber

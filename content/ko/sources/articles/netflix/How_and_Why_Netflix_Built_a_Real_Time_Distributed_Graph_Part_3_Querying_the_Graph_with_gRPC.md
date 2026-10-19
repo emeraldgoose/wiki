@@ -1,7 +1,7 @@
 ---
 title: "How and Why Netflix Built a Real-Time Distributed Graph Part 3: Querying the Graph with gRPC"
-description: 80억 노드·1500억 엣지 실시간 그래프의 gRPC 서빙층 — 너비우선 비동기 탐색, 조기 필터링, 선별 캐싱
-tags: [source, article, netflix, distributed-systems, graph, grpc, serving, ko]
+description: 80억 노드·1500억 엣지 실시간 그래프의 gRPC 서빙층 — 너비우선 비동기 탐색, 조기 필터링, 선별 캐싱 (한국어 번역)
+tags: [source, article, netflix, distributed-systems, graph, grpc, serving, ko, ko]
 locale: ko
 source_url: "https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607"
 blog: netflix

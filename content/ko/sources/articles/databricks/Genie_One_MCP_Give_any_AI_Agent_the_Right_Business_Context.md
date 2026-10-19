@@ -1,7 +1,7 @@
 ---
 title: "Genie One MCP: 모든 AI 에이전트에 올바른 비즈니스 컨텍스트를"
-description: "승인된 지표·관계·권한을 담은 Genie Ontology 컨텍스트를 모든 MCP 호환 AI 어시스턴트로 확장하는 Genie One MCP."
-tags: [source, databricks, genie, mcp, unity-catalog, ko]
+description: "승인된 지표·관계·권한을 담은 Genie Ontology 컨텍스트를 모든 MCP 호환 AI 어시스턴트로 확장하는 Genie One MCP." (한국어 번역)
+tags: [source, databricks, genie, mcp, unity-catalog, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/genie-one-mcp-give-any-ai-agent-right-business-context"
 blog: databricks

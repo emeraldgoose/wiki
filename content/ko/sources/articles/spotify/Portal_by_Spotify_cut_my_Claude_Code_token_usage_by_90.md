@@ -1,7 +1,7 @@
 ---
 title: "Portal by Spotify가 Claude Code 토큰 사용량을 90% 줄여준 이야기"
-description: Portal AiKA 모드와 shunt 플러그인으로 Claude Code의 대량 읽기·정형 코드 생성을 저가 모델에 위임 — 대량 읽기에서 평균 90% 토큰 절감
-tags: [source, spotify, ai-coding, agents, cost-optimization, ko]
+description: Portal AiKA 모드와 shunt 플러그인으로 Claude Code의 대량 읽기·정형 코드 생성을 저가 모델에 위임 — 대량 읽기에서 평균 90% 토큰 절감 (한국어 번역)
+tags: [source, spotify, ai-coding, agents, cost-optimization, ko, ko]
 locale: ko
 source_url: "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90"
 blog: spotify

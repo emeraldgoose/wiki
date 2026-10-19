@@ -1,7 +1,7 @@
 ---
 title: "A Tale of Two Flink Autoscalers"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b"
 blog: netflix

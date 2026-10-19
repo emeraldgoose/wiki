@@ -1,7 +1,7 @@
 ---
 title: "From Weeks to a Day: How We Made LLM Evaluation Fast Enough to Iterate On"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/from-weeks-to-a-day-how-we-made-llm-evaluation-fast-enough-to-iterate-on-14e2d35198b4"
 blog: airbnb

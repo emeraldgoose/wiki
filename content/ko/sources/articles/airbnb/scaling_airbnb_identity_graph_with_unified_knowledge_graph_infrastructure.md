@@ -1,7 +1,7 @@
 ---
 title: "통합 지식 그래프 인프라로 Airbnb 아이덴티티 그래프 확장하기"
-description: JanusGraph + DynamoDB paved-path 그래프 플랫폼 — SaaS에서 아이덴티티 그래프 전환, P99 개선, 쓰기 10배
-tags: [source, airbnb, knowledge-graph, janusgraph, infrastructure, trust-and-safety, ko]
+description: JanusGraph + DynamoDB paved-path 그래프 플랫폼 — SaaS에서 아이덴티티 그래프 전환, P99 개선, 쓰기 10배 (한국어 번역)
+tags: [source, airbnb, knowledge-graph, janusgraph, infrastructure, trust-and-safety, ko, ko]
 locale: ko
 source_url: "https://medium.com/airbnb-engineering/scaling-airbnbs-identity-graph-with-a-unified-knowledge-graph-infrastructure-ebac467b7836"
 blog: airbnb

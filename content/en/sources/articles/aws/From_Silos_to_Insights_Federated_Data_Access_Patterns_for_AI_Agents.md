@@ -2,7 +2,7 @@
 title: From Silos to Insights - Federated Data Access Patterns for AI Agents
 description: Promoted on 2026-10-17
 date: 2026-09-04
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/from-silos-to-insights-federated-data-access-patterns-for-ai-agents/"
 blog: aws

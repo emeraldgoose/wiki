@@ -5,7 +5,7 @@ blog: netflix
 published_date: 2026-10-16
 locale: en
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 published: 2026-10-17
 ---
 

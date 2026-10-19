@@ -1,7 +1,7 @@
 ---
 title: "유연한 인증: 수백만 사용자를 위한 Airbnb 인증의 재구상"
-description: "서버 주도 식별-후-인증 모델과 Challenge Picker로 클라이언트 코드를 줄이고 로그인 성공률을 높인 Airbnb 사례."
-tags: [source, airbnb, auth, server-driven-ui, experimentation, ko]
+description: "서버 주도 식별-후-인증 모델과 Challenge Picker로 클라이언트 코드를 줄이고 로그인 성공률을 높인 Airbnb 사례." (한국어 번역)
+tags: [source, airbnb, auth, server-driven-ui, experimentation, ko, ko]
 locale: ko
 source_url: "https://airbnb.tech/uncategorized/flexible-authentication-reimagining-authentication-for-millions-of-users-at-airbnb"
 blog: airbnb

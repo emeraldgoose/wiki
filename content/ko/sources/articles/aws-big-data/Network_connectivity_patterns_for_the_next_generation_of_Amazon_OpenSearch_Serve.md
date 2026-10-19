@@ -1,11 +1,11 @@
 ---
 title: "차세대 Amazon OpenSearch Serverless의 네트워크 연결 패턴"
-description: "표준 PrivateLink 엔드포인트 기반의 차세대 OpenSearch Serverless 프라이빗 연결 패턴 9가지, 단일 VPC부터 교차 리전까지."
+description: "표준 PrivateLink 엔드포인트 기반의 차세대 OpenSearch Serverless 프라이빗 연결 패턴 9가지, 단일 VPC부터 교차 리전까지." (한국어 번역)
 published: "2026-09-03"
 source_url: "https://aws.amazon.com/blogs/big-data/network-connectivity-patterns-for-the-next-generation-of-amazon-opensearch-serverless"
 blog: aws-big-data
 locale: ko
-tags: [source, aws-big-data, opensearch, networking, ko]
+tags: [source, aws-big-data, opensearch, networking, ko, ko]
 ---
 
 # 차세대 Amazon OpenSearch Serverless의 네트워크 연결 패턴

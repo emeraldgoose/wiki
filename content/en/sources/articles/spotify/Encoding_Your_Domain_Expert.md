@@ -1,7 +1,7 @@
 ---
 title: Encoding Your Domain Expert
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant"
 blog: spotify

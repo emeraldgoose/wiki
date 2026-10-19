@@ -1,7 +1,7 @@
 ---
 title: "In-House LLM Serving at Netflix"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c"
 blog: netflix

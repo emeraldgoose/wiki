@@ -5,7 +5,7 @@ published: 2026-10-17
 arxiv_id: "2609.13356"
 url: "https://arxiv.org/abs/2609.13356"
 authors: ["Jiyan He", "Guang Liang", "Hao Liu", "Haoxiang Guan", "Jinbo Sun", "Junyi Guo", "Wenjun Feng", "Yantai Xie", "Yifei Shen", "Bin Shao", "Chuyang Wei", "Kai Chen", "Kexin Zhou", "Minghang Zhu", "Shuxin Zheng", "Tie-Yan Liu", "Taine Zhao", "Wenhui Zhu", "Xueyin Xu", "Xiaoqing Zhang", "Yatao Li", "Yuxuan Ren"]
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 locale: en
 ---
 

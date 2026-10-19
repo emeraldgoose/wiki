@@ -1,7 +1,7 @@
 ---
 title: "From Production Traffic to Post-Training: Building a Self-Hosted LLM That Covers the Corporate Request Mix"
 description: Promoted on 2026-10-17
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 locale: en
 arxiv_id: 2609.01572
 published: 2026-10-17

@@ -1,7 +1,7 @@
 ---
 title: "GA: 본인-대신-사용자 인증으로 권한 인지 Databricks 앱 만들기"
-description: "GA된 OBO 인증으로 Databricks 앱이 로그인 사용자 신분으로 동작하며, 좁은 API 스코프와 함께 Unity Catalog 권한을 강제한다."
-tags: [source, databricks, databricks-apps, unity-catalog, authorization, ko]
+description: "GA된 OBO 인증으로 Databricks 앱이 로그인 사용자 신분으로 동작하며, 좁은 API 스코프와 함께 Unity Catalog 권한을 강제한다." (한국어 번역)
+tags: [source, databricks, databricks-apps, unity-catalog, authorization, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/now-ga-building-permission-aware-databricks-apps-behalf-user-authorization"
 blog: databricks

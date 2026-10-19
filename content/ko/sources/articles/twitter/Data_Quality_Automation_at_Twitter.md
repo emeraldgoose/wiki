@@ -1,7 +1,7 @@
 ---
 title: Twitter의 데이터 품질 자동화
-description: 엑사바이트급 BigQuery 데이터에 Great Expectations + Airflow 검사를 얹은 데이터 품질 플랫폼(DQP)
-tags: [source, twitter, x, data-quality, bigquery, airflow, great-expectations, ko]
+description: 엑사바이트급 BigQuery 데이터에 Great Expectations + Airflow 검사를 얹은 데이터 품질 플랫폼(DQP) (한국어 번역)
+tags: [source, twitter, x, data-quality, bigquery, airflow, great-expectations, ko, ko]
 locale: ko
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2022/data-quality-automation-at-twitter"
 blog: twitter

@@ -4,8 +4,8 @@ description: Promoted on 2026-10-17
 published: 2026-10-17
 source_url: "https://airbnb.tech/ai-ml/beyond-the-model-engineering-ai-infra-with-scientific-judgement/"
 blog: airbnb
-locale: "en"
-tags: [source, article, en]
+locale: en
+tags: [source, article, en, en]
 ---
 
 # Beyond the Model - Engineering AI Infra with Scientific Judgement

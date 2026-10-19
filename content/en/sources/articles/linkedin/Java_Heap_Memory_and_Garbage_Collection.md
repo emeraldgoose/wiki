@@ -2,7 +2,7 @@
 title: 'Java Heap Memory and Garbage Collection: Tuning for High-Performance Services'
 description: Promoted on 2026-10-17
 date: 2024-09-13
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.linkedin.com/blog/engineering/infrastructure/java-heap-memory-and-garbage-collection-tuning-for-high-performance-services"
 blog: linkedin

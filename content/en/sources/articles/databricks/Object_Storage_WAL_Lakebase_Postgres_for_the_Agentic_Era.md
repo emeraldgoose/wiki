@@ -2,7 +2,7 @@
 title: Object Storage Plus WAL Lakebase Postgres for the Agentic Era
 description: Promoted on 2026-10-17
 date: 2026-08-27
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/object-storage-wal-lakebase-postgres-agentic-era"
 blog: databricks

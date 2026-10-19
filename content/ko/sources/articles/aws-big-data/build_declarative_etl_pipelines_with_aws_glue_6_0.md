@@ -3,7 +3,7 @@ title: "AWS Glue 6.0으로 선언적 ETL 파이프라인 구축"
 source_url: "https://aws.amazon.com/blogs/big-data/build-declarative-etl-pipelines-with-aws-glue-6-0/"
 blog: "AWS Big Data"
 published: "2026-09-09"
-locale: "ko"
+locale: ko
 ---
 
 [Translation needed]

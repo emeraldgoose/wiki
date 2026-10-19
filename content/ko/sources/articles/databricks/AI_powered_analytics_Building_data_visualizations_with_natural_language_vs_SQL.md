@@ -1,7 +1,7 @@
 ---
 title: "자연어 vs SQL: AI 기반 데이터 시각화"
-description: "NL-to-SQL이 10년간 기대에 못 미친 이유와 거버넌스 의미 계층이 자연어 시각화를 신뢰 가능하게 만드는 법"
-tags: [source, databricks, ai-engineering, semantic-layer, governance, genie, ko]
+description: "NL-to-SQL이 10년간 기대에 못 미친 이유와 거버넌스 의미 계층이 자연어 시각화를 신뢰 가능하게 만드는 법" (한국어 번역)
+tags: [source, databricks, ai-engineering, semantic-layer, governance, genie, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/ai-powered-analytics-building-data-visualizations-natural-language-vs-sql"
 blog: databricks

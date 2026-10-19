@@ -1,8 +1,8 @@
 ---
 title: Amazon MSK 커스텀 도메인 이름 구성
-description: NLB·DNS·ACM 인증서로 MSK Provisioned 클러스터(ZooKeeper·KRaft 공통)에 커스텀 advertised 리스너를 적용하는 2단계 롤아웃.
+description: NLB·DNS·ACM 인증서로 MSK Provisioned 클러스터(ZooKeeper·KRaft 공통)에 커스텀 advertised 리스너를 적용하는 2단계 롤아웃. (한국어 번역)
 date: 2026-08-25
-tags: [aws, kafka, msk, networking, dns, ko]
+tags: [aws, kafka, msk, networking, dns, ko, ko]
 locale: ko
 blog: aws
 ---

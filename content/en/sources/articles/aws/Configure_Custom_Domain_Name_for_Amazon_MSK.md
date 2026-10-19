@@ -2,7 +2,7 @@
 title: Configure Custom Domain Name for Amazon MSK
 description: Promoted on 2026-10-17
 date: 2026-08-25
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 blog: aws
 published: 2026-10-17

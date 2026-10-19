@@ -1,7 +1,7 @@
 ---
 title: "DICS: Exploring Data Intrinsic Consistency for Visual Instruction Selection"
-description: '표본 내 일관성(DIC)으로 시각 지시 데이터를 골라 25%로 전체 미세조정 능가'
-tags: [source, paper, huggingface, machine-learning, ko]
+description: '표본 내 일관성(DIC)으로 시각 지시 데이터를 골라 25%로 전체 미세조정 능가' (한국어 번역)
+tags: [source, paper, huggingface, machine-learning, ko, ko]
 locale: ko
 source_url: "https://arxiv.org/abs/2608.30209"
 arxiv_id: 2608.30209

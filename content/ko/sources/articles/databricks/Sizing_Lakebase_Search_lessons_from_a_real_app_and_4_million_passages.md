@@ -1,7 +1,7 @@
 ---
 title: "Lakebase Search 크기 산정: 실제 앱과 400만 패시지에서 얻은 교훈"
-description: "Lakebase Search가 벡터와 BM25 키워드 검색을 애플리케이션 데이터베이스 내 Postgres 확장으로 실행. Slide Hub 앱(700개 프레젠테이션) 벤치마크에서 로컬 파일 캐시를 벡터 인덱스 크기에 맞춰 95-98% 페이지 메모리 상주, 웜 벡터 지연시간을 한 자리 밀리초로 단축; 후보 풀 1000→200 축소로 top-10 결과 90.5% 보존하며 페이지 읽기 1/3로 감소."
-tags: [source, databricks, lakebase-search, postgres, vector-search, bm25, hybrid-search, ko]
+description: "Lakebase Search가 벡터와 BM25 키워드 검색을 애플리케이션 데이터베이스 내 Postgres 확장으로 실행. Slide Hub 앱(700개 프레젠테이션) 벤치마크에서 로컬 파일 캐시를 벡터 인덱스 크기에 맞춰 95-98% 페이지 메모리 상주, 웜 벡터 지연시간을 한 자리 밀리초로 단축; 후보 풀 1000→200 축소로 top-10 결과 90.5% 보존하며 페이지 읽기 1/3로 감소." (한국어 번역)
+tags: [source, databricks, lakebase-search, postgres, vector-search, bm25, hybrid-search, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/sizing-lakebase-search-lessons-real-app-and-4-million-passages"
 blog: databricks

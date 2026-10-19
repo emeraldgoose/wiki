@@ -1,7 +1,7 @@
 ---
 title: "Resolving Concurrent Write Conflicts for Apache Iceberg Tables in Amazon Redshift"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/resolving-concurrent-write-conflicts-for-apache-iceberg-tables-in-amazon-redshift"
 blog: aws-big-data

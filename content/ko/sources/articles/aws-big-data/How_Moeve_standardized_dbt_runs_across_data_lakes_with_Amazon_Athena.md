@@ -1,11 +1,11 @@
 ---
 title: "Amazon Athena로 데이터 레이크 전반의 dbt 실행을 표준화한 Moeve 사례"
-description: "Athena, Step Functions, Fargate 기반의 중앙집중식 서버리스 dbt 런처로 신규 프로젝트 온보딩을 수일에서 15분으로 단축한 사례."
+description: "Athena, Step Functions, Fargate 기반의 중앙집중식 서버리스 dbt 런처로 신규 프로젝트 온보딩을 수일에서 15분으로 단축한 사례." (한국어 번역)
 published: "2026-09-22"
 source_url: "https://aws.amazon.com/blogs/big-data/how-moeve-standardized-dbt-runs-across-data-lakes-with-amazon-athena"
 blog: aws-big-data
 locale: ko
-tags: [source, aws-big-data, athena, dbt, ko]
+tags: [source, aws-big-data, athena, dbt, ko, ko]
 ---
 
 # Amazon Athena로 데이터 레이크 전반의 dbt 실행을 표준화한 Moeve 사례

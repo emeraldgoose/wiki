@@ -2,7 +2,7 @@
 title: 10 Trillion Samples a Day Scaling Beyond Traditional Monitoring Infra at Databricks
 description: Promoted on 2026-10-17
 date: 2026-05-05
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/10-trillion-samples-day-scaling-beyond-traditional-monitoring-infra-databricks"
 blog: databricks

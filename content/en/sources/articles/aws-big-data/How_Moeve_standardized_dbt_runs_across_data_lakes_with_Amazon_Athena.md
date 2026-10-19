@@ -5,7 +5,7 @@ published: 2026-10-17
 source_url: "https://aws.amazon.com/blogs/big-data/how-moeve-standardized-dbt-runs-across-data-lakes-with-amazon-athena"
 blog: aws-big-data
 locale: en
-tags: [source, article, en]
+tags: [source, article, en, en]
 ---
 
 # How Moeve standardized dbt runs across data lakes with Amazon Athena

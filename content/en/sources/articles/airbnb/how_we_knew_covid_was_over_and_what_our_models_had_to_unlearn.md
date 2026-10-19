@@ -1,7 +1,7 @@
 ---
 title: "How We Knew COVID Was Over (and What Our Models Had to Unlearn)"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/how-we-knew-covid-was-over-and-what-our-models-had-to-unlearn-c606b9bdb0ab"
 blog: airbnb

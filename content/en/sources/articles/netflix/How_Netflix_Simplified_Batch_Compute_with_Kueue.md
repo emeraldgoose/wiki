@@ -1,7 +1,7 @@
 ---
 title: "How Netflix Simplified Batch Compute with Kueue"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c"
 blog: netflix

@@ -1,7 +1,7 @@
 ---
 title: Coding Is No Longer the Constraint
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint"
 blog: spotify

@@ -1,7 +1,7 @@
 ---
 title: 도메인 전문가를 인코딩하기
-description: Spotify AI 데이터 어시스턴트 뒤의 컨텍스트 레이어 — 도메인 전문가가 데이터셋, 검증된 질문-SQL 쌍, 문서를 큐레이션하는 클러스터 모델로 웨어하우스 규모에서 LLM 에이전트가 신뢰 답을 내는 구조
-tags: [source, rss, spotify, data-assistant, context-engineering, rag, ko]
+description: Spotify AI 데이터 어시스턴트 뒤의 컨텍스트 레이어 — 도메인 전문가가 데이터셋, 검증된 질문-SQL 쌍, 문서를 큐레이션하는 클러스터 모델로 웨어하우스 규모에서 LLM 에이전트가 신뢰 답을 내는 구조 (한국어 번역)
+tags: [source, rss, spotify, data-assistant, context-engineering, rag, ko, ko]
 locale: ko
 source_url: "https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant"
 blog: spotify

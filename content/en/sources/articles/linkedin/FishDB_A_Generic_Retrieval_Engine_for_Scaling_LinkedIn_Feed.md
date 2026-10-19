@@ -2,7 +2,7 @@
 title: "FishDB: A Generic Retrieval Engine for Scaling LinkedIn's Feed"
 description: Promoted on 2026-10-17
 date: 2025-11-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.linkedin.com/blog/engineering/infrastructure/fishdb-a-generic-retrieval-engine-for-scaling-linkedins-feed"
 blog: linkedin

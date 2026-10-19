@@ -2,7 +2,7 @@
 title: Engineering the Next Generation of LinkedIn's Feed
 description: Promoted on 2026-10-17
 date: 2026-03-12
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.linkedin.com/blog/engineering/feed/engineering-the-next-generation-of-linkedins-feed"
 blog: linkedin

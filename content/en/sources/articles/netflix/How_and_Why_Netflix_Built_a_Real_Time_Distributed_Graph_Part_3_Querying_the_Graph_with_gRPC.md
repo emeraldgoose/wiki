@@ -1,7 +1,7 @@
 ---
 title: "How and Why Netflix Built a Real-Time Distributed Graph Part 3: Querying the Graph with gRPC"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607"
 blog: netflix

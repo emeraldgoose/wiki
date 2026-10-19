@@ -1,7 +1,7 @@
 ---
 title: Scaling Exact COUNT(DISTINCT) for High-Cardinality Non-Rollup Metrics in Distributed Data Pipelines
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.uber.com/us/en/blog/scaling-exact-count/"
 blog: uber

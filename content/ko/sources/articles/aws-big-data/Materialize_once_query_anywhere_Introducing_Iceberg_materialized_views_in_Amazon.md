@@ -1,11 +1,11 @@
 ---
 title: "한 번 구체화하고 어디서든 조회하기: Amazon Redshift의 Iceberg 구체화 뷰"
-description: "Redshift에서 구체화 뷰 결과를 개방형 Iceberg 테이블로 저장해 한 번만 계산하고 Athena, Spark, SageMaker에서 읽는 기능과 증분 새로고침 소개."
+description: "Redshift에서 구체화 뷰 결과를 개방형 Iceberg 테이블로 저장해 한 번만 계산하고 Athena, Spark, SageMaker에서 읽는 기능과 증분 새로고침 소개." (한국어 번역)
 published: "2026-10-05"
 source_url: "https://aws.amazon.com/blogs/big-data/materialize-once-query-anywhere-introducing-iceberg-materialized-views-in-amazon-redshift"
 blog: aws-big-data
 locale: ko
-tags: [source, aws-big-data, redshift, iceberg, ko]
+tags: [source, aws-big-data, redshift, iceberg, ko, ko]
 ---
 
 # 한 번 구체화하고 어디서든 조회하기: Amazon Redshift의 Iceberg 구체화 뷰

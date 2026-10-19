@@ -1,7 +1,7 @@
 ---
 title: "Compile by Training: Turning Natural-Language Specifications into Local Neural Functions"
 description: Promoted on 2026-10-17
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 locale: en
 arxiv_id: 2609.04199
 published: 2026-10-17

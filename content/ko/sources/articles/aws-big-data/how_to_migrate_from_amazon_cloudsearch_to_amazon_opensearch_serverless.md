@@ -3,8 +3,8 @@ title: "How to migrate from Amazon CloudSearch에서 Amazon OpenSearch Serverles
 source_url: "https://aws.amazon.com/blogs/big-data/how-to-migrate-from-amazon-cloudsearch-to-amazon-opensearch-serverless/"
 blog: "AWS Big Data"
 published: "2026-09-10"
-locale: "ko"
-tags: [source, aws-big-data, infrastructure, ko]
+locale: ko
+tags: [source, aws-big-data, infrastructure, ko, ko]
 ---
 
 [Translation needed]

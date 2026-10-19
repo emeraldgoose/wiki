@@ -1,7 +1,7 @@
 ---
 title: "How California built its Behavioral Health Public County Profile on Databricks"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/how-california-built-its-behavioral-health-public-county-profile-databricks"
 blog: databricks

@@ -1,7 +1,7 @@
 ---
 title: "Building an LLM-powered DAG failure analysis plugin for Amazon MWAA"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/building-an-llm-powered-dag-failure-analysis-plugin-for-amazon-mwaa"
 blog: aws-big-data

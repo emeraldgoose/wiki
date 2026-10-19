@@ -1,7 +1,7 @@
 ---
 title: "Biomedical Imaging's Real Bottleneck Is the Data, Not the Model"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/biomedical-imagings-real-bottleneck-data-not-model"
 blog: databricks

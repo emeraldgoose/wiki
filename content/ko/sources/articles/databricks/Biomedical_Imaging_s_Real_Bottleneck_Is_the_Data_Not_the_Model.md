@@ -1,7 +1,7 @@
 ---
 title: "바이오메디컬 이미징의 진짜 병목은 데이터이지 모델이 아니다"
-description: "사일로에 갇힌 의료 영상 데이터가 AI를 가로막는 이유와 메달리온 수집, 비식별화, 멀티모달 조인을 갖춘 거버넌스 레이크하우스로 푸는 법."
-tags: [source, databricks, lakehouse, healthcare, medical-imaging, ko]
+description: "사일로에 갇힌 의료 영상 데이터가 AI를 가로막는 이유와 메달리온 수집, 비식별화, 멀티모달 조인을 갖춘 거버넌스 레이크하우스로 푸는 법." (한국어 번역)
+tags: [source, databricks, lakehouse, healthcare, medical-imaging, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/biomedical-imagings-real-bottleneck-data-not-model"
 blog: databricks

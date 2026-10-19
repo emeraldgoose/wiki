@@ -3,7 +3,7 @@ title: "Iceberg materrialized 뷰를 사용한 Spark 쿼리 가속"
 source_url: "https://aws.amazon.com/blogs/big-data/accelerating-spark-queries-with-iceberg-materialized-views/"
 blog: "AWS Big Data"
 published: "2026-09-10"
-locale: "ko"
+locale: ko
 ---
 
 [Translation needed]

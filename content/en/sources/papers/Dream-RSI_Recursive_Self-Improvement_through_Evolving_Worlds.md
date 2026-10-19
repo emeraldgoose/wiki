@@ -6,7 +6,7 @@ source_url: "https://arxiv.org/abs/2609.14858"
 published: 2026-10-17
 arxiv_id: "2609.14858"
 authors: ["Tong Zheng", "and 16 other authors"]
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 ---
 
 # Dream-RSI: Recursive Self-Improvement through Evolving Worlds

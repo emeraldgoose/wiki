@@ -1,7 +1,7 @@
 ---
 title: "DiagEvo: Diagnosis-Guided Self-Evolution via Hierarchical Error Memory"
 description: Promoted on 2026-10-17
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 locale: en
 source_url: "https://arxiv.org/abs/2609.00768"
 arxiv_id: 2609.00768

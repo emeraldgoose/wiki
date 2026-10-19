@@ -1,7 +1,7 @@
 ---
 title: '훈련, 학습, 추론: 통합 역학'
-description: 'Training, learning and inference: unified dynamics of neural systems (한국어 전체 번역)'
-tags: [paper, source, huggingface, ai-engineering, neural-dynamics, transformer, resnet, diffusion, ko]
+description: 'Training, learning and inference: unified dynamics of neural systems (한국어 전체 번역)' (한국어 번역)
+tags: [paper, source, huggingface, ai-engineering, neural-dynamics, transformer, resnet, diffusion, ko, ko]
 locale: ko
 arxiv_id: 2608.20965
 ---

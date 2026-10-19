@@ -1,7 +1,7 @@
 ---
 title: "Eval-Driven Development: Lessons from Evaluating GenAI at Scale"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/eval-driven-development-lessons-from-evaluating-genai-at-scale-e817e5ae5788"
 blog: airbnb

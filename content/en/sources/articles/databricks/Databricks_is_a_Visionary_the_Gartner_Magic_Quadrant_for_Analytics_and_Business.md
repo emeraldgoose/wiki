@@ -1,7 +1,7 @@
 ---
 title: "Databricks Is a Visionary in the Gartner Magic Quadrant for Analytics and Business Intelligence Platforms"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/databricks-visionary-gartnerr-magic-quadranttm-analytics-and-business-intelligence-platforms"
 blog: databricks

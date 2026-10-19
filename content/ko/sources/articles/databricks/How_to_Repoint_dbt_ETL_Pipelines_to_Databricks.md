@@ -1,7 +1,7 @@
 ---
 title: "dbt ETL 파이프라인을 Databricks로 옮기는 방법"
-description: "어댑터 교체, Unity Catalog 네임스페이스, SQL 방언 수정, audit-helper 검증, Lakeflow Jobs 배포까지 dbt 전환 7단계 레시피."
-tags: [source, databricks, dbt, data-engineering, lakehouse, ko]
+description: "어댑터 교체, Unity Catalog 네임스페이스, SQL 방언 수정, audit-helper 검증, Lakeflow Jobs 배포까지 dbt 전환 7단계 레시피." (한국어 번역)
+tags: [source, databricks, dbt, data-engineering, lakehouse, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/how-repoint-dbt-etl-pipelines-databricks"
 blog: databricks

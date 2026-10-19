@@ -1,7 +1,7 @@
 ---
 title: "Personalization without user identity"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://airbnb.tech/infrastructure/personalization-without-user-identity"
 blog: airbnb

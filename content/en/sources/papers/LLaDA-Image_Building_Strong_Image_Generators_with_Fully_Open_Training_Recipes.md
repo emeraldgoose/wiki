@@ -1,7 +1,7 @@
 ---
 title: "LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes"
 description: Promoted on 2026-10-17
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 locale: en
 arxiv_id: 2609.03796
 published: 2026-10-17

@@ -1,7 +1,7 @@
 ---
 title: "클라우드 데이터 웨어하우스 비용에 예산과 알림 설정하기"
-description: "Databricks SQL 웨어하우스 비용 거버넌스: 태그 귀속, 계층형 예산, 페이싱 알림, 대시보드, 최적화의 5단계 사전 관리법."
-tags: [source, databricks, cost-optimization, sql-warehouses, finops, ko]
+description: "Databricks SQL 웨어하우스 비용 거버넌스: 태그 귀속, 계층형 예산, 페이싱 알림, 대시보드, 최적화의 5단계 사전 관리법." (한국어 번역)
+tags: [source, databricks, cost-optimization, sql-warehouses, finops, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/set-budgets-and-alerts-cloud-data-warehouse-costs"
 blog: databricks

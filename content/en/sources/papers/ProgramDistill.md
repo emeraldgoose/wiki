@@ -5,7 +5,7 @@ locale: en
 source_url: "https://arxiv.org/abs/2609.18805"
 arxiv_id: "2609.18805"
 authors: ["Jeonghye Kim", "Minseon Kim", "Young Jin Kim", "Matheus Pereira", "Marc-Alexandre Côté", "Alessandro Sordoni", "Xingdi Yuan", "Zhengyan Shi"]
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 published: 2026-10-17
 ---
 

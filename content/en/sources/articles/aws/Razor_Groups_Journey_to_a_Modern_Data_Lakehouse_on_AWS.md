@@ -2,7 +2,7 @@
 title: Razor Group's Journey to a Modern Data Lakehouse on AWS
 description: Promoted on 2026-10-17
 date: 2026-08-28
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/razor-groups-journey-to-a-modern-data-lakehouse-on-aws/"
 blog: aws

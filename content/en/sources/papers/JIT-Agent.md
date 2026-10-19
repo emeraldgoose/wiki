@@ -1,7 +1,7 @@
 ---
 title: "JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution"
 description: Promoted on 2026-10-17
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 locale: en
 published: 2026-10-17
 ---

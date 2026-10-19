@@ -1,7 +1,7 @@
 ---
 title: "Introducing Funke: Native HL7v2 Parsing on Databricks"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/introducing-funke-native-hl7v2-parsing-databricks"
 blog: databricks

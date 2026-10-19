@@ -1,7 +1,7 @@
 ---
 title: "Enforce IAM permissions boundaries for Amazon SageMaker Unified Studio Tooling blueprints"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/enforce-iam-permissions-boundaries-for-amazon-sagemaker-unified-studio-tooling-blueprints"
 blog: aws-big-data

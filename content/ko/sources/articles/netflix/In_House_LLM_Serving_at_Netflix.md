@@ -1,7 +1,7 @@
 ---
 title: "In-House LLM Serving at Netflix"
-description: vLLM+Triton 자사 LLM 스택 — 엔진 선정, 모델 패키징, OpenAI 호환 API, 버전별 배포, 제약 디코딩
-tags: [source, article, netflix, llm, model-serving, platform-engineering, ai-engineering, ko]
+description: vLLM+Triton 자사 LLM 스택 — 엔진 선정, 모델 패키징, OpenAI 호환 API, 버전별 배포, 제약 디코딩 (한국어 번역)
+tags: [source, article, netflix, llm, model-serving, platform-engineering, ai-engineering, ko, ko]
 locale: ko
 source_url: "https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c"
 blog: netflix

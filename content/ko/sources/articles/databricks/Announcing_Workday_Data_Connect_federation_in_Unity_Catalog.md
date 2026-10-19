@@ -1,7 +1,7 @@
 ---
 title: "Unity Catalog의 Workday Data Connect 페더레이션"
-description: "네이티브 Data Connect 페더레이션 커넥터(Beta)로 Unity Catalog에서 Workday HR·재무 데이터를 zero-copy로 조회"
-tags: [source, databricks, data-engineering, federation, iceberg, unity-catalog, ko]
+description: "네이티브 Data Connect 페더레이션 커넥터(Beta)로 Unity Catalog에서 Workday HR·재무 데이터를 zero-copy로 조회" (한국어 번역)
+tags: [source, databricks, data-engineering, federation, iceberg, unity-catalog, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/announcing-workday-data-connect-federation-unity-catalog"
 blog: databricks

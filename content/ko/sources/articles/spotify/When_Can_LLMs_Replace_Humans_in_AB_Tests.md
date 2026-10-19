@@ -1,7 +1,7 @@
 ---
 title: A/B 테스트에서 LLM이 인간을 대체할 수 있는 경우
-description: A/B 테스트에서 LLM 예측이 인간 반응을 대신할 수 있는 조건에 대한 Spotify의 통계 프레임워크 — 대리 종결점 이론, Upworthy 실증 결과, 원시 LLM 예측의 효과 감쇠 편향
-tags: [source, rss, spotify, ab-testing, llm-eval, statistics, ko]
+description: A/B 테스트에서 LLM 예측이 인간 반응을 대신할 수 있는 조건에 대한 Spotify의 통계 프레임워크 — 대리 종결점 이론, Upworthy 실증 결과, 원시 LLM 예측의 효과 감쇠 편향 (한국어 번역)
+tags: [source, rss, spotify, ab-testing, llm-eval, statistics, ko, ko]
 locale: ko
 source_url: "https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests"
 blog: spotify

@@ -1,7 +1,7 @@
 ---
 title: "Databricks 비용 파악을 위한 시스템 테이블 쿼리 5선"
-description: "제품·웨어하우스·팀별 지출 분석부터 이상 탐지와 다음 달 예측까지, 시스템 테이블 SQL 쿼리 다섯 개로 비용을 파악한다."
-tags: [source, databricks, cost-optimization, system-tables, sql, ko]
+description: "제품·웨어하우스·팀별 지출 분석부터 이상 탐지와 다음 달 예측까지, 시스템 테이블 SQL 쿼리 다섯 개로 비용을 파악한다." (한국어 번역)
+tags: [source, databricks, cost-optimization, system-tables, sql, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/top-5-system-table-queries-understanding-your-databricks-costs"
 blog: databricks

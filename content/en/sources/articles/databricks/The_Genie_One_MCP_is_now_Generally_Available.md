@@ -1,7 +1,7 @@
 ---
 title: "The Genie One MCP is now Generally Available"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/genie-one-mcp-now-generally-available"
 blog: databricks

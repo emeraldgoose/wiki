@@ -6,8 +6,8 @@ arxiv_id: "2609.24972"
 hf_url: "https://huggingface.co/papers/2609.24972"
 authors: "Peng Xia, Rujun Han, Zifeng Wang, Yanfei Chen, Yufan Zhang, Yoonho Lee, Chengsong Huang, Han Yu, Zhongying CuiZhu, Yifei Ming, Huaxiu Yao, Burak Gokturk, Tomas Pfister, Chen-Yu Lee"
 organization: "Google Cloud AI Research"
-tags: [source, paper, en]
-locale: "en"
+tags: [source, paper, en, en]
+locale: en
 ---
 
 # RRSI: Regularized Recursive Self-Improvement of Agent Harnesses

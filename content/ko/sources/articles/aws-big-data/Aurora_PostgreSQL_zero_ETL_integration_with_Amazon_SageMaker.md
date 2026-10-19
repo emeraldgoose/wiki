@@ -1,7 +1,7 @@
 ---
 title: "Amazon SageMaker와 Aurora PostgreSQL 제로 ETL 통합"
-description: "Aurora PostgreSQL 데이터를 커스텀 ETL 없이 Iceberg 테이블로 SageMaker AI에 수 초 내 복제합니다."
-tags: [source, aws-big-data, aurora, zero-etl, sagemaker, ko]
+description: "Aurora PostgreSQL 데이터를 커스텀 ETL 없이 Iceberg 테이블로 SageMaker AI에 수 초 내 복제합니다." (한국어 번역)
+tags: [source, aws-big-data, aurora, zero-etl, sagemaker, ko, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/aurora-postgresql-zero-etl-integration-with-amazon-sagemaker"
 blog: aws-big-data

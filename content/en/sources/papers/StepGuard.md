@@ -1,7 +1,7 @@
 ---
 title: "StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing"
 description: Promoted on 2026-10-17
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 locale: en
 published: 2026-10-17
 ---

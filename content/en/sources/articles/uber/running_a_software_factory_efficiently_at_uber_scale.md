@@ -1,7 +1,7 @@
 ---
 title: Running a Software Factory Efficiently at Uber Scale
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.uber.com/us/en/blog/efficient-software-factory/"
 blog: uber

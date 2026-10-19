@@ -1,12 +1,12 @@
 ---
 title: "Studying Image Tokenizers as Visual Languages in Unified Multimodal Models"
 description: Promoted on 2026-10-17
-locale: "en"
+locale: en
 source_url: "https://arxiv.org/abs/2609.09143"
 arxiv_id: "2609.09143"
 authors: ["Siting Li", "Zhengyang Wang", "Simon Shaolei Du", "Xi Chen", "Yang Liu"]
 published: 2026-10-17
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 ---
 
 # Studying Image Tokenizers as Visual Languages in Unified Multimodal Models

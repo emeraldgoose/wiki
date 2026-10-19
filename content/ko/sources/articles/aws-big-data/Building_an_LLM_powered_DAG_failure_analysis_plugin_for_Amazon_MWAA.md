@@ -1,7 +1,7 @@
 ---
 title: "Amazon MWAA용 LLM 기반 DAG 실패 분석 플러그인 만들기"
-description: "Bedrock으로 실패한 태스크를 코드 수준 맥락과 함께 진단하는 Analyze Task 버튼을 MWAA의 Airflow에 추가합니다."
-tags: [source, aws-big-data, mwaa, airflow, bedrock, ko]
+description: "Bedrock으로 실패한 태스크를 코드 수준 맥락과 함께 진단하는 Analyze Task 버튼을 MWAA의 Airflow에 추가합니다." (한국어 번역)
+tags: [source, aws-big-data, mwaa, airflow, bedrock, ko, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/building-an-llm-powered-dag-failure-analysis-plugin-for-amazon-mwaa"
 blog: aws-big-data

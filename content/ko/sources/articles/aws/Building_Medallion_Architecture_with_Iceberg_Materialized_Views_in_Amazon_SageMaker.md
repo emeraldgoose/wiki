@@ -1,8 +1,8 @@
 ---
 title: SageMaker에서 Iceberg 구체화 뷰로 메달리온 아키텍처 구축하기
-description: Bronze→Silver→Gold 메달리온 파이프라인을 3개 구체화 뷰 SQL로 선언 — DAG·CDC 없이 증분 리프레시와 중첩 뷰로 구현.
+description: Bronze→Silver→Gold 메달리온 파이프라인을 3개 구체화 뷰 SQL로 선언 — DAG·CDC 없이 증분 리프레시와 중첩 뷰로 구현. (한국어 번역)
 date: 2026-09-02
-tags: [aws, data-engineering, lakehouse, apache-iceberg, medallion, materialized-views, sagemaker, s3-tables, ko]
+tags: [aws, data-engineering, lakehouse, apache-iceberg, medallion, materialized-views, sagemaker, s3-tables, ko, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/building-medallion-architecture-with-iceberg-materialized-views-in-amazon-sagemaker/"
 blog: aws

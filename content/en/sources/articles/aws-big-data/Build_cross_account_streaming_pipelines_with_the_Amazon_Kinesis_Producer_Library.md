@@ -1,7 +1,7 @@
 ---
 title: "Build cross-account streaming pipelines with the Amazon Kinesis Producer Library and Kinesis Client Library"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/build-cross-account-streaming-pipelines-with-the-amazon-kinesis-producer-library-and-kinesis-client-library"
 blog: aws-big-data

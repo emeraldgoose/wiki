@@ -1,7 +1,7 @@
 ---
 title: "평가 주도 개발: 대규모 GenAI 평가의 교훈"
-description: Airbnb의 eval-driven development — 3층 평가, 보정된 LLM 저지, 에이전트 궤적 평가
-tags: [source, airbnb, genai, llm, evaluation, llm-as-judge, agents, ko]
+description: Airbnb의 eval-driven development — 3층 평가, 보정된 LLM 저지, 에이전트 궤적 평가 (한국어 번역)
+tags: [source, airbnb, genai, llm, evaluation, llm-as-judge, agents, ko, ko]
 locale: ko
 source_url: "https://medium.com/airbnb-engineering/eval-driven-development-lessons-from-evaluating-genai-at-scale-e817e5ae5788"
 blog: airbnb

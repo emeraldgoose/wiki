@@ -1,7 +1,7 @@
 ---
 title: "How I built agent-based security reviews on Databricks"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/how-i-built-agent-based-security-reviews-databricks"
 blog: databricks

@@ -5,7 +5,7 @@ published: 2026-10-17
 source_url: "https://aws.amazon.com/blogs/big-data/query-unstructured-data-in-amazon-sagemaker-catalog-using-generative-ai"
 blog: aws-big-data
 locale: en
-tags: [source, article, en]
+tags: [source, article, en, en]
 ---
 
 # Query unstructured data in Amazon SageMaker Catalog using generative AI

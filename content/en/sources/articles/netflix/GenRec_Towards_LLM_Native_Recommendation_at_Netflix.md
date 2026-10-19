@@ -1,7 +1,7 @@
 ---
 title: "GenRec: Towards LLM-Native Recommendation at Netflix"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3"
 blog: netflix

@@ -1,7 +1,7 @@
 ---
 title: "How to Repoint dbt ETL Pipelines to Databricks"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/how-repoint-dbt-etl-pipelines-databricks"
 blog: databricks

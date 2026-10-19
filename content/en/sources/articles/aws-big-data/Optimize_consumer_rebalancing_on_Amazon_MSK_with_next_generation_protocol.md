@@ -5,7 +5,7 @@ published: 2026-10-17
 source_url: "https://aws.amazon.com/blogs/big-data/optimize-consumer-rebalancing-on-amazon-msk-with-next-generation-protocol"
 blog: aws-big-data
 locale: en
-tags: [source, article, en]
+tags: [source, article, en, en]
 ---
 
 # Optimize consumer rebalancing on Amazon MSK with next generation protocol

@@ -1,7 +1,7 @@
 ---
 title: "A Practical Guide to Real-Time Analytics in 2026"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/practical-guide-real-time-analytics-2026"
 blog: databricks

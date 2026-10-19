@@ -1,11 +1,11 @@
 ---
 title: "SageMaker Unified Studio를 Power BI에 연결하기 Part 1 - IDC 기반 도메인"
-description: "Athena ODBC 2.2 네이티브 인증으로 Power BI를 SageMaker Unified Studio에 직접 연결: SageMakerBrowserIdc와 SageMakerIam, DSN과 DSN-less 방식, 게이트웨이 배선, IDC 도메인 워크스루."
+description: "Athena ODBC 2.2 네이티브 인증으로 Power BI를 SageMaker Unified Studio에 직접 연결: SageMakerBrowserIdc와 SageMakerIam, DSN과 DSN-less 방식, 게이트웨이 배선, IDC 도메인 워크스루." (한국어 번역)
 published: "2026-09-15"
 source_url: "https://aws.amazon.com/blogs/big-data/connect-amazon-sagemaker-unified-studio-to-microsoft-power-bi-part-1-iam-identity-center-idc-based-domains/"
 blog: "AWS Big Data"
-locale: "ko"
-tags: [aws, sagemaker, athena, power-bi, odbc, iam-identity-center, bi, ko]
+locale: ko
+tags: [aws, sagemaker, athena, power-bi, odbc, iam-identity-center, bi, ko, ko]
 ---
 
 # SageMaker Unified Studio를 Power BI에 연결하기 Part 1 - IDC 기반 도메인

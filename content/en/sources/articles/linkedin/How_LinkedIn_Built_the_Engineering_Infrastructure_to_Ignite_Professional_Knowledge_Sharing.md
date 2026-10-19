@@ -2,7 +2,7 @@
 title: How LinkedIn Built the Engineering Infrastructure to Ignite Professional Knowledge Sharing
 description: Promoted on 2026-10-17
 date: 2023-11-20
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://engineering.linkedin.com/blog/2023/how-linkedin-built-the-engineering-infrastructure-to-ignite-prof"
 blog: linkedin

@@ -1,7 +1,7 @@
 ---
 title: "Harness-of-Harness: Multi-Day Autonomous Software Development with Continual Improvement"
-description: '하네스 위 하네스 — 3 반복 +52.25%, 70+ 반복 FPS 게임'
-tags: [source, paper, huggingface, ai-engineering, ko]
+description: '하네스 위 하네스 — 3 반복 +52.25%, 70+ 반복 FPS 게임' (한국어 번역)
+tags: [source, paper, huggingface, ai-engineering, ko, ko]
 locale: ko
 source_url: "https://arxiv.org/abs/2609.01481"
 arxiv_id: 2609.01481

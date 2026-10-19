@@ -1,7 +1,7 @@
 ---
 title: "Set Budgets and Alerts for Cloud Data Warehouse Costs"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/set-budgets-and-alerts-cloud-data-warehouse-costs"
 blog: databricks

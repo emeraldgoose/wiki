@@ -1,7 +1,7 @@
 ---
 title: "사용자 식별 정보 없이 개인화하기"
-description: "인근 사용자 버킷의 집단 행동을 집계해 비로그인 콜드스타트 트래픽을 개인화하는 Airbnb Proximity Features."
-tags: [source, airbnb, ml, personalization, privacy, ko]
+description: "인근 사용자 버킷의 집단 행동을 집계해 비로그인 콜드스타트 트래픽을 개인화하는 Airbnb Proximity Features." (한국어 번역)
+tags: [source, airbnb, ml, personalization, privacy, ko, ko]
 locale: ko
 source_url: "https://airbnb.tech/infrastructure/personalization-without-user-identity"
 blog: airbnb

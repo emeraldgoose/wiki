@@ -1,7 +1,7 @@
 ---
 title: 고카디널리티 비롤업 지표의 정확한 COUNT(DISTINCT) 스케일링
-description: 해시 상위 비트로 Roaring 비트맵을 청크 분할해 JVM 2GB 한계를 극복한 수십억 규모 정확 distinct count 전략
-tags: [source, uber, data-engineering, count-distinct, spark, hive, bitmap, ko]
+description: 해시 상위 비트로 Roaring 비트맵을 청크 분할해 JVM 2GB 한계를 극복한 수십억 규모 정확 distinct count 전략 (한국어 번역)
+tags: [source, uber, data-engineering, count-distinct, spark, hive, bitmap, ko, ko]
 locale: ko
 source_url: "https://www.uber.com/us/en/blog/scaling-exact-count/"
 blog: uber

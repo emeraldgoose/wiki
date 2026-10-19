@@ -1,7 +1,7 @@
 ---
 title: Twitter Blobstore 하드웨어 수명주기 모니터링 및 리포팅 서비스
-description: Blobstore 사진/동영상 스토리지를 위한 베어메탈 수명주기(allocated, managed, maintenance, repair) 관리 방식
-tags: [source, twitter, x, blobstore, storage, hardware, sre, ko]
+description: Blobstore 사진/동영상 스토리지를 위한 베어메탈 수명주기(allocated, managed, maintenance, repair) 관리 방식 (한국어 번역)
+tags: [source, twitter, x, blobstore, storage, hardware, sre, ko, ko]
 locale: ko
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/twitters-blobstore-hardware-lifecycle-monitoring-and-reporting-service"
 blog: twitter

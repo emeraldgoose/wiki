@@ -1,7 +1,7 @@
 ---
 title: "Cost-effective ETL with DuckDB and Amazon S3 Tables on AWS Glue"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/cost-effective-etl-with-duckdb-and-amazon-s3-tables-on-aws-glue"
 blog: aws-big-data

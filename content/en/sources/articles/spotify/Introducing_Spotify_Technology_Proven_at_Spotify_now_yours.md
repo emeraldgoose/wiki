@@ -1,7 +1,7 @@
 ---
 title: "Introducing: Spotify Technology. Proven at Spotify, now yours."
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://engineering.atspotify.com/2026/10/introducing-spotify-technology-proven-at-spotify-now-yours"
 blog: spotify

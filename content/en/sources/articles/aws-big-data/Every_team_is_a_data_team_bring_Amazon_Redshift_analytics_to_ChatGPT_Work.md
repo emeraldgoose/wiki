@@ -4,8 +4,8 @@ description: Promoted on 2026-10-17
 source_url: "https://aws.amazon.com/blogs/big-data/every-team-is-a-data-team-bring-amazon-redshift-analytics-to-chatgpt-work/"
 blog: "AWS Big Data"
 published: 2026-10-17
-locale: "en"
-tags: [source, article, en]
+locale: en
+tags: [source, article, en, en]
 ---
 
 # Every team is a data team — bring Amazon Redshift analytics to ChatGPT Work

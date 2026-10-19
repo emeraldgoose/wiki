@@ -1,7 +1,7 @@
 ---
 title: "Delivery Hero가 Apache Flink로 실시간 광고 측정을 재구축한 방법"
-description: "Delivery Hero가 시간 단위 배치를 실시간 Flink 스트리밍으로 바꿔 비용 57% 절감과 수 초 내 측정을 달성했습니다."
-tags: [source, aws-big-data, flink, streaming, kinesis, ko]
+description: "Delivery Hero가 시간 단위 배치를 실시간 Flink 스트리밍으로 바꿔 비용 57% 절감과 수 초 내 측정을 달성했습니다." (한국어 번역)
+tags: [source, aws-big-data, flink, streaming, kinesis, ko, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/how-delivery-hero-rebuilt-real-time-ad-measurement-with-apache-flink"
 blog: aws-big-data

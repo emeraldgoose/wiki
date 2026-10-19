@@ -1,7 +1,7 @@
 ---
 title: "Beyond synthetic testing: Capturing and replaying real database workloads at Airbnb"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://airbnb.tech/infrastructure/beyond-synthetic-testing-capturing-and-replaying-real-database-workloads-at-airbnb"
 blog: airbnb

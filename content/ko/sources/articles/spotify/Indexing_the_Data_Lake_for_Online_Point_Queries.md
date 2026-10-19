@@ -1,7 +1,7 @@
 ---
 title: 온라인 포인트 쿼리를 위한 데이터 레이크 인덱싱
-description: Spotify의 Random Access Parquet(RAP) — 레이크 Parquet 파일 위 외부 인덱스로 정밀 ranged read를 수행해 KV-store 복제 없이 저지연 포인트 쿼리를 제공하는 아키텍처
-tags: [source, rss, spotify, data-lake, parquet, indexing, ko]
+description: Spotify의 Random Access Parquet(RAP) — 레이크 Parquet 파일 위 외부 인덱스로 정밀 ranged read를 수행해 KV-store 복제 없이 저지연 포인트 쿼리를 제공하는 아키텍처 (한국어 번역)
+tags: [source, rss, spotify, data-lake, parquet, indexing, ko, ko]
 locale: ko
 source_url: "https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries"
 blog: spotify

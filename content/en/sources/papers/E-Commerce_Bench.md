@@ -1,7 +1,7 @@
 ---
 title: "E-Commerce Bench: Evaluating LLM Agents on Long-Horizon Autonomous Business Operation"
 description: Promoted on 2026-10-17
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 locale: en
 source_url: "https://arxiv.org/abs/2608.30730"
 arxiv_id: 2608.30730

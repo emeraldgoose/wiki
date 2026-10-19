@@ -1,7 +1,7 @@
 ---
 title: "CASTLE: Training Natural Language Search Before the First Real Query"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://airbnb.tech/ai-ml/castle-training-natural-language-search-before-the-first-real-query"
 blog: airbnb

@@ -1,12 +1,12 @@
 ---
 title: "Dream-RSI: 진화하는 세계를 통한 재귀적 자기 개선"
-description: "누적 발견 기록을 리플레이 시뮬레이터로 쓰는 경량 오케스트레이션 — 4개 도메인 9개 태스크에서 발견 비용을 줄이며 경쟁력 있는 품질"
+description: "누적 발견 기록을 리플레이 시뮬레이터로 쓰는 경량 오케스트레이션 — 4개 도메인 9개 태스크에서 발견 비용을 줄이며 경쟁력 있는 품질" (한국어 번역)
 locale: ko
 source_url: "https://arxiv.org/abs/2609.14858"
 published: 2026-09-14
 arxiv_id: "2609.14858"
 authors: ["Tong Zheng", "외 16명의 저자"]
-tags: [source, paper, ai-engineering, ko]
+tags: [source, paper, ai-engineering, ko, ko]
 ---
 
 # Dream-RSI: 진화하는 세계를 통한 재귀적 자기 개선

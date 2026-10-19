@@ -3,8 +3,8 @@ title: "AWS가 16년 연속 가트너 전략적 클라우드 플랫폼 서비스
 source_url: "https://aws.amazon.com/blogs/big-data/aws-recognized-as-a-leader-in-the-2026-gartner-magic-quadrant-for-strategic-cloud-platform-services-for-the-16th-consecutive-year/"
 blog: "AWS Big Data"
 published: "2026-09-08"
-locale: "ko"
-tags: [source, aws-big-data, infrastructure, ko]
+locale: ko
+tags: [source, aws-big-data, infrastructure, ko, ko]
 ---
 
 [Translation needed]

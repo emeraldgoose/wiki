@@ -1,7 +1,7 @@
 ---
 title: Data Quality Automation at Twitter
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2022/data-quality-automation-at-twitter"
 blog: twitter

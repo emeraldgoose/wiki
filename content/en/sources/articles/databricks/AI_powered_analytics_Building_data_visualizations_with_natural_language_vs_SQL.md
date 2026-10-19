@@ -1,7 +1,7 @@
 ---
 title: "AI-powered analytics: Building data visualizations with natural language vs. SQL"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/ai-powered-analytics-building-data-visualizations-natural-language-vs-sql"
 blog: databricks

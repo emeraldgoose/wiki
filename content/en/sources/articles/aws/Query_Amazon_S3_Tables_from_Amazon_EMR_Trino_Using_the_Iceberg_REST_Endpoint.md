@@ -2,7 +2,7 @@
 title: Query Amazon S3 Tables from Amazon EMR Trino Using the Iceberg REST Endpoint
 description: Promoted on 2026-10-17
 date: 2026-09-02
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/query-amazon-s3-tables-from-amazon-emr-trino-using-the-iceberg-rest-endpoint/"
 blog: aws

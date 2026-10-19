@@ -2,7 +2,7 @@
 title: Build a Dynamic Streaming Data Lake with Apache Iceberg and Apache Flink
 description: Promoted on 2026-10-17
 date: 2026-09-02
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/build-a-dynamic-streaming-data-lake-with-apache-iceberg-and-apache-flink/"
 blog: aws

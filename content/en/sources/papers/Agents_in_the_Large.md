@@ -1,7 +1,7 @@
 ---
 title: "Agents in the Large: Perception-Centered Architecture for Persistent Agents"
 description: Promoted on 2026-10-17
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 locale: en
 source_url: "https://arxiv.org/abs/2608.30478"
 arxiv_id: 2608.30478

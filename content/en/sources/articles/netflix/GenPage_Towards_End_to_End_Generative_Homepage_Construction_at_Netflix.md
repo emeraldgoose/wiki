@@ -1,7 +1,7 @@
 ---
 title: "GenPage: Towards End-to-End Generative Homepage Construction at Netflix"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08"
 blog: netflix

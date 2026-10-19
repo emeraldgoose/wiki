@@ -5,7 +5,7 @@ arxiv_id: "2609.11042"
 HF_URL: "https://huggingface.co/papers/2609.11042"
 published: 2026-10-17
 authors: "Junyao Yang, Yucheng Shi, Zhongzhi Li, Ruhan Wang, Zongxia Li, Haitao Mi, Leowei Liang"
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 locale: en
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: Razor Group의 AWS 현대 데이터 레이크하우스 여정
-description: Razor Group이 상시 가동 Redshift 클러스터에서 S3 Tables 기반 개방형 Iceberg 레이크하우스로 5단계 이전 — P95 65% 단축, 인프라 비용 63% 절감.
+description: Razor Group이 상시 가동 Redshift 클러스터에서 S3 Tables 기반 개방형 Iceberg 레이크하우스로 5단계 이전 — P95 65% 단축, 인프라 비용 63% 절감. (한국어 번역)
 date: 2026-08-28
-tags: [aws, data-engineering, lakehouse, apache-iceberg, redshift, spark, ko]
+tags: [aws, data-engineering, lakehouse, apache-iceberg, redshift, spark, ko, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/razor-groups-journey-to-a-modern-data-lakehouse-on-aws/"
 blog: aws

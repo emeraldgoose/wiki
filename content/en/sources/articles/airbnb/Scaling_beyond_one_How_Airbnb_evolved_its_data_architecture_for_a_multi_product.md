@@ -1,7 +1,7 @@
 ---
 title: "Scaling beyond one: How Airbnb evolved its data architecture for a multi-product world"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://airbnb.tech/uncategorized/scaling-beyond-one-how-airbnb-evolved-its-data-architecture-for-a-multi-product-world"
 blog: airbnb

@@ -1,7 +1,7 @@
 ---
 title: Kerberizing Hadoop Clusters at Twitter
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/kerberizing-hadoop-clusters-at-twitter"
 blog: twitter

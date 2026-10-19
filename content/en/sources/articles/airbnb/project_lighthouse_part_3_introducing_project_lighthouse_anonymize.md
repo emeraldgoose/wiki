@@ -1,7 +1,7 @@
 ---
 title: "Project Lighthouse — Part 3: Introducing project-lighthouse-anonymize"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/project-lighthouse-part-3-introducing-project-lighthouse-anonymize-74f8b26653fb"
 blog: airbnb

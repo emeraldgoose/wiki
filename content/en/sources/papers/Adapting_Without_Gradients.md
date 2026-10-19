@@ -1,7 +1,7 @@
 ---
 title: "Adapting Without Gradients: Affine Statistics Transport and What Its Certificate Can Tell You"
 description: Promoted on 2026-10-17
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 locale: en
 arxiv_id: 2609.00374
 published: 2026-10-17

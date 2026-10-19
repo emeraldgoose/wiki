@@ -4,8 +4,8 @@ description: Promoted on 2026-10-17
 published: 2026-10-17
 source_url: "https://aws.amazon.com/blogs/big-data/connect-amazon-sagemaker-unified-studio-to-microsoft-power-bi-part-1-iam-identity-center-idc-based-domains/"
 blog: "AWS Big Data"
-locale: "en"
-tags: [source, article, en]
+locale: en
+tags: [source, article, en, en]
 ---
 
 # Connect SageMaker Unified Studio to Power BI Part 1 - IDC-Based Domains

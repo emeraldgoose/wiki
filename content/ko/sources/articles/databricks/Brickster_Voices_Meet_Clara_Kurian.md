@@ -1,7 +1,7 @@
 ---
 title: "Brickster Voices: Clara Kurian을 만나다"
-description: "Databricks 최초의 APJ 대학 채용 리크루터가 인도 캠퍼스 채용 구축기를 들려준다 — 2.5억 달러 이상 투자, 2022년 이후 270% 인력 성장, 51명 벵갈루루 인턴 프로그램 — 그리고 주니어 데이터·AI 인재를 가르는 기준을 설명한다."
-tags: [source, databricks, university-recruiting, india, early-career, ko]
+description: "Databricks 최초의 APJ 대학 채용 리크루터가 인도 캠퍼스 채용 구축기를 들려준다 — 2.5억 달러 이상 투자, 2022년 이후 270% 인력 성장, 51명 벵갈루루 인턴 프로그램 — 그리고 주니어 데이터·AI 인재를 가르는 기준을 설명한다." (한국어 번역)
+tags: [source, databricks, university-recruiting, india, early-career, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/brickster-voices-meet-clara-kurian"
 blog: databricks

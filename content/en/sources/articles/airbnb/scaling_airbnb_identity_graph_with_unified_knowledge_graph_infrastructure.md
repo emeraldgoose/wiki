@@ -1,7 +1,7 @@
 ---
 title: "Scaling Airbnb's Identity Graph with a Unified Knowledge Graph Infrastructure"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/scaling-airbnbs-identity-graph-with-a-unified-knowledge-graph-infrastructure-ebac467b7836"
 blog: airbnb

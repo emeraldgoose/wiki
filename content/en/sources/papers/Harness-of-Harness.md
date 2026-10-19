@@ -1,7 +1,7 @@
 ---
 title: "Harness-of-Harness: Multi-Day Autonomous Software Development with Continual Improvement"
 description: Promoted on 2026-10-17
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 locale: en
 source_url: "https://arxiv.org/abs/2609.01481"
 arxiv_id: 2609.01481

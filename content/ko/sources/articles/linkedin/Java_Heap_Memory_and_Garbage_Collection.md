@@ -1,8 +1,8 @@
 ---
 title: 고성능 서비스를 위한 Java 힙 메모리와 가비지 컬렉션 튜닝
-description: FollowFeed의 JVM 여정 — CMS에서 JDK 21 generational ZGC로, P999 55% 감소·용량 28% 증가
+description: FollowFeed의 JVM 여정 — CMS에서 JDK 21 generational ZGC로, P999 55% 감소·용량 28% 증가 (한국어 번역)
 date: 2024-09-13
-tags: [source, linkedin, jvm, gc, performance, followfeed, ko]
+tags: [source, linkedin, jvm, gc, performance, followfeed, ko, ko]
 locale: ko
 source_url: "https://www.linkedin.com/blog/engineering/infrastructure/java-heap-memory-and-garbage-collection-tuning-for-high-performance-services"
 blog: linkedin

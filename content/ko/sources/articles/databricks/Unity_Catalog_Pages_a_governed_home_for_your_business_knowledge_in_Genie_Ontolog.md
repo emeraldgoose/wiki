@@ -1,7 +1,7 @@
 ---
 title: "Unity Catalog Pages: Genie Ontology 속 비즈니스 지식의 거버넌스 홈"
-description: "데이터 스튜어드가 비즈니스 용어의 권위 정의를 한 번만 정의해 Genie One과 에이전트를 grounding하는 Unity Catalog Pages(Beta)."
-tags: [source, databricks, unity-catalog, genie, knowledge-management, ko]
+description: "데이터 스튜어드가 비즈니스 용어의 권위 정의를 한 번만 정의해 Genie One과 에이전트를 grounding하는 Unity Catalog Pages(Beta)." (한국어 번역)
+tags: [source, databricks, unity-catalog, genie, knowledge-management, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/unity-catalog-pages-governed-home-your-business-knowledge-genie-ontology"
 blog: databricks

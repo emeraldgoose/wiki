@@ -1,7 +1,7 @@
 ---
 title: "Spotify Technology 소개: Spotify에서 검증된 기술을 여러분에게"
-description: Portal·Confidence·Xirp·Backstage를 Spotify Technology 브랜드로 통합 — 하나의 컨텍스트 레이어와 에이전트 런타임으로 제품 개발 전 과정을 잇는다
-tags: [source, spotify, platform-engineering, developer-tools, ko]
+description: Portal·Confidence·Xirp·Backstage를 Spotify Technology 브랜드로 통합 — 하나의 컨텍스트 레이어와 에이전트 런타임으로 제품 개발 전 과정을 잇는다 (한국어 번역)
+tags: [source, spotify, platform-engineering, developer-tools, ko, ko]
 locale: ko
 source_url: "https://engineering.atspotify.com/2026/10/introducing-spotify-technology-proven-at-spotify-now-yours"
 blog: spotify

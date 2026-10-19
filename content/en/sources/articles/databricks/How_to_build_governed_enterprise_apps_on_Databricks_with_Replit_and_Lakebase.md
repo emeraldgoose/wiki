@@ -1,7 +1,7 @@
 ---
 title: "How to build governed enterprise apps on Databricks with Replit and Lakebase"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/how-build-governed-enterprise-apps-databricks-replit-and-lakebase"
 blog: databricks

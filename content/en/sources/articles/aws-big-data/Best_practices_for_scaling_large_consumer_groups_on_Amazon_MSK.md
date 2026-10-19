@@ -1,7 +1,7 @@
 ---
 title: "Best practices for scaling large consumer groups on Amazon MSK"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/best-practices-for-scaling-large-consumer-groups-on-amazon-msk"
 blog: aws-big-data

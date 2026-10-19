@@ -1,7 +1,7 @@
 ---
 title: "From post-training to production: How TinyFish runs its web-native model on Databricks AI Runtime"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/post-training-production-how-tinyfish-runs-its-web-native-model-databricks-ai-runtime"
 blog: databricks

@@ -1,7 +1,7 @@
 ---
 title: "Building Service Topology at Scale"
-description: 스트리밍 우선 실시간 서비스 의존성 지도 — 3단계 집계, 중개자 해소, 타임트래블과 프로덕션 교훈
-tags: [source, article, netflix, distributed-systems, observability, data-engineering, backend, ko]
+description: 스트리밍 우선 실시간 서비스 의존성 지도 — 3단계 집계, 중개자 해소, 타임트래블과 프로덕션 교훈 (한국어 번역)
+tags: [source, article, netflix, distributed-systems, observability, data-engineering, backend, ko, ko]
 locale: ko
 source_url: "https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8"
 blog: netflix

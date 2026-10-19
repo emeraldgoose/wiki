@@ -1,7 +1,7 @@
 ---
 title: "Flow Reasoning Models: Turning Flows Into Efficient Recurrent Reasoners"
 description: Promoted on 2026-10-17
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 locale: en
 arxiv_id: 2606.29150
 published: 2026-10-17

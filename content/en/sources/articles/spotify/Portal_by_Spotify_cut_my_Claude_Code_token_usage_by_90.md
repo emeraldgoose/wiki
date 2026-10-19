@@ -1,7 +1,7 @@
 ---
 title: "Portal by Spotify cut my Claude Code token usage by 90%"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90"
 blog: spotify

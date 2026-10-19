@@ -1,7 +1,7 @@
 ---
 title: "AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity"
 blog: spotify

@@ -1,7 +1,7 @@
 ---
 title: 코딩은 더 이상 병목이 아니다
-description: 팀과 에이전트로 개발자 경험을 확장하는 Spotify 수석 아키텍트의 전략 — AI 도구 사용률 99%, 플릿 단위 자동화, 백그라운드 코딩 에이전트 Honk
-tags: [source, rss, spotify, developer-experience, ai-coding, ko]
+description: 팀과 에이전트로 개발자 경험을 확장하는 Spotify 수석 아키텍트의 전략 — AI 도구 사용률 99%, 플릿 단위 자동화, 백그라운드 코딩 에이전트 Honk (한국어 번역)
+tags: [source, rss, spotify, developer-experience, ai-coding, ko, ko]
 locale: ko
 source_url: "https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint"
 blog: spotify

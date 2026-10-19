@@ -1,7 +1,7 @@
 ---
 title: "Now GA: Building permission-aware Databricks Apps with on-behalf-of-user authorization"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/now-ga-building-permission-aware-databricks-apps-behalf-user-authorization"
 blog: databricks

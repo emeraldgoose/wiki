@@ -1,7 +1,7 @@
 ---
 title: "Databricks에서 SQL로 open-Jev 실행하기"
-description: "오픈 가중치 Jev 결정 모델을 서버리스 GPU에 서빙하고 ai_query로 거버넌스 데이터에 SQL에서 직접 호출한다."
-tags: [source, databricks, model-serving, sql, llm, ko]
+description: "오픈 가중치 Jev 결정 모델을 서버리스 GPU에 서빙하고 ai_query로 거버넌스 데이터에 SQL에서 직접 호출한다." (한국어 번역)
+tags: [source, databricks, model-serving, sql, llm, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/running-open-jev-sql-databricks"
 blog: databricks

@@ -1,7 +1,7 @@
 ---
 title: Content Ingestion and Podcast Video Incident Report
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://engineering.atspotify.com/2026/7/content-ingestion-and-podcast-video-incident-report"
 blog: spotify

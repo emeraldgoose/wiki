@@ -1,7 +1,7 @@
 ---
 title: "Why Spotify Is Not Using Bayesian A/B Testing"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing"
 blog: spotify

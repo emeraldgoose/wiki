@@ -1,7 +1,7 @@
 ---
 title: "프라이빗 네트워크 게이트웨이 소개"
-description: "Databricks 프라이빗 네트워크 게이트웨이(PNG)가 단일 관리형 게이트웨이로 서버리스 네트워킹 단순화—한 번 구성하면 기존 라우트, DNS, 방화벽 규칙이 서버리스 워크로드 도달 범위 제어. Azure 퍼블릭 프리뷰, AWS 프라이빗 프리뷰."
-tags: [source, databricks, private-network-gateway, serverless, networking, security, ko]
+description: "Databricks 프라이빗 네트워크 게이트웨이(PNG)가 단일 관리형 게이트웨이로 서버리스 네트워킹 단순화—한 번 구성하면 기존 라우트, DNS, 방화벽 규칙이 서버리스 워크로드 도달 범위 제어. Azure 퍼블릭 프리뷰, AWS 프라이빗 프리뷰." (한국어 번역)
+tags: [source, databricks, private-network-gateway, serverless, networking, security, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/introducing-private-network-gateway"
 blog: databricks

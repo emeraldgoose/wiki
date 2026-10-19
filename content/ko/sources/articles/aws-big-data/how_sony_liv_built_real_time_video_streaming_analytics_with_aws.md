@@ -3,8 +3,8 @@ title: "소니 라이브가 AWS로 실시간 비디오 스트리밍 분석 구�
 source_url: "https://aws.amazon.com/blogs/big-data/how-sony-liv-built-real-time-video-streaming-analytics-with-aws/"
 blog: "AWS Big Data"
 published: "2026-09-08"
-locale: "ko"
-tags: [source, aws-big-data, data-engineering, ko]
+locale: ko
+tags: [source, aws-big-data, data-engineering, ko, ko]
 ---
 
 [Translation needed]

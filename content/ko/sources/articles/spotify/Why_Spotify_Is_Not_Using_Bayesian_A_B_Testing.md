@@ -1,7 +1,7 @@
 ---
 title: "Spotify가 베이지안 A/B 테스트를 쓰지 않는 이유"
-description: 베이지안 A/B 테스트는 만능이 아니라 설정(중단 규칙×사전분포×우도)의 집합 — 기본값은 빈도주의 peeking을 재현할 뿐이고, 진짜 나은 설정은 유지 비용이 더 크다는 Spotify 통계팀의 주장
-tags: [source, spotify, experimentation, statistics, ab-testing, ko]
+description: 베이지안 A/B 테스트는 만능이 아니라 설정(중단 규칙×사전분포×우도)의 집합 — 기본값은 빈도주의 peeking을 재현할 뿐이고, 진짜 나은 설정은 유지 비용이 더 크다는 Spotify 통계팀의 주장 (한국어 번역)
+tags: [source, spotify, experimentation, statistics, ab-testing, ko, ko]
 locale: ko
 source_url: "https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing"
 blog: spotify

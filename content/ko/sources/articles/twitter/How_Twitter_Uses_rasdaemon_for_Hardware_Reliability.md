@@ -1,7 +1,7 @@
 ---
 title: Twitter의 rasdaemon 활용 하드웨어 신뢰성
-description: 수십만 호스트의 하드웨어 오류 텔레메트리를 폐기된 mcelog/edac-utils에서 rasdaemon으로 일원화한 사례
-tags: [source, twitter, x, hardware, reliability, linux, rasdaemon, ko]
+description: 수십만 호스트의 하드웨어 오류 텔레메트리를 폐기된 mcelog/edac-utils에서 rasdaemon으로 일원화한 사례 (한국어 번역)
+tags: [source, twitter, x, hardware, reliability, linux, rasdaemon, ko, ko]
 locale: ko
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/how-twitter-uses-rasdaemon-for-hardware-reliability"
 blog: twitter

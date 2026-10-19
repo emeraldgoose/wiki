@@ -1,7 +1,7 @@
 ---
 title: Knowledge Distillation During Mid-Training Favors Reasoning over Factual Recall
-description: '중간학습 Switch 증류 — 추론 1.6배, 사실 회상 96.7% 보존'
-tags: [source, paper, huggingface, machine-learning, ko]
+description: '중간학습 Switch 증류 — 추론 1.6배, 사실 회상 96.7% 보존' (한국어 번역)
+tags: [source, paper, huggingface, machine-learning, ko, ko]
 locale: ko
 source_url: "https://arxiv.org/abs/2609.01532"
 arxiv_id: 2609.01532

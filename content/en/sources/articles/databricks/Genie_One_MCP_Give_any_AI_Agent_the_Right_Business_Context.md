@@ -1,7 +1,7 @@
 ---
 title: "Genie One MCP: Give any AI Agent the Right Business Context"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/genie-one-mcp-give-any-ai-agent-right-business-context"
 blog: databricks

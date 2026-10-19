@@ -1,7 +1,7 @@
 ---
 title: "Training, Learning and Inference: Unified Dynamics"
 description: Promoted on 2026-10-17
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 locale: en
 published: 2026-10-17
 ---

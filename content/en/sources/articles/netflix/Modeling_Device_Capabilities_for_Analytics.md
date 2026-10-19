@@ -1,7 +1,7 @@
 ---
 title: "Modeling Device Capabilities for Analytics"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://netflixtechblog.com/modeling-device-capabilities-for-analytics-e7607acebde8"
 blog: netflix

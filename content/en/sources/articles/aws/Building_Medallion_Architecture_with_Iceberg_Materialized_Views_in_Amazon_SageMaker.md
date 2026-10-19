@@ -2,7 +2,7 @@
 title: Building Medallion Architecture with Iceberg Materialized Views in Amazon SageMaker
 description: Promoted on 2026-10-17
 date: 2026-09-02
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/building-medallion-architecture-with-iceberg-materialized-views-in-amazon-sagemaker/"
 blog: aws

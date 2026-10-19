@@ -1,11 +1,11 @@
 ---
 title: "공통 기반에 대한 증거로서의 시선: MapTask와 MUNDEX의 교차 코퍼스 분석"
-description: "MapTask·MUNDEX 공통 분석 — 정렬된 이해는 과제 응시 증가·상대 응시 감소·낮은 엔트로피와 동반. 단독 신호가 아닌 보조 단서"
+description: "MapTask·MUNDEX 공통 분석 — 정렬된 이해는 과제 응시 증가·상대 응시 감소·낮은 엔트로피와 동반. 단독 신호가 아닌 보조 단서" (한국어 번역)
 locale: ko
 source_url: "https://arxiv.org/abs/2609.18011"
 arxiv_id: "2609.18011"
 authors: ["Nan Li", "Albert Gatt", "Massimo Poesio"]
-tags: [source, paper, machine-learning, ko]
+tags: [source, paper, machine-learning, ko, ko]
 ---
 
 # 공통 기반에 대한 증거로서의 시선: MapTask와 MUNDEX의 교차 코퍼스 분석

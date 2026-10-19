@@ -1,7 +1,7 @@
 ---
 title: "OLTP vs. OLAP: Choosing Between Transactional and Analytical Databases"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/oltp-vs-olap-choosing-between-transactional-and-analytical-databases"
 blog: databricks

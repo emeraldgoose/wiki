@@ -1,7 +1,7 @@
 ---
 title: "Modeling Device Capabilities for Analytics"
-description: 코덱·DRM·디스플레이·RAM 등 디바이스 역량 모델(누적+히스토그램 테이블)로 기능 출시를 데이터 기반으로 결정
-tags: [source, article, netflix, data-engineering, data-modeling, analytics, devices, ko]
+description: 코덱·DRM·디스플레이·RAM 등 디바이스 역량 모델(누적+히스토그램 테이블)로 기능 출시를 데이터 기반으로 결정 (한국어 번역)
+tags: [source, article, netflix, data-engineering, data-modeling, analytics, devices, ko, ko]
 locale: ko
 source_url: "https://netflixtechblog.com/modeling-device-capabilities-for-analytics-e7607acebde8"
 blog: netflix

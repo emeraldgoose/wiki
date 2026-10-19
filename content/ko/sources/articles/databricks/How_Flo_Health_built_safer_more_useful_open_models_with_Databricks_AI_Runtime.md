@@ -1,7 +1,7 @@
 ---
 title: "Databricks AI Runtime으로 더 안전하고 유용한 개방형 모델을 만든 Flo Health"
-description: "Flo Health는 임상 검증 AI 저지와 프라이버시 우선 합성 데이터를 Databricks AI Runtime 위 post-training 파이프라인으로 전환해 파인튜닝된 개방형 모델의 의료 안전성을 34%에서 61%로, 유용성을 42%에서 76%로 끌어올렸다."
-tags: [source, databricks, llm-post-training, ai-judges, supervised-fine-tuning, preference-optimization, ko]
+description: "Flo Health는 임상 검증 AI 저지와 프라이버시 우선 합성 데이터를 Databricks AI Runtime 위 post-training 파이프라인으로 전환해 파인튜닝된 개방형 모델의 의료 안전성을 34%에서 61%로, 유용성을 42%에서 76%로 끌어올렸다." (한국어 번역)
+tags: [source, databricks, llm-post-training, ai-judges, supervised-fine-tuning, preference-optimization, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/how-flo-health-built-safer-more-useful-open-models-databricks-ai-runtime"
 blog: databricks

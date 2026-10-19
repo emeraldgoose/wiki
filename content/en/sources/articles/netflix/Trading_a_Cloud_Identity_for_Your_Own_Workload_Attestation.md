@@ -1,7 +1,7 @@
 ---
 title: "Trading a Cloud Identity for Your Own: Workload Attestation on Managed Compute"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://netflixtechblog.com/trading-a-cloud-identity-for-your-own-workload-attestation-on-managed-compute-516d5a29b252"
 blog: netflix

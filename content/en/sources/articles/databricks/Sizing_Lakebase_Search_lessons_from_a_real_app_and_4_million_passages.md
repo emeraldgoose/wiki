@@ -1,7 +1,7 @@
 ---
 title: "Sizing Lakebase Search: Lessons from a Real App and 4 Million Passages"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/sizing-lakebase-search-lessons-real-app-and-4-million-passages"
 blog: databricks

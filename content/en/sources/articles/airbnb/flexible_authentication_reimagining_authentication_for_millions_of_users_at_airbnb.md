@@ -1,7 +1,7 @@
 ---
 title: "Flexible Authentication: Reimagining Authentication for Millions of Users at Airbnb"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/flexible-authentication-reimagining-authentication-for-millions-of-users-at-airbnb-3a8a4c917137"
 blog: airbnb

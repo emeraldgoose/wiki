@@ -1,7 +1,7 @@
 ---
 title: "Databricks, Gartner Magic Quadrant for Analytics and Business Intelligence Platforms에서 Visionary로 선정"
-description: "Databricks가 Gartner Magic Quadrant for Analytics and BI Platforms 20주년 역사상 최고 데뷔 성적으로 Visionary 진입, 'Completeness of Vision' 최고 점수 중 하나 달성. 이 인정은 컨버지드 Data + AI 플랫폼, 에이전틱 분석, 중앙화된 시맨틱스로의 전환을 검증한다."
-tags: [source, databricks, gartner, magic-quadrant, analytics, bi, visionary, ko]
+description: "Databricks가 Gartner Magic Quadrant for Analytics and BI Platforms 20주년 역사상 최고 데뷔 성적으로 Visionary 진입, 'Completeness of Vision' 최고 점수 중 하나 달성. 이 인정은 컨버지드 Data + AI 플랫폼, 에이전틱 분석, 중앙화된 시맨틱스로의 전환을 검증한다." (한국어 번역)
+tags: [source, databricks, gartner, magic-quadrant, analytics, bi, visionary, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/databricks-visionary-gartnerr-magic-quadranttm-analytics-and-business-intelligence-platforms"
 blog: databricks

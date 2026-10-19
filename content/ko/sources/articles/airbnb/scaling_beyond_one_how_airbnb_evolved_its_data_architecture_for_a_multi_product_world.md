@@ -1,7 +1,7 @@
 ---
 title: "하나를 넘어: 멀티 프로덕트 세상을 위한 Airbnb 데이터 아키텍처 진화"
-description: Homes + Experiences + Services를 위한 오프라인 웨어하우스 진화 — 분리 vs 모놀리식 모델링 프레임워크
-tags: [source, airbnb, data-engineering, data-modeling, data-mesh, warehouse, ko]
+description: Homes + Experiences + Services를 위한 오프라인 웨어하우스 진화 — 분리 vs 모놀리식 모델링 프레임워크 (한국어 번역)
+tags: [source, airbnb, data-engineering, data-modeling, data-mesh, warehouse, ko, ko]
 locale: ko
 source_url: "https://medium.com/airbnb-engineering/scaling-beyond-one-how-airbnb-evolved-its-data-architecture-for-a-multi-product-world-6125645d470c"
 blog: airbnb

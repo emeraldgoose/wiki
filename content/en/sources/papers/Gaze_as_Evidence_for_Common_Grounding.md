@@ -5,7 +5,7 @@ locale: en
 source_url: "https://arxiv.org/abs/2609.18011"
 arxiv_id: "2609.18011"
 authors: ["Nan Li", "Albert Gatt", "Massimo Poesio"]
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 published: 2026-10-17
 ---
 

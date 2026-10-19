@@ -1,7 +1,7 @@
 ---
 title: Twitter's Blobstore Hardware Lifecycle Monitoring and Reporting Service
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/twitters-blobstore-hardware-lifecycle-monitoring-and-reporting-service"
 blog: twitter

@@ -1,8 +1,8 @@
 ---
 title: 하루 10조 샘플 — Databricks 전통 모니터링을 넘어서
-description: 50억 활성 시계열·하루 10조 샘플 규모로 Databricks 모니터링을 확장한 방법 — Pantheon(Thanos 포크), 카디널리티 방어 집계, Hydra 레이크하우스 트러블슈팅 플랫폼.
+description: 50억 활성 시계열·하루 10조 샘플 규모로 Databricks 모니터링을 확장한 방법 — Pantheon(Thanos 포크), 카디널리티 방어 집계, Hydra 레이크하우스 트러블슈팅 플랫폼. (한국어 번역)
 date: 2026-05-05
-tags: [databricks, monitoring, observability, thanos, prometheus, timeseries, data-engineering, lakehouse, delta-lake, cardinality, ko]
+tags: [databricks, monitoring, observability, thanos, prometheus, timeseries, data-engineering, lakehouse, delta-lake, cardinality, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/10-trillion-samples-day-scaling-beyond-traditional-monitoring-infra-databricks"
 blog: databricks

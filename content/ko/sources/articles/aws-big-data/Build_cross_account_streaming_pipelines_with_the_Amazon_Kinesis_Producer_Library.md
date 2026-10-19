@@ -1,7 +1,7 @@
 ---
 title: "Kinesis Producer Library와 Kinesis Client Library로 크로스 계정 스트리밍 파이프라인 구축하기"
-description: "중앙 Kinesis 스트림에 KPL 프로듀서·KCL 3.5 컨슈머를 붙이는 3계정 레퍼런스 아키텍처 — 크로스 계정 IAM 역할, 리소스 기반 정책, 고객 관리형 KMS 키, Enhanced Fan-Out을 CloudFormation으로 배포하는 전 과정을 안내한다."
-tags: [source, aws-big-data, kinesis, streaming, cross-account, iam, kms, ko]
+description: "중앙 Kinesis 스트림에 KPL 프로듀서·KCL 3.5 컨슈머를 붙이는 3계정 레퍼런스 아키텍처 — 크로스 계정 IAM 역할, 리소스 기반 정책, 고객 관리형 KMS 키, Enhanced Fan-Out을 CloudFormation으로 배포하는 전 과정을 안내한다." (한국어 번역)
+tags: [source, aws-big-data, kinesis, streaming, cross-account, iam, kms, ko, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/build-cross-account-streaming-pipelines-with-the-amazon-kinesis-producer-library-and-kinesis-client-library"
 blog: aws-big-data

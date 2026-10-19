@@ -1,7 +1,7 @@
 ---
 title: "Deploy and manage coding agents at scale with the Unity Gateway CLI"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/deploy-and-manage-coding-agents-scale-unity-gateway-cli"
 blog: databricks

@@ -1,11 +1,11 @@
 ---
 title: "ZGCM-1: 수학 및 에이전트 검색을 위한 완전 공개 및 극효율 파운데이션 모델"
-description: "완전 공개 7B 밀집 모델 — 수십 배 큰 모델과 경쟁, time-to-loss 4.2배"
+description: "완전 공개 7B 밀집 모델 — 수십 배 큰 모델과 경쟁, time-to-loss 4.2배" (한국어 번역)
 published: 2026-09-11
 arxiv_id: "2609.13356"
 url: "https://arxiv.org/abs/2609.13356"
 authors: ["Jiyan He", "Guang Liang", "Hao Liu", "Haoxiang Guan", "Jinbo Sun", "Junyi Guo", "Wenjun Feng", "Yantai Xie", "Yifei Shen", "Bin Shao", "Chuyang Wei", "Kai Chen", "Kexin Zhou", "Minghang Zhu", "Shuxin Zheng", "Tie-Yan Liu", "Taine Zhao", "Wenhui Zhu", "Xueyin Xu", "Xiaoqing Zhang", "Yatao Li", "Yuxuan Ren"]
-tags: [source, paper, machine-learning, ko]
+tags: [source, paper, machine-learning, ko, ko]
 locale: ko
 ---
 

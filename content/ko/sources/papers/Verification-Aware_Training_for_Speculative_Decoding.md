@@ -1,7 +1,7 @@
 ---
 title: Verification-Aware Training for Speculative Decoding
-description: '검증 인식 드래프트 학습 — 수락 길이 +11.4%, 벽시계 +8.7%'
-tags: [source, paper, huggingface, ko]
+description: '검증 인식 드래프트 학습 — 수락 길이 +11.4%, 벽시계 +8.7%' (한국어 번역)
+tags: [source, paper, huggingface, ko, ko]
 locale: ko
 source_url: "https://arxiv.org/abs/2608.30135"
 arxiv_id: 2608.30135

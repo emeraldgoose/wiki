@@ -6,8 +6,8 @@ arxiv_id: "2609.24220"
 hf_url: "https://huggingface.co/papers/2609.24220"
 authors: "Abhivanth Sivaprakash, Pratik Singh, Aman Manocha, Uday Allu"
 organization: "Yellow.ai AI Research Team"
-tags: [source, paper, en]
-locale: "en"
+tags: [source, paper, en, en]
+locale: en
 ---
 
 # Document Retrieval-Aware Chunking

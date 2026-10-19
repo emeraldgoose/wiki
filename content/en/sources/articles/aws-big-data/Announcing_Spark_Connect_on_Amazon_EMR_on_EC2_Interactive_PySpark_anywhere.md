@@ -1,7 +1,7 @@
 ---
 title: "Announcing Spark Connect on Amazon EMR on EC2: Interactive PySpark anywhere"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/announcing-spark-connect-on-amazon-emr-on-ec2-interactive-pyspark-anywhere"
 blog: aws-big-data

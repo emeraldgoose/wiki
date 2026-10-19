@@ -1,7 +1,7 @@
 ---
 title: Measuring the Impact of Twitter Network Latency with CausalImpact
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://blog.x.com/engineering/en_us/topics/insights/2022/measuring-the-impact-of-twitter-network-latency-with-causalimpac"
 blog: twitter

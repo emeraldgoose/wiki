@@ -1,7 +1,7 @@
 ---
 title: "The guest journey, updated in real time: extending Airbnb's sequence recommender with Chronon"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://airbnb.tech/ai-ml/the-guest-journey-updated-in-real-time-extending-airbnbs-sequence-recommender-with-chronon"
 blog: airbnb

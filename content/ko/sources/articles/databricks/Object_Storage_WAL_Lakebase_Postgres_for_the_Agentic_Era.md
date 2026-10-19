@@ -1,8 +1,8 @@
 ---
 title: 객체 스토리지와 WAL — 에이전트 시대의 Lakebase Postgres
-description: WAL-온-객체스토리지를 source of truth로 삼아 컴퓨트와 스토리지를 분리한 Lakebase Postgres — 브랜칭, 즉시 복원, 타임트래블, 단일 복사본 LTAP 분석.
+description: WAL-온-객체스토리지를 source of truth로 삼아 컴퓨트와 스토리지를 분리한 Lakebase Postgres — 브랜칭, 즉시 복원, 타임트래블, 단일 복사본 LTAP 분석. (한국어 번역)
 date: 2026-08-27
-tags: [databricks, lakebase, postgres, oltp, ltap, object-storage, wal, ai-agents, database, ko]
+tags: [databricks, lakebase, postgres, oltp, ltap, object-storage, wal, ai-agents, database, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/object-storage-wal-lakebase-postgres-agentic-era"
 blog: databricks

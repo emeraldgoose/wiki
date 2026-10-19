@@ -1,11 +1,11 @@
 ---
 title: "SageMaker Unified Studio를 Power BI에 연결하기 Part 2 - IAM 기반 도메인"
-description: "Athena ODBC SageMakerIam 인증으로 IAM 기반 도메인의 SageMaker Unified Studio에 Power BI를 직접 연결: SSO 권한 세트, DSN 및 DSN-less 구성, 게이트웨이 IAM 역할."
+description: "Athena ODBC SageMakerIam 인증으로 IAM 기반 도메인의 SageMaker Unified Studio에 Power BI를 직접 연결: SSO 권한 세트, DSN 및 DSN-less 구성, 게이트웨이 IAM 역할." (한국어 번역)
 published: "2026-09-15"
 source_url: "https://aws.amazon.com/blogs/big-data/connect-amazon-sagemaker-unified-studio-to-microsoft-power-bi-part-2-iam-based-domains/"
 blog: "AWS Big Data"
-locale: "ko"
-tags: [aws, sagemaker, athena, power-bi, odbc, iam, iam-identity-center, bi, ko]
+locale: ko
+tags: [aws, sagemaker, athena, power-bi, odbc, iam, iam-identity-center, bi, ko, ko]
 ---
 
 # SageMaker Unified Studio를 Power BI에 연결하기 Part 2 - IAM 기반 도메인

@@ -1,7 +1,7 @@
 ---
 title: "합성 테스트를 넘어서: Airbnb의 실제 데이터베이스 워크로드 캡처와 리플레이"
-description: "ProxySQL 캡처 기반 실제 트래픽 리플레이로 부하 테스트, 업그레이드 검증, 성능 디버깅을 수행한 Airbnb 사례."
-tags: [source, airbnb, mysql, testing, capacity-planning, ko]
+description: "ProxySQL 캡처 기반 실제 트래픽 리플레이로 부하 테스트, 업그레이드 검증, 성능 디버깅을 수행한 Airbnb 사례." (한국어 번역)
+tags: [source, airbnb, mysql, testing, capacity-planning, ko, ko]
 locale: ko
 source_url: "https://airbnb.tech/infrastructure/beyond-synthetic-testing-capturing-and-replaying-real-database-workloads-at-airbnb"
 blog: airbnb

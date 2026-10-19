@@ -1,7 +1,7 @@
 ---
 title: "Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models"
 description: Promoted on 2026-10-17
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 locale: en
 arxiv_id: 2608.27550
 published: 2026-10-17

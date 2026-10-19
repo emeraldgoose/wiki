@@ -1,7 +1,7 @@
 ---
 title: "SageMaker Unified Studio Tooling 블루프린트에 IAM 권한 경계 적용"
-description: "Tooling 블루프린트 역할에 커스텀 권한 경계를 붙여 SCP 거버넌스 계정에서도 SageMaker Unified Studio를 도입합니다."
-tags: [source, aws-big-data, sagemaker, iam, security, ko]
+description: "Tooling 블루프린트 역할에 커스텀 권한 경계를 붙여 SCP 거버넌스 계정에서도 SageMaker Unified Studio를 도입합니다." (한국어 번역)
+tags: [source, aws-big-data, sagemaker, iam, security, ko, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/enforce-iam-permissions-boundaries-for-amazon-sagemaker-unified-studio-tooling-blueprints"
 blog: aws-big-data

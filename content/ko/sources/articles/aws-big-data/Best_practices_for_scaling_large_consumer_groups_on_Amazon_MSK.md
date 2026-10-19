@@ -1,7 +1,7 @@
 ---
 title: "Amazon MSK에서 대규모 컨슈머 그룹 확장을 위한 모범 사례"
-description: "컨슈머 그룹 메타데이터 크기를 추정하고 내부 토픽 한도를 올려 MSK 리밸런스 실패를 방지합니다."
-tags: [source, aws-big-data, kafka, msk, ko]
+description: "컨슈머 그룹 메타데이터 크기를 추정하고 내부 토픽 한도를 올려 MSK 리밸런스 실패를 방지합니다." (한국어 번역)
+tags: [source, aws-big-data, kafka, msk, ko, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/best-practices-for-scaling-large-consumer-groups-on-amazon-msk"
 blog: aws-big-data

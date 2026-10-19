@@ -1,7 +1,7 @@
 ---
 title: "How Concurrence governs clinical AI at a trillion-token scale with Unity Gateway"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/how-concurrence-governs-clinical-ai-trillion-token-scale-unity-gateway"
 blog: databricks

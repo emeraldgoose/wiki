@@ -1,7 +1,7 @@
 ---
 title: "Power real-time applications and agents with Document Intelligence"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/power-real-time-applications-and-agents-document-intelligence"
 blog: databricks

@@ -1,7 +1,7 @@
 ---
 title: "DiagEvo: Diagnosis-Guided Self-Evolution via Hierarchical Error Memory"
-description: '실패 기록 기반 자가진화 — 9 벤치 전부 최고, Qwen3-8B 수학 72.3%'
-tags: [source, paper, huggingface, ko]
+description: '실패 기록 기반 자가진화 — 9 벤치 전부 최고, Qwen3-8B 수학 72.3%' (한국어 번역)
+tags: [source, paper, huggingface, ko, ko]
 locale: ko
 source_url: "https://arxiv.org/abs/2609.00768"
 arxiv_id: 2609.00768

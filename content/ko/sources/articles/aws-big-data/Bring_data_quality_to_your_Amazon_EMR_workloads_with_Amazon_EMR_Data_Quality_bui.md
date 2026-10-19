@@ -1,7 +1,7 @@
 ---
 title: "AWS Glue Data Quality 기반 Amazon EMR Data Quality로 EMR 워크로드에 데이터 품질 적용하기"
-description: "Amazon EMR Data Quality는 AWS Glue의 DQDL 규칙 엔진을 EC2·Serverless·EKS의 EMR Spark 잡 안에서 네이티브 실행한다 — 애드혹 인라인 검증과 Glue Data Catalog 관리형 규칙셋 기반 Iceberg Write-Audit-Publish 승격 게이트 두 패턴을 지원한다."
-tags: [source, aws-big-data, emr, data-quality, glue, apache-iceberg, spark, ko]
+description: "Amazon EMR Data Quality는 AWS Glue의 DQDL 규칙 엔진을 EC2·Serverless·EKS의 EMR Spark 잡 안에서 네이티브 실행한다 — 애드혹 인라인 검증과 Glue Data Catalog 관리형 규칙셋 기반 Iceberg Write-Audit-Publish 승격 게이트 두 패턴을 지원한다." (한국어 번역)
+tags: [source, aws-big-data, emr, data-quality, glue, apache-iceberg, spark, ko, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/bring-data-quality-to-your-amazon-emr-workloads-with-amazon-emr-data-quality-built-on-aws-glue-data-quality"
 blog: aws-big-data

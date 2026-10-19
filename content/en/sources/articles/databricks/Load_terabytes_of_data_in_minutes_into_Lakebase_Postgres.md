@@ -1,7 +1,7 @@
 ---
 title: "Load terabytes of data in minutes into Lakebase Postgres"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/load-terabytes-data-minutes-lakebase-postgres"
 blog: databricks

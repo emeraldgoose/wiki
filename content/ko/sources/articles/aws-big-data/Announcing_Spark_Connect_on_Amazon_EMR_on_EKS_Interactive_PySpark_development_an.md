@@ -1,7 +1,7 @@
 ---
 title: "EKS의 Amazon EMR에서 Spark Connect 발표: 어디서든 대화형 PySpark 개발"
-description: "기존 EKS 클러스터에서 Spark를 대규모로 실행하면서 로컬 IDE·노트북에서 PySpark를 개발·디버깅합니다."
-tags: [source, aws-big-data, spark, emr, kubernetes, ko]
+description: "기존 EKS 클러스터에서 Spark를 대규모로 실행하면서 로컬 IDE·노트북에서 PySpark를 개발·디버깅합니다." (한국어 번역)
+tags: [source, aws-big-data, spark, emr, kubernetes, ko, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/announcing-spark-connect-on-amazon-emr-on-eks"
 blog: aws-big-data

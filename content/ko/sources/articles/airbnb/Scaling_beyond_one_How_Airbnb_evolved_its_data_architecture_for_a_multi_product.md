@@ -1,7 +1,7 @@
 ---
 title: "하나를 넘어 확장하기: 멀티 프로덕트 시대 Airbnb 데이터 아키텍처의 진화"
-description: "중앙 원칙과 도메인별 분리·통합 모델 선택을 결합한 Airbnb 멀티 프로덕트 오프라인 데이터 모델링 프레임워크."
-tags: [source, airbnb, data-warehouse, data-modeling, ko]
+description: "중앙 원칙과 도메인별 분리·통합 모델 선택을 결합한 Airbnb 멀티 프로덕트 오프라인 데이터 모델링 프레임워크." (한국어 번역)
+tags: [source, airbnb, data-warehouse, data-modeling, ko, ko]
 locale: ko
 source_url: "https://airbnb.tech/uncategorized/scaling-beyond-one-how-airbnb-evolved-its-data-architecture-for-a-multi-product-world"
 blog: airbnb

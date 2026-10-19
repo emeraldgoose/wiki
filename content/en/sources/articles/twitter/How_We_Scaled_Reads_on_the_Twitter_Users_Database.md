@@ -1,7 +1,7 @@
 ---
 title: How We Scaled Reads on the Twitter Users Database
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/how-we-scaled-reads-on-the-twitter-users-database"
 blog: twitter

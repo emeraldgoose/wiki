@@ -1,7 +1,7 @@
 ---
 title: "Lakeflow Designer 2026년 10월 업데이트: 새로운 기능 총정리"
-description: "Lakeflow Designer에 데이터 정리(Prepare), 중복 제거(Unique), 품질 검사(Guardrails)용 새 노코드 오퍼레이터 추가, 출력 옵션 확장(머티리얼라이즈드 뷰, 테이블 병합, 파일 내보내기), 캔버스 개선(시각적 버전 히스토리, 실시간 커서 공존)."
-tags: [source, databricks, lakeflow-designer, no-code, data-preparation, ko]
+description: "Lakeflow Designer에 데이터 정리(Prepare), 중복 제거(Unique), 품질 검사(Guardrails)용 새 노코드 오퍼레이터 추가, 출력 옵션 확장(머티리얼라이즈드 뷰, 테이블 병합, 파일 내보내기), 캔버스 개선(시각적 버전 히스토리, 실시간 커서 공존)." (한국어 번역)
+tags: [source, databricks, lakeflow-designer, no-code, data-preparation, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/whats-new-lakeflow-designer-october-2026-roundup"
 blog: databricks

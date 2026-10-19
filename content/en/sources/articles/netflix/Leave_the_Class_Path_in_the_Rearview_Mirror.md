@@ -1,7 +1,7 @@
 ---
 title: "Leave the Class Path in the Rearview Mirror"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be"
 blog: netflix

@@ -1,7 +1,7 @@
 ---
 title: "Personalizing Airbnb Search by Learning from the Guest Journey"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/personalizing-airbnb-search-by-learning-from-the-guest-journey-bcefd1915624"
 blog: airbnb

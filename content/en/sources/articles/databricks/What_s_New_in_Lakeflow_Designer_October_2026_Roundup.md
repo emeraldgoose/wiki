@@ -1,7 +1,7 @@
 ---
 title: "What's New in Lakeflow Designer - October 2026 Roundup"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/whats-new-lakeflow-designer-october-2026-roundup"
 blog: databricks

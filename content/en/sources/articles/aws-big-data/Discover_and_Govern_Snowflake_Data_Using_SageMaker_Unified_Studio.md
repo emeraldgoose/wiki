@@ -4,8 +4,8 @@ description: Promoted on 2026-10-17
 published: 2026-10-17
 source_url: "https://aws.amazon.com/blogs/big-data/discover-and-govern-snowflake-data-using-sagemaker-unified-studio/"
 blog: "AWS Big Data"
-locale: "en"
-tags: [source, article, en]
+locale: en
+tags: [source, article, en, en]
 ---
 
 # Discover and Govern Snowflake Data Using SageMaker Unified Studio

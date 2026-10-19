@@ -1,7 +1,7 @@
 ---
 title: "RADAR: Catch gray failures with anomaly detection"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/radar-catch-gray-failures-anomaly-detection"
 blog: databricks

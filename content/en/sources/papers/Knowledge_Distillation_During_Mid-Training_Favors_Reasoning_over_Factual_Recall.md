@@ -1,7 +1,7 @@
 ---
 title: Knowledge Distillation During Mid-Training Favors Reasoning over Factual Recall
 description: Promoted on 2026-10-17
-tags: [source, paper, en]
+tags: [source, paper, en, en]
 locale: en
 source_url: "https://arxiv.org/abs/2609.01532"
 arxiv_id: 2609.01532

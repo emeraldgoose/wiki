@@ -1,7 +1,7 @@
 ---
 title: "Configure domain-level VPC networking in Amazon SageMaker Unified Studio"
 description: Promoted on 2026-10-17
-tags: [source, article, en]
+tags: [source, article, en, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/configure-domain-level-vpc-networking-in-amazon-sagemaker-unified-studio"
 blog: aws-big-data

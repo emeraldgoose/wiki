@@ -1,7 +1,7 @@
 ---
 title: "Project Lighthouse — Part 3: project-lighthouse-anonymize 소개"
-description: 차별 측정용 프라이버시 보호 익명화 라이브러리 오픈소스 공개; Core Mondrian 알고리즘과 데이터 품질 프레임워크
-tags: [source, airbnb, privacy, anonymization, open-source, data-engineering, ko]
+description: 차별 측정용 프라이버시 보호 익명화 라이브러리 오픈소스 공개; Core Mondrian 알고리즘과 데이터 품질 프레임워크 (한국어 번역)
+tags: [source, airbnb, privacy, anonymization, open-source, data-engineering, ko, ko]
 locale: ko
 source_url: "https://medium.com/airbnb-engineering/project-lighthouse-part-3-introducing-project-lighthouse-anonymize-74f8b26653fb"
 blog: airbnb

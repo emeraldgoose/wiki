@@ -1,7 +1,7 @@
 ---
 title: 콘텐츠 인제스천 및 팟캐스트 비디오 장애 보고서
-description: 6월 24일 팟캐스트 비디오 발행 지연에 대한 Spotify 포스트모템 — 네 가지 수렴 원인과 퍼블리싱 파이프라인 신뢰성 프로그램
-tags: [source, rss, spotify, reliability, incident-report, ko]
+description: 6월 24일 팟캐스트 비디오 발행 지연에 대한 Spotify 포스트모템 — 네 가지 수렴 원인과 퍼블리싱 파이프라인 신뢰성 프로그램 (한국어 번역)
+tags: [source, rss, spotify, reliability, incident-report, ko, ko]
 locale: ko
 source_url: "https://engineering.atspotify.com/2026/7/content-ingestion-and-podcast-video-incident-report"
 blog: spotify
