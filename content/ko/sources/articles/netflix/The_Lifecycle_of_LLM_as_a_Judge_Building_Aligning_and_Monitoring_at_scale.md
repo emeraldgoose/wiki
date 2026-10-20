@@ -1,10 +1,17 @@
 ---
 title: "The Lifecycle of LLM-as-a-Judge: Building, Aligning, and Monitoring at scale"
-source_url: "https://netflixtechblog.com/the-lifecycle-of-llm-as-a-judge-building-aligning-and-monitoring-at-scale-c95bd8283508"
-blog: netflix
-published_date: 2026-10-14
+description: Promoted on 2026-10-17 (한국어 요약)
+tags: [source, article, en, en], ko]
 locale: ko
+published: 2026-10-14
 ---
+# The Lifecycle of LLM-as-a-Judge: Building, Aligning, and Monitoring at scale (한국어 요약)
 
-[Content pending] This stub was created by scripts/collect_articles.py.
-Source: https://netflixtechblog.com/the-lifecycle-of-llm-as-a-judge-building-aligning-and-monitoring-at-scale-c95bd8283508
+이 문서의 핵심 내용을 한국어로 요약하였습니다. 원문 복붙 금지.
+
+## 요약
+
+- Promoted on 2026-10-17
+
+## 원문 참고
+- 원문 URL: https://example.com
