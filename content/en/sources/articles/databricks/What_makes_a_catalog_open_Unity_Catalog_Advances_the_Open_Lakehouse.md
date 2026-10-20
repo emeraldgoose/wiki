@@ -1,10 +1,9 @@
----
 title: "What makes a catalog open? Unity Catalog Advances the Open Lakehouse"
+description: "AI article summary"
+tags: [source, article, en]
 source_url: "https://www.databricks.com/blog/what-makes-catalog-open-unity-catalog-advances-open-lakehouse"
 blog: databricks
 published_date: 2026-10-19
 locale: en
----
-
 [Content pending] This stub was created by scripts/collect_articles.py.
 Source: https://www.databricks.com/blog/what-makes-catalog-open-unity-catalog-advances-open-lakehouse
