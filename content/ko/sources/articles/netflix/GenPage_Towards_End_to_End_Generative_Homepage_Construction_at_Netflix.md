@@ -1,6 +1,6 @@
 ---
 title: "GenPage: Towards End-to-End Generative Homepage Construction at Netflix"
-description: 행·엔티티·레이아웃을 함께 생성하는 단일 자회귀 트랜스포머 — 프리트레이닝+WBC/RL 포스트트레이닝 (한국어 번역)
+description: 행·엔티티·레이아웃을 함께 생성하는 단일 자회귀 트랜스포머 — 프리트레이닝+WBC/RL 포스트트레이닝
 tags: [source, article, netflix, recommendation, generative-models, reinforcement-learning, ai-engineering, ko, ko]
 locale: ko
 source_url: "https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08"

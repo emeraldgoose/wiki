@@ -1,6 +1,6 @@
 ---
 title: "SAS: 컨텍스트 랭킹의 종단간 최적화를 통한 단순 어텐션 희소화 (Simple Attention Sparsification via End-to-End Optimization of Context Ranking)"
-description: "사후학습 어텐션 희소화를 위한 종단간 학습 컨텍스트 랭킹" (한국어 번역)
+description: "사후학습 어텐션 희소화를 위한 종단간 학습 컨텍스트 랭킹"
 arxiv_id: "2609.13141"
 HF_URL: "https://huggingface.co/papers/2609.13141"
 published: 2026-09-11

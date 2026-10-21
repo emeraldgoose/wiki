@@ -1,6 +1,6 @@
 ---
 title: "FishDB: LinkedIn 피드 확장을 위한 범용 검색 엔진"
-description: FollowFeed를 대체한 Rust 기반 범용 리트리벌 엔진 — scatter-gather 서빙, 람다 인입, 2배 효율 (한국어 번역)
+description: FollowFeed를 대체한 Rust 기반 범용 리트리벌 엔진 — scatter-gather 서빙, 람다 인입, 2배 효율
 date: 2025-11-17
 tags: [source, linkedin, feed, retrieval, rust, infrastructure, ko, ko]
 locale: ko

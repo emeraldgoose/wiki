@@ -1,6 +1,6 @@
 ---
 title: 스트림 처리 (Stream Processing)
-description: en/concepts/data-engineering/stream-processing.md 한국어 번역 요약
+description: en/concepts/data-engineering/stream-processing.md
 tags: [concept, data-engineering, stream-processing, ko]
 locale: ko
 ---

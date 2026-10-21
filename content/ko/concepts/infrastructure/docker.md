@@ -1,6 +1,6 @@
 ---
 title: Docker
-description: en/concepts/infrastructure/docker.md 한국어 번역 요약
+description: en/concepts/infrastructure/docker.md
 tags: [concept, infrastructure, docker, container, buildkit, ko]
 locale: ko
 ---

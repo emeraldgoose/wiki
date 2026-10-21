@@ -1,6 +1,6 @@
 ---
 title: "Databricks 위에 에이전트 기반 보안 리뷰를 직접 만든 방법"
-description: "Unity Catalog·Lakeflow Jobs·Databricks Apps 위의 7개 전담 리뷰 에이전트로 정형 업무를 자동화하고 어려운 판단은 사람에게 남긴 실전 기록." (한국어 번역)
+description: "Unity Catalog·Lakeflow Jobs·Databricks Apps 위의 7개 전담 리뷰 에이전트로 정형 업무를 자동화하고 어려운 판단은 사람에게 남긴 실전 기록."
 tags: [source, databricks, unity-catalog, ai-agents, security, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/how-i-built-agent-based-security-reviews-databricks"

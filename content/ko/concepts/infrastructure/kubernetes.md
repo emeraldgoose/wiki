@@ -1,6 +1,6 @@
 ---
 title: Kubernetes
-description: en/concepts/infrastructure/kubernetes.md 한국어 번역 요약
+description: en/concepts/infrastructure/kubernetes.md
 tags: [concept, infrastructure, kubernetes, orchestration, operators, ko]
 locale: ko
 ---

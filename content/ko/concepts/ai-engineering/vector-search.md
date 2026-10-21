@@ -1,6 +1,6 @@
 ---
 title: 벡터 검색 (Vector Search)
-description: en/concepts/ai-engineering/vector-search.md 한국어 번역 요약
+description: en/concepts/ai-engineering/vector-search.md
 tags: [concept, ai-engineering, vector-search, ko]
 locale: ko
 ---

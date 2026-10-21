@@ -1,6 +1,6 @@
 ---
 title: "PARSER: Read in Parallel, Reason in Depth for Long-Context LLM Agents"
-description: "문서 탐색과 추론 깊이 분리 — 장문맥 에이전트의 병렬 읽기" (한국어 번역)
+description: "문서 탐색과 추론 깊이 분리 — 장문맥 에이전트의 병렬 읽기"
 arxiv_id: 2609.06702
 HF_URL: https://huggingface.co/papers/2609.06702
 published: 2026-09-06

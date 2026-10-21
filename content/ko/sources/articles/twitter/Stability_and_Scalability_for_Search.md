@@ -1,6 +1,6 @@
 ---
 title: 검색의 안정성과 확장성
-description: 트래픽 급증 속에서도 Twitter Elasticsearch 플랫폼을 지켜낸 프록시·Kafka 기반 인제스트 서비스·백필 서비스 (한국어 번역)
+description: 트래픽 급증 속에서도 Twitter Elasticsearch 플랫폼을 지켜낸 프록시·Kafka 기반 인제스트 서비스·백필 서비스
 tags: [source, twitter, x, search, elasticsearch, kafka, scalability, ko, ko]
 locale: ko
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2022/stability-and-scalability-for-search"

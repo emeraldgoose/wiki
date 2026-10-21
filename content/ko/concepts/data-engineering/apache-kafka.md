@@ -1,6 +1,6 @@
 ---
 title: Apache Kafka
-description: en/concepts/data-engineering/apache-kafka.md 한국어 번역 요약
+description: en/concepts/data-engineering/apache-kafka.md
 tags: [concept, data-engineering, kafka, ko]
 locale: ko
 ---

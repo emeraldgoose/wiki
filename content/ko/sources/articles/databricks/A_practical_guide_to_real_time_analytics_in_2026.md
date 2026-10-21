@@ -1,6 +1,6 @@
 ---
 title: "2026년 실시간 분석 실무 가이드"
-description: "대부분 조직은 별도 실시간 서빙 레이어가 필요하지 않다. 세 가지 차원(신선도, 지연시간, 동시성)으로 실시간 워크로드 평가하고, Databricks Lakehouse//RT와 Reyden 엔진으로 레이크하우스에서 직접 밀리초 분석 제공." (한국어 번역)
+description: "대부분 조직은 별도 실시간 서빙 레이어가 필요하지 않다. 세 가지 차원(신선도, 지연시간, 동시성)으로 실시간 워크로드 평가하고, Databricks Lakehouse//RT와 Reyden 엔진으로 레이크하우스에서 직접 밀리초 분석 제공."
 tags: [source, databricks, real-time-analytics, lakehouse, lakehouse-rt, reyden, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/practical-guide-real-time-analytics-2026"

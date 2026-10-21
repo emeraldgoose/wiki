@@ -1,6 +1,6 @@
 ---
 title: "Lakebase와 에이전틱 SDLC: 코딩 에이전트를 위한 브랜칭 데이터베이스"
-description: "copy-on-write 브랜칭, Git worktree, CI 자동화로 모든 코딩 에이전트와 PR에 격리된 Lakebase Postgres 브랜치를 제공한다." (한국어 번역)
+description: "copy-on-write 브랜칭, Git worktree, CI 자동화로 모든 코딩 에이전트와 PR에 격리된 Lakebase Postgres 브랜치를 제공한다."
 tags: [source, databricks, lakebase, coding-agents, cicd, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/lakebase-and-agentic-sdlc-branching-databases-coding-agents"

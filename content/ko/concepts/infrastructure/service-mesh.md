@@ -1,6 +1,6 @@
 ---
 title: 서비스 메시 (Service Mesh)
-description: en/concepts/infrastructure/service-mesh.md 한국어 번역 요약
+description: en/concepts/infrastructure/service-mesh.md
 tags: [concept, infrastructure, service-mesh, istio, linkerd, observability, ko]
 locale: ko
 ---

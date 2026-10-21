@@ -1,6 +1,6 @@
 ---
 title: "RADAR: 이상 탐지로 그레이 장애 잡기"
-description: "부분적 무음 장애를 4단계 이상 탐지 파이프라인으로 수 분 만에 포착해 탐지 시간을 95% 단축, 정밀도 90% 이상을 달성한다." (한국어 번역)
+description: "부분적 무음 장애를 4단계 이상 탐지 파이프라인으로 수 분 만에 포착해 탐지 시간을 95% 단축, 정밀도 90% 이상을 달성한다."
 tags: [source, databricks, observability, anomaly-detection, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/radar-catch-gray-failures-anomaly-detection"

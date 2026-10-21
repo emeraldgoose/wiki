@@ -1,6 +1,6 @@
 ---
 title: "ODA 웜 처리량으로 Kinesis Data Streams 온디맨드 용량 축소하기"
-description: "Kinesis 온디맨드 Advantage 스트림의 웜 처리량 축소 신기능: 버스트 후 샤드 용량 해제, 최근 1시간 피크 하한선, CloudWatch 모니터링." (한국어 번역)
+description: "Kinesis 온디맨드 Advantage 스트림의 웜 처리량 축소 신기능: 버스트 후 샤드 용량 해제, 최근 1시간 피크 하한선, CloudWatch 모니터링."
 published: "2026-09-14"
 source_url: "https://aws.amazon.com/blogs/big-data/scale-down-kinesis-data-streams-on-demand-capacity-with-oda-warm-throughput/"
 blog: "AWS Big Data"

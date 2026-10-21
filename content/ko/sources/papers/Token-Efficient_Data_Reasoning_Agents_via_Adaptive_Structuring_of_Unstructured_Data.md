@@ -1,6 +1,6 @@
 ---
 title: Token-Efficient Data Reasoning Agents via Adaptive Structuring of Unstructured Data
-description: en/sources/papers/Token-Efficient_Data_Reasoning_Agents_via_Adaptive_Structuring_of_Unstructured_Data.md 한국어 번역 요약 (한국어 번역)
+description: en/sources/papers/Token-Efficient_Data_Reasoning_Agents_via_Adaptive_Structuring_of_Unstructured_Data.md
 tags: [source, paper, huggingface, ko, ko]
 locale: ko
 arxiv_id: 2608.31082

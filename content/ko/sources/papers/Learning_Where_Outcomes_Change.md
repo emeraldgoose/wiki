@@ -1,6 +1,6 @@
 ---
 title: "Learning Where Outcomes Change:Credit-Addressable Reasoning for Multimodal Geometry"
-description: en/sources/papers/Learning_Where_Outcomes_Change.md 한국어 번역 요약 (한국어 번역)
+description: en/sources/papers/Learning_Where_Outcomes_Change.md
 tags: [source, paper, huggingface, ko, ko]
 locale: ko
 source_url: "https://arxiv.org/abs/2608.30457"

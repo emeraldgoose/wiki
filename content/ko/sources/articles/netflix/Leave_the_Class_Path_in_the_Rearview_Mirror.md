@@ -1,6 +1,6 @@
 ---
 title: "클래스패스는 백미러에 두고 오자"
-description: 모듈 시스템 기반·에이전트 친화적 Java CLI 도구 미리보기 — Maven 기반 해석과 기본 무결성 보장을 갖춘 ja와 jig·jfmt·jist·jdocserver 조합형 도구 (한국어 번역)
+description: 모듈 시스템 기반·에이전트 친화적 Java CLI 도구 미리보기 — Maven 기반 해석과 기본 무결성 보장을 갖춘 ja와 jig·jfmt·jist·jdocserver 조합형 도구
 tags: [source, netflix, java, modules, build-tools, ko, ko]
 locale: ko
 source_url: "https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be"

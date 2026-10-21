@@ -1,6 +1,6 @@
 ---
 title: "Funke 소개: Databricks 네이티브 HL7v2 파싱"
-description: "Smolder의 PySpark 후계자로 HL7v2 임상 메시지를 계층 그대로 네이티브 Spark 타입으로 파싱하는 오픈소스 Funke 가속기." (한국어 번역)
+description: "Smolder의 PySpark 후계자로 HL7v2 임상 메시지를 계층 그대로 네이티브 Spark 타입으로 파싱하는 오픈소스 Funke 가속기."
 tags: [source, databricks, healthcare, data-engineering, lakehouse, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/introducing-funke-native-hl7v2-parsing-databricks"

@@ -1,6 +1,6 @@
 ---
 title: "클라우드 신원을 내 것으로: 매니지드 컴퓨트에서 워크로드 애테스테이션"
-description: Netflix가 AWS EMR의 Spark 워크로드에서 IAM 신원과 사내 Metatron PKI 신원을 연결한 방법 — AWS STS 프리사인 URL과 컨트롤 평면 서명 메타데이터를 서로 독립적이면서 상호 확인 가능한 두 개의 주장으로 사용 (한국어 번역)
+description: Netflix가 AWS EMR의 Spark 워크로드에서 IAM 신원과 사내 Metatron PKI 신원을 연결한 방법 — AWS STS 프리사인 URL과 컨트롤 평면 서명 메타데이터를 서로 독립적이면서 상호 확인 가능한 두 개의 주장으로 사용
 tags: [source, rss, netflix, workload-identity, attestation, security, mTLS, PKI, aws-emr, apache-spark, ko]
 locale: ko
 source_url: "https://netflixtechblog.com/trading-a-cloud-identity-for-your-own-workload-attestation-on-managed-compute-516d5a29b252"

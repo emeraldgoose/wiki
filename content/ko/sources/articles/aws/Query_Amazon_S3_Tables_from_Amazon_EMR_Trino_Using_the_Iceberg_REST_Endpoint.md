@@ -1,6 +1,6 @@
 ---
 title: Iceberg REST 엔드포인트로 EMR Trino에서 S3 Tables 쿼리하기
-description: EMR 7.11+ Trino와 관리형 S3 Tables Iceberg 스토리지의 REST 카탈로그 연동 — CloudFormation 배포, 카탈로그 설정, ACID 대화형 분석. (한국어 번역)
+description: EMR 7.11+ Trino와 관리형 S3 Tables Iceberg 스토리지의 REST 카탈로그 연동 — CloudFormation 배포, 카탈로그 설정, ACID 대화형 분석.
 date: 2026-09-02
 tags: [aws, data-engineering, lakehouse, apache-iceberg, trino, emr, s3-tables, ko, ko]
 locale: ko

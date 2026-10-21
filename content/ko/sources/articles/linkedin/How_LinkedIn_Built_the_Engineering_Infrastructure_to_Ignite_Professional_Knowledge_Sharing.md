@@ -1,6 +1,6 @@
 ---
 title: 전문 지식 공유에 불을 붙인 LinkedIn의 엔지니어링 인프라 구축기
-description: "Collaborative Articles — LinkedIn 최초의 생성형 AI 제품 인프라: 프롬프트 툴링, 전문가 매칭, 신뢰 시스템" (한국어 번역)
+description: "Collaborative Articles — LinkedIn 최초의 생성형 AI 제품 인프라: 프롬프트 툴링, 전문가 매칭, 신뢰 시스템"
 date: 2023-11-20
 tags: [source, linkedin, generative-ai, prompt-engineering, infrastructure, ko, ko]
 locale: ko

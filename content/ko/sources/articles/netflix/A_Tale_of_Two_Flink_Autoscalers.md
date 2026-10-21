@@ -1,6 +1,6 @@
 ---
 title: "A Tale of Two Flink Autoscalers"
-description: 3만 개 Flink 잡 함대를 사내 외부 관측 오토스케일러에서 오픈소스 Flink 오토스케일러로 전환한 과정 (한국어 번역)
+description: 3만 개 Flink 잡 함대를 사내 외부 관측 오토스케일러에서 오픈소스 Flink 오토스케일러로 전환한 과정
 tags: [source, article, netflix, stream-processing, apache-flink, autoscaling, kubernetes, ko, ko]
 locale: ko
 source_url: "https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b"

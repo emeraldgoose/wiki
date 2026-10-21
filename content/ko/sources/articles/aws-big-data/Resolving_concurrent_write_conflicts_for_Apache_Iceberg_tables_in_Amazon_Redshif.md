@@ -1,6 +1,6 @@
 ---
 title: "Amazon Redshift에서 Apache Iceberg 테이블의 동시 쓰기 충돌 해결"
-description: "Amazon Redshift가 이제 작업, 파티션, 파일 세 가지 세분성에서 커밋을 리베이스해 Apache Iceberg 테이블로의 비중첩 동시 쓰기를 자동 해결—스트리밍 삽입 대 컴플라이언스 삭제 같은 독립적 쓰기의 재시도 루프 제거." (한국어 번역)
+description: "Amazon Redshift가 이제 작업, 파티션, 파일 세 가지 세분성에서 커밋을 리베이스해 Apache Iceberg 테이블로의 비중첩 동시 쓰기를 자동 해결—스트리밍 삽입 대 컴플라이언스 삭제 같은 독립적 쓰기의 재시도 루프 제거."
 tags: [source, aws-big-data, apache-iceberg, amazon-redshift, concurrency-control, data-lake, ko, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/resolving-concurrent-write-conflicts-for-apache-iceberg-tables-in-amazon-redshift"

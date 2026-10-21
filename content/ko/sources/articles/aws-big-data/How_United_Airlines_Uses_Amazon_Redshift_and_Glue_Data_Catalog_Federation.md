@@ -1,6 +1,6 @@
 ---
 title: "United Airlines가 Databricks 관리 데이터를 조회하기 위해 Redshift와 Glue Data Catalog 연합을 사용하는 방법"
-description: "Databricks Unity Catalog에서 Glue 연합 카탈로그와 Lake Formation을 거쳐 Redshift Serverless로 이어지는 United Airlines 연합 체인: 리소스 링크 패턴과 측정된 비용 효과." (한국어 번역)
+description: "Databricks Unity Catalog에서 Glue 연합 카탈로그와 Lake Formation을 거쳐 Redshift Serverless로 이어지는 United Airlines 연합 체인: 리소스 링크 패턴과 측정된 비용 효과."
 published: "2026-09-15"
 source_url: "https://aws.amazon.com/blogs/big-data/how-united-airlines-uses-amazon-redshift-and-aws-glue-data-catalog-federation-to-query-databricks-managed-data/"
 blog: "AWS Big Data"

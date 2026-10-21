@@ -1,6 +1,6 @@
 ---
 title: "CASTLE: 첫 실제 쿼리 전 자연어 검색 학습하기"
-description: "Airbnb가 비식별화된 예약 데이터에서 합성 쿼리와 관련도 레이블을 공동 생성해 자연어 검색의 콜드-스타트 문제를 해결한다. CASTLE은 9.2배 더 나은 분포 정렬(KL 발산 1.01 대 9.33 기준선)과 91-93% 인간 레이블 동의를 달성한다." (한국어 번역)
+description: "Airbnb가 비식별화된 예약 데이터에서 합성 쿼리와 관련도 레이블을 공동 생성해 자연어 검색의 콜드-스타트 문제를 해결한다. CASTLE은 9.2배 더 나은 분포 정렬(KL 발산 1.01 대 9.33 기준선)과 91-93% 인간 레이블 동의를 달성한다."
 tags: [source, airbnb, natural-language-search, cold-start, synthetic-data, information-retrieval, ko, ko]
 locale: ko
 source_url: "https://airbnb.tech/ai-ml/castle-training-natural-language-search-before-the-first-real-query"

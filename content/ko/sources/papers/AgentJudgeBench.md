@@ -1,6 +1,6 @@
 ---
 title: "AgentJudgeBench: A Multi-Difficulty Benchmark for Evaluating LLM Judges on Agentic Tool-Calling"
-description: '에이전틱 도구 호출 심판의 첫 벤치마크 — 3,808 인스턴스, 난이도별 77~82% 상한, 정답 과잉 앵커링' (한국어 번역)
+description: '에이전틱 도구 호출 심판의 첫 벤치마크 — 3,808 인스턴스, 난이도별 77~82% 상한, 정답 과잉 앵커링'
 tags: [source, paper, huggingface, ko, ko]
 locale: ko
 source_url: "https://arxiv.org/abs/2608.26623"

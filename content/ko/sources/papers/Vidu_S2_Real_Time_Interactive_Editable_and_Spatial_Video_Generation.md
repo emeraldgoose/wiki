@@ -1,6 +1,6 @@
 ---
 title: "Vidu S2: 실시간 인터랙티브, 편집 가능 및 공간 비디오 생성"
-description: "실시간 720p 아바타(S2-Avatar, 동적 참조 지원)와 실시간 스트림 편집(S2-Editing, 스타일·의상·캐릭터·배경), 공간 비디오 탐색" (한국어 번역)
+description: "실시간 720p 아바타(S2-Avatar, 동적 참조 지원)와 실시간 스트림 편집(S2-Editing, 스타일·의상·캐릭터·배경), 공간 비디오 탐색"
 locale: ko
 source_url: "https://arxiv.org/abs/2609.11638"
 published: 2026-09-10

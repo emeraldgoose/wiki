@@ -1,6 +1,6 @@
 ---
 title: SHAPE of Chain-of-Thought in Math Reasoning
-description: 'CoT의 의미 공간·휴리스틱 분석 — 다양성 장려가 정확도 향상' (한국어 번역)
+description: 'CoT의 의미 공간·휴리스틱 분석 — 다양성 장려가 정확도 향상'
 tags: [source, paper, huggingface, machine-learning, ko, ko]
 locale: ko
 source_url: "https://arxiv.org/abs/2608.28600"

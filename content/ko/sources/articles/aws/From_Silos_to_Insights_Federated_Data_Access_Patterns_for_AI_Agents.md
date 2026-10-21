@@ -1,6 +1,6 @@
 ---
 title: 사일로에서 인사이트로 - AI 에이전트를 위한 연합 데이터 접근 패턴
-description: "MCP와 Bedrock AgentCore를 통한 AI 에이전트 연합 데이터 접근: 카탈로그 우선(Glue + Athena), 직접 접근(Aurora MySQL), 하이브리드 패턴과 게이트웨이 라우팅 및 거버넌스." (한국어 번역)
+description: "MCP와 Bedrock AgentCore를 통한 AI 에이전트 연합 데이터 접근: 카탈로그 우선(Glue + Athena), 직접 접근(Aurora MySQL), 하이브리드 패턴과 게이트웨이 라우팅 및 거버넌스."
 date: 2026-09-04
 tags: [aws, ai-agents, mcp, bedrock-agentcore, athena, glue, aurora, data-governance, ko]
 locale: ko

@@ -1,6 +1,6 @@
 ---
 title: "생성형 AI로 Amazon SageMaker Catalog의 비정형 데이터 조회하기"
-description: "SageMaker Catalog에 발행된 보강된 비정형 자산을 구독하고 노코드 Bedrock 채팅 에이전트 또는 프로그래밍 방식 모델 추론으로 조회." (한국어 번역)
+description: "SageMaker Catalog에 발행된 보강된 비정형 자산을 구독하고 노코드 Bedrock 채팅 에이전트 또는 프로그래밍 방식 모델 추론으로 조회."
 published: "2026-09-23"
 source_url: "https://aws.amazon.com/blogs/big-data/query-unstructured-data-in-amazon-sagemaker-catalog-using-generative-ai"
 blog: aws-big-data

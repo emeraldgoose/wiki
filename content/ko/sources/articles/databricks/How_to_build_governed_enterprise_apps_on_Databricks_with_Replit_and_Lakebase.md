@@ -1,6 +1,6 @@
 ---
 title: "Replit·Lakebase로 Databricks 거버넌스 엔터프라이즈 앱 만들기"
-description: "Replit Agent와 Databricks Apps·Lakebase Postgres로 평서문 프롬프트를 라이브 데이터 위의 거버넌스 프로덕션 앱으로 바꾸는 법." (한국어 번역)
+description: "Replit Agent와 Databricks Apps·Lakebase Postgres로 평서문 프롬프트를 라이브 데이터 위의 거버넌스 프로덕션 앱으로 바꾸는 법."
 tags: [source, databricks, lakebase, databricks-apps, unity-catalog, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/how-build-governed-enterprise-apps-databricks-replit-and-lakebase"

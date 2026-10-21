@@ -1,6 +1,6 @@
 ---
 title: "Document Retrieval-Aware Chunking"
-description: "D-RAC은 PDF 정규화와 1회 멀티모달 Markdown 변환 후 ID 기반 청크 계획으로 에이전틱 청킹과 동등한 검색 품질을 95.7퍼센트 적은 출력 토큰으로 달성한다." (한국어 번역)
+description: "D-RAC은 PDF 정규화와 1회 멀티모달 Markdown 변환 후 ID 기반 청크 계획으로 에이전틱 청킹과 동등한 검색 품질을 95.7퍼센트 적은 출력 토큰으로 달성한다."
 published: "2026-09-21"
 arxiv_id: "2609.24220"
 hf_url: "https://huggingface.co/papers/2609.24220"

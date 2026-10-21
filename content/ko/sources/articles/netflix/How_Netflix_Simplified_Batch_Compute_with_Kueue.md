@@ -1,6 +1,6 @@
 ---
 title: "How Netflix Simplified Batch Compute with Kueue"
-description: 커스텀 CMB 스케줄러에서 Titus 위 Kueue로 수백만 배치 잡을 무중단 이전 — 선점 기반 공정 공유 (한국어 번역)
+description: 커스텀 CMB 스케줄러에서 Titus 위 Kueue로 수백만 배치 잡을 무중단 이전 — 선점 기반 공정 공유
 tags: [source, article, netflix, kubernetes, kueue, batch, platform-engineering, ko, ko]
 locale: ko
 source_url: "https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c"

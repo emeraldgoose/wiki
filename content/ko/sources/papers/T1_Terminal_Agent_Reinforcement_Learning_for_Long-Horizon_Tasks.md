@@ -1,6 +1,6 @@
 ---
 title: "T1: 장기 터미널 에이전트를 위한 강화학습 (Terminal Agent Reinforcement Learning for Long-Horizon Tasks)"
-description: "클라우드 샌드박스 300+ 도구 호출로 RL 학습한 122B-MoE 터미널 에이전트" (한국어 번역)
+description: "클라우드 샌드박스 300+ 도구 호출로 RL 학습한 122B-MoE 터미널 에이전트"
 arxiv_id: "2609.11042"
 HF_URL: "https://huggingface.co/papers/2609.11042"
 published: 2026-09-10

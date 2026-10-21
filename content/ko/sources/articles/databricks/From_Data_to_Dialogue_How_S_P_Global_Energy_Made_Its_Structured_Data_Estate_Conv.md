@@ -1,6 +1,6 @@
 ---
 title: "데이터에서 대화로: S&P Global Energy가 정형 데이터 자산을 대화형으로 바꾼 방법"
-description: "데이터셋 그룹별 Genie Agent, 매니지드 MCP 서버, FastMCP 프록시 3층 구조로 원자재 데이터를 대화형 엔드포인트로 바꾼 S&P Global Energy 사례." (한국어 번역)
+description: "데이터셋 그룹별 Genie Agent, 매니지드 MCP 서버, FastMCP 프록시 3층 구조로 원자재 데이터를 대화형 엔드포인트로 바꾼 S&P Global Energy 사례."
 tags: [source, databricks, genie, mcp, ai-agents, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/data-dialogue-how-sp-global-energy-made-its-structured-data-estate-conversational-databricks"

@@ -1,6 +1,6 @@
 ---
 title: Delta Lake
-description: en/concepts/data-engineering/delta-lake.md 한국어 번역 요약
+description: en/concepts/data-engineering/delta-lake.md
 tags: [concept, data-engineering, delta-lake, ko]
 locale: ko
 ---

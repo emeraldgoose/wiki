@@ -1,6 +1,6 @@
 ---
 title: "아키텍처 현대화로 비용 33%를 절감한 Moovit 사례"
-description: "과부하된 Redshift 단일 클러스터를 EMR과 Redshift Serverless를 곁들인 멀티엔진 레이크하우스로 나누어 클러스터를 절반으로 줄이고 파이프라인 비용 33%를 절감." (한국어 번역)
+description: "과부하된 Redshift 단일 클러스터를 EMR과 Redshift Serverless를 곁들인 멀티엔진 레이크하우스로 나누어 클러스터를 절반으로 줄이고 파이프라인 비용 33%를 절감."
 published: "2026-09-03"
 source_url: "https://aws.amazon.com/blogs/big-data/how-moovit-achieved-33-cost-optimization-through-architectural-modernization"
 blog: aws-big-data

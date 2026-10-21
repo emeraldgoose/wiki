@@ -1,6 +1,6 @@
 ---
 title: "Unity Gateway CLI로 코딩 에이전트를 대규모로 배포·관리하기"
-description: "관리자는 모델·도구·예산을 중앙에서 거버넌스하고 개발자는 선호 에이전트를 그대로 쓰는 Unity Gateway CLI(`ug`) 소개." (한국어 번역)
+description: "관리자는 모델·도구·예산을 중앙에서 거버넌스하고 개발자는 선호 에이전트를 그대로 쓰는 Unity Gateway CLI(`ug`) 소개."
 tags: [source, databricks, unity-catalog, ai-agents, unity-gateway, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/deploy-and-manage-coding-agents-scale-unity-gateway-cli"

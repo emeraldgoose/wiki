@@ -1,6 +1,6 @@
 ---
 title: "캘리포니아는 Databricks로 행동건강 공개 카운티 프로파일을 어떻게 만들었나"
-description: "58개 카운티의 행동건강 데이터를 하나의 공개 대시보드로 묶어 BHSA 투명성과 감독을 실현한 캘리포니아 DHCS 사례." (한국어 번역)
+description: "58개 카운티의 행동건강 데이터를 하나의 공개 대시보드로 묶어 BHSA 투명성과 감독을 실현한 캘리포니아 DHCS 사례."
 tags: [source, databricks, lakehouse, public-sector, data-engineering, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/how-california-built-its-behavioral-health-public-county-profile-databricks"

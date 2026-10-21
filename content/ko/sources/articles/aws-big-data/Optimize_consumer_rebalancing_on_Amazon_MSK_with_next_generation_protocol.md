@@ -1,6 +1,6 @@
 ---
 title: "차세대 프로토콜로 Amazon MSK 컨슈머 리밸런싱 최적화하기"
-description: "Kafka 4.0의 KIP-848 서버 주도 컨슈머 프로토콜을 MSK에서 활성화해 리밸런스 스톰을 없애고, 잔여 저속 리밸런스 진단법 정리." (한국어 번역)
+description: "Kafka 4.0의 KIP-848 서버 주도 컨슈머 프로토콜을 MSK에서 활성화해 리밸런스 스톰을 없애고, 잔여 저속 리밸런스 진단법 정리."
 published: "2026-10-01"
 source_url: "https://aws.amazon.com/blogs/big-data/optimize-consumer-rebalancing-on-amazon-msk-with-next-generation-protocol"
 blog: aws-big-data

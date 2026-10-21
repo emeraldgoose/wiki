@@ -1,6 +1,6 @@
 ---
 title: "거버넌스 데이터 공유로 국방 공급망 가시성 풀기"
-description: "원시 기록을 중앙화하지 않고 실시간 원가·공급망 근거를 주는 연방형 Databricks 데이터 교환으로 국방 조달 가시성을 확보한다." (한국어 번역)
+description: "원시 기록을 중앙화하지 않고 실시간 원가·공급망 근거를 주는 연방형 Databricks 데이터 교환으로 국방 조달 가시성을 확보한다."
 tags: [source, databricks, data-sharing, unity-catalog, governance, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/solving-defense-supply-chain-visibility-through-governed-data-sharing"

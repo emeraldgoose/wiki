@@ -1,6 +1,6 @@
 ---
 title: 검색 증강 생성 (RAG)
-description: en/concepts/ai-engineering/rag.md 한국어 번역 요약
+description: en/concepts/ai-engineering/rag.md
 tags: [concept, ai-engineering, rag, ko]
 locale: ko
 ---

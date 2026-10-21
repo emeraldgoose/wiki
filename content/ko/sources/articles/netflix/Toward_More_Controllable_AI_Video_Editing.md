@@ -1,6 +1,6 @@
 ---
 title: "Toward More Controllable AI Video Editing"
-description: 아티스트 제어형 생성 편집을 위한 Vera 레이어드 비디오 디퓨전과 VOID 물리 타당 인페인팅 (한국어 번역)
+description: 아티스트 제어형 생성 편집을 위한 Vera 레이어드 비디오 디퓨전과 VOID 물리 타당 인페인팅
 tags: [source, article, netflix, generative-models, video, diffusion, computer-vision, ko, ko]
 locale: ko
 source_url: "https://netflixtechblog.com/toward-more-controllable-ai-video-editing-an-early-research-exploration-at-netflix-eb8160ed60a2"

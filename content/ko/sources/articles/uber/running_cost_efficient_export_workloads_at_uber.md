@@ -1,6 +1,6 @@
 ---
 title: Uber에서 비용 효율적인 익스포트 워크로드 운영하기
-description: Apache Hudi 컬럼 통계와 테이블 정렬로 풀테이블 익스포트 스캔을 선택적 저접촉 조회로 전환한 Uber GCS 레이크하우스 사례 (한국어 번역)
+description: Apache Hudi 컬럼 통계와 테이블 정렬로 풀테이블 익스포트 스캔을 선택적 저접촉 조회로 전환한 Uber GCS 레이크하우스 사례
 tags: [source, uber, data-engineering, hudi, lakehouse, gcs, cost-optimization, ko, ko]
 locale: ko
 source_url: "https://www.uber.com/us/en/blog/running-cost-efficient-export/"

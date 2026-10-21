@@ -1,6 +1,6 @@
 ---
 title: "모두가 AI 에이전트를 도입한다. 그런데 거의 아무도 ROI를 입증하지 못한다. 왜일까?"
-description: "Databricks의 Amber Roberts가 '더 빠름'이 에이전트형 AI 생산성을 보는 잘못된 렌즈인 이유, AI 구매자와 사용자 사이에 ROI 격차가 존재하는 이유, 그리고 단순한 작업 속도가 아닌 비즈니스 컨텍스트가 에이전트의 실제 엔터프라이즈 가치를 결정하는 이유를 설명한다." (한국어 번역)
+description: "Databricks의 Amber Roberts가 '더 빠름'이 에이전트형 AI 생산성을 보는 잘못된 렌즈인 이유, AI 구매자와 사용자 사이에 ROI 격차가 존재하는 이유, 그리고 단순한 작업 속도가 아닌 비즈니스 컨텍스트가 에이전트의 실제 엔터프라이즈 가치를 결정하는 이유를 설명한다."
 tags: [source, databricks, ai-agents, enterprise-ai, roi-measurement, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/everyones-adopting-ai-agents-almost-no-one-can-prove-roi-heres-why"

@@ -1,6 +1,6 @@
 ---
 title: "AWS Glue에서 DuckDB와 Amazon S3 Tables로 비용 효율적인 ETL"
-description: "Glue 6.0에 내장된 DuckDB로 SQL 중심 ETL을 수행해 S3 Tables에 Iceberg로 기록하고 Spark 대비 시간·비용을 절반으로 줄입니다." (한국어 번역)
+description: "Glue 6.0에 내장된 DuckDB로 SQL 중심 ETL을 수행해 S3 Tables에 Iceberg로 기록하고 Spark 대비 시간·비용을 절반으로 줄입니다."
 tags: [source, aws-big-data, glue, duckdb, etl, iceberg, ko, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/cost-effective-etl-with-duckdb-and-amazon-s3-tables-on-aws-glue"

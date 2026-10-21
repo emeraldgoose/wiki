@@ -1,6 +1,6 @@
 ---
 title: "Adapting Without Gradients: Affine Statistics Transport and What Its Certificate Can Tell You"
-description: en/sources/papers/Adapting_Without_Gradients.md 한국어 번역 요약 (한국어 번역)
+description: en/sources/papers/Adapting_Without_Gradients.md
 tags: [source, paper, huggingface, machine-learning, ko, ko]
 locale: ko
 arxiv_id: 2609.00374

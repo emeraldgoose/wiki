@@ -1,6 +1,6 @@
 ---
 title: Apache Spark
-description: en/concepts/data-engineering/apache-spark.md 한국어 번역 요약
+description: en/concepts/data-engineering/apache-spark.md
 tags: [concept, data-engineering, spark, ko]
 locale: ko
 ---

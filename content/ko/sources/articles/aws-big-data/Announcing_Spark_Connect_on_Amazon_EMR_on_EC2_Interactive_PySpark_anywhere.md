@@ -1,6 +1,6 @@
 ---
 title: "EC2의 Amazon EMR에서 Spark Connect 발표: 어디서든 대화형 PySpark"
-description: "Spark Connect로 자신의 IDE나 SageMaker Unified Studio에서 EC2의 EMR 클러스터를 상대로 대화형 PySpark를 실행합니다." (한국어 번역)
+description: "Spark Connect로 자신의 IDE나 SageMaker Unified Studio에서 EC2의 EMR 클러스터를 상대로 대화형 PySpark를 실행합니다."
 tags: [source, aws-big-data, spark, emr, ko, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/announcing-spark-connect-on-amazon-emr-on-ec2-interactive-pyspark-anywhere"

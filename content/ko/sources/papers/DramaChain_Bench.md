@@ -1,6 +1,6 @@
 ---
 title: "DramaChain Bench: An End-to-End Benchmark for Short-Drama Generation"
-description: '숏드라마 전 단계 벤치마크 — 5,785 아이템, 에이전틱 심판 PLCC 0.918' (한국어 번역)
+description: '숏드라마 전 단계 벤치마크 — 5,785 아이템, 에이전틱 심판 PLCC 0.918'
 tags: [source, paper, huggingface, ai-engineering, ko, ko]
 locale: ko
 source_url: "https://arxiv.org/abs/2609.00646"

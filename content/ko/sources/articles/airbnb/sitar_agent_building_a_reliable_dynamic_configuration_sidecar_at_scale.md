@@ -1,6 +1,6 @@
 ---
 title: "Sitar-Agent: 대규모 동적 설정 사이드카 구축기"
-description: 동적 설정 전달용 쿠버네티스 사이드카 — S3 스냅샷, 캐시형 풀, SQLite 전환, 메인-vs-사이드카 트레이드오프 (한국어 번역)
+description: 동적 설정 전달용 쿠버네티스 사이드카 — S3 스냅샷, 캐시형 풀, SQLite 전환, 메인-vs-사이드카 트레이드오프
 tags: [source, airbnb, infrastructure, kubernetes, configuration, distributed-systems, ko, ko]
 locale: ko
 source_url: "https://medium.com/airbnb-engineering/sitar-agent-building-a-reliable-dynamic-configuration-sidecar-at-scale-b7e00c152068"

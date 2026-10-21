@@ -1,6 +1,6 @@
 ---
 title: "E-Commerce Bench: Evaluating LLM Agents on Long-Horizon Autonomous Business Operation"
-description: '365일 상점 운영 벤치 — GPT-5.6 Sol 143만, 오픈 최고 Qwen3.8-Max' (한국어 번역)
+description: '365일 상점 운영 벤치 — GPT-5.6 Sol 143만, 오픈 최고 Qwen3.8-Max'
 tags: [source, paper, huggingface, ko, ko]
 locale: ko
 source_url: "https://arxiv.org/abs/2608.30730"

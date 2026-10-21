@@ -1,6 +1,6 @@
 ---
 title: Engineering the Next Generation of LinkedIn's Feed
-description: LinkedIn 피드 추천 스택 전면 개편 — LLM 기반 통합 리트리벌과 트랜스포머 Generative Recommender 랭킹 (한국어 번역)
+description: LinkedIn 피드 추천 스택 전면 개편 — LLM 기반 통합 리트리벌과 트랜스포머 Generative Recommender 랭킹
 date: 2026-03-12
 tags: [source, linkedin, feed, ranking, llm, recommender-systems, retrieval, ko, ko]
 locale: ko

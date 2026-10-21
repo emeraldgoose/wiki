@@ -1,6 +1,6 @@
 ---
 title: "주 단위에서 일 단위로: LLM 평가를 반복 가능한 속도로 만든 방법"
-description: 4층 LLM 운영 스택 — 이중 불확정성, 결정적 평가 캐시, 마이크로 어댑터, 종단 검증 (한국어 번역)
+description: 4층 LLM 운영 스택 — 이중 불확정성, 결정적 평가 캐시, 마이크로 어댑터, 종단 검증
 tags: [source, airbnb, llm, evaluation, ml-ops, lora, infrastructure, ko, ko]
 locale: ko
 source_url: "https://medium.com/airbnb-engineering/from-weeks-to-a-day-how-we-made-llm-evaluation-fast-enough-to-iterate-on-14e2d35198b4"

@@ -1,6 +1,6 @@
 ---
 title: "Amazon EMR 멀티카탈로그로 계정·테이블 포맷 넘나들며 조회하기"
-description: "EMR 8.1의 RedirectingSessionCatalog으로 Iceberg, Delta, Hudi, Hive 테이블을 단일 Spark 카탈로그에서 조회하고 쿼리 시점에 원격 카탈로그 자동 탐색." (한국어 번역)
+description: "EMR 8.1의 RedirectingSessionCatalog으로 Iceberg, Delta, Hudi, Hive 테이블을 단일 Spark 카탈로그에서 조회하고 쿼리 시점에 원격 카탈로그 자동 탐색."
 published: "2026-10-06"
 source_url: "https://aws.amazon.com/blogs/big-data/query-across-accounts-and-table-formats-with-multi-catalog-in-amazon-emr"
 blog: aws-big-data

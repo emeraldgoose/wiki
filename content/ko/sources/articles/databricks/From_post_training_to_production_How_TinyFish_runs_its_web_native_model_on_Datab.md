@@ -1,6 +1,6 @@
 ---
 title: "Post-training부터 프로덕션까지: TinyFish가 Databricks AI Runtime에서 웹 네이티브 모델을 운영하는 법"
-description: "TinyFish는 특화 웹 네이티브 모델의 전체 수명주기를 Databricks AI Runtime에서 운영한다 — 관리형 GPU post-training, MLflow 작업 단위 평가, 프로덕션 서빙 — 2,178개 웹 에이전트 작업에서 77.6% 성공률, 에이전트 실행당 $0.088 비용을 기록했다." (한국어 번역)
+description: "TinyFish는 특화 웹 네이티브 모델의 전체 수명주기를 Databricks AI Runtime에서 운영한다 — 관리형 GPU post-training, MLflow 작업 단위 평가, 프로덕션 서빙 — 2,178개 웹 에이전트 작업에서 77.6% 성공률, 에이전트 실행당 $0.088 비용을 기록했다."
 tags: [source, databricks, ai-agents, llm-post-training, model-serving, mlflow, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/post-training-production-how-tinyfish-runs-its-web-native-model-databricks-ai-runtime"

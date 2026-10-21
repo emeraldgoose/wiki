@@ -1,6 +1,6 @@
 ---
 title: "Genie One MCP GA: 어떤 에이전트에도 거버넌스 비즈니스 컨텍스트를"
-description: "GA된 Genie One MCP 서버가 Unity Gateway의 감사 로깅과 함께 거버넌스된 Genie 비즈니스 컨텍스트를 모든 AI 에이전트에 제공한다." (한국어 번역)
+description: "GA된 Genie One MCP 서버가 Unity Gateway의 감사 로깅과 함께 거버넌스된 Genie 비즈니스 컨텍스트를 모든 AI 에이전트에 제공한다."
 tags: [source, databricks, mcp, genie, ai-agents, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/genie-one-mcp-now-generally-available"

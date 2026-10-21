@@ -1,6 +1,6 @@
 ---
 title: Iceberg와 Flink로 동적 스트리밍 데이터 레이크 구축하기
-description: Flink 관리형 서비스 위 Iceberg Dynamic Sink의 레코드 단위 테이블 라우팅과 자동 스키마 진화 — 파이프라인 재시작 없이 신규 이벤트 타입·컬럼 대응. (한국어 번역)
+description: Flink 관리형 서비스 위 Iceberg Dynamic Sink의 레코드 단위 테이블 라우팅과 자동 스키마 진화 — 파이프라인 재시작 없이 신규 이벤트 타입·컬럼 대응.
 date: 2026-09-02
 tags: [aws, data-engineering, lakehouse, apache-iceberg, apache-flink, streaming, schema-evolution, ko, ko]
 locale: ko

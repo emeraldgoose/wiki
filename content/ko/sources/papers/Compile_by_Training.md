@@ -1,6 +1,6 @@
 ---
 title: "Compile by Training: 자연어 명세를 로컬 신경 함수로"
-description: "HuggingFace Daily Papers — 2026-09-03 — 자연어 명세를 로컬 LoRA 신경 함수로 컴파일" (한국어 번역)
+description: "HuggingFace Daily Papers — 2026-09-03 — 자연어 명세를 로컬 LoRA 신경 함수로 컴파일"
 tags: [source, paper, huggingface, ko]
 locale: ko
 arxiv_id: 2609.04199

@@ -1,6 +1,6 @@
 ---
 title: "Concurrence는 Unity Gateway로 조 단위 토큰 임상 AI를 어떻게 거버넌스하나"
-description: "불변 이벤트 기반 환자 상태, 출시 전 시뮬레이션, 컴플라이언스 우선 라우팅, Unity Gateway 단일 AI 접점으로 임상 AI를 통제한 Concurrence 사례." (한국어 번역)
+description: "불변 이벤트 기반 환자 상태, 출시 전 시뮬레이션, 컴플라이언스 우선 라우팅, Unity Gateway 단일 AI 접점으로 임상 AI를 통제한 Concurrence 사례."
 tags: [source, databricks, unity-catalog, ai-agents, unity-gateway, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/how-concurrence-governs-clinical-ai-trillion-token-scale-unity-gateway"

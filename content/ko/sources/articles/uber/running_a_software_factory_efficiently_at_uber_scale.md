@@ -1,6 +1,6 @@
 ---
 title: Uber 규모에서 소프트웨어 팩토리를 효율적으로 운영하기
-description: Uber의 AI 에이전트 코딩 비용 방정식과 최적화 레버 — 모델 선택, 토큰 효율, 매니지드 에이전트 경제성 (한국어 번역)
+description: Uber의 AI 에이전트 코딩 비용 방정식과 최적화 레버 — 모델 선택, 토큰 효율, 매니지드 에이전트 경제성
 tags: [source, uber, ai-engineering, agent, cost-optimization, software-factory, ko, ko]
 locale: ko
 source_url: "https://www.uber.com/us/en/blog/efficient-software-factory/"

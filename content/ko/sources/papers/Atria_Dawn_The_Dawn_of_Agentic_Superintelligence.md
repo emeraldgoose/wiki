@@ -1,6 +1,6 @@
 ---
 title: "Atria Dawn: 에이전트 기반 초지능의 서막"
-description: "검증 가능한 경험 파이프라인의 Atria Dawn Preview — 16 벤치 경쟁, 5개 최고. 769 작업 인간-AI 협업 연구" (한국어 번역)
+description: "검증 가능한 경험 파이프라인의 Atria Dawn Preview — 16 벤치 경쟁, 5개 최고. 769 작업 인간-AI 협업 연구"
 published: 2026-09-14
 arxiv_id: "2609.15818"
 url: "https://arxiv.org/abs/2609.15818"

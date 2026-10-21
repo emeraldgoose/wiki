@@ -1,6 +1,6 @@
 ---
 title: "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses"
-description: "RRSI는 에이전트 하네스의 재귀적 자기 개선을 제안·선택 양면에서 정규화하여 evolve 점수를 유지하면서 분포 외 벤치마크에서 최대 4.7점 전이를 달성하고 정책 토큰을 30퍼센트 절감한다." (한국어 번역)
+description: "RRSI는 에이전트 하네스의 재귀적 자기 개선을 제안·선택 양면에서 정규화하여 evolve 점수를 유지하면서 분포 외 벤치마크에서 최대 4.7점 전이를 달성하고 정책 토큰을 30퍼센트 절감한다."
 published: "2026-09-21"
 arxiv_id: "2609.24972"
 hf_url: "https://huggingface.co/papers/2609.24972"

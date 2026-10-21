@@ -1,6 +1,6 @@
 ---
 title: TensorFlow를 이용한 홈페이지 피드 멀티태스크 학습
-description: 홈페이지 피드용 통합 멀티태스크 랭킹 모델 — 공유 표현, 태스크 타워, 공동 최적화 (한국어 번역)
+description: 홈페이지 피드용 통합 멀티태스크 랭킹 모델 — 공유 표현, 태스크 타워, 공동 최적화
 date: 2021-06-03
 tags: [source, linkedin, feed, ranking, multi-task-learning, tensorflow, ko, ko]
 locale: ko

@@ -1,6 +1,6 @@
 ---
 title: Hadoop 클러스터 관리용 데이터 플랫폼 클러스터 오퍼레이터 서비스
-description: Hadoop 호스트 수명주기·쿼터·keytab을 자동화한 Twitter의 Flask 기반 Python 오퍼레이터 DCO (한국어 번역)
+description: Hadoop 호스트 수명주기·쿼터·keytab을 자동화한 Twitter의 Flask 기반 Python 오퍼레이터 DCO
 tags: [source, twitter, x, hadoop, sre, automation, operators, ko, ko]
 locale: ko
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/the-data-platform-cluster-operator-service-for-hadoop-cluster-management"

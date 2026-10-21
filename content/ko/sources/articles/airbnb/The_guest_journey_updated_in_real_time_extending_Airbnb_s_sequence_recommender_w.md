@@ -1,6 +1,6 @@
 ---
 title: "실시간으로 갱신되는 게스트 여정: Chronon으로 확장한 Airbnb 시퀀스 추천"
-description: "Chronon의 Push Mode와 실시간 모델 변환으로 게스트 임베딩 지연을 2일에서 수십 초로 줄인 Airbnb 사례." (한국어 번역)
+description: "Chronon의 Push Mode와 실시간 모델 변환으로 게스트 임베딩 지연을 2일에서 수십 초로 줄인 Airbnb 사례."
 tags: [source, airbnb, ml, recommendation, chronon, streaming, ko, ko]
 locale: ko
 source_url: "https://airbnb.tech/ai-ml/the-guest-journey-updated-in-real-time-extending-airbnbs-sequence-recommender-with-chronon"

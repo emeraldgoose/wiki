@@ -1,6 +1,6 @@
 ---
 title: 규모라는 저장 난제를 푼 Twitter Sparrow
-description: 시간 단위 배치에서 스트리밍으로 이벤트 파이프라인을 재설계해 지연을 수 시간에서 수 초로 줄인 Sparrow 프로젝트 (한국어 번역)
+description: 시간 단위 배치에서 스트리밍으로 이벤트 파이프라인을 재설계해 지연을 수 시간에서 수 초로 줄인 Sparrow 프로젝트
 tags: [source, twitter, x, streaming, beam, dataflow, pubsub, bigquery, ko, ko]
 locale: ko
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2022/twitter-sparrow-tackles-data-storage-challenges-of-scale"

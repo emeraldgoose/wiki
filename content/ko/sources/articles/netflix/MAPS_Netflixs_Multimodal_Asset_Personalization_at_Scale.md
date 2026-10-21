@@ -1,6 +1,6 @@
 ---
 title: "MAPS: Netflix's Multimodal Asset Personalization at Scale"
-description: CLIP·MediaFM 멀티모달 임베딩으로 신규 타이틀 콜드스타트를 해결하는 아트워크·비디오 프리뷰 개인화 (한국어 번역)
+description: CLIP·MediaFM 멀티모달 임베딩으로 신규 타이틀 콜드스타트를 해결하는 아트워크·비디오 프리뷰 개인화
 tags: [source, article, netflix, personalization, multimodal, embedding, recommendation, ko, ko]
 locale: ko
 source_url: "https://netflixtechblog.com/maps-netflixs-multimodal-asset-personalization-at-scale-32f96320785e"

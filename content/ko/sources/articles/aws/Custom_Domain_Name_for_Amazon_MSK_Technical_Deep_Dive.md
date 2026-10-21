@@ -1,6 +1,6 @@
 ---
 title: Amazon MSK 커스텀 도메인 (기술 심화)
-description: MSK 브로커의 OAuth audience 기반 인증 구조 — EKS IAM/STS 웹 아이덴티티 흐름과 Keycloak SSO 운영자 흐름, 제공자별 리소스 서버와 AMQPS. (한국어 번역)
+description: MSK 브로커의 OAuth audience 기반 인증 구조 — EKS IAM/STS 웹 아이덴티티 흐름과 Keycloak SSO 운영자 흐름, 제공자별 리소스 서버와 AMQPS.
 date: 2026-08-25
 tags: [aws, kafka, msk, auth, oauth, iam, kubernetes, ko, ko]
 locale: ko

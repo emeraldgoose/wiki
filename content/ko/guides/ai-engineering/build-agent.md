@@ -1,6 +1,6 @@
 ---
 title: AI Agent 구축 — 가이드 (번역)
-description: en/guides/ai-engineering/build-agent.md 한국어 번역 요약
+description: en/guides/ai-engineering/build-agent.md
 tags: [guide, ai-engineering, agent, system1-system2, ko]
 locale: ko
 ---

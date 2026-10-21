@@ -1,6 +1,6 @@
 ---
 title: "Flow Reasoning Models: Turning Flows Into Efficient Recurrent Reasoners"
-description: "Flow Reasoning Models는 discrete flow 언어 모델을 self-conditioning으로 recurrent reasoner로 바꾸고 Fixed-Point Forcing으로 안정화; Sudoku-Extreme 99.5퍼센트, 44배 적은 FLOPs" (한국어 번역)
+description: "Flow Reasoning Models는 discrete flow 언어 모델을 self-conditioning으로 recurrent reasoner로 바꾸고 Fixed-Point Forcing으로 안정화; Sudoku-Extreme 99.5퍼센트, 44배 적은 FLOPs"
 tags: [source, paper, arxiv, flow-models, reasoning, diffusion, test-time-scaling, ko]
 locale: ko
 arxiv_id: 2606.29150

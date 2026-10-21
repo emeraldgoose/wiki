@@ -1,6 +1,6 @@
 ---
 title: "Lakebase Postgres에 수 분 만에 테라바이트 적재하기"
-description: "LTAP 아키텍처로 대량 적재를 프라이머리에서 Spark로 오프로드해 유효한 Postgres 페이지를 병렬 생성, 최대 147배 빠른 적재를 달성한다." (한국어 번역)
+description: "LTAP 아키텍처로 대량 적재를 프라이머리에서 Spark로 오프로드해 유효한 Postgres 페이지를 병렬 생성, 최대 147배 빠른 적재를 달성한다."
 tags: [source, databricks, lakebase, postgres, data-ingestion, ko, ko]
 locale: ko
 source_url: "https://www.databricks.com/blog/load-terabytes-data-minutes-lakebase-postgres"

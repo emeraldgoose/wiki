@@ -1,6 +1,6 @@
 ---
 title: "Amazon OpenSearch Service로 MWAA 기반 ETL 파이프라인 모니터링하기"
-description: "CloudWatch 구독 필터로 MWAA, Glue, EC2 로그를 OpenSearch에 실시간 수집하고 Bedrock 기반 MCP 서버로 자연어 질의·장애 원인 분석." (한국어 번역)
+description: "CloudWatch 구독 필터로 MWAA, Glue, EC2 로그를 OpenSearch에 실시간 수집하고 Bedrock 기반 MCP 서버로 자연어 질의·장애 원인 분석."
 published: "2026-10-06"
 source_url: "https://aws.amazon.com/blogs/big-data/monitoring-mwaa-orchestrated-etl-pipelines-with-amazon-opensearch-service"
 blog: aws-big-data

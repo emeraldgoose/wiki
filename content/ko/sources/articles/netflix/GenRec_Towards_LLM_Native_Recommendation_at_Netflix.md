@@ -1,6 +1,6 @@
 ---
 title: "GenRec: Towards LLM-Native Recommendation at Netflix"
-description: 콘텍스트 엔지니어링·보상 가중 손실·프리필 전용 서빙의 2단계 LLM 기반 전체 카탈로그 랭커 (한국어 번역)
+description: 콘텍스트 엔지니어링·보상 가중 손실·프리필 전용 서빙의 2단계 LLM 기반 전체 카탈로그 랭커
 tags: [source, article, netflix, llm, recommendation, genai, ai-engineering, ko, ko]
 locale: ko
 source_url: "https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3"

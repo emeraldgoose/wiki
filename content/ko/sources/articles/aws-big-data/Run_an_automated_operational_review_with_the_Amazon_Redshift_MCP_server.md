@@ -1,6 +1,6 @@
 ---
 title: "Amazon Redshift MCP 서버로 자동 운영 점검 실행하기"
-description: "Redshift MCP 서버의 review_cluster 도구로 4-8시간짜리 수동 클러스터 점검을 자연어 한 줄 요청과 우선순위 조치 목록으로 대체." (한국어 번역)
+description: "Redshift MCP 서버의 review_cluster 도구로 4-8시간짜리 수동 클러스터 점검을 자연어 한 줄 요청과 우선순위 조치 목록으로 대체."
 published: "2026-10-05"
 source_url: "https://aws.amazon.com/blogs/big-data/run-an-automated-operational-review-with-the-amazon-redshift-mcp-server"
 blog: aws-big-data

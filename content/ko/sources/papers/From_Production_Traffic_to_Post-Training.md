@@ -1,6 +1,6 @@
 ---
 title: "From Production Traffic to Post-Training: Building a Self-Hosted LLM That Covers the Corporate Request Mix"
-description: en/sources/papers/From_Production_Traffic_to_Post-Training.md 한국어 번역 요약 (한국어 번역)
+description: en/sources/papers/From_Production_Traffic_to_Post-Training.md
 tags: [source, paper, huggingface, ko, ko]
 locale: ko
 arxiv_id: 2609.01572

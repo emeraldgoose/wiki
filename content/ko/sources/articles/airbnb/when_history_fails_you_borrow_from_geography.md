@@ -1,6 +1,6 @@
 ---
 title: "역사가 실패하면 지리에서 빌려라"
-description: 로컬 데이터 희소 시 순차적 지리 회복 신호와 베이지안 사전 전파로 복도 수요 예측 (한국어 번역)
+description: 로컬 데이터 희소 시 순차적 지리 회복 신호와 베이지안 사전 전파로 복도 수요 예측
 tags: [source, airbnb, forecasting, bayesian, hierarchical-models, data-science, ko, ko]
 locale: ko
 source_url: "https://medium.com/airbnb-engineering/when-history-fails-you-borrow-from-geography-915a72b91b5c"

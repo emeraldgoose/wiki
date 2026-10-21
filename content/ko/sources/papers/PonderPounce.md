@@ -1,6 +1,6 @@
 ---
 title: 'PonderPounce: 에피소드 컨텍스트 엔진으로서의 MLLM을 이용한 로봇 제어'
-description: 'PonderPounce: 에피소드 컨텍스트 엔진으로서의 사전학습 MLLM을 이용한 로봇 제어 (한국어 전체 번역)' (한국어 번역)
+description: 'PonderPounce: 에피소드 컨텍스트 엔진으로서의 사전학습 MLLM을 이용한 로봇 제어'
 tags: [paper, source, huggingface, ai-engineering, robotics, mllm, system1-system2, ko, ko]
 locale: ko
 arxiv_id: 2608.24115

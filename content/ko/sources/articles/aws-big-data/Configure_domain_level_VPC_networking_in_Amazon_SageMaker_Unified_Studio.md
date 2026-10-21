@@ -1,6 +1,6 @@
 ---
 title: "Amazon SageMaker Unified Studio에서 도메인 수준 VPC 네트워킹 구성"
-description: "도메인에 VPC 하나를 설정해 모든 신규 프로젝트가 프라이빗 서브넷·엔드포인트·보안 상태를 자동 상속받게 합니다." (한국어 번역)
+description: "도메인에 VPC 하나를 설정해 모든 신규 프로젝트가 프라이빗 서브넷·엔드포인트·보안 상태를 자동 상속받게 합니다."
 tags: [source, aws-big-data, sagemaker, vpc, networking, ko, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/configure-domain-level-vpc-networking-in-amazon-sagemaker-unified-studio"

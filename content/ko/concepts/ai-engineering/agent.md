@@ -1,6 +1,6 @@
 ---
 title: AI 에이전트 (AI Agent)
-description: en/concepts/ai-engineering/agent.md 한국어 번역 요약
+description: en/concepts/ai-engineering/agent.md
 tags: [concept, ai-engineering, agent, ko]
 locale: ko
 ---

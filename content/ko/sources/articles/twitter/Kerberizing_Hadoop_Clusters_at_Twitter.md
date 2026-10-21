@@ -1,6 +1,6 @@
 ---
 title: Twitter Hadoop 클러스터의 Kerberos 적용기
-description: 수십 개 Hadoop 클러스터에 HDFS 무중단으로 Kerberos 인증을 도입한 방법 (한국어 번역)
+description: 수십 개 Hadoop 클러스터에 HDFS 무중단으로 Kerberos 인증을 도입한 방법
 tags: [source, twitter, x, hadoop, kerberos, security, sre, ko, ko]
 locale: ko
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/kerberizing-hadoop-clusters-at-twitter"

@@ -1,6 +1,6 @@
 ---
 title: "데이터 스케일을 넘어서 — 비전-언어-액션 모델의 표현 중심 지속 사전학습"
-description: "HuggingFace Daily Papers — 2026-08-26 — VLAct: 표현 중심 지속 사전학습으로 데이터 효율적인 VLA" (한국어 번역)
+description: "HuggingFace Daily Papers — 2026-08-26 — VLAct: 표현 중심 지속 사전학습으로 데이터 효율적인 VLA"
 tags: [source, paper, huggingface, ai-engineering, ko]
 locale: ko
 arxiv_id: 2608.27550

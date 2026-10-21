@@ -1,6 +1,6 @@
 ---
 title: "AI가 바꾼 Spotify의 개발 방식: 더 빠른 속도에서 품질을 되찾은 과정"
-description: AI 시대 품질에 대한 Spotify의 데이터 — 월 병합 변경이 1.7만 건으로 2배가 됐지만 AI발 장애는 없었고, 병목은 코드 작성에서 검증으로 이동했다 (한국어 번역)
+description: AI 시대 품질에 대한 Spotify의 데이터 — 월 병합 변경이 1.7만 건으로 2배가 됐지만 AI발 장애는 없었고, 병목은 코드 작성에서 검증으로 이동했다
 tags: [source, spotify, ai-coding, quality, reliability, ko, ko]
 locale: ko
 source_url: "https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity"

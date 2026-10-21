@@ -1,6 +1,6 @@
 ---
 title: "Agents in the Large: Perception-Centered Architecture for Persistent Agents"
-description: '장수 에이전트용 Pera 아키텍처 — 지각에서 수명주기 태스크로. 수치 없는 프레임워크 논문' (한국어 번역)
+description: '장수 에이전트용 Pera 아키텍처 — 지각에서 수명주기 태스크로. 수치 없는 프레임워크 논문'
 tags: [source, paper, huggingface, ko, ko]
 locale: ko
 source_url: "https://arxiv.org/abs/2608.30478"

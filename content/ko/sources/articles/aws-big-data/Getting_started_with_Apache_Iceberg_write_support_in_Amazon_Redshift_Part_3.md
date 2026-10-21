@@ -1,6 +1,6 @@
 ---
 title: "Amazon Redshift의 Apache Iceberg 쓰기 지원 시작하기 – 3부"
-description: "Redshift에서 메타데이터 전용 ALTER로 Iceberg 스키마·파티션을 진화시키고 Lake Formation으로 교차 엔진 공유합니다." (한국어 번역)
+description: "Redshift에서 메타데이터 전용 ALTER로 Iceberg 스키마·파티션을 진화시키고 Lake Formation으로 교차 엔진 공유합니다."
 tags: [source, aws-big-data, redshift, iceberg, ko, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/getting-started-with-apache-iceberg-write-support-in-amazon-redshift-part-3"

@@ -1,6 +1,6 @@
 ---
 title: "SageMaker Unified Studio로 Snowflake 데이터를 검색하고 거버넌스하기"
-description: "Glue 연결로 Snowflake를 SageMaker Unified Studio에 연합하고, 거버넌스 자산을 SageMaker Catalog에 게시하며, 데이터 이동 없이 Glue 데이터 품질 점수를 게시." (한국어 번역)
+description: "Glue 연결로 Snowflake를 SageMaker Unified Studio에 연합하고, 거버넌스 자산을 SageMaker Catalog에 게시하며, 데이터 이동 없이 Glue 데이터 품질 점수를 게시."
 published: "2026-09-16"
 source_url: "https://aws.amazon.com/blogs/big-data/discover-and-govern-snowflake-data-using-sagemaker-unified-studio/"
 blog: "AWS Big Data"

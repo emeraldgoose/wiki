@@ -1,6 +1,6 @@
 ---
 title: "COVID 종료를 어떻게 알았나 (그리고 모델이 언러닝해야 했던 것)"
-description: Airbnb 예측 규율 — refit·respecify·hold 구분, 팬데믹 시대 가정의 의도적 제거 (한국어 번역)
+description: Airbnb 예측 규율 — refit·respecify·hold 구분, 팬데믹 시대 가정의 의도적 제거
 tags: [source, airbnb, forecasting, data-science, bayesian, ml-ops, ko, ko]
 locale: ko
 source_url: "https://medium.com/airbnb-engineering/how-we-knew-covid-was-over-and-what-our-models-had-to-unlearn-c606b9bdb0ab"

@@ -1,6 +1,6 @@
 ---
 title: "게스트 여정 학습으로 Airbnb 검색 개인화하기"
-description: JourneyFormer — 게스트 이력 시퀀스의 트랜스포머 모델; NDCG +3.78%, 온라인 예약자 +0.55% (한국어 번역)
+description: JourneyFormer — 게스트 이력 시퀀스의 트랜스포머 모델; NDCG +3.78%, 온라인 예약자 +0.55%
 tags: [source, airbnb, recommendation, personalization, transformer, ranking, ko, ko]
 locale: ko
 source_url: "https://medium.com/airbnb-engineering/personalizing-airbnb-search-by-learning-from-the-guest-journey-bcefd1915624"

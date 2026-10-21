@@ -1,6 +1,6 @@
 ---
 title: Twitter 클러스터 운영 안전성과 신뢰성을 위한 제약 관리
-description: Kafka 같은 상태 저장 플릿에서 충돌하는 유지보수 작업을 막는 중앙 집중식 클러스터 인지 중재자 (한국어 번역)
+description: Kafka 같은 상태 저장 플릿에서 충돌하는 유지보수 작업을 막는 중앙 집중식 클러스터 인지 중재자
 tags: [source, twitter, x, kafka, sre, reliability, safety, ko, ko]
 locale: ko
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/constraint-management-for-cluster-operation-safety-and-reliability-at-twitter"
