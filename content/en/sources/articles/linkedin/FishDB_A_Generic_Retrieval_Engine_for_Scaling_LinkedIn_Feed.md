@@ -1,13 +1,13 @@
 ---
 title: "FishDB: A Generic Retrieval Engine for Scaling LinkedIn's Feed"
-description: Promoted on 2026-10-17
+description: "LinkedIn's Rust-based generic retrieval engine replacing FollowFeed — scatter-gather serving, lambda ingestion, 2x efficiency"
 date: 2025-11-17
 tags: [source, article, en, en]
 locale: en
 source_url: "https://www.linkedin.com/blog/engineering/infrastructure/fishdb-a-generic-retrieval-engine-for-scaling-linkedins-feed"
 blog: linkedin
+published_date: 2025-11-17
 author: Kenneth Li
-published: 2026-10-17
 ---
 
 # FishDB: A Generic Retrieval Engine for Scaling LinkedIn's Feed

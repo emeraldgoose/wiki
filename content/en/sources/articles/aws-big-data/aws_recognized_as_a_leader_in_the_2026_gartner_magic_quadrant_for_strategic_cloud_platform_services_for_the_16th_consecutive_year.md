@@ -2,10 +2,10 @@
 title: "AWS recognized as a Leader in the 2026 Gartner Magic Quadrant for Strategic Cloud Platform Services for the 16th consecutive year"
 source_url: "https://aws.amazon.com/blogs/big-data/aws-recognized-as-a-leader-in-the-2026-gartner-magic-quadrant-for-strategic-cloud-platform-services-for-the-16th-consecutive-year/"
 blog: "AWS Big Data"
-published: 2026-10-17
 locale: en
+published_date: 2026-09-08
 tags: [source, article, en, en]
-description: Promoted on 2026-10-17
+description: "AWS recognized as a Leader in the 2026 Gartner Magic Quadrant for Strategic Cloud Platform Services for the 16th consecutive year"
 ---
 
 # AWS recognized as a Leader in the 2026 Gartner Magic Quadrant for Strategic Cloud Platform Services for the 16th consecutive year

@@ -1,12 +1,12 @@
 ---
 title: "Scaling Airbnb's Identity Graph with a Unified Knowledge Graph Infrastructure"
-description: Promoted on 2026-10-17
+description: "JanusGraph + DynamoDB paved-path graph platform — identity graph migration off SaaS, P99 wins, 10x write scale"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/scaling-airbnbs-identity-graph-with-a-unified-knowledge-graph-infrastructure-ebac467b7836"
 blog: airbnb
 date: 2026-05-19
-published: 2026-10-17
+published_date: 2026-05-19
 ---
 
 # Scaling Airbnb's Identity Graph with a Unified Knowledge Graph Infrastructure

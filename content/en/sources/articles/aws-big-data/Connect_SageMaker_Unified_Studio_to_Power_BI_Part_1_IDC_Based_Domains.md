@@ -1,10 +1,10 @@
 ---
 title: "Connect SageMaker Unified Studio to Power BI Part 1 - IDC-Based Domains"
-description: Promoted on 2026-10-17
-published: 2026-10-17
+description: "Direct Power BI to SageMaker Unified Studio via Athena ODBC 2.2 native auth: SageMakerBrowserIdc and SageMakerIam, DSN and DSN-less methods, gateway wiring, IDC-domain walkthrough."
 source_url: "https://aws.amazon.com/blogs/big-data/connect-amazon-sagemaker-unified-studio-to-microsoft-power-bi-part-1-iam-identity-center-idc-based-domains/"
 blog: "AWS Big Data"
 locale: en
+published_date: 2026-09-15
 tags: [source, article, en, en]
 ---
 

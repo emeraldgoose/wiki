@@ -1,10 +1,10 @@
 ---
 title: "How United Airlines Uses Amazon Redshift and Glue Data Catalog Federation to Query Databricks-Managed Data"
-description: Promoted on 2026-10-17
-published: 2026-10-17
+description: "United Airlines federation chain from Databricks Unity Catalog through Glue federated catalog and Lake Formation to Redshift Serverless, with resource-link pattern and measured cost impact."
 source_url: "https://aws.amazon.com/blogs/big-data/how-united-airlines-uses-amazon-redshift-and-aws-glue-data-catalog-federation-to-query-databricks-managed-data/"
 blog: "AWS Big Data"
 locale: en
+published_date: 2026-09-15
 tags: [source, article, en, en]
 ---
 

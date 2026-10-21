@@ -1,12 +1,12 @@
 ---
 title: Query Amazon S3 Tables from Amazon EMR Trino Using the Iceberg REST Endpoint
-description: Promoted on 2026-10-17
+description: "Trino on EMR 7.11+ querying managed S3 Tables Iceberg storage via the Iceberg REST catalog — CloudFormation deploy, catalog config, and ACID interactive analytics."
 date: 2026-09-02
 tags: [source, article, en, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/query-amazon-s3-tables-from-amazon-emr-trino-using-the-iceberg-rest-endpoint/"
 blog: aws
-published: 2026-10-17
+published_date: 2026-09-02
 ---
 
 # Query Amazon S3 Tables from Amazon EMR Trino Using the Iceberg REST Endpoint

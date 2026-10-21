@@ -1,11 +1,11 @@
 ---
 title: "What's New in Lakeflow Designer - October 2026 Roundup"
-description: Promoted on 2026-10-17
+description: "Lakeflow Designer adds new no-code operators for data cleaning (Prepare), deduplication (Unique), and quality checks (Guardrails), plus expanded output options (materialized views, table merges, file exports) and canvas improvements (visual version history, live cursor presence)."
 tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/whats-new-lakeflow-designer-october-2026-roundup"
 blog: databricks
-published: 2026-10-17
+published_date: 2026-10-13
 ---
 
 # What's New in Lakeflow Designer - October 2026 Roundup

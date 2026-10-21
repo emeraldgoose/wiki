@@ -1,12 +1,12 @@
 ---
 title: "From Weeks to a Day: How We Made LLM Evaluation Fast Enough to Iterate On"
-description: Promoted on 2026-10-17
+description: "Four-layer LLM production stack — dual indeterminacy, deterministic eval cache, micro-adapters, end-to-end validation"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/from-weeks-to-a-day-how-we-made-llm-evaluation-fast-enough-to-iterate-on-14e2d35198b4"
 blog: airbnb
 date: 2026-07-14
-published: 2026-10-17
+published_date: 2026-07-14
 ---
 
 # From Weeks to a Day: How We Made LLM Evaluation Fast Enough to Iterate On

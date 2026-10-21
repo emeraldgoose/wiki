@@ -1,11 +1,11 @@
 ---
 title: "Personalization without user identity"
-description: Promoted on 2026-10-17
+description: "Airbnb's Proximity Features group nearby users into buckets to personalize search and recommendations for logged-out cold-start traffic."
 tags: [source, article, en, en]
 locale: en
 source_url: "https://airbnb.tech/infrastructure/personalization-without-user-identity"
 blog: airbnb
-published: 2026-10-17
+published_date: 2026-09-29
 ---
 
 # Personalization without user identity

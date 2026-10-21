@@ -1,12 +1,12 @@
 ---
 title: Object Storage Plus WAL Lakebase Postgres for the Agentic Era
-description: Promoted on 2026-10-17
+description: "Lakebase Postgres decouples compute from storage with WAL-on-object-storage as the source of truth — branching, instant restore, time travel, and LTAP analytics from one copy."
 date: 2026-08-27
 tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/object-storage-wal-lakebase-postgres-agentic-era"
 blog: databricks
-published: 2026-10-17
+published_date: 2026-08-27
 ---
 
 # Object Storage + WAL: Lakebase Postgres for the Agentic Era

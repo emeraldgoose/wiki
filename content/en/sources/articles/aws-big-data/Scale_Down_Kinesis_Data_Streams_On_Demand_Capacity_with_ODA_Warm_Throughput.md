@@ -1,10 +1,10 @@
 ---
 title: "Scale Down Kinesis Data Streams On-Demand Capacity with ODA Warm Throughput"
-description: Promoted on 2026-10-17
-published: 2026-10-17
+description: "New warm-throughput scale-down for Kinesis on-demand Advantage streams: release post-burst shard capacity, safeguard on last-hour peak, and monitor via CloudWatch."
 source_url: "https://aws.amazon.com/blogs/big-data/scale-down-kinesis-data-streams-on-demand-capacity-with-oda-warm-throughput/"
 blog: "AWS Big Data"
 locale: en
+published_date: 2026-09-14
 tags: [source, article, en, en]
 ---
 

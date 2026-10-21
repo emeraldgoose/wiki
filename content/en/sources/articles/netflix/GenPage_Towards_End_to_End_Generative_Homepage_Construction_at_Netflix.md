@@ -1,11 +1,11 @@
 ---
 title: "GenPage: Towards End-to-End Generative Homepage Construction at Netflix"
-description: Promoted on 2026-10-17
+description: "Single autoregressive transformer generating rows, entities, and layout together with pretraining plus WBC/RL post-training"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08"
 blog: netflix
-published: 2026-10-17
+published_date: 2026-06-29
 ---
 
 # GenPage: Towards End-to-End Generative Homepage Construction at Netflix

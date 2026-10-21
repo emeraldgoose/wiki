@@ -1,12 +1,12 @@
 ---
 title: Kerberizing Hadoop Clusters at Twitter
-description: Promoted on 2026-10-17
+description: "How Twitter added Kerberos authentication to tens of Hadoop clusters with zero HDFS downtime"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/kerberizing-hadoop-clusters-at-twitter"
 blog: twitter
 date: '2023-02-23'
-published: 2026-10-17
+published_date: 2023-02-23
 ---
 
 # Kerberizing Hadoop Clusters at Twitter

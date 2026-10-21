@@ -1,12 +1,11 @@
 ---
 title: "How I built agent-based security reviews on Databricks"
-description: Promoted on 2026-10-17
+description: "Seven bounded review agents on Unity Catalog, Lakeflow Jobs, and Databricks Apps that automate routine security work while escalating novel cases to humans."
 tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/how-i-built-agent-based-security-reviews-databricks"
 blog: databricks
 published_date: 2026-09-24
-published: 2026-10-17
 ---
 
 # How I built agent-based security reviews on Databricks

@@ -1,12 +1,12 @@
 ---
 title: "Eval-Driven Development: Lessons from Evaluating GenAI at Scale"
-description: Promoted on 2026-10-17
+description: "Airbnb's eval-driven development — three-layer evaluation, calibrated LLM judges, agentic trajectory evals"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/eval-driven-development-lessons-from-evaluating-genai-at-scale-e817e5ae5788"
 blog: airbnb
 date: 2026-07-28
-published: 2026-10-17
+published_date: 2026-07-28
 ---
 
 # Eval-Driven Development: Lessons from Evaluating GenAI at Scale

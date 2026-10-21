@@ -1,10 +1,10 @@
 ---
 title: "Connect SageMaker Unified Studio to Power BI Part 2 - IAM-Based Domains"
-description: Promoted on 2026-10-17
-published: 2026-10-17
+description: "Direct Power BI to SageMaker Unified Studio for IAM-based domains via Athena ODBC SageMakerIam auth: SSO permission set, DSN and DSN-less wiring, gateway IAM role."
 source_url: "https://aws.amazon.com/blogs/big-data/connect-amazon-sagemaker-unified-studio-to-microsoft-power-bi-part-2-iam-based-domains/"
 blog: "AWS Big Data"
 locale: en
+published_date: 2026-09-15
 tags: [source, article, en, en]
 ---
 

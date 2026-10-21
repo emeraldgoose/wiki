@@ -1,12 +1,11 @@
 ---
 title: "Lakebase and Agentic SDLC: Branching Databases for Coding Agents"
-description: Promoted on 2026-10-17
+description: "Give every coding agent and pull request an isolated Lakebase Postgres branch via copy-on-write branching, Git worktrees, and CI automation."
 tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/lakebase-and-agentic-sdlc-branching-databases-coding-agents"
 blog: databricks
 published_date: 2026-10-08
-published: 2026-10-17
 ---
 
 # Lakebase and Agentic SDLC: Branching Databases for Coding Agents

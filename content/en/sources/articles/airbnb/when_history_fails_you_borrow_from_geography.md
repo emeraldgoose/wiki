@@ -1,12 +1,12 @@
 ---
 title: "When History Fails You, Borrow from Geography"
-description: Promoted on 2026-10-17
+description: "Sequential geographic recovery signals and Bayesian prior propagation for corridor forecasts when local data is scarce"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/when-history-fails-you-borrow-from-geography-915a72b91b5c"
 blog: airbnb
 date: 2026-06-02
-published: 2026-10-17
+published_date: 2026-06-02
 ---
 
 # When History Fails You, Borrow from Geography

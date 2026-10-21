@@ -1,11 +1,11 @@
 ---
 title: "MAPS: Netflix's Multimodal Asset Personalization at Scale"
-description: Promoted on 2026-10-17
+description: "Multimodal embeddings (CLIP, MediaFM) for cold-start artwork and video preview personalization with a unified cross-canvas model"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://netflixtechblog.com/maps-netflixs-multimodal-asset-personalization-at-scale-32f96320785e"
 blog: netflix
-published: 2026-10-17
+published_date: 2026-08-28
 ---
 
 # MAPS: Netflix's Multimodal Asset Personalization at Scale

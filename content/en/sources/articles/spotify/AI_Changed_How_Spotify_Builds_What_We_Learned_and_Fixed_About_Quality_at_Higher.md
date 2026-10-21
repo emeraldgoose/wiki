@@ -1,12 +1,11 @@
 ---
 title: "AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity"
-description: Promoted on 2026-10-17
+description: "Spotify's data on AI-era quality — merged changes doubled to 17K/month with no AI-attributed incident signature; the bottleneck moved from writing code to verifying it"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity"
 blog: spotify
 published_date: 2026-09-16
-published: 2026-10-17
 ---
 
 # AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity

@@ -1,12 +1,12 @@
 ---
 title: Razor Group's Journey to a Modern Data Lakehouse on AWS
-description: Promoted on 2026-10-17
+description: "How Razor Group migrated from always-on Redshift clusters to an open Iceberg lakehouse on S3 Tables in five phases — 65% faster P95, 63% lower infra cost."
 date: 2026-08-28
 tags: [source, article, en, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/razor-groups-journey-to-a-modern-data-lakehouse-on-aws/"
 blog: aws
-published: 2026-10-17
+published_date: 2026-08-28
 ---
 
 # Razor Group's Journey to a Modern Data Lakehouse on AWS

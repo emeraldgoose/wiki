@@ -1,11 +1,11 @@
 ---
 title: "CASTLE: Training Natural Language Search Before the First Real Query"
-description: Promoted on 2026-10-17
+description: "Airbnb solves the cold-start problem for natural language search by jointly generating synthetic queries and relevance labels from de-identified booking data. CASTLE achieves 9.2× better distributional alignment (KL divergence 1.01 vs. 9.33 baseline) and 91–93% human label agreement."
 tags: [source, article, en, en]
 locale: en
 source_url: "https://airbnb.tech/ai-ml/castle-training-natural-language-search-before-the-first-real-query"
 blog: airbnb
-published: 2026-10-17
+published_date: 2026-10-13
 ---
 
 # CASTLE: Training Natural Language Search Before the First Real Query

@@ -1,11 +1,11 @@
 ---
 title: "Flexible Authentication: Reimagining authentication for millions of users at Airbnb"
-description: Promoted on 2026-10-17
+description: "Airbnb's server-driven Identify-first-then-Challenge login system with a Challenge Picker, cutting client code and lifting login success."
 tags: [source, article, en, en]
 locale: en
 source_url: "https://airbnb.tech/uncategorized/flexible-authentication-reimagining-authentication-for-millions-of-users-at-airbnb"
 blog: airbnb
-published: 2026-10-17
+published_date: 2026-08-12
 ---
 
 # Flexible Authentication: Reimagining authentication for millions of users at Airbnb

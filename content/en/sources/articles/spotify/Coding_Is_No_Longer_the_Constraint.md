@@ -1,12 +1,11 @@
 ---
 title: Coding Is No Longer the Constraint
-description: Promoted on 2026-10-17
+description: "Spotify's chief architect on scaling developer experience to teams and agents — 99% AI-tool adoption, fleet-wide automation, and the Honk background coding agent"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint"
 blog: spotify
 published_date: 2026-06-03
-published: 2026-10-17
 ---
 
 # Coding Is No Longer the Constraint: Scaling Developer Experience to Teams and Agents

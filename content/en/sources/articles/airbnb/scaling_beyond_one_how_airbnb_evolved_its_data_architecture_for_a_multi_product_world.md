@@ -1,12 +1,12 @@
 ---
 title: "Scaling Beyond One: How Airbnb Evolved Its Data Architecture for a Multi-Product World"
-description: Promoted on 2026-10-17
+description: "Offline warehouse evolution for Homes + Experiences + Services — separate vs monolithic modeling framework"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/scaling-beyond-one-how-airbnb-evolved-its-data-architecture-for-a-multi-product-world-6125645d470c"
 blog: airbnb
 date: 2026-06-09
-published: 2026-10-17
+published_date: 2026-06-09
 ---
 
 # Scaling Beyond One: How Airbnb Evolved Its Data Architecture for a Multi-Product World

@@ -1,10 +1,10 @@
 ---
 title: "Discover and Govern Snowflake Data Using SageMaker Unified Studio"
-description: Promoted on 2026-10-17
-published: 2026-10-17
+description: "Federate Snowflake into SageMaker Unified Studio via Glue connection, publish governed assets to SageMaker Catalog, and post Glue Data Quality scores without moving data."
 source_url: "https://aws.amazon.com/blogs/big-data/discover-and-govern-snowflake-data-using-sagemaker-unified-studio/"
 blog: "AWS Big Data"
 locale: en
+published_date: 2026-09-16
 tags: [source, article, en, en]
 ---
 

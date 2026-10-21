@@ -1,11 +1,11 @@
 ---
 title: "Everyone's adopting AI agents. Almost no one can prove the ROI. Here's why"
-description: Promoted on 2026-10-17
+description: "Databricks' Amber Roberts explains why 'faster' is the wrong lens for agentic AI productivity, why the ROI gap exists between AI buyers and users, and why business context—not raw task speed—determines whether an agent creates real enterprise value."
 tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/everyones-adopting-ai-agents-almost-no-one-can-prove-roi-heres-why"
 blog: databricks
-published: 2026-10-17
+published_date: 2026-10-13
 ---
 
 # Everyone's adopting AI agents. Almost no one can prove the ROI. Here's why

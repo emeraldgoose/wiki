@@ -1,11 +1,11 @@
 ---
 title: "How Flo Health built safer, more useful open models with Databricks AI Runtime"
-description: Promoted on 2026-10-17
+description: "Flo Health turned clinician-calibrated AI judges and privacy-first synthetic data into a post-training pipeline on Databricks AI Runtime, lifting medical safety from 34% to 61% and usefulness from 42% to 76% on a fine-tuned open model."
 tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/how-flo-health-built-safer-more-useful-open-models-databricks-ai-runtime"
 blog: databricks
-published: 2026-10-17
+published_date: 2026-10-12
 ---
 
 # How Flo Health built safer, more useful open models with Databricks AI Runtime

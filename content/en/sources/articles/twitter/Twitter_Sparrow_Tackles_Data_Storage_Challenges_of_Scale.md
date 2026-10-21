@@ -1,12 +1,12 @@
 ---
 title: Twitter Sparrow Tackles Data Storage Challenges of Scale
-description: Promoted on 2026-10-17
+description: "Project Sparrow — redesigning Twitter's event pipeline from hourly batch to streaming, cutting latency from hours to seconds"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2022/twitter-sparrow-tackles-data-storage-challenges-of-scale"
 blog: twitter
 date: '2022-06-28'
-published: 2026-10-17
+published_date: 2022-06-28
 ---
 
 # Twitter Sparrow Tackles Data Storage Challenges of Scale

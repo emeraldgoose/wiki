@@ -1,11 +1,11 @@
 ---
 title: "Building Service Topology at Scale"
-description: Promoted on 2026-10-17
+description: "Streaming-first real-time service dependency map — three-stage aggregation, intermediary resolution, time travel, and production lessons"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8"
 blog: netflix
-published: 2026-10-17
+published_date: 2026-07-13
 ---
 
 # Building Service Topology at Scale

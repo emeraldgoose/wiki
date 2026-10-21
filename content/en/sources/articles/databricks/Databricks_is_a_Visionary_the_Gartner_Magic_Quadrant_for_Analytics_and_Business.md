@@ -1,11 +1,11 @@
 ---
 title: "Databricks Is a Visionary in the Gartner Magic Quadrant for Analytics and Business Intelligence Platforms"
-description: Promoted on 2026-10-17
+description: "Databricks debuted as a Visionary with the highest initial placement in the 20+ year history of the Gartner Magic Quadrant for Analytics and BI Platforms, achieving one of the highest Completeness of Vision scores. The recognition validates the shift toward converged Data + AI platforms, agentic analytics, and centralized semantics."
 tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/databricks-visionary-gartnerr-magic-quadranttm-analytics-and-business-intelligence-platforms"
 blog: databricks
-published: 2026-10-17
+published_date: 2026-10-13
 ---
 
 # Databricks Is a Visionary in the Gartner Magic Quadrant for Analytics and Business Intelligence Platforms

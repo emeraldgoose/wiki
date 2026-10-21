@@ -1,11 +1,11 @@
 ---
 title: "Announcing Workday Data Connect federation in Unity Catalog"
-description: Promoted on 2026-10-17
+description: "Zero-copy Workday HR and finance data in Unity Catalog via a native Data Connect federation connector (Beta)"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/announcing-workday-data-connect-federation-unity-catalog"
 blog: databricks
-published: 2026-10-17
+published_date: 2026-10-08
 ---
 
 # Announcing Workday Data Connect federation in Unity Catalog

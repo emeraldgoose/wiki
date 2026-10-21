@@ -1,10 +1,10 @@
 ---
 title: "How Moeve standardized dbt runs across data lakes with Amazon Athena"
-description: Promoted on 2026-10-17
-published: 2026-10-17
+description: "Moeve's centralized serverless dbt launcher on Athena, Step Functions, and Fargate cut new-project onboarding from days to 15 minutes."
 source_url: "https://aws.amazon.com/blogs/big-data/how-moeve-standardized-dbt-runs-across-data-lakes-with-amazon-athena"
 blog: aws-big-data
 locale: en
+published_date: 2026-09-22
 tags: [source, article, en, en]
 ---
 

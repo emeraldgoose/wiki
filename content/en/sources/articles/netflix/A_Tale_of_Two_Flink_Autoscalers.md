@@ -1,11 +1,11 @@
 ---
 title: "A Tale of Two Flink Autoscalers"
-description: Promoted on 2026-10-17
+description: "Migrating Netflix's 30k-job Flink fleet from a homegrown external autoscaler to the open-source Flink autoscaler with per-operator parallelism"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b"
 blog: netflix
-published: 2026-10-17
+published_date: 2026-08-21
 ---
 
 # A Tale of Two Flink Autoscalers

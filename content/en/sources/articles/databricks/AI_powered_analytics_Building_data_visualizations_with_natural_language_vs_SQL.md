@@ -1,11 +1,11 @@
 ---
 title: "AI-powered analytics: Building data visualizations with natural language vs. SQL"
-description: Promoted on 2026-10-17
+description: "Why NL-to-SQL underdelivered for a decade and how a governed semantic layer makes natural-language visualizations trustworthy"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/ai-powered-analytics-building-data-visualizations-natural-language-vs-sql"
 blog: databricks
-published: 2026-10-17
+published_date: 2026-10-06
 ---
 
 # AI-powered analytics: Building data visualizations with natural language vs. SQL

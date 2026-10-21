@@ -1,12 +1,11 @@
 ---
 title: "Solving defense supply chain visibility through governed data sharing"
-description: Promoted on 2026-10-17
+description: "A federated Databricks data exchange gives defense acquisition real-time cost and supply-chain evidence without centralizing raw records."
 tags: [source, article, en, en]
 locale: en
 source_url: "https://www.databricks.com/blog/solving-defense-supply-chain-visibility-through-governed-data-sharing"
 blog: databricks
 published_date: 2026-10-09
-published: 2026-10-17
 ---
 
 # Solving defense supply chain visibility through governed data sharing

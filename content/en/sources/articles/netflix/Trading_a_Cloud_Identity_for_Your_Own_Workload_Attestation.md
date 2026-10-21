@@ -1,12 +1,11 @@
 ---
 title: "Trading a Cloud Identity for Your Own: Workload Attestation on Managed Compute"
-description: Promoted on 2026-10-17
+description: "Netflix closes the gap between AWS IAM identities and its private Metatron PKI for Spark on EMR — using AWS STS pre-signed URLs plus control-plane metadata signatures as two independent, mutually corroborating claims"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://netflixtechblog.com/trading-a-cloud-identity-for-your-own-workload-attestation-on-managed-compute-516d5a29b252"
 blog: netflix
 published_date: 2026-09-25
-published: 2026-10-17
 ---
 
 # Trading a Cloud Identity for Your Own: Workload Attestation on Managed Compute

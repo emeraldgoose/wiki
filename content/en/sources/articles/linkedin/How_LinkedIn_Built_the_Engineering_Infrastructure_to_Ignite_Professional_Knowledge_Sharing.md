@@ -1,13 +1,13 @@
 ---
 title: How LinkedIn Built the Engineering Infrastructure to Ignite Professional Knowledge Sharing
-description: Promoted on 2026-10-17
+description: "Collaborative Articles — LinkedIn's first generative-AI product infra: prompt tooling, expert matching, trust systems"
 date: 2023-11-20
 tags: [source, article, en, en]
 locale: en
 source_url: "https://engineering.linkedin.com/blog/2023/how-linkedin-built-the-engineering-infrastructure-to-ignite-prof"
 blog: linkedin
+published_date: 2023-11-20
 author: Shweta Patira
-published: 2026-10-17
 ---
 
 # How LinkedIn Built the Engineering Infrastructure to Ignite Professional Knowledge Sharing

@@ -1,12 +1,11 @@
 ---
 title: Encoding Your Domain Expert
-description: Promoted on 2026-10-17
+description: "Spotify's context layer behind its AI data assistant — the cluster model where domain experts curate datasets, vetted question-SQL pairs, and docs so an LLM agent answers reliably at warehouse scale"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://engineering.atspotify.com/2026/6/encoding-your-domain-expert-the-context-layer-behind-spotifys-data-assistant"
 blog: spotify
 published_date: 2026-06-10
-published: 2026-10-17
 ---
 
 # Encoding Your Domain Expert: The Context Layer Behind Spotify's Data Assistant

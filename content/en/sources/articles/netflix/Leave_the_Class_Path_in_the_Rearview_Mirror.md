@@ -1,12 +1,11 @@
 ---
 title: "Leave the Class Path in the Rearview Mirror"
-description: Promoted on 2026-10-17
+description: "Netflix previews ja and its composable CLI tools (jig, jfmt, jist, jdocserver) — module-system-native, agent-friendly Java development with Maven-backed resolution and integrity by default"
 tags: [source, article, en, en]
 locale: en
 source_url: "https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be"
 blog: netflix
 published_date: 2026-09-18
-published: 2026-10-17
 ---
 
 # Leave the Class Path in the Rearview Mirror
