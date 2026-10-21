@@ -7,7 +7,7 @@ locale: en
 
 # Build AI Agent — Execution Guide
 
-**Synthesizes**: `concepts/ai-engineering/agent.md`, `sources/articles/uber-engineering.md`, `sources/articles/databricks-engineering.md`, `sources/papers/PonderPounce.md`, `sources/papers/JIT-Agent.md`, `sources/papers/StepGuard.md`
+**Synthesizes**: `concepts/ai-engineering/agent.md`, `sources/articles/uber-engineering.md`, `sources/articles/databricks-engineering.md`, `sources/papers/2608-24115.md`, `sources/papers/2608-25593.md`, `sources/papers/2608-24777.md`
 
 ## Architecture Decision
 

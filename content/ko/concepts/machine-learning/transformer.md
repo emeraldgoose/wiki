@@ -100,9 +100,9 @@ MultiHead = Concat(head_1...head_h) · W^O
 ## 관련 소스
 - `sources/articles/netflix-techblog.md` (GenRec 2단계)
 - `sources/articles/spotify-engineering.md` (LLM A/B 테스팅)
-- `sources/papers/Training_Learning_and_Inference.md` (훈련 동역학)
-- `sources/papers/PonderPounce.md` (System2/System1)
-- `sources/papers/JIT-Agent.md` (하네스 지능)
+- `sources/papers/2608-20965.md` (훈련 동역학)
+- `sources/papers/2608-24115.md` (System2/System1)
+- `sources/papers/2608-25593.md` (하네스 지능)
 
 ## 관련 가이드
 - `guides/ai-engineering/build-rag.md`

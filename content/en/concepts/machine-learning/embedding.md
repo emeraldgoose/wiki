@@ -81,8 +81,8 @@ LIMIT 20
 
 ## Related Sources
 - `sources/articles/netflix-techblog.md` (MAPS, GenRec)
-- `sources/papers/PonderPounce.md` (causal context as memory)
-- `sources/papers/JIT-Agent.md` (tool embedding in harness)
+- `sources/papers/2608-24115.md` (causal context as memory)
+- `sources/papers/2608-25593.md` (tool embedding in harness)
 
 ## Related Guides
 - `guides/ai-engineering/build-rag.md` (embedding + retrieval)

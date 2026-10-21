@@ -116,9 +116,9 @@ Tool Result: {output: "...", error: null}
 ## Related Sources
 - `sources/articles/uber-engineering.md` (software factory)
 - `sources/articles/databricks-engineering.md` (Lakebase)
-- `sources/papers/PonderPounce.md` (System2/System1)
-- `sources/papers/JIT-Agent.md` (harness intelligence)
-- `sources/papers/StepGuard.md` (step-level guard)
+- `sources/papers/2608-24115.md` (System2/System1)
+- `sources/papers/2608-25593.md` (harness intelligence)
+- `sources/papers/2608-24777.md` (step-level guard)
 
 ## Related Guides
 - `guides/ai-engineering/build-agent.md`

@@ -111,8 +111,8 @@ Answer:
 ## Related Sources
 - `sources/articles/netflix-techblog.md` (GenRec context engineering)
 - `sources/articles/databricks-engineering.md` (Hydra PromQL-to-SQL)
-- `sources/papers/PonderPounce.md` (System2 context)
-- `sources/papers/JIT-Agent.md` (harness as retrieval)
+- `sources/papers/2608-24115.md` (System2 context)
+- `sources/papers/2608-25593.md` (harness as retrieval)
 
 ## Related Guides
 - `guides/ai-engineering/build-rag.md`

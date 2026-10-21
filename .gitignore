@@ -1,3 +1,4 @@
 .index-backup/
 static/
 public/
+__pycache__/

@@ -81,8 +81,8 @@ LIMIT 20
 
 ## 관련 소스
 - `sources/articles/netflix-techblog.md` (MAPS, GenRec)
-- `sources/papers/PonderPounce.md` (메모리로서의 인과적 컨텍스트)
-- `sources/papers/JIT-Agent.md` (하네스 내 도구 임베딩)
+- `sources/papers/2608-24115.md` (메모리로서의 인과적 컨텍스트)
+- `sources/papers/2608-25593.md` (하네스 내 도구 임베딩)
 
 ## 관련 가이드
 - `guides/ai-engineering/build-rag.md` (임베딩 + 검색)
