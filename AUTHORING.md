@@ -87,9 +87,38 @@ python3 scripts/serve_wiki.py 8900  # 로컬 확인 (http://localhost:8900/)
 (흔한 실패: 수집 후 승격 없이 방치, 초안 채우기 생략):
 
 1. **수집** (§5.1) — inventory JSON + 양 언어 stub 생성. 본문을 쓰지 않는다.
+   **이 단계는 완료가 아니다.**
 2. **초안 채우기** (§5.2) — `fetch_drafts.py`로 원문을 읽어 스켈레톤 본문 생성.
+   **스켈레톤도 완료가 아니다.**
 3. **승격** (§5.3) — stub마다 본문 완성 + frontmatter 확정 (`en` 먼저, §5.3 체크리스트).
 4. **번역 + 검증** (§5.3) — `ko` 작성 후 §4 빌드로 확인.
+
+### 5.0 강제 게이트 — 루프의 종료 조건
+
+stub 생성이나 `fetch_drafts.py --write` 직후에는 절대 멈추지 않는다. 아래
+게이트가 `Gate: OK`가 될 때까지 §5.1→§5.3을 반복한다.
+
+```bash
+python3 scripts/gate_promote_check.py --next --worktree  # 이번 배치의 다음 1건
+python3 scripts/gate_promote_check.py --worktree         # 이번 배치 검사
+python3 scripts/gate_promote_check.py --staged           # 커밋 전 (hook 자동)
+python3 scripts/gate_promote_check.py                    # 저장소 전체 감사
+python3 scripts/gate_promote_check.py --changed --base origin/main  # push/CI
+```
+
+- `stub`(`status: pending` / `[Content pending]`)과 `draft`
+  (`Draft summary auto-extracted` / `RAW DRAFT`)는 **둘 다 실패**다.
+  파일이 존재한다고 완료가 아니다.
+- en/ko 짝이 없거나, 짝이 아직 stub/draft면 실패다.
+- 새로 추가하거나 승격하는 문서는 frontmatter·태그·H1·본문 언어 검사를 통과해야 한다.
+- `--next --worktree`가 항목을 출력하는 동안은 작업이 남아 있다는 뜻이다.
+  그 1건을 §5.3까지 처리하고 다시 실행한다. "blocking items left: 0"이
+  **이번 배치**의 종료 조건이다. 같은 명령이 이번 세션에서 만진 파일만 보므로,
+  레거시 backlog에 발목 잡히지 않고 방금 만든 stub부터 끝낼 수 있다.
+- 전체 backlog는 `--next`(플래그 없이)로 본다. 저장소 전체 완료는
+  `gate_promote_check.py`의 `Gate: OK`다.
+- `.githooks/pre-commit`·`pre-push`가 같은 검사를 실행한다. 우회하지 않는다
+  (`git commit --no-verify` 금지). 새 clone은 `git config core.hooksPath .githooks`.
 
 **상태 판정 (공통).** 파일 앞부분에 `status: pending` 또는 `[Content pending]` 중
 하나라도 있으면 미완성이다. 빌드는 이런 파일을 메인 목록에서 빼고
@@ -102,7 +131,11 @@ python3 scripts/serve_wiki.py 8900  # 로컬 확인 (http://localhost:8900/)
 grep -rl "status: pending" content/en/sources/articles/ content/en/sources/papers/ \
   content/ko/sources/articles/ content/ko/sources/papers/
 python3 scripts/fetch_drafts.py --kind all --dry-run --limit 5   # 처리 대상 목록
+python3 scripts/gate_promote_check.py --next                     # 초안/짝 누락까지 포함
 ```
+
+게이트는 `status: pending`뿐 아니라 `Draft summary auto-extracted`/`RAW DRAFT`
+스켈레톤과 en/ko 짝 누락도 미완성으로 판정한다.
 
 ### 5.1 수집 — stub 만들기 (종류별 명령. 이 단계에서 본문을 쓰지 않는다)
 
@@ -187,6 +220,8 @@ python3 scripts/fetch_drafts.py --kind papers --limit 5 --write
   추가한다. 스켈레톤을 그대로 두지 말고 §5.3으로 간다.
 - `--full`은 전문 초안으로 `status: pending`을 유지한다 (여전히 pending에 머무름).
   요약이 끝난 뒤 `status`를 지우고 §5.3을 적용한다.
+- `--write`가 만든 `Draft summary auto-extracted` 본문은 **초안일 뿐**이다.
+  게이트는 이 마커를 미완성으로 판정한다. 출력 후 §5.3으로 바로 간다.
 - 실패시 행동 (공통): `extract: too few blocks` → stub 유지, 수동 작성 대상으로 보고.
   논문에서 arXiv HTML·ar5iv 둘 다 실패 → stub 그대로 두고 다음 stub으로.
   robots 차단 URL은 재시도하지 않는다.
@@ -219,6 +254,9 @@ python3 scripts/fetch_drafts.py --kind papers --limit 5 --write
 6. **빌드 검증** (§4): `Build verified` + 포털 Recent·Navigator 노출 +
    언어 버튼 상호 이동 확인. `en` 단독 완성 금지
    (`ko` 없으면 언어 버튼이 포털로 폴백).
+7. **게이트 통과** (§5.0): `python3 scripts/gate_promote_check.py`가
+   `Gate: OK`여야 그 stub의 승격이 끝난 것이다. `--next`로 다음 1건을 꺼내
+   1→7을 반복한다.
 
 예시 완성형 (아티클, `ko`):
 
@@ -254,7 +292,7 @@ python3 scripts/fetch_drafts.py --kind papers --limit 5 --write
 - 금지: PDF 파싱, `source_url` 변경·삭제, 논문의 제목 슬러그형 파일명,
   수집건의 주제 자의 제외, 스켈레톤 그대로 방치, §5.3 생략.
 - 필수: 양 언어 동일 상대 경로, 깨진 수식·표·그림은 PDF와 대조 수정
-  (논문만), 매 stub마다 §5.3 1→6 완주.
+  (논문만), 매 stub마다 §5.3 1→7 완주.
 
 ### 5.4 개념 — sources로 보강·신설 (`concepts/`)
 
@@ -300,3 +338,6 @@ python3 scripts/fetch_drafts.py --kind papers --limit 5 --write
 | fetch 후에도 Recent에 안 보인다 | `--full`로 써서 `status` 유지 중. 요약 후 `status` 제거 (§5.3.1) |
 | 같은 논문이 중복 수집된다 | `source_url`을 abs가 아닌 html/ar5iv URL로 바꿈 |
 | 오늘 날짜 수집이 비어 있다 | 미래 날짜 지정 또는 API 장애. `--date` 확인 후 재시도 |
+| stub만 만들고 작업이 끝난 것처럼 보인다 | §5.0 게이트를 실행하지 않음. `gate_promote_check.py --next`가 남은 1건을 알려준다 |
+| `--write` 초안에서 작업이 멈춘다 | `Draft summary auto-extracted` 본문을 완성본으로 착각함. §5.3.1로 다시 쓴다 |
+| 커밋이 `BLOCKED stub`으로 거부된다 | 정상 동작. 해당 문서를 §5.3까지 승격한 뒤 다시 커밋한다 |

@@ -1,0 +1,6 @@
+#!/bin/sh
+# AUTHORING.md §5 gate: do not commit while the worktree still contains a stub
+# or an unexpanded fetch_drafts skeleton (staged, unstaged, or untracked).
+set -eu
+root=$(git rev-parse --show-toplevel)
+exec python3 "$root/scripts/gate_promote_check.py" --worktree

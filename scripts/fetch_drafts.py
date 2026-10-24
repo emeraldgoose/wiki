@@ -456,6 +456,7 @@ def main():
     if not stubs:
         return
 
+    wrote = 0
     for path in stubs:
         meta, _body, _raw = parse_stub(path)
         url = meta.get("source_url", "")
@@ -497,6 +498,7 @@ def main():
             front = build_front(meta, url, published, lang_tag, True, desc)
             with open(path, "w", encoding="utf-8") as fh:
                 fh.write(front + body)
+            wrote += 1
             print(f"    wrote RAW full-text draft -> {rel} ({len(blocks)} blocks, kept pending)")
             continue
         body = build_draft_body(title, blog, url, published, blocks)
@@ -506,7 +508,19 @@ def main():
         front = build_front(meta, url, published, lang_tag, False, desc)
         with open(path, "w", encoding="utf-8") as fh:
             fh.write(front + body)
+        wrote += 1
         print(f"    wrote draft summary -> {rel} ({len(blocks)} blocks)")
+
+    # A --write draft is raw material, not a finished document. Say so loudly:
+    # agents that stop after this step are the failure mode this guards against.
+    print("\nNEXT (required, AUTHORING.md §5.3): the loop is not finished here.")
+    if wrote:
+        print(f"  {wrote} draft(s) written. Expand each skeleton into a real")
+        print("  summary, add topic tags, then write the same-relative-path pair")
+        print("  in the other language. A draft summary is not a deliverable.")
+    else:
+        print("  No draft was written; the stubs still need manual work.")
+    print("  python3 scripts/gate_promote_check.py --next --worktree")
 
 
 if __name__ == "__main__":

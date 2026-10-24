@@ -925,6 +925,8 @@ def main():
             print(f"        {path}", file=sys.stderr)
         if len(pending) > 5:
             print(f"        ... and {len(pending) - 5} more", file=sys.stderr)
+        print("        run: python3 scripts/gate_promote_check.py --next --worktree",
+              file=sys.stderr)
 
     for lang in LANGS:
         src_root = os.path.join(CONTENT_DIR, lang)

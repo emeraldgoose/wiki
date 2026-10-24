@@ -1,0 +1,11 @@
+#!/bin/sh
+# AUTHORING.md §5 gate: refuse to push commits that still contain a stub or
+# an unexpanded fetch_drafts skeleton. The base is the current upstream, so
+# only the commits being pushed are checked.
+set -eu
+root=$(git rev-parse --show-toplevel)
+base=$(git rev-parse --abbrev-ref --symbolic-full-name '@{upstream}' 2>/dev/null || echo origin/main)
+if git rev-parse --verify --quiet "$base" >/dev/null 2>&1; then
+    exec python3 "$root/scripts/gate_promote_check.py" --changed --base "$base"
+fi
+exec python3 "$root/scripts/gate_promote_check.py" --staged

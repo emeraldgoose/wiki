@@ -382,6 +382,11 @@ def main():
                 print(f"  {lang}: {len(made)} new stub(s) under content/{lang}/sources/papers/")
             unwritten = sum(1 for it in items if not already_written(it, subdir="papers"))
             print(f"\nPending papers needing a written body: {unwritten}")
+            print("NEXT (required, AUTHORING.md §5.2): fill and expand every new stub.")
+            print("  python3 scripts/fetch_drafts.py --kind papers --lang en --limit 5 --write")
+            print("  # expand the en draft, then translate it to the ko pair (§5.3)")
+            print("  python3 scripts/gate_promote_check.py --next --worktree")
+            print("Stub creation is step 1 of 4, not a deliverable.")
         return
 
     out = args.out or os.path.join(CWD, ".index-backup", "collected.json")
@@ -410,6 +415,11 @@ def main():
             print(f"  {lang}: {len(made)} new stub(s) under content/{lang}/sources/articles/")
         unwritten = sum(1 for it in items if not already_written(it))
         print(f"\nPending articles needing a written body: {unwritten}")
+        print("NEXT (required, AUTHORING.md §5.2): fill and expand every new stub.")
+        print("  python3 scripts/fetch_drafts.py --kind articles --lang en --limit 5 --write")
+        print("  # expand the en draft, then translate it to the ko pair (§5.3)")
+        print("  python3 scripts/gate_promote_check.py --next --worktree")
+        print("Stub creation is step 1 of 4, not a deliverable.")
 
 
 if __name__ == "__main__":
