@@ -22,18 +22,20 @@ committing, the loop must pass:
 ```bash
 python3 scripts/gate_promote_check.py --next --worktree  # next item in this batch
 python3 scripts/gate_promote_check.py --worktree         # this batch
+git add -A
+python3 scripts/gate_promote_check.py --staged           # staged commit
 python3 scripts/gate_promote_check.py                    # full repo audit
 git config core.hooksPath .githooks                      # once per clone
 ```
 
 `.githooks/pre-commit` and `pre-push` block stubs, unexpanded skeletons, and
 new English docs without a Korean pair. See `AGENTS.md` for the contract and
-`AUTHORING.md` §5.0 for the full loop.
+`AUTHORING.md` §0 and §7 for the deterministic runbook.
 
 ## Docs
 
-- `AUTHORING.md` — authoring guide: file layout, frontmatter, collecting
-  articles/papers, common mistakes.
+- `AUTHORING.md` — authoring guide: execution contract, deterministic runbook,
+  file layout, frontmatter, collecting articles/papers, common mistakes.
 - `scripts/` — `site_css.py` + `portal.js` + `zoom.js` are the sources of
   truth for styling and portal interactivity; never edit the built copies
   under `static/`.

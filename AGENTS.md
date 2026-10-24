@@ -1,7 +1,9 @@
 # Wiki authoring contract (AGENTS.md)
 
 이 저장소에서 `content/`를 만지는 모든 에이전트에 적용된다.
-상세 규칙의 원본은 **`AUTHORING.md` §5**이고, 이 파일은 그 루프의 **중단 조건**을 강제한다.
+실행 순서는 **`AUTHORING.md` §0 → §7**을 따르고, 상세 규칙의 원본은
+**`AUTHORING.md` §5**다. 이 파일은 그 루프의 **중단 조건**을 강제한다.
+보고는 `AUTHORING.md` §7.7 형식을 그대로 쓴다.
 
 ## 한 줄 규칙
 
@@ -14,7 +16,8 @@
 
 1. **수집** — `collect_articles.py ... --stubs`
    - 이 단계의 산출물은 `status: pending` stub이다. **deliverable이 아니다.**
-2. **초안 채우기** — `fetch_drafts.py --kind ... --lang en --limit N --write`
+2. **초안 채우기** — `fetch_drafts.py --kind ... --lang en --limit 5 --write`
+   - 최대 5건까지 초안을 만들 수 있지만, 승격은 **1건씩** 한다.
    - `Draft summary auto-extracted` 스켈레톤도 **deliverable이 아니다.**
    - `--full`은 `status: pending`을 유지하므로 여전히 미완성이다.
 3. **승격** — `AUTHORING.md` §5.3 1→7
@@ -30,8 +33,9 @@ python3 scripts/gate_promote_check.py --staged           # 커밋 전 검사 (ho
 python3 scripts/gate_promote_check.py                    # 저장소 전체 감사
 ```
 
-`--next --worktree`가 항목을 출력하는 동안에는 **작업을 끝내지 않는다.**
-그 1건을 처리하고 다시 실행한다. "blocking items left: 0"이 될 때까지 반복한다.
+`--next --worktree`가 `NEXT:`를 출력하는 동안에는 **작업을 끝내지 않는다.**
+그 1건을 `AUTHORING.md` §7.5 순서로 처리하고 다시 실행한다.
+`Gate: DONE — no blocking work in this batch`가 될 때까지 반복한다.
 `--worktree`는 **이번 세션에서 생성·수정한 파일만** 본다. 전체 backlog를 보려면
 `--next`(플래그 없이)를 쓴다.
 
@@ -75,17 +79,24 @@ hook은 다음을 차단한다.
 - en 신규 문서에 ko 짝이 없는 커밋
 - 승격 중인 문서의 frontmatter·태그·본문 정책 위반
 
-## 작업 순서 (권장)
+## 작업 순서 (고정)
+
+작업 유형 판별과 전체 런북은 **`AUTHORING.md` §0·§7**에 있다. 요약하면:
 
 ```bash
 python3 scripts/gate_promote_check.py --next --worktree
-# 출력된 1건을 §5.3까지 완주
+# 출력된 1건을 AUTHORING.md §7.5 순서로 완주
 python3 scripts/gate_promote_check.py --next --worktree
-# ... blocking 0이 될 때까지
+# ... Gate: DONE이 될 때까지
+git status --short
+git add -A
 python3 scripts/gate_promote_check.py --worktree
 python3 scripts/gate_promote_check.py --staged
 python3 scripts/check_ko_papers.py
 python3 scripts/wiki_builder.py
 python3 scripts/make_index.py
-git add -A && git commit && git push
+git commit && git push
 ```
+
+새 수집 배치는 `AUTHORING.md` §7.1, 기존 backlog는 §7.2, 개념/가이드는
+§7.3, 지정 문서 1건은 §7.4를 따른다.
