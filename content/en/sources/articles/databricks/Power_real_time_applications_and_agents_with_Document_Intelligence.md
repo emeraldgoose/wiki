@@ -1,7 +1,7 @@
 ---
 title: "Power real-time applications and agents with Document Intelligence"
-description: "At Databricks, our enterprise customers receive millions of documents every single day. These messy, unstructured documents hold critical"
-tags: [source, article, en, en]
+description: "At Databricks, our enterprise customers receive millions of documents every single day."
+tags: [source, databricks, data-engineering, en]
 locale: en
 source_url: "https://www.databricks.com/blog/power-real-time-applications-and-agents-document-intelligence"
 blog: databricks
@@ -10,11 +10,7 @@ published_date: 2026-10-14
 
 # Power real-time applications and agents with Document Intelligence
 
-**Source**: [databricks](https://www.databricks.com/blog/power-real-time-applications-and-agents-document-intelligence)
-**Date**: 2026-10-14
-
-> Draft summary auto-extracted from the original article. Condensed here — see the original for full detail.
-> Original: [https://www.databricks.com/blog/power-real-time-applications-and-agents-document-intelligence](https://www.databricks.com/blog/power-real-time-applications-and-agents-document-intelligence)
+**Source**: [databricks](https://www.databricks.com/blog/power-real-time-applications-and-agents-document-intelligence) · **Published**: 2026-10-14
 
 ## Overview
 
@@ -28,11 +24,6 @@ At Databricks, our enterprise customers receive millions of documents every sing
 - A contract lands in an inbox. A legal team member opens it, hunts for the parties, effective date, and renewal terms, then enters them into the system to track the agreement for years.
 - An invoice arrives. An accounts payable specialist finds the vendor, PO number, and total, then enters them into the system so the invoice can go through approval and audit.
 - An insurance claim shows up in a portal with a stack of attachments, and an adjuster reads all of it just to decide where the claim should be routed to.
-
-## Source outline
-
-- Process documents in real-time with synchronous REST APIs
-- Integrate real-time document intelligence into your Apps and Agents
 
 ## References
 
