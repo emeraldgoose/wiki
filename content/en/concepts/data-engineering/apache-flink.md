@@ -52,6 +52,122 @@ TaskManagers (Worker Nodes)
 | **EmbeddedRocksDB** | Local disk (RocksDB) | Large state (TB), incremental checkpoints |
 | **Changelog** | Remote (Kafka/Pulsar) | Disaggregated state; fast recovery |
 
+## State Management
+
+### What Is State?
+
+**State** is the information an operator remembers across multiple events. Typical examples:
+
+- Sequence of events seen so far while searching for a pattern (CEP)
+- Pending aggregates per minute / hour / day
+- Current parameters of a model being trained over a stream
+- Efficient access to events that occurred in the past
+
+Flink must be aware of state in order to:
+
+- Make it **fault tolerant** through **checkpoints** and **savepoints**
+- **Rescale** applications by redistributing state across parallel instances
+
+See [State Backends](#state-backends) for where and how state is stored.
+
+### Keyed State
+
+Keyed state behaves like an **embedded key/value store**, scoped to the key of the current input element:
+
+- Only available on a **`KeyedStream`** (after `keyBy` / `key_by`)
+- Access is restricted to the value(s) associated with the **current event's key**
+- Streams and state are **aligned by key**, so updates are local operations (no transaction overhead)
+- Alignment lets Flink redistribute state and adjust stream partitioning transparently when scaling
+
+**Key groups** are the atomic unit of keyed-state redistribution:
+
+- There are exactly as many key groups as the configured **maximum parallelism**
+- Each parallel operator instance owns one or more key groups
+- Choose maximum parallelism with future rescaling in mind
+
+Managed keyed-state primitives (typically created in `RichFunction.open()` from `RuntimeContext`, then read/written per element):
+
+- `ValueState<T>` — single value per key; `update(T)`, `value()`
+- `ListState<T>` — list per key; `add(T)` / `addAll(...)`, replace with `update(List<T>)`, iterate via `get()`
+- `ReducingState<T>` — single value per key maintained by a `ReduceFunction`
+- `AggregatingState<IN, OUT>` — aggregated value per key via an `AggregateFunction`
+- `MapState<K, V>` — map per key; `put`, `get`, `remove`, `contains`, `entries()`
+
+Notes:
+
+- State descriptors (`ValueStateDescriptor`, etc.) carry type information and an optional `StateTtlConfig`
+- Keyed state is checkpointed automatically as part of a checkpoint when checkpointing is enabled
+
+### Operator State
+
+Operator (non-keyed) state is scoped to a **single parallel operator instance** rather than a key:
+
+- Access it by implementing `CheckpointedFunction` (or `ListCheckpointed` for list state)
+- `snapshotState(...)` writes state on checkpoint; `initializeState(...)` initializes and restores it
+- List-style operator state supports two redistribution schemes on rescale:
+  - **Even-split**: the whole state is the concatenation of per-task lists; on restore it is evenly divided among new tasks (some may be empty)
+  - **Union**: every new task receives the complete list — avoid this for high-cardinality state (checkpoint metadata size can cause RPC/frame-size or OOM issues)
+- Common uses: source offsets, buffered sinks, global counters
+
+### Broadcast State
+
+Broadcast state is a special operator state with a **map format** used when one stream is broadcast to all tasks:
+
+- Declared with a `MapStateDescriptor`
+- Broadcast the input via `broadcast(descriptor)`, then `connect(...)` with the non-broadcast stream
+- Writes happen on the **broadcast side**; the other side sees a **read-only** view
+- Considerations:
+  - No cross-task communication: all tasks must apply identical updates per element
+  - Events may arrive in different order per task, so updates must not depend on ordering
+  - Every task checkpoints its own copy (state size scales with parallelism `p`)
+  - Not supported by the RocksDB backend — kept in memory at runtime
+
+### State Backends
+
+| Backend | Storage | Use Case |
+|---------|---------|----------|
+| **HashMapStateBackend** | JVM heap | Small state, low latency |
+| **EmbeddedRocksDBStateBackend** | Local disk (RocksDB) | Large state (TBs), incremental checkpoints |
+| **ChangelogStateBackend** | Remote brokers (Kafka/Pulsar) | Disaggregated state; fast recovery |
+
+Notes:
+
+- Backend choice is independent of application logic — state descriptors stay the same
+- Checkpoint *location* (state storage) is configured separately and is usually a distributed filesystem or object store
+- RocksDB supports incremental checkpoints; heap backends typically snapshot full state
+- Broadcast/operator state is in-memory only
+
+### State Persistence, Checkpoints, and Savepoints
+
+- **Checkpoint**: consistent snapshot of input offsets plus operator state; enables exactly-once recovery
+- Checkpoint interval trades runtime overhead against recovery time
+- Checkpointing is **disabled by default** — enable it in the execution environment
+- Requires sources that can rewind (e.g. Kafka) so records can be replayed from the checkpoint
+- **Aligned checkpoints** use barrier alignment; **unaligned checkpoints** reduce latency under backpressure but may produce duplicates on recovery
+- **Savepoint**: user-triggered, manually managed snapshot used for upgrades, migrations, scaling, A/B testing; does not auto-expire
+- On failure, operators are restored from the latest successful checkpoint/savepoint
+
+### State TTL
+
+Avoid unbounded state growth by attaching a time-to-live to a state descriptor via `StateTtlConfig`:
+
+- Applies to keyed state (`Value`/`List`/`Map`/`Reducing`/`Aggregating`)
+- Expired entries can be cleaned up lazily on access and eagerly during compaction/checkpoint depending on the backend
+- Configure update type (on create/write vs on read/write), visibility of expired but uncleaned entries, and cleanup strategies
+
+### Queryable State
+
+Some keyed and operator state can be exposed to external clients through a queryable-state server for ad-hoc lookups and debugging. The API is evolving and may change between releases — prefer metrics and deliberate exports for production visibility.
+
+### Operational Best Practices
+
+- Prefer **keyed state** over operator state when a natural key exists
+- Use **RocksDB** for large state, **heap** for small/low-latency state
+- Set **maximum parallelism** with future rescaling in mind (it fixes the number of key groups)
+- Enable checkpoints for fault tolerance; tune the interval to state size and source replay cost
+- Use **TTL** to bound state; monitor state size and checkpoint duration
+- Avoid unbounded per-key collections without TTL or explicit cleanup
+
 ## Key APIs
 
 ### DataStream API (Java/Scala)
