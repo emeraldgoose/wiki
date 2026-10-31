@@ -1,37 +1,32 @@
 ---
 title: "Databricks and SAP unleash end-to-end data & AI capabilities to level up enterprise AI transformation"
-description: "Today's AI models are more capable than ever. What they still lack is the business context to understand how your company actually runs."
-tags: [source, databricks, en]
+description: "SAP and Databricks are expanding their partnership to bring full Databricks data and AI capabilities to SAP Databricks in SAP Business Data Cloud, plus Application Data Foundation for direct access to SAP application data."
+tags: [source, databricks, sap, data-engineering, en]
 locale: en
 source_url: "https://www.databricks.com/blog/databricks-and-sap-unleash-end-end-data-ai-capabilities-level-enterprise-ai-transformation"
 blog: databricks
-published: "2026-10-30"
+published_date: 2026-10-30
 ---
 
 # Databricks and SAP unleash end-to-end data & AI capabilities to level up enterprise AI transformation
 
-**Source**: [databricks](https://www.databricks.com/blog/databricks-and-sap-unleash-end-end-data-ai-capabilities-level-enterprise-ai-transformation)
-**Date**: 2026-10-30
-
+**Source**: [Databricks Blog](https://www.databricks.com/blog/databricks-and-sap-unleash-end-end-data-ai-capabilities-level-enterprise-ai-transformation) · **Published**: 2026-10-30
 
 ## Overview
-
-Today's AI models are more capable than ever. What they still lack is the business context to understand how your company actually runs. For most enterprises, that context lives in SAP systems. Over 90% of Fortune 500 companies use SAP solutions to manage key business processes, enhance operational efficiency, and gain a competitive edge through data-driven decision-making. Last year, SAP and Databricks introduced SAP Databricks, which natively embedded the Databricks Data + AI Platform in SAP Business Data Cloud (SAP BDC). Since general availability, customers including Adidas, Zalando, Mondi, and CAF have used SAP Databricks and SAP BDC Connect for Databricks to analyze, govern, and build AI on live, semantically rich SAP Data Products through zero-copy, bi-directional OpenSharing.
+AI models are more capable than ever, yet they often lack the business context that lives inside SAP systems, which more than 90% of Fortune 500 companies use to run key processes. SAP and Databricks introduced SAP Databricks within SAP Business Data Cloud last year, and are now entering the next phase by bringing the full scope of Databricks capabilities to SAP Databricks. The centerpiece is SAP Application Data Foundation, which makes SAP application data directly consumable in the customer's chosen SAP Business Data Cloud engine, including SAP Databricks, without custom extraction pipelines or data copies while preserving business semantics. The expanded partnership also plans to bring capabilities such as Genie, Lakeflow, Unity Gateway and Lakebase, with Unity Catalog governance across SAP and non-SAP data. The goal is to let enterprises combine decades of SAP process data with third-party sources, build forecasting, anomaly detection and agent applications on business semantics, and accelerate AI transformation on critical enterprise data with joint SAP and Databricks field teams.
 
 ## Key points
+- SAP Application Data Foundation removes custom extraction pipelines: SAP data products can be shared via SAP BDC for zero-copy access, avoiding copies and silos.
+- AI is built on SAP business semantics so analytics and AI reflect how the business actually runs, using years of order history when enriching with third-party data.
+- The full Databricks platform arrives on SAP data: Genie as an AI coworker, Lakeflow for unified ingestion and pipelines, Unity Gateway for governance and cost control, and Lakebase as a mission-critical Postgres foundation for AI apps and agents.
+- Governance stays unified through Unity Catalog and Unity Gateway across SAP and non-SAP data, models and agents.
+- Customers can consume SAP data inside SAP BDC with SAP Databricks or bring governed SAP data products into an existing Databricks estate, on any cloud and model.
+- Case study SAF-Holland unified more than 100 million records of customer, delivery and material data and achieved analyses 5x faster and insights in minutes instead of weeks.
 
-- Databricks and SAP are expanding their partnership to provide expanded access to SAP application data across cloud and on-premises to accelerate time to value for advanced analytics and AI.
-- New Databricks capabilities including Genie, Lakeflow, Unity Gateway, and Lakebase come to SAP Databricks fully integrated with SAP Business Data Cloud.
-- Customers can put all their SAP data to work with the full range of the Databricks Data + AI Platform and AI capabilities.
-- No more custom extraction pipelines: SAP data products can be shared with SAP BDC Connect for zero-copy access, avoiding additional pipelines, data copies and silos.
-- AI built on SAP business semantics: Data engineers can build models on a semantically rich foundation, so analytics and AI reflect how the business actually runs.
-- The full Databricks Data + AI Platform on SAP data: Genie, Lakeflow, Unity Gateway and Lakebase turn that data into enriched data products, apps and agents.
+## Details
+SAP application data has historically been accessible only via custom extraction pipelines that copy data, lose business context and fragment governance. Application Data Foundation changes that by exposing SAP data as consumable products for SAP BDC engines, lowering total cost of ownership and speeding time to value. For SAP Databricks customers this means no extra pipelines, models built on semantically rich data and a broader platform including Genie, Lakeflow, Unity Gateway and Lakebase, with multi-AI governance and agent controls through Unity Gateway.
 
-## Source outline
-
-- How customers put SAP application data to work in SAP Databricks
-- What Databricks capabilities are coming to SAP Databricks
+The partnership also highlights architecture choice and go-to-market execution: customers can use SAP data inside SAP BDC, or export governed SAP data products into existing Databricks estates; joint field teams help accelerate delivery. SAP and Databricks leaders frame the move as combining SAP's business-process understanding with the leading Data plus AI platform so data becomes a foundation for the autonomous enterprise, with bi-directional integration possibilities between Genie and Joule. SAP Databricks and SAP BDC Connect for Databricks are available today; customers should talk to their SAP or Databricks account team regarding Application Data Foundation.
 
 ## References
-
-- Original article: [https://www.databricks.com/blog/databricks-and-sap-unleash-end-end-data-ai-capabilities-level-enterprise-ai-transformation](https://www.databricks.com/blog/databricks-and-sap-unleash-end-end-data-ai-capabilities-level-enterprise-ai-transformation)
+- Original article: [Databricks and SAP unleash end-to-end data & AI capabilities to level up enterprise AI transformation](https://www.databricks.com/blog/databricks-and-sap-unleash-end-end-data-ai-capabilities-level-enterprise-ai-transformation)
