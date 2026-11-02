@@ -307,7 +307,7 @@ python3 scripts/fetch_drafts.py --kind papers --limit 5 --write
    끼운다 (`[source, paper, machine-learning, en]`). 끝 언어 태그는 유지한다 (§2).
 3. **날짜 키 확인.** `published`(fetch 출력) 또는 `published_date`(stub/`--full` 출력)
    중 하나가 `YYYY-MM-DD` 형식이면 된다. 둘 다 넣지 않는다.
-   **새로 쓰는 문서는 `published_date`로 통일한다.** 수집일이 아니라 원문 게시일을 쓴다.
+   frontmatter published_date는 이 wiki에 게시된 날짜(승격일, 보통 오늘)다. 원문 게시일은 본문 출처 줄에 출처와 함께 기록한다.
 4. **종류별 보존 키 (삭제·변경 금지).**
 
    | 종류 | 유지해야 할 키 |
@@ -707,7 +707,7 @@ Method, data, setup, and results. Do not add facts absent from the source.
 | frontmatter `---` 없음 | 수정 | 기존 key 줄을 `---`로 감싼다. 값은 유지 |
 | `tags` 언어 태그 중복 | 수정 | 중복 제거 후 주제 태그 추가 |
 | 제목이 arXiv ID | 수정 | arXiv abs 페이지에서 실제 제목 확인 후 frontmatter/H1 수정 |
-| 날짜가 비어 있음 | 수정 | 원문 게시일 사용. 오늘 날짜로 채우지 않는다 |
+| 날짜가 비어 있음 | 수정 | frontmatter published_date에는 승격일(오늘, wiki 게시일)을 쓴다. 원문 게시일은 body 출처 줄에만 기록하고 꾸며 채우지 않는다 |
 | ko가 아직 stub | 수정 | ko fetch 금지. 완성된 en을 번역 |
 | `gate`가 metadata BLOCKED | 수정 | 지적된 필드만 고친다. 게이트 우회 금지 |
 | hook이 커밋 거부 | 정상 | 미완성 파일을 끝내거나, 새로 만든 미완성 stub을 제거하고 보고 |
