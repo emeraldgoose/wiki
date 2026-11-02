@@ -57,7 +57,6 @@ I18N = {
         "by_tag": "By tag",
         "navigate": "Navigator",
         "search_ph": "Search 519 documents…",
-        "table_search_ph": "Search title, description, source…",
         "col_title": "Title",
         "col_type": "Type",
         "col_category": "Category",
@@ -96,7 +95,6 @@ I18N = {
         "by_tag": "태그별",
         "navigate": "내비게이터",
         "search_ph": "519개 문서 검색…",
-        "table_search_ph": "제목·설명·출처 검색…",
         "col_title": "제목",
         "col_type": "유형",
         "col_category": "카테고리",
@@ -400,15 +398,13 @@ def table_html(records, t, show_type=True, id_prefix="", table_id="",
         if compact:
             out.append("<tr>")
         else:
-            search = " ".join([rec["title"], rec["desc"], rec["category"], rec["blog"]]).lower()
             tags = " ".join(rec["tags"])
             out.append(
                 f'<tr data-kind="{eattr(rec["kind"])}" '
                 f'data-category="{eattr(rec["category"])}" '
                 f'data-blog="{eattr(rec["blog"])}" '
                 f'data-date="{eattr(rec["date"])}" '
-                f'data-tags="{eattr(tags)}" '
-                f'data-search="{eattr(search)}">'
+                f'data-tags="{eattr(tags)}">'
             )
         out.append(
             f'<td class="t-title"><a href="{eattr(rec["href"])}">{e(rec["title"])}</a></td>'
@@ -601,9 +597,6 @@ def render(records, t, lang, other_lang_code):
         <div class="selects">
           <select id="cat-filter"><option value="">{e(t['by_category'])}: {e(t['all'])}</option>{cat_options}</select>
           <select id="src-filter"><option value="">{e(t['by_source'])}: {e(t['all'])}</option>{src_options}</select>
-        </div>
-        <div class="table-search">
-          <input type="search" id="table-search" class="search" placeholder="{eattr(t['table_search_ph'])}" autocomplete="off"/>
         </div>
       </div>
       <p class="result-count" id="result-count"></p>

@@ -217,7 +217,9 @@ python3 scripts/collect_articles.py --year 2026 --stubs   # stub까지 생성
 ```
 
 - 수집 대상(`scripts/collect_articles.py` 상단 `FEEDS`):
-  `netflix`, `airbnb`, `spotify`, `aws-big-data`, `databricks`.
+  `airbnb`, `spotify`, `aws-big-data`, `databricks`.
+  `netflix`는 제외한다 — netflixtechblog.com의 robots.txt가 이 크롤러를
+  막아 새 글을 받을 수 없다. 이미 수집된 글은 그대로 둔다.
 - 동작: 각 피드를 읽어 올해(`--year`) 이후 발행글만 남기고,
   `.index-backup/collected.json`에 제목·URL·날짜·출처 목록을 쓴다.
   이 단계에서는 본문을 쓰지 않는다.

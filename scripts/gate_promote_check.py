@@ -6,7 +6,10 @@ A source document is finished only when all of these hold:
   * it is not an unexpanded `fetch_drafts.py` skeleton,
   * the same relative path exists in both en and ko and both are finished,
   * (for new files and for promotions out of stub/draft) frontmatter, body,
-    tags and links pass the §5.3 checks.
+    tags and links pass the §5.3 checks,
+  * the body is actually written: a ko body that pastes the source abstract,
+    keeps long English runs, lists metadata as "key points", or reduces
+    Details to a section outline is not finished (§5.3, §7.5.3).
 
 This is the single "am I done?" command for the authoring loop. A stub or a
 `--write` draft is step 1 or 2 of 4, never a deliverable.
@@ -67,6 +70,11 @@ PRIORITY = {
     "paper-filename": 9,
     "ko-body-en": 9,
     "ko-copy": 9,
+    "ko-raw-abstract": 9,
+    "ko-en-run": 9,
+    "key-points-refs": 9,
+    "key-points-meta": 9,
+    "details-outline": 9,
     "en-body-ko": 10,
 }
 
@@ -227,6 +235,123 @@ def _issue(severity: str, code: str, doc: Doc, message: str) -> Issue:
     return Issue(severity, code, doc.rel, message, doc.state)
 
 
+# Content quality -----------------------------------------------------------
+# The structural checks above cannot tell a finished summary from a pasted
+# abstract, a bibliography, or a table of contents. These four patterns are the
+# observed failure mode of a "metadata-only" promotion (AUTHORING.md §5.3).
+
+HANGUL = re.compile(r"[\uac00-\ud7a3]")
+ASCII_WORD = re.compile(r"[A-Za-z][A-Za-z'\u2019\-]*")
+REF_ENTRY = re.compile(
+    r"^\[\d+\]|^\d+\.\s|\bet al\.|arXiv preprint|\bIn Proceedings\b|"
+    r"\bCited by\b|\bdoi:\s", re.I)
+META_BULLET = re.compile(
+    r"^(원문\s*제목|arXiv\s*ID|분류|저자|게시일|출판|논문\s*제목|"
+    r"original\s+title|authors?|categories?)\s*[:：]", re.I)
+OUTLINE_BULLET = re.compile(
+    r"^(\d+(\.\d+)*\.?\s|Appendix\b|부록\b|Chapter\b|Section\b)", re.I)
+RAW_ABSTRACT = re.compile(r"원문\s*초록|Original abstract", re.I)
+
+
+def _section(body: str, *names: str) -> str:
+    for name in names:
+        m = re.search(r"^##\s+%s\s*$" % re.escape(name), body, re.M)
+        if not m:
+            continue
+        rest = body[m.end():]
+        nxt = re.search(r"^##\s+", rest, re.M)
+        return rest[:nxt.start()] if nxt else rest
+    return ""
+
+
+def _bullets(section: str) -> list[str]:
+    return [ln.strip()[2:].strip() for ln in section.splitlines()
+            if ln.strip().startswith("- ")]
+
+
+def _strip_code(text: str) -> str:
+    text = re.sub(r"```.*?```", "\n", text, flags=re.S)
+    return re.sub(r"`[^`\n]*`", " ", text)
+
+
+def _english_runs(body: str, min_words: int = 18,
+                  block_words: int = 40) -> list[tuple[int, str]]:
+    """Lines that keep a long untranslated English passage (code excluded).
+
+    A quoted work title or product name is allowed by §7.5.3, so a short run
+    only counts when it ends like a sentence; an unpunctuated block of 40+
+    words always counts.
+    """
+    runs: list[tuple[int, str]] = []
+    for line in _strip_code(body).splitlines():
+        stripped = line.lstrip()
+        if stripped.startswith(("|", ">")) or re.match(
+                r"^\*\*(저자|원저자|Authors?)\*\*", stripped, re.I):
+            continue
+        for chunk in HANGUL.split(line):
+            words = ASCII_WORD.findall(chunk)
+            if len(words) < min_words:
+                continue
+            # An author list or a run of constants is a proper-noun list, not
+            # an untranslated sentence.
+            caps = sum(1 for w in words if w[:1].isupper())
+            if caps >= 0.8 * len(words):
+                continue
+            # A formula or a symbol table, not prose.
+            if sum(1 for w in words if len(w) == 1) >= 0.5 * len(words):
+                continue
+            if len(words) >= block_words or re.search(
+                    r"[.?!]\s*[*_`)\]]*$", chunk):
+                runs.append((len(words), " ".join(words[:10])))
+    return runs
+
+
+def quality_issues(doc: Doc, severity: str) -> list[Issue]:
+    out: list[Issue] = []
+    body = doc.body
+
+    if doc.lang == "ko":
+        marker = RAW_ABSTRACT.search(body)
+        if marker:
+            out.append(_issue(
+                severity, "ko-raw-abstract", doc,
+                "ko body keeps the source abstract (%r)"
+                % body[marker.start():marker.start() + 24].replace("\n", " ")))
+        runs = _english_runs(body)
+        if runs:
+            words, sample = max(runs)
+            out.append(_issue(
+                severity, "ko-en-run", doc,
+                f"{len(runs)} untranslated English run(s), longest {words} "
+                f"words: {sample!r}"))
+
+    bullets = _bullets(_section(body, "Key points", "핵심 내용"))
+    if bullets:
+        refs = [b for b in bullets if REF_ENTRY.search(b)]
+        if len(refs) >= max(2, (len(bullets) + 1) // 2):
+            out.append(_issue(
+                severity, "key-points-refs", doc,
+                f"{len(refs)}/{len(bullets)} Key points are bibliography "
+                "entries, not findings"))
+        if doc.lang == "ko":
+            meta = [b for b in bullets if META_BULLET.match(b)]
+            if len(meta) >= max(2, (len(bullets) + 1) // 2):
+                out.append(_issue(
+                    severity, "key-points-meta", doc,
+                    f"{len(meta)}/{len(bullets)} 핵심 내용 bullets are metadata, "
+                    "not findings"))
+
+    details = _bullets(_section(body, "Details", "상세"))
+    if details:
+        outline = [b for b in details if OUTLINE_BULLET.match(b)]
+        if len(outline) >= max(3, (len(details) + 1) // 2):
+            out.append(_issue(
+                severity, "details-outline", doc,
+                f"{len(outline)}/{len(details)} Details bullets are section "
+                "headings, not content"))
+    return out
+
+
 def evaluate(doc: Doc, docs: dict[str, Doc], status: str | None, strict: bool,
              prev_state: str | None = None) -> list[Issue]:
     """status: "A" added, "M" modified, "D" deleted, None = full audit.
@@ -270,6 +395,12 @@ def evaluate(doc: Doc, docs: dict[str, Doc], status: str | None, strict: bool,
         out.append(_issue("error" if pair_strict else "warn",
                           "pair-incomplete", doc,
                           f"pair is still {other.state}: content/{other_rel}"))
+
+    # Content quality does not depend on the frontmatter policy: it blocks as
+    # soon as the document is written (new / modified / promoted / --strict)
+    # and only warns for untouched legacy files in the plain full audit.
+    touched = status in ("A", "M") or promotion
+    out.extend(quality_issues(doc, "error" if (strict or touched) else "warn"))
 
     if not policy:
         return out

@@ -28,8 +28,11 @@ from datetime import datetime, timezone
 
 CWD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# netflix is intentionally absent: netflixtechblog.com disallows this crawler
+# in robots.txt, so new posts cannot be fetched (fetch_drafts.py refuses them
+# anyway). Posts collected before that are kept under
+# content/<lang>/sources/articles/netflix/.
 FEEDS = {
-    "netflix": "https://netflixtechblog.com/feed",
     "airbnb": "https://airbnb.tech/feed/",
     "spotify": "https://engineering.atspotify.com/feed/",
     "aws-big-data": "https://aws.amazon.com/blogs/big-data/feed/",
@@ -38,6 +41,7 @@ FEEDS = {
 
 # Folder slug per publisher. Must match the on-disk layout in
 # content/<lang>/sources/articles/<slug>/ and make_index.py's BLOG_LABEL.
+# netflix stays here because that folder already holds earlier posts.
 BLOG_SLUG = {
     "netflix": "netflix",
     "airbnb": "airbnb",
