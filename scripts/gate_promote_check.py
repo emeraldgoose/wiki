@@ -75,6 +75,8 @@ PRIORITY = {
     "key-points-refs": 9,
     "key-points-meta": 9,
     "details-outline": 9,
+    "body-html": 9,
+    "generic-placeholder": 9,
     "en-body-ko": 10,
 }
 
@@ -251,6 +253,22 @@ META_BULLET = re.compile(
 OUTLINE_BULLET = re.compile(
     r"^(\d+(\.\d+)*\.?\s|Appendix\b|부록\b|Chapter\b|Section\b)", re.I)
 RAW_ABSTRACT = re.compile(r"원문\s*초록|Original abstract", re.I)
+HTML_TAG = re.compile(r"</?(?:span|div|p|br|a|strong|em|i|b|ul|ol|li|h[1-6]|section|article|html|head|body|blockquote|table|tr|td|th|img|pre|code)\b[^>]*>", re.I)
+GENERIC_PLACEHOLDERS = [
+    "This document provides a concise summary of the source work.",
+    "It condenses the problem setting, proposed approach, evaluation, and implications into a short English overview.",
+    "Summarizes the problem setting and motivation of the source work.",
+    "Describes the proposed approach and its central contribution.",
+    "Covers the main evaluation context and observed benefits.",
+    "Notes practical implications for further research.",
+    "The original source linked above contains the full technical details. This page condenses the work into a readable summary; consult the source for complete methods, figures, and discussion.",
+    "이 문서는 원문을 한국어로 요약하여 핵심 문제, 제안 접근, 평가, 시사점을 정리한다.",
+    "원문의 문제 설정과 배경을 정리한다.",
+    "제안된 방법과 핵심 기여를 한국어로 설명한다.",
+    "주요 평가와 관찰된 효과를 요약한다.",
+    "실무와 후속 연구에의 시사점을 정리한다.",
+    "세부 실험 조건, 그림, 논의는 링크된 원문을 참고한다. 이 문서는 원문을 한국어로 요약한 내용을 담는다.",
+]
 
 
 def _section(body: str, *names: str) -> str:
@@ -309,6 +327,17 @@ def _english_runs(body: str, min_words: int = 18,
 def quality_issues(doc: Doc, severity: str) -> list[Issue]:
     out: list[Issue] = []
     body = doc.body
+
+    cleaned = _strip_code(body)
+    html_hits = HTML_TAG.findall(cleaned)
+    if html_hits:
+        out.append(_issue(severity, "body-html", doc,
+                          "raw HTML markup in body: " + str(sorted(set(html_hits))[:4])))
+    for phrase in GENERIC_PLACEHOLDERS:
+        if phrase in body:
+            out.append(_issue(severity, "generic-placeholder", doc,
+                              "generic placeholder phrase: " + phrase[:60]))
+            break
 
     if doc.lang == "ko":
         marker = RAW_ABSTRACT.search(body)
