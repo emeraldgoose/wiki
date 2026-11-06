@@ -697,31 +697,42 @@ Method, data, setup, and results. Do not add facts absent from the source.
 - 제목은 자연스러운 한국어로 옮기되, 고유명사(모델명·시스템명)는 유지한다.
 - 영어 문장을 그대로 남기지 않는다. 코드·수식·고유명사만 허용.
 
-### 7.5.4 Korean rendering — 자연스러운 한국어 우선 (natural Korean preferred)
+### 7.5.4 Korean rendering — 자연스러운 한국어 우선 (natural Korean preferred, universal)
 
-한국어 본문에서 영어 동사·구문에 대응하는 자연스러운 한국어 표현이 있으면 영어를 그대로 섞지 않고 한국어로 옮기며, 정석 영어 용어는 최초 한 번만 괄호 gloss로 붙인다.
+_v2 (2026-11-06): 보편 원칙으로 확장. 이전의 구문별 예시 쌍에 잠기지 않고, 평범한 영어도 한국어로 옮긴다 ("docs that outperform" → "성능이 더 뛰어난 문서")._
 
-- 영어 동사·구문에 한국어 대응 표현이 있으면 한국어로 옮기고, 최초 한 번만 정석 영어 용어를 괄호로 붙인다.
-  - 예: channels를 jointly code하고 → 채널을 결합하여 코딩하고(jointly code)… (이후는 채널을 결합하여 코딩하고)
-  - 예: codebooks를 fine-tune하는 → 코드북을 미세조정(fine-tune)하는
-- 고유명사나 자연스러운 한국어 대응이 없는 용어는 영어 원문 유지를 허용하되, 괄호 gloss를 최초 한 번 붙인다.
-  - 예: full-precision → 풀프레시전(full-precision)
-  - 예: looped transformer → 루프형 트랜스포머(looped transformer)
-- 괄호 gloss 이후에는 한국어만 쓰고, 문장 단위 혼용(영어 동사 + 한국어 조사)을 피한다.
-- §7.6 ko-en-run 탐지 (>= 18 얽힌 영문 연속) 차단과 호환. §7.5.3의 코드·수식·고유명사만 허용 규칙을 함께 따른다.
-- 이 규칙은 §7.5.3의 ko 작성 규칙을 보강하며, 작업 중인 모든 en→ko 페어에 적용된다.
+ko 본문에서 영어 동사·형용사·구문에 대응하는 자연스러운 한국어 표현이 있으면 한국어로 옮기고, 영어는 최초 한 번만 괄호 gloss로 쓴다. "outperform"처럼 평범한 영어도 반드시 한국어로 옮긴다.
 
-before/after 예시 (LoopVQ, arXiv 2611.05304, KV 캐시 벡터 양자화)
+1. **Translate-common rule (평범한 영어 번역)** — 표준 기술 산문에 자연스러운 한국어 표현이 있는 영어 동사·형용사·구문은 모두 한국어로 바꾼다. "outperform" → "성능이 더 뛰어나다", "fine-tune" → "미세조정", "jointly code" → "결합하여 코딩". 괄호 영어 gloss는 **첫 사용 시 의미 전달을 canonical 영어 이름이 좌우하는 틈새 기술 용어에만** 붙인다 ("풀프레시전(full-precision)", "루프형 트랜스포머(looped transformer)"). 평범한 영어 단어에는 gloss를 붙이지 않는다 (× "성능이 더 뛰어나다 (outperform)").
+
+2. **Keep verbatim rule (원문 유지)** — 자연스러운 한국어 대응이 없는 경우에만 영어 원문을 그대로 둔다 (고유명사, API 이름, 브랜드/모델 이름, arXiv ID). 이때는 gloss 없이 raw 그대로 둔다.
+
+3. **Mixed-script allowance (혼용 허용 범위)** — 번역 용어에 대한 괄호 gloss는 ko 문장 안에 영어가 들어올 수 있는 **유일한** 통로다. 문장 단위 혼용 ("channels를 jointly code하고", "codebooks를 fine-tune하는")은 `(...)` gloss 내부를 제외하고 금지한다.
+
+4. **Decision procedure (애매한 경우)** — 한국 엔지니어가 자연스럽게 쓸 한국어 문장을 택한다. 두 표현이 모두 자연스러우면 더 짧은 쪽을 택한다. **문장 본문에 영어 동사를 남기는 쪽을 고르지 않는다.**
+
+5. **Universal examples (before → after)**. 이 쌍들은 특정 구문에 잠기지 않고 원칙을 보여준다:
+   - "counts_change detection을 jointly code한 모델" → "counts_change 감지기를 결합하여 코딩한 모델"
+   - "this method outperforms all baselines" → "이 방법은 모든 베이스라인보다 성능이 더 뛰어났다"
+   - "fine-tune on 8k examples" → "8k 예제로 미세조정"
+   - "the KV cache is vector-quantized" (niche) → "KV 캐시는 벡터 양자화(vector quantization)된다"  (gloss 유지)
+   - "transformer-based model" → "트랜스포머 기반 모델"  (gloss 불필요; common)
+
+6. **Retroactive (소급 적용)** — Phase-A 버킷(ko-copy, ko-en-run 등)의 레거시 문서를 고칠 때도 동일 규칙을 적용한다. 커밋 메시지에 `ko rendering v2`를 기록한다.
+
+호환: §7.6 ko-en-run 탐지(>= 18 연속 영어) 차단과 혼용하지 않는다. §7.5.3의 코드·수식·고유명사만 허용 규칙을 함께 따른다. §7.5.3의 ko 작성 규칙을 보강하며 작업 중인 모든 en→ko 페어에 적용된다.
+
+before/after 예시 (LoopVQ, arXiv 2611.05304, KV 캐시 벡터 양자화, v2)
 
 Before (mixed script):
 
 > LoopVQ는 multiple loop steps의 channels를 jointly code하고 full-precision model output에 match하도록 codebooks를 fine-tune하는 looped transformer KV cache vector quantization method를 제안한다.
 
-After (natural Korean):
+After (natural Korean, v2):
 
-> LoopVQ는 여러 루프 단계의 채널을 결합하여 코딩(jointly code)하고 풀프레시전(full-precision) 모델 출력에 맞추어 코드북(codebook)을 미세조정(fine-tune)하는 루프형 트랜스포머(looped transformer) KV 캐시 벡터 양자화 방법을 제안한다.
+> LoopVQ는 여러 루프 단계의 채널을 결합하여 코딩하고 풀프레시전(full-precision) 모델 출력에 맞추어 코드북을 미세조정하는 루프형 트랜스포머(looped transformer) KV 캐시 벡터 양자화 방법을 제안한다.
 
-
+Pilot (2026-11-06): `ko/sources/papers/2611-05304.md`, `ko/sources/papers/2610-12570.md` 본문의 문장 단위 혼용을 v2 규칙으로 정리. 근거 문장은 §7.7 보고에 최대 3개 기록.
 
 ### 7.6 실패 처리 (같은 상황이면 같은 행동)
 
