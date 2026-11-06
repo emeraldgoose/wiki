@@ -697,6 +697,32 @@ Method, data, setup, and results. Do not add facts absent from the source.
 - 제목은 자연스러운 한국어로 옮기되, 고유명사(모델명·시스템명)는 유지한다.
 - 영어 문장을 그대로 남기지 않는다. 코드·수식·고유명사만 허용.
 
+### 7.5.4 Korean rendering — 자연스러운 한국어 우선 (natural Korean preferred)
+
+한국어 본문에서 영어 동사·구문에 대응하는 자연스러운 한국어 표현이 있으면 영어를 그대로 섞지 않고 한국어로 옮기며, 정석 영어 용어는 최초 한 번만 괄호 gloss로 붙인다.
+
+- 영어 동사·구문에 한국어 대응 표현이 있으면 한국어로 옮기고, 최초 한 번만 정석 영어 용어를 괄호로 붙인다.
+  - 예: channels를 jointly code하고 → 채널을 결합하여 코딩하고(jointly code)… (이후는 채널을 결합하여 코딩하고)
+  - 예: codebooks를 fine-tune하는 → 코드북을 미세조정(fine-tune)하는
+- 고유명사나 자연스러운 한국어 대응이 없는 용어는 영어 원문 유지를 허용하되, 괄호 gloss를 최초 한 번 붙인다.
+  - 예: full-precision → 풀프레시전(full-precision)
+  - 예: looped transformer → 루프형 트랜스포머(looped transformer)
+- 괄호 gloss 이후에는 한국어만 쓰고, 문장 단위 혼용(영어 동사 + 한국어 조사)을 피한다.
+- §7.6 ko-en-run 탐지 (>= 18 얽힌 영문 연속) 차단과 호환. §7.5.3의 코드·수식·고유명사만 허용 규칙을 함께 따른다.
+- 이 규칙은 §7.5.3의 ko 작성 규칙을 보강하며, 작업 중인 모든 en→ko 페어에 적용된다.
+
+before/after 예시 (LoopVQ, arXiv 2611.05304, KV 캐시 벡터 양자화)
+
+Before (mixed script):
+
+> LoopVQ는 multiple loop steps의 channels를 jointly code하고 full-precision model output에 match하도록 codebooks를 fine-tune하는 looped transformer KV cache vector quantization method를 제안한다.
+
+After (natural Korean):
+
+> LoopVQ는 여러 루프 단계의 채널을 결합하여 코딩(jointly code)하고 풀프레시전(full-precision) 모델 출력에 맞추어 코드북(codebook)을 미세조정(fine-tune)하는 루프형 트랜스포머(looped transformer) KV 캐시 벡터 양자화 방법을 제안한다.
+
+
+
 ### 7.6 실패 처리 (같은 상황이면 같은 행동)
 
 | 상황 | 판정 | 반드시 할 일 |
