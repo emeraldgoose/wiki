@@ -2,7 +2,7 @@
 title: Spark 쿼리에서 아이스버그 materialized view로 가속화
 description: Amazon EMR 7.12.0 및 AWS Glue 5.1부터 Apache Spark 쿼리 실행 시간을 Apache Iceberg materialized views를 사용하며 SQL을 변경하지 않고 자동 쿼리 재작성을 통해 감소시킬 수 있습니다.
 date: 2026-09-10
-tags: [aws, data-engineering, spark, iceberg, materialized-views, query-optimization]
+tags: [aws, data-engineering, spark, iceberg, materialized-views, query-optimization, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/accelerating-spark-queries-with-iceberg-materialized-views/"
 blog: aws

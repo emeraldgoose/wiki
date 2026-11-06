@@ -2,7 +2,7 @@
 title: Every team is a data team — bring Amazon Redshift analytics to ChatGPT Work
 description: The AWS Data Analytics plugin for ChatGPT Work brings Amazon Redshift analytics to business teams, enabling natural-language questions against governed data warehouses and data lakes, with dashboard creation and shareable results.
 date: 2026-09-10
-tags: [aws, data-analytics, chatgpt, redshift, business-intelligence, natural-language-sql]
+tags: [aws, data-analytics, chatgpt, redshift, business-intelligence, natural-language-sql, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/every-team-is-a-data-team-bring-amazon-redshift-analytics-to-chatgpt-work/"
 blog: aws

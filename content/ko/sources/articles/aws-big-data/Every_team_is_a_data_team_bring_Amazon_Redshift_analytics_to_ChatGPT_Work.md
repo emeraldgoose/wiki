@@ -5,6 +5,7 @@ source_url: "https://aws.amazon.com/blogs/big-data/every-team-is-a-data-team-bri
 blog: "AWS Big Data"
 published: 2026-09-10
 locale: ko
+tags: [source, article, aws-big-data, redshift, chatgpt, data-analytics, ko]
 ---
 
 # 모든 팀은 데이터 팀입니다 — Amazon Redshift 분석 기능을 ChatGPT Work로 가져오세요

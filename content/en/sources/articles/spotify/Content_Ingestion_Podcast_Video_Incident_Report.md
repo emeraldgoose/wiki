@@ -1,7 +1,7 @@
 ---
-title: Content Ingestion and Podcast Video Incident Report
+title: "Content Ingestion & Podcast Video Incident Report"
 description: "Spotify's post-mortem of the June 24 podcast video publishing delay — four converging causes and the reliability program for the publishing pipeline"
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://engineering.atspotify.com/2026/7/content-ingestion-and-podcast-video-incident-report"
 blog: spotify

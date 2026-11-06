@@ -2,7 +2,7 @@
 title: Accelerating Spark queries with Iceberg materialized views
 description: How automatic query rewrite with Iceberg materialized views reduces Apache Spark query execution time without changing SQL, using precomputed results from the AWS Glue Data Catalog.
 date: 2026-09-10
-tags: [aws, data-engineering, spark, iceberg, materialized-views, query-optimization]
+tags: [aws, data-engineering, spark, iceberg, materialized-views, query-optimization, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/accelerating-spark-queries-with-iceberg-materialized-views/"
 blog: aws

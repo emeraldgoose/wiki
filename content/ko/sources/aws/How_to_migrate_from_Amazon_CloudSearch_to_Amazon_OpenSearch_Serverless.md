@@ -2,7 +2,7 @@
 title: Amazon 클라우드서치에서 아마존 오픈서버리스로 마이그레이션 방법
 description: Amazon CloudSearch에서 Amazon OpenSearch Serverless로 마이그레이션하는 단계별 가이드. 평가는 데이터 변환, 쿼리 마이그레이션 및 보안 정책 번역을 포함하여 최소한의 가동 중지 시간과 데이터 손실 없이 CloudSearch 도메인을 마이그레이션하는 방법을 따라할 수 있습니다.
 date: 2026-09-10
-tags: [aws, data-engineering, search, opensearch, cloudsearch, migration]
+tags: [aws, data-engineering, search, opensearch, cloudsearch, migration, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/how-to-migrate-from-amazon-cloudsearch-to-amazon-opensearch-serverless/"
 blog: aws

@@ -2,7 +2,7 @@
 title: How to migrate from Amazon CloudSearch to Amazon OpenSearch Serverless
 description: Step-by-step migration guide from Amazon CloudSearch to Amazon OpenSearch Serverless, covering assessment, data conversion, query migration, and security policy translation. Readers can follow this to migrate their CloudSearch domains with minimal downtime and no data loss.
 date: 2026-09-10
-tags: [aws, data-engineering, search, opensearch, cloudsearch, migration]
+tags: [aws, data-engineering, search, opensearch, cloudsearch, migration, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/how-to-migrate-from-amazon-cloudsearch-to-amazon-opensearch-serverless/"
 blog: aws

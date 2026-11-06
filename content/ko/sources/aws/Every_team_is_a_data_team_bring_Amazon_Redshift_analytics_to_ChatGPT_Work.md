@@ -2,7 +2,7 @@
 title: Every 팀은 데이터 팀입니다 — Amazon Redshift analytics를 ChatGPT Work에 가져오기
 description: AWS Data Analytics plugin for ChatGPT Work는 비즈니스 팀이 governed data warehouse 및 data lake에서 자연어 질문을 하여 분석하고 공유 가능한 대시보드를 생성할 수 있게 합니다.
 date: 2026-09-10
-tags: [aws, data-analytics, chatgpt, redshift, business-intelligence, natural-language-sql]
+tags: [aws, data-analytics, chatgpt, redshift, business-intelligence, natural-language-sql, ko]
 locale: ko
 source_url: "https://aws.amazon.com/blogs/big-data/every-team-is-a-data-team-bring-amazon-redshift-analytics-to-chatgpt-work/"
 blog: aws
@@ -40,7 +40,7 @@ Maya는 ChatGPT Work에 AWS Data Analytics plugin을 로드한 다음 다음과 
 
 > *"지난 30일간 이전 30일간과 비교하여 revenue metrics는 어떻게 되나요?"*
 
-[![ChatGPT Work conversation asking for revenue metrics using the AWS Data Analytics plugin](https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/09/BDB-6266-1.png)](https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/09/BDB-6266-1.png)
+[![ChatGPT Work 대화 화면: AWS Data Analytics plugin으로 수익 지표 조회](https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/09/BDB-6266-1.png)](https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/09/BDB-6266-1.png)
 
 *그림 1: ChatGPT Work에서 AWS Data Analytics plugin을 사용하여 revenue metrics 문의*
 
@@ -54,7 +54,7 @@ Maya는 gross margin이 감소하는 것을 noticed하고 follow-up 질문을 �
 
 > *"지난 90일간 product category 및 region별 revenue breakdown은 어떻게 되나요?"*
 
-[![Revenue results segmented by product category and region for the past 90 days in ChatGPT Work](https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/09/BDB-6266-3.png)](https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/09/BDB-6266-3.png)
+[![ChatGPT Work 대화 화면: 지난 90일간 제품 카테고리 및 지역별 수익 분석](https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/09/BDB-6266-3.png)](https://d2908q01vomqb2.cloudfront.net/b6692ea5df920cad691c20319a6fffd7a4a766b8/2026/09/09/BDB-6266-3.png)
 
 *그림 3: 지난 90일간 product category 및 region별 revenue breakdown*
 

@@ -1,8 +1,8 @@
 ---
-title: 10 Trillion Samples a Day Scaling Beyond Traditional Monitoring Infra at Databricks
+title: "10 Trillion Samples a Day: Scaling Beyond Traditional Monitoring Infra at Databricks"
 description: "How Databricks scaled monitoring to 5B active timeseries and 10T samples/day — Pantheon (Thanos fork), cardinality-shielding aggregation, and the Hydra lakehouse troubleshooting platform."
 date: 2026-05-05
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/10-trillion-samples-day-scaling-beyond-traditional-monitoring-infra-databricks"
 blog: databricks
