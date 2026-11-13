@@ -1,0 +1,50 @@
+---
+title: "How Samsung Ads federated Snowflake Iceberg tables using Amazon Cognito"
+description: "Samsung Ads keeps feature data as Snowflake-managed Iceberg tables in Amazon S3 and federates them into AWS Lake Formation — Amazon Cognito issues the OAuth2 client_credentials tokens Snowflake trusts, a Pre Token Generation Lambda injects the required aud claim, and Athena queries one copy of the data under Lake Formation governance with no second pipeline or duplicated permissions."
+tags: [source, aws-big-data, data-federation, lakehouse, en]
+locale: en
+source_url: "https://aws.amazon.com/blogs/big-data/how-samsung-ads-federated-snowflake-iceberg-tables-using-amazon-cognito"
+blog: aws-big-data
+published_date: 2026-11-14
+---
+
+# How Samsung Ads federated Snowflake Iceberg tables using Amazon Cognito
+
+**Source**: [AWS Big Data Blog](https://aws.amazon.com/blogs/big-data/how-samsung-ads-federated-snowflake-iceberg-tables-using-amazon-cognito) · **Published**: 2026-11-11
+
+## Overview
+
+Samsung Ads, the advertising division of Samsung Electronics, keeps its feature data in Snowflake as Apache Iceberg tables while its machine learning team trains large-scale models on Amazon SageMaker AI, serving programmatic buyers targeting Samsung Smart TV and connected TV audiences. The usual bridge — copying data into Amazon S3 on a schedule — costs a second pipeline to operate, a second copy to store, and two permission sets to keep in agreement. The pattern in this post, co-written with Samsung Ads ML platform engineer Ajay Gunasekaran, removes the copy instead: the final pipeline stage writes Snowflake-managed Iceberg tables into Amazon S3, those tables are federated into AWS Lake Formation, and Amazon Cognito supplies the OAuth2 tokens Snowflake trusts. Both sides then read one copy of the data in S3 — Snowflake manages the tables, Lake Formation controls which principals can read them, and model engineers pick the query engine that fits each training job.
+
+The solution federates the Snowflake Horizon Catalog into Lake Formation with machine-to-machine OAuth2. The AWS Glue connection runs inside an Amazon VPC, reaching Snowflake through AWS PrivateLink and the Cognito token endpoint through a NAT gateway. The workflow runs in eight steps: Athena receives a SQL query referencing a federated table and delegates catalog resolution and permission checks to Lake Formation; Lake Formation resolves the reference through the AWS Glue Data Catalog and invokes the Glue connection in a private subnet; the connection sends a client_credentials request (client ID, secret, scope) to the Cognito token endpoint; a Pre Token Generation Lambda trigger (V3_0) adds the aud claim that Snowflake External OAuth validation requires; with the returned token the connection calls the Snowflake Horizon Catalog Iceberg REST endpoint for table metadata — schema plus the S3 location of data files — with a Route 53 private hosted zone resolving the hostname because Snowflake's endpoint service provides no private DNS; Lake Formation then vends temporary, scoped S3 credentials to Athena, which reads the Iceberg metadata and Parquet files directly and runs the query.
+
+Samsung Ads chose Cognito over a central enterprise identity provider for three practical reasons: each Snowflake table lookup depends on a token, so the team wanted to own the issuer alongside the rest of the solution; an enterprise IdP makes every new machine-to-machine client a cross-team request, while owning the user pool makes it self-service; and since the security integration trusts the user pool rather than an individual client, one integration can serve several workloads, each with its own read-only Snowflake role.
+
+## Key points
+
+- Architecture: Snowflake Horizon Catalog federation into AWS Lake Formation using Amazon Cognito for machine-to-machine OAuth2; the AWS Glue connection runs in a private subnet, reaches Snowflake via AWS PrivateLink and the public Cognito token endpoint via NAT gateway; Athena, Lake Formation, Glue Data Catalog, and the Glue connection form the query path.
+- Eight-step query workflow: SQL in Athena → Lake Formation permission evaluation → Glue Data Catalog resolves the Snowflake connection → client_credentials request to Cognito → Pre Token Generation Lambda (V3_0) injects the aud claim → Glue connection calls the Snowflake Iceberg REST endpoint for metadata (schema + S3 data file locations) over PrivateLink with Route 53 private DNS → Lake Formation vends temporary scoped S3 credentials → Athena reads Iceberg metadata and Parquet files directly and runs the query.
+- Setup spans two CloudFormation stacks plus explicit SQL/CLI: snowflake-federation-oauth (Cognito user pool, machine-to-machine app client, aud-claim Lambda; writes the app client secret to Secrets Manager in the format the Glue connection expects; generates the Snowflake SQL), snowflake-federation-network (VPC, PrivateLink endpoint, Route 53 private hosted zone, Lake Formation data access role); Snowflake security integration and grants run as explicit SQL; S3 location registration, Glue connection, federated catalog, and Lake Formation permissions run as CLI commands; validation in Athena.
+- Token verification before configuration: run the generated VerifyAudClaimCommand in CloudShell and confirm the aud claim equals the Cognito client ID and the scope is snowflake/catalog.read — a missing claim does not fail early; it surfaces several steps later as a Glue connection that cannot authenticate.
+- Snowflake side: CREATE SECURITY INTEGRATION lakeformation_cognito_oauth as EXTERNAL_OAUTH/CUSTOM with the Cognito issuer and JWKS URLs, token user mapping claim sub mapped to login_name, audience list set to the Cognito client ID, EXTERNAL_OAUTH_ANY_ROLE_MODE = ENABLE (Cognito custom scopes cannot carry Snowflake's session:role:ROLE_NAME form), and a blocked roles list covering ACCOUNTADMIN, SECURITYADMIN, USERADMIN, and SYSADMIN — broader than Snowflake's default.
+- Service identity: a read-only role lakeformation_catalog_reader and a service user whose LOGIN_NAME equals the Cognito client ID (the token's sub claim carries the client ID and the integration maps sub to login_name), TYPE = SERVICE; grants are USAGE on database and schema plus SELECT on all and future Iceberg tables in the schema.
+- Schema hygiene rules: federate only schemas containing Snowflake-managed Iceberg tables — an externally managed table can fail the entire listing; converted tables, tables loaded from Iceberg-compatible Parquet, and clones whose source table the role cannot access are unsupported; mixed-case quoted names are not federated because the connection sets CATALOG_CASING_FILTER to UPPERCASE_ONLY.
+- Security caveat: Snowflake masking and row access policies do not apply when Athena reads a federated table, because Lake Formation vends the S3 credentials and Athena reads the Parquet files directly — keep such tables out of the federated schema or recreate the controls in Lake Formation and test them.
+- Secrets handling: after the connection validates, AWS Glue caches the token it mints by writing it back into the Secrets Manager secret, so read access to that secret should be treated as read access to the federated tables.
+- External volume specifics: DESC EXTERNAL VOLUME reveals STORAGE_BASE_URL (bucket plus optional prefix — a prefix is better because it scopes the Lake Formation data access role to that path) and ENCRYPTION_TYPE; with customer-managed KMS keys, the external volume's session role needs kms:Decrypt/DescribeKey/GenerateDataKey in the key policy, otherwise the Glue connection fails with a no-session-policy-allows-kms:Decrypt error; the Snowflake role owning the Iceberg tables must retain USAGE on the external volume or vended-credential operations fail.
+- PrivateLink authorization quirk: SYSTEM$AUTHORIZE_PRIVATELINK requires a federation token from an IAM user's long-term keys (sts:GetFederationToken rejects role-session credentials); Snowflake persists the authorization, so the temporary key and user can be deleted right after step 4.
+- Prerequisites: Snowflake on AWS in the same Region (Business-Critical edition or higher for PrivateLink), Snowflake-managed Iceberg tables with CATALOG = 'SNOWFLAKE' and an external volume pointing at the S3 bucket, a Lake Formation data lake administrator principal, and the S3 bucket holding the Iceberg data files.
+
+## Details
+
+### Why the aud claim needs a Lambda
+
+The OAuth2 client_credentials grant does not define an aud claim, but Snowflake's External OAuth validation requires one. Cognito's Pre Token Generation trigger (V3_0) fills the gap by injecting the client ID as aud into every machine-to-machine token. The post's advice is to verify the injected claim immediately with the generated command rather than debugging it later — a missing claim produces no early failure, only a connection that cannot authenticate several steps downstream, which is hard to attribute.
+
+### Role mapping across two identity models
+
+Snowflake normally takes the role from a session:role:ROLE_NAME scope, a form Cognito custom scopes cannot express (they use resourceServer/scope). EXTERNAL_OAUTH_ANY_ROLE_MODE = ENABLE resolves this by letting the session use any role granted to the service user — which is why the setup keeps that user to a single read-only role and explicitly blocks the privileged roles the default list misses. The identity chain is client ID to sub claim to login_name, with the service user's LOGIN_NAME set to the Cognito client ID.
+
+### What federation changes about governance
+
+Reading happens in two trust domains: Lake Formation governs who may resolve and read the federated table, and it vends short-lived S3 credentials to Athena; Snowflake-side policies (masking, row access policies) never see the query because the data is read as Parquet files from S3. Teams adopting this pattern therefore need to move any Snowflake-level data protections into Lake Formation for the federated schema, and scope the Lake Formation data access role tightly to the external volume's S3 prefix.
