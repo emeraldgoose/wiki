@@ -5,7 +5,7 @@ source_url: "https://aws.amazon.com/blogs/big-data/monitoring-mwaa-orchestrated-
 blog: aws-big-data
 locale: en
 published_date: 2026-10-06
-tags: [source, article, en, en]
+tags: [source, article, en]
 ---
 
 # Monitoring MWAA-orchestrated ETL pipelines with Amazon OpenSearch Service

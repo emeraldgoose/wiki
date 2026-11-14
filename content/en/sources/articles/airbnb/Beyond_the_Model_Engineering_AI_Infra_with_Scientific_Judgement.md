@@ -5,7 +5,7 @@ source_url: "https://airbnb.tech/ai-ml/beyond-the-model-engineering-ai-infra-wit
 blog: airbnb
 locale: en
 published_date: 2026-09-15
-tags: [source, article, en, en]
+tags: [source, article, en]
 ---
 
 # Beyond the Model - Engineering AI Infra with Scientific Judgement

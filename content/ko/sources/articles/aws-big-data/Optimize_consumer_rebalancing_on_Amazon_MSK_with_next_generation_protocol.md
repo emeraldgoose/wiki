@@ -5,7 +5,7 @@ published: "2026-10-01"
 source_url: "https://aws.amazon.com/blogs/big-data/optimize-consumer-rebalancing-on-amazon-msk-with-next-generation-protocol"
 blog: aws-big-data
 locale: ko
-tags: [source, aws-big-data, msk, kafka, ko, ko]
+tags: [source, aws-big-data, msk, kafka, ko]
 ---
 
 # 차세대 프로토콜로 Amazon MSK 컨슈머 리밸런싱 최적화하기

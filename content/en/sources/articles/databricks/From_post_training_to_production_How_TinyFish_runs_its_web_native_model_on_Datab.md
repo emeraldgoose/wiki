@@ -1,7 +1,7 @@
 ---
 title: "From post-training to production: How TinyFish runs its web-native model on Databricks AI Runtime"
 description: "TinyFish runs its specialized web-native model end to end on Databricks AI Runtime — post-training on managed GPUs, task-level evaluation with MLflow, and production serving — reaching 77.6% task success across 2,178 web-agent tasks at $0.088 per agent run."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/post-training-production-how-tinyfish-runs-its-web-native-model-databricks-ai-runtime"
 blog: databricks

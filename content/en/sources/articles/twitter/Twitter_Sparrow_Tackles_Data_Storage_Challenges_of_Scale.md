@@ -1,7 +1,7 @@
 ---
 title: Twitter Sparrow Tackles Data Storage Challenges of Scale
 description: "Project Sparrow — redesigning Twitter's event pipeline from hourly batch to streaming, cutting latency from hours to seconds"
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2022/twitter-sparrow-tackles-data-storage-challenges-of-scale"
 blog: twitter

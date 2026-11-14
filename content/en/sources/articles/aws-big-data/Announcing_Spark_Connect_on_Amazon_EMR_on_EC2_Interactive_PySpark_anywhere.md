@@ -1,7 +1,7 @@
 ---
 title: "Announcing Spark Connect on Amazon EMR on EC2: Interactive PySpark anywhere"
 description: "Run interactive PySpark from your own IDE or SageMaker Unified Studio against a shared EMR on EC2 cluster via Spark Connect."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/announcing-spark-connect-on-amazon-emr-on-ec2-interactive-pyspark-anywhere"
 blog: aws-big-data

@@ -2,7 +2,7 @@
 title: Engineering the Next Generation of LinkedIn's Feed
 description: "LinkedIn's LLM-powered Feed rebuild — unified dual-encoder retrieval and transformer-based Generative Recommender ranking"
 date: 2026-03-12
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://www.linkedin.com/blog/engineering/feed/engineering-the-next-generation-of-linkedins-feed"
 blog: linkedin

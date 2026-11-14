@@ -5,7 +5,7 @@ published: "2026-09-23"
 source_url: "https://aws.amazon.com/blogs/big-data/query-unstructured-data-in-amazon-sagemaker-catalog-using-generative-ai"
 blog: aws-big-data
 locale: ko
-tags: [source, aws-big-data, sagemaker, bedrock, ko, ko]
+tags: [source, aws-big-data, sagemaker, bedrock, ko]
 ---
 
 # 생성형 AI로 Amazon SageMaker Catalog의 비정형 데이터 조회하기

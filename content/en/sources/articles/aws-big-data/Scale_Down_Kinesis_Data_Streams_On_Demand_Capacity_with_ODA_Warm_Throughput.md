@@ -5,7 +5,7 @@ source_url: "https://aws.amazon.com/blogs/big-data/scale-down-kinesis-data-strea
 blog: "AWS Big Data"
 locale: en
 published_date: 2026-09-14
-tags: [source, article, en, en]
+tags: [source, article, en]
 ---
 
 # Scale Down Kinesis Data Streams On-Demand Capacity with ODA Warm Throughput

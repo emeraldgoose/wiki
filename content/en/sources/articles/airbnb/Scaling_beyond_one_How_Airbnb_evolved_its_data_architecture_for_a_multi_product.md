@@ -1,7 +1,7 @@
 ---
 title: "Scaling beyond one: How Airbnb evolved its data architecture for a multi-product world"
 description: "Airbnb's framework for multi-product offline data modeling: central principles plus per-domain choice between separate and monolithic models."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://airbnb.tech/uncategorized/scaling-beyond-one-how-airbnb-evolved-its-data-architecture-for-a-multi-product-world"
 blog: airbnb

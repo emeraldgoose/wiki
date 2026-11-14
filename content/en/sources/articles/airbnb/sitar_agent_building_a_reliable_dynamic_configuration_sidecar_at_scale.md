@@ -1,7 +1,7 @@
 ---
 title: "Sitar-Agent: Building a Reliable Dynamic Configuration Sidecar at Scale"
 description: "Kubernetes sidecar for dynamic config delivery — S3 snapshots, pull-with-cache, SQLite migration, main-vs-sidecar tradeoffs"
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/sitar-agent-building-a-reliable-dynamic-configuration-sidecar-at-scale-b7e00c152068"
 blog: airbnb

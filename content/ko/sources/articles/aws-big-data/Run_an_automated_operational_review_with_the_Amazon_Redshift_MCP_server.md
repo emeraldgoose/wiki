@@ -5,7 +5,7 @@ published: "2026-10-05"
 source_url: "https://aws.amazon.com/blogs/big-data/run-an-automated-operational-review-with-the-amazon-redshift-mcp-server"
 blog: aws-big-data
 locale: ko
-tags: [source, aws-big-data, redshift, mcp, ko, ko]
+tags: [source, aws-big-data, redshift, mcp, ko]
 ---
 
 # Amazon Redshift MCP 서버로 자동 운영 점검 실행하기

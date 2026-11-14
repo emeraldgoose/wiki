@@ -5,7 +5,7 @@ blog: "AWS Big Data"
 locale: en
 published_date: 2026-09-09
 description: "Build declarative ETL pipelines with AWS Glue 6.0"
-tags: [source, article, en, en]
+tags: [source, article, en]
 ---
 
 # Build declarative ETL pipelines with AWS Glue 6.0

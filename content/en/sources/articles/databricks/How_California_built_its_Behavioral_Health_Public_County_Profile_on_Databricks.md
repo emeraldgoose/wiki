@@ -1,7 +1,7 @@
 ---
 title: "How California built its Behavioral Health Public County Profile on Databricks"
 description: "California unified behavioral health data from all 58 counties into a public Databricks-powered dashboard for BHSA transparency and oversight."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/how-california-built-its-behavioral-health-public-county-profile-databricks"
 blog: databricks

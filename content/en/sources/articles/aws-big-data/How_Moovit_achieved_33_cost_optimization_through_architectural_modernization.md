@@ -5,7 +5,7 @@ source_url: "https://aws.amazon.com/blogs/big-data/how-moovit-achieved-33-cost-o
 blog: aws-big-data
 locale: en
 published_date: 2026-09-03
-tags: [source, article, en, en]
+tags: [source, article, en]
 ---
 
 # How Moovit achieved 33% cost optimization through architectural modernization

@@ -5,7 +5,7 @@ published: "2026-09-15"
 source_url: "https://airbnb.tech/ai-ml/beyond-the-model-engineering-ai-infra-with-scientific-judgement/"
 blog: airbnb
 locale: ko
-tags: [airbnb, ai-agents, agent-harness, data-science, evaluation, methodology, unstructured-data, ko, ko]
+tags: [airbnb, ai-agents, agent-harness, data-science, evaluation, methodology, unstructured-data, ko]
 ---
 
 # 모델을 넘어서 - 과학적 판단력을 갖춘 AI 인프라 엔지니어링

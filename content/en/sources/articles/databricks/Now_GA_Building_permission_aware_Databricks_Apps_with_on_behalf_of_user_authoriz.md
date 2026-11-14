@@ -1,7 +1,7 @@
 ---
 title: "Now GA: Building permission-aware Databricks Apps with on-behalf-of-user authorization"
 description: "Generally available OBO authorization lets Databricks Apps act as the signed-in user, enforcing Unity Catalog permissions with narrow API scopes."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/now-ga-building-permission-aware-databricks-apps-behalf-user-authorization"
 blog: databricks

@@ -5,7 +5,7 @@ published: "2026-09-16"
 source_url: "https://aws.amazon.com/blogs/big-data/discover-and-govern-snowflake-data-using-sagemaker-unified-studio/"
 blog: "AWS Big Data"
 locale: ko
-tags: [aws, sagemaker, snowflake, glue, data-quality, catalog, governance, ko, ko]
+tags: [aws, sagemaker, snowflake, glue, data-quality, catalog, governance, ko]
 ---
 
 # SageMaker Unified Studio로 Snowflake 데이터를 검색하고 거버넌스하기

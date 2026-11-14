@@ -1,7 +1,7 @@
 ---
 title: "Genie One MCP: Give any AI Agent the Right Business Context"
 description: "Genie One MCP extends Genie Ontology's governed business context — approved metrics, relationships, and permissions — to any MCP-compatible AI assistant."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/genie-one-mcp-give-any-ai-agent-right-business-context"
 blog: databricks

@@ -1,7 +1,7 @@
 ---
 title: "Biomedical Imaging's Real Bottleneck Is the Data, Not the Model"
 description: "Why medical imaging AI stalls on siloed, unqueryable pixels and how a governed lakehouse foundation with medallion ingestion, de-identification, and multimodal joins unlocks it."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/biomedical-imagings-real-bottleneck-data-not-model"
 blog: databricks

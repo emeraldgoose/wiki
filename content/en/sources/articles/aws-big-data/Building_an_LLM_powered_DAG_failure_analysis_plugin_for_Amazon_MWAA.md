@@ -1,7 +1,7 @@
 ---
 title: "Building an LLM-powered DAG failure analysis plugin for Amazon MWAA"
 description: "Add an on-demand Analyze Task button to Airflow on MWAA that uses Amazon Bedrock to diagnose failed tasks with code-level context."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/building-an-llm-powered-dag-failure-analysis-plugin-for-amazon-mwaa"
 blog: aws-big-data

@@ -1,7 +1,7 @@
 ---
 title: When Can LLMs Replace Humans in A/B Tests?
 description: "Spotify's statistical framework for when LLM predictions can stand in for human outcomes in A/B tests — surrogate endpoint theory, Upworthy empirical results, and why raw LLM predictions attenuate treatment effects"
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests"
 blog: spotify

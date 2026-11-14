@@ -5,7 +5,7 @@ source_url: "https://aws.amazon.com/blogs/big-data/materialize-once-query-anywhe
 blog: aws-big-data
 locale: en
 published_date: 2026-10-05
-tags: [source, article, en, en]
+tags: [source, article, en]
 ---
 
 # Materialize once, query anywhere: Introducing Iceberg materialized views in Amazon Redshift

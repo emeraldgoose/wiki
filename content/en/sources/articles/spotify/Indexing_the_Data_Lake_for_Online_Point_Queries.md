@@ -1,7 +1,7 @@
 ---
 title: Indexing the Data Lake for Online Point Queries
 description: "Spotify's Random Access Parquet (RAP) — an external index over lake Parquet files enabling low-latency point queries via targeted ranged reads, without KV-store replication"
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://engineering.atspotify.com/2026/7/indexing-the-data-lake-for-online-point-queries"
 blog: spotify

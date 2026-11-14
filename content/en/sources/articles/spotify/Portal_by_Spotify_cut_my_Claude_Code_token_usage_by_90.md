@@ -1,7 +1,7 @@
 ---
 title: "Portal by Spotify cut my Claude Code token usage by 90%"
 description: "Routing Claude Code's I/O-heavy reads and boilerplate writes to cheap worker models via Portal AiKA Modes and the shunt plugin — mean 90% token savings on bulk reads"
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90"
 blog: spotify

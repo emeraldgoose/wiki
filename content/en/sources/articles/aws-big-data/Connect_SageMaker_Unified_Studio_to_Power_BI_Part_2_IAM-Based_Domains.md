@@ -5,7 +5,7 @@ source_url: "https://aws.amazon.com/blogs/big-data/connect-amazon-sagemaker-unif
 blog: "AWS Big Data"
 locale: en
 published_date: 2026-09-15
-tags: [source, article, en, en]
+tags: [source, article, en]
 ---
 
 # Connect SageMaker Unified Studio to Power BI Part 2 - IAM-Based Domains

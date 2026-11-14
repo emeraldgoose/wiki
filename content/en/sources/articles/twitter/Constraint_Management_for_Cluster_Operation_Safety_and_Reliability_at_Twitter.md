@@ -1,7 +1,7 @@
 ---
 title: Constraint Management for Cluster Operation Safety and Reliability at Twitter
 description: "A centralized cluster-aware arbiter preventing colliding maintenance operations on stateful fleets like Kafka"
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/constraint-management-for-cluster-operation-safety-and-reliability-at-twitter"
 blog: twitter

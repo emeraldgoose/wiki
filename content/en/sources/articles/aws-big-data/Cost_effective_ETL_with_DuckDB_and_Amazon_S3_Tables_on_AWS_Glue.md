@@ -1,7 +1,7 @@
 ---
 title: "Cost-effective ETL with DuckDB and Amazon S3 Tables on AWS Glue"
 description: "Run SQL-centric ETL with embedded DuckDB on Glue 6.0 writing Iceberg to S3 Tables at about half the time and cost of Spark."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/cost-effective-etl-with-duckdb-and-amazon-s3-tables-on-aws-glue"
 blog: aws-big-data

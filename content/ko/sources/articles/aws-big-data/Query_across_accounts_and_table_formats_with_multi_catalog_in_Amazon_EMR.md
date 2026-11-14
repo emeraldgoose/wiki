@@ -5,7 +5,7 @@ published: "2026-10-06"
 source_url: "https://aws.amazon.com/blogs/big-data/query-across-accounts-and-table-formats-with-multi-catalog-in-amazon-emr"
 blog: aws-big-data
 locale: ko
-tags: [source, aws-big-data, emr, glue, ko, ko]
+tags: [source, aws-big-data, emr, glue, ko]
 ---
 
 # Amazon EMR 멀티카탈로그로 계정·테이블 포맷 넘나들며 조회하기

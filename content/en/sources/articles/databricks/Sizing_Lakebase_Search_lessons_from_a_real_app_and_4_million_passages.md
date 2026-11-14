@@ -1,7 +1,7 @@
 ---
 title: "Sizing Lakebase Search: Lessons from a Real App and 4 Million Passages"
 description: "Lakebase Search runs vector and BM25 keyword search as Postgres extensions inside the application database. Benchmarks on the Slide Hub app (700 presentations) show sizing Local File Cache to match vector index keeps 95-98% pages in memory, dropping warm vector latency to single-digit ms; reducing candidate pool 1000→200 preserves 90.5% top-10 results at 1/3 page reads."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/sizing-lakebase-search-lessons-real-app-and-4-million-passages"
 blog: databricks

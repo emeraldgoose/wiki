@@ -5,7 +5,7 @@ published: "2026-10-05"
 source_url: "https://aws.amazon.com/blogs/big-data/materialize-once-query-anywhere-introducing-iceberg-materialized-views-in-amazon-redshift"
 blog: aws-big-data
 locale: ko
-tags: [source, aws-big-data, redshift, iceberg, ko, ko]
+tags: [source, aws-big-data, redshift, iceberg, ko]
 ---
 
 # 한 번 구체화하고 어디서든 조회하기: Amazon Redshift의 Iceberg 구체화 뷰

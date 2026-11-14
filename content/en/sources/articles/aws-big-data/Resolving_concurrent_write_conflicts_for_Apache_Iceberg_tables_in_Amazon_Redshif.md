@@ -1,7 +1,7 @@
 ---
 title: "Resolving Concurrent Write Conflicts for Apache Iceberg Tables in Amazon Redshift"
 description: "Amazon Redshift now automatically resolves non-overlapping concurrent writes to Apache Iceberg tables by rebasing commits at operation, partition, and file granularity—eliminating retry loops for independent writes like streaming inserts vs. compliance deletes."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/resolving-concurrent-write-conflicts-for-apache-iceberg-tables-in-amazon-redshift"
 blog: aws-big-data

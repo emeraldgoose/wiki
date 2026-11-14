@@ -5,7 +5,7 @@ published: "2026-09-15"
 source_url: "https://aws.amazon.com/blogs/big-data/how-united-airlines-uses-amazon-redshift-and-aws-glue-data-catalog-federation-to-query-databricks-managed-data/"
 blog: "AWS Big Data"
 locale: ko
-tags: [aws, redshift, glue, lake-formation, databricks, unity-catalog, iceberg, federation, ko, ko]
+tags: [aws, redshift, glue, lake-formation, databricks, unity-catalog, iceberg, federation, ko]
 ---
 
 # United Airlines가 Databricks 관리 데이터를 조회하기 위해 Redshift와 Glue Data Catalog 연합을 사용하는 방법

@@ -2,7 +2,7 @@
 title: Homepage Feed Multi-Task Learning Using TensorFlow
 description: "LinkedIn's unified multi-task ranking model for homepage feed — shared representations, task towers, joint optimization"
 date: 2021-06-03
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://www.linkedin.com/blog/engineering/feed/homepage-feed-multi-task-learning-using-tensorflow"
 blog: linkedin

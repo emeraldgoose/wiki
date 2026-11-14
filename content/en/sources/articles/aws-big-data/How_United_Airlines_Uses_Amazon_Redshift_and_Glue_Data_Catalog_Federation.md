@@ -5,7 +5,7 @@ source_url: "https://aws.amazon.com/blogs/big-data/how-united-airlines-uses-amaz
 blog: "AWS Big Data"
 locale: en
 published_date: 2026-09-15
-tags: [source, article, en, en]
+tags: [source, article, en]
 ---
 
 # How United Airlines Uses Amazon Redshift and Glue Data Catalog Federation to Query Databricks-Managed Data

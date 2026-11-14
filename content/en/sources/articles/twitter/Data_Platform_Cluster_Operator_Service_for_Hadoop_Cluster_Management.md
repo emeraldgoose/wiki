@@ -1,7 +1,7 @@
 ---
 title: Data Platform Cluster Operator Service for Hadoop Cluster Management
 description: "Twitter's DCO service — a Flask-based Python operator automating Hadoop host lifecycle, quotas, and keytabs"
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/the-data-platform-cluster-operator-service-for-hadoop-cluster-management"
 blog: twitter

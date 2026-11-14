@@ -1,7 +1,7 @@
 ---
 title: "Running open-Jev in SQL on Databricks"
 description: "Serve open-weight Jev decision models on serverless GPUs and invoke them directly from SQL via ai_query over governed data."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/running-open-jev-sql-databricks"
 blog: databricks

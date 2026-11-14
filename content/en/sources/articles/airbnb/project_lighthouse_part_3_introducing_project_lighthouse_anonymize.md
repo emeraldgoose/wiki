@@ -1,7 +1,7 @@
 ---
 title: "Project Lighthouse — Part 3: Introducing project-lighthouse-anonymize"
 description: "Airbnb's open-source anonymization library for privacy-preserving disparity measurement; Core Mondrian algorithm and data-quality framework"
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://medium.com/airbnb-engineering/project-lighthouse-part-3-introducing-project-lighthouse-anonymize-74f8b26653fb"
 blog: airbnb

@@ -5,7 +5,7 @@ published: "2026-09-03"
 source_url: "https://aws.amazon.com/blogs/big-data/how-moovit-achieved-33-cost-optimization-through-architectural-modernization"
 blog: aws-big-data
 locale: ko
-tags: [source, aws-big-data, redshift, emr, ko, ko]
+tags: [source, aws-big-data, redshift, emr, ko]
 ---
 
 # 아키텍처 현대화로 비용 33%를 절감한 Moovit 사례

@@ -5,7 +5,7 @@ blog: "AWS Big Data"
 locale: en
 published_date: 2026-09-10
 description: "Accelerating Spark queries with Iceberg materialized views"
-tags: [source, article, en, en]
+tags: [source, article, en]
 ---
 
 # Accelerating Spark queries with Iceberg materialized views

@@ -1,7 +1,7 @@
 ---
 title: "Set Budgets and Alerts for Cloud Data Warehouse Costs"
 description: "Proactive SQL warehouse cost governance on Databricks: tag attribution, layered budgets, pacing alerts, dashboards, and optimization."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/set-budgets-and-alerts-cloud-data-warehouse-costs"
 blog: databricks

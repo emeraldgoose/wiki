@@ -1,7 +1,7 @@
 ---
 title: "How Delivery Hero rebuilt real-time ad measurement with Apache Flink"
 description: "Delivery Hero moved ad measurement from hourly batches to real-time Flink streaming, cutting costs 57% and latency to seconds."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/how-delivery-hero-rebuilt-real-time-ad-measurement-with-apache-flink"
 blog: aws-big-data

@@ -5,7 +5,7 @@ source_url: "https://aws.amazon.com/blogs/big-data/every-team-is-a-data-team-bri
 blog: "AWS Big Data"
 locale: en
 published_date: 2026-09-10
-tags: [source, article, en, en]
+tags: [source, article, en]
 ---
 
 # Every team is a data team — bring Amazon Redshift analytics to ChatGPT Work

@@ -5,7 +5,7 @@ published: "2026-09-22"
 source_url: "https://aws.amazon.com/blogs/big-data/how-moeve-standardized-dbt-runs-across-data-lakes-with-amazon-athena"
 blog: aws-big-data
 locale: ko
-tags: [source, aws-big-data, athena, dbt, ko, ko]
+tags: [source, aws-big-data, athena, dbt, ko]
 ---
 
 # Amazon Athena로 데이터 레이크 전반의 dbt 실행을 표준화한 Moeve 사례

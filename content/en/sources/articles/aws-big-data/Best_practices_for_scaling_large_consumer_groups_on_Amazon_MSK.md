@@ -1,7 +1,7 @@
 ---
 title: "Best practices for scaling large consumer groups on Amazon MSK"
 description: "Avoid RecordTooLargeException rebalances on MSK by sizing consumer-group metadata, raising internal-topic limits, and planning capacity."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://aws.amazon.com/blogs/big-data/best-practices-for-scaling-large-consumer-groups-on-amazon-msk"
 blog: aws-big-data

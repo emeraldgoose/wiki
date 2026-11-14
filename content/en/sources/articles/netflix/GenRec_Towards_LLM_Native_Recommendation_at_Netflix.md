@@ -1,7 +1,7 @@
 ---
 title: "GenRec: Towards LLM-Native Recommendation at Netflix"
 description: "Two-phase LLM-backed full-catalog ranker with context engineering, reward-weighted losses, and prefill-only serving"
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3"
 blog: netflix

@@ -1,7 +1,7 @@
 ---
 title: "From Data to Dialogue: How S&P Global Energy Made Its Structured Data Estate Conversational with Databricks Genie Agents and MCP"
 description: "S&P Global Energy's three-layer pattern — SME-curated Genie Agents per dataset group, managed MCP servers, and a FastMCP proxy — turned commodity data into conversational endpoints."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/data-dialogue-how-sp-global-energy-made-its-structured-data-estate-conversational-databricks"
 blog: databricks

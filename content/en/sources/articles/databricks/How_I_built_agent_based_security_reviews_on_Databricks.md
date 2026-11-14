@@ -1,7 +1,7 @@
 ---
 title: "How I built agent-based security reviews on Databricks"
 description: "Seven bounded review agents on Unity Catalog, Lakeflow Jobs, and Databricks Apps that automate routine security work while escalating novel cases to humans."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://www.databricks.com/blog/how-i-built-agent-based-security-reviews-databricks"
 blog: databricks

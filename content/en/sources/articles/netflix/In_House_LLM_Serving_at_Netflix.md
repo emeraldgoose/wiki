@@ -1,7 +1,7 @@
 ---
 title: "In-House LLM Serving at Netflix"
 description: "Self-hosted LLM stack on vLLM plus Triton — engine selection, model packaging, OpenAI-compatible API, versioned rollouts, constrained decoding"
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c"
 blog: netflix

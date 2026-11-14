@@ -5,7 +5,7 @@ source_url: "https://aws.amazon.com/blogs/big-data/network-connectivity-patterns
 blog: aws-big-data
 locale: en
 published_date: 2026-09-03
-tags: [source, article, en, en]
+tags: [source, article, en]
 ---
 
 # Network connectivity patterns for the next generation of Amazon OpenSearch Serverless

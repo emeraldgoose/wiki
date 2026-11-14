@@ -1,7 +1,7 @@
 ---
 title: "How Netflix Simplified Batch Compute with Kueue"
 description: "Migrating millions of batch jobs from custom CMB scheduler to Kueue on Titus with zero-lift transparent migration and preemption-based fair sharing"
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c"
 blog: netflix

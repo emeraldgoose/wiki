@@ -5,7 +5,7 @@ published: "2026-09-14"
 source_url: "https://aws.amazon.com/blogs/big-data/scale-down-kinesis-data-streams-on-demand-capacity-with-oda-warm-throughput/"
 blog: "AWS Big Data"
 locale: ko
-tags: [aws, kinesis, streaming, serverless, cost-optimization, cloudwatch, ko, ko]
+tags: [aws, kinesis, streaming, serverless, cost-optimization, cloudwatch, ko]
 ---
 
 # ODA 웜 처리량으로 Kinesis Data Streams 온디맨드 용량 축소하기

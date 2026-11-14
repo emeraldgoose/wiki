@@ -1,7 +1,7 @@
 ---
 title: Running Cost-Efficient Export Workloads at Uber
 description: "Apache Hudi column stats plus table sorting turn full-table export scans into selective low-touch lookups on Uber's GCS lakehouse"
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://www.uber.com/us/en/blog/running-cost-efficient-export/"
 blog: uber

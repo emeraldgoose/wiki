@@ -1,7 +1,7 @@
 ---
 title: "The guest journey, updated in real time: extending Airbnb's sequence recommender with Chronon"
 description: "Airbnb adds Push Mode and near-real-time model transform to Chronon, cutting guest embedding staleness from two days to seconds."
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://airbnb.tech/ai-ml/the-guest-journey-updated-in-real-time-extending-airbnbs-sequence-recommender-with-chronon"
 blog: airbnb

@@ -1,7 +1,7 @@
 ---
 title: "Introducing: Spotify Technology. Proven at Spotify, now yours."
 description: "Spotify unifies Portal, Confidence, Xirp, and Backstage under the Spotify Technology brand — one context layer and agent runtime covering the full product development lifecycle"
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://engineering.atspotify.com/2026/10/introducing-spotify-technology-proven-at-spotify-now-yours"
 blog: spotify

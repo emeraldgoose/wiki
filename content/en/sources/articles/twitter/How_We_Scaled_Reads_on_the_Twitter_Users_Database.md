@@ -1,7 +1,7 @@
 ---
 title: How We Scaled Reads on the Twitter Users Database
 description: "Scaling the Twitter User Reservation System to millions of read QPS with Vitess Vtgate on Aurora Mesos"
-tags: [source, article, en, en]
+tags: [source, article, en]
 locale: en
 source_url: "https://blog.x.com/engineering/en_us/topics/infrastructure/2023/how-we-scaled-reads-on-the-twitter-users-database"
 blog: twitter
