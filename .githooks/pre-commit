@@ -3,4 +3,5 @@
 # or an unexpanded fetch_drafts skeleton (staged, unstaged, or untracked).
 set -eu
 root=$(git rev-parse --show-toplevel)
-exec python3 "$root/scripts/gate_promote_check.py" --worktree
+python3 "$root/scripts/gate_promote_check.py" --worktree
+exec python3 "$root/scripts/check_ko_papers.py"
