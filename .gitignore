@@ -1,4 +1,6 @@
-.index-backup/
+# generated build artifacts — never committed
 static/
-public/
+.index-backup/
 __pycache__/
+*.pyc
+.DS_Store
